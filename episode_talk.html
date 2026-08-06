@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>エピソードトーク ランダム表示</title>
+<style>
+  :root {
+    --bg: #f4f1ea;
+    --card-bg: #ffffff;
+    --accent: #c85a3e;
+    --accent-dark: #a8452e;
+    --text: #2c2620;
+    --text-sub: #8a8074;
+    --border: #e5ddd0;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+    font-family: "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+    color: var(--text);
+    padding: 24px;
+  }
+  .wrap {
+    width: 100%;
+    max-width: 560px;
+    text-align: center;
+  }
+  h1 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-sub);
+    letter-spacing: 0.05em;
+    margin-bottom: 28px;
+  }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 56px 32px;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    margin-bottom: 28px;
+    transition: opacity 0.15s ease;
+  }
+  .card.fade { opacity: 0; }
+  .card.spinning {
+    border-color: var(--accent);
+  }
+  .card.spinning .question {
+    color: var(--text-sub);
+  }
+  button:disabled {
+    background: #d8b6ab;
+    cursor: default;
+  }
+  .number {
+    display: inline-block;
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 14px;
+  }
+  .question {
+    font-size: 22px;
+    line-height: 1.6;
+    font-weight: 600;
+  }
+  button {
+    appearance: none;
+    border: none;
+    background: var(--accent);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 14px 40px;
+    border-radius: 999px;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    transition: background 0.15s ease, transform 0.1s ease;
+  }
+  button:hover { background: var(--accent-dark); }
+  button:active { transform: scale(0.97); }
+  .count {
+    margin-top: 16px;
+    font-size: 12px;
+    color: var(--text-sub);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>エピソードトーク</h1>
+  <div class="card" id="card">
+    <div>
+      <div class="number" id="number">Q1</div>
+      <div class="question" id="question">ボタンを押してスタート</div>
+    </div>
+  </div>
+  <button id="btn">次のお題を引く</button>
+  <div class="count" id="count"></div>
+</div>
+
+<script>
+const episodes = [
+  "初任給は何に使いましたか？",
+  "入社初日に感じたことは？",
+  "入社前と入社後で、会社の印象はどう変わりましたか？",
+  "入社後、最初に任された仕事は？",
+  "初めて褒められた仕事は？",
+  "初めて失敗した仕事と、そこから学んだことは？",
+  "今だから笑って話せる新人時代の失敗は？",
+  "仕事で一番成長したと感じた瞬間は？",
+  "仕事で「向いていないかも」と思ったことは？",
+  "それでも仕事を続けられた理由は？",
+  "入社して一番驚いた社内ルールは？",
+  "入社当時、勘違いしていたことは？",
+  "最初に覚えた社内用語・業界用語は？",
+  "いまだに少し苦手な業務は？",
+  "仕事で一番緊張した場面は？",
+  "これまでで一番達成感があった仕事は？",
+  "お客様や社内の人から言われて嬉しかった言葉は？",
+  "仕事で受けた忘れられないフィードバックは？",
+  "仕事上の失敗をどうリカバリーしましたか？",
+  "先輩・上司から教わった印象的な一言は？",
+  "尊敬する先輩の仕事ぶりは？",
+  "後輩ができて初めて気づいたことは？",
+  "入社当時の自分にアドバイスするなら？",
+  "学生時代にやっておけばよかったことは？",
+  "学生時代の経験が仕事で役立った場面は？",
+  "就職活動中に重視していたことは？",
+  "この会社への入社の決め手は？",
+  "他社ではなく、この会社でよかったと思った瞬間は？",
+  "入社前に不安だったことと、実際どうだったか？",
+  "会社員になって変わった生活習慣は？",
+  "仕事とプライベートの切り替え方法は？",
+  "最近の休日は何をして過ごしていますか？",
+  "社内で意外な特技を持っている人は？",
+  "自分だけが知っているおすすめの社内スポットや制度は？",
+  "社内で起きた、今だから話せる面白い出来事は？",
+  "仕事中に起きた「まさか」のハプニングは？",
+  "これまでで一番無茶だと思った依頼は？",
+  "もし1日だけ別の部署で働けるなら、どこで何をしたいですか？",
+  "会社や仕事に関する誤解を一つ解くなら？",
+  "5年後、どんな社員になっていたいですか？"
+];
+
+let lastIndex = -1;
+let drawn = 0;
+let spinning = false;
+const card = document.getElementById('card');
+const numberEl = document.getElementById('number');
+const questionEl = document.getElementById('question');
+const countEl = document.getElementById('count');
+const btn = document.getElementById('btn');
+
+function pickIndex() {
+  if (episodes.length === 1) return 0;
+  let idx;
+  do {
+    idx = Math.floor(Math.random() * episodes.length);
+  } while (idx === lastIndex);
+  return idx;
+}
+
+function randomIndexAny() {
+  return Math.floor(Math.random() * episodes.length);
+}
+
+function draw() {
+  if (spinning) return;
+  spinning = true;
+  btn.disabled = true;
+  card.classList.add('spinning');
+
+  const totalSpins = 16;      // 何回パラパラ切り替えるか
+  let spinCount = 0;
+  let delay = 60;             // 開始時の速さ(ms)
+
+  function spinStep() {
+    const idx = randomIndexAny();
+    numberEl.textContent = 'Q' + (idx + 1);
+    questionEl.textContent = episodes[idx];
+    spinCount++;
+
+    if (spinCount < totalSpins) {
+      delay *= 1.15;           // だんだん遅くなる
+      setTimeout(spinStep, delay);
+    } else {
+      // 最終決定(直前と同じお題は避ける)
+      const finalIdx = pickIndex();
+      lastIndex = finalIdx;
+      numberEl.textContent = 'Q' + (finalIdx + 1);
+      questionEl.textContent = episodes[finalIdx];
+      drawn++;
+      countEl.textContent = '全' + episodes.length + '問中 ' + drawn + '回目';
+      card.classList.remove('spinning');
+      spinning = false;
+      btn.disabled = false;
+    }
+  }
+
+  spinStep();
+}
+
+btn.addEventListener('click', draw);
+</script>
+</body>
+</html>
