@@ -1,804 +1,520 @@
 <!doctype html>
-<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>セキュリティインシデント一覧｜2026.09.06–10.07</title>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>セキュリティインシデント一覧｜2026.09.06–10.08</title>
 <style>
 :root{--ink:#152e36;--muted:#5e7278;--line:#dce5e5;--paper:#f3f6f5;--teal:#086c68;--navy:#132f38;--red:#a73e38;--amber:#88601a}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.8 -apple-system,BlinkMacSystemFont,'Noto Sans JP','Yu Gothic',Meiryo,sans-serif}button,input,select,textarea{font:inherit}button,select{cursor:pointer}button{border:1px solid #b9caca;background:white;color:var(--ink);border-radius:7px;padding:8px 14px}button:hover{background:#eaf2f1}button:focus-visible,a:focus-visible,input:focus,select:focus,textarea:focus{outline:3px solid #55aaa0;outline-offset:2px}a{color:#076d74;text-underline-offset:3px}.wrap{max-width:1240px;margin:auto;padding:0 32px}.mast{background:var(--navy);color:white;padding:42px 0 34px;border-top:6px solid #47b5a4}.eyebrow{font-size:12px;letter-spacing:.17em;color:#a4d6cf;font-weight:700}.mast h1{font-size:clamp(26px,4vw,40px);line-height:1.4;margin:12px 0 10px;letter-spacing:.03em}.mast p{max-width:790px;color:#d1e2e4;margin:10px 0}.mast .meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.pill{font-size:12px;border:1px solid #56747c;border-radius:30px;padding:4px 12px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:26px 0}.stat{background:white;border:1px solid var(--line);padding:17px 22px;border-radius:10px}.stat strong{display:block;font-size:30px;line-height:1.4;font-variant-numeric:tabular-nums}.stat span{color:var(--muted);font-size:12px}.guide{border:1px solid var(--line);background:white;border-radius:10px;margin:20px 0;padding:15px 22px}.guide summary{cursor:pointer;font-weight:700}.guide p{margin:10px 0;font-size:13px}.guide ul{font-size:13px;padding-left:20px}.filters{background:#f3f6f5f5;border-block:1px solid var(--line);padding:18px 0;position:sticky;top:0;z-index:5;backdrop-filter:blur(10px)}.fields{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px}label{display:block;font-size:12px;font-weight:700;color:var(--muted)}input,select,textarea{width:100%;border:1px solid #b9caca;border-radius:7px;padding:9px 11px;background:white;color:var(--ink)}.tools{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:12px}.dateinput{display:flex;gap:8px;align-items:center}.dateinput input{width:155px;font-size:13px;padding:6px}.tools .right{margin-left:auto;display:flex;gap:8px}.tools button{font-size:12px}.resultbar{display:flex;justify-content:space-between;align-items:center;margin:22px 0 12px;color:var(--muted);font-size:13px}.month{font-size:19px;margin:28px 0 12px;display:flex;gap:15px;align-items:center}.month:after{content:'';height:1px;background:#ccdada;flex:1}.incident{background:white;border:1px solid var(--line);border-radius:11px;margin-bottom:14px;overflow:hidden}.cardhead{display:grid;grid-template-columns:108px 1fr;gap:20px;padding:21px 24px 14px}.date{font-size:24px;font-weight:700;line-height:1.5;font-variant-numeric:tabular-nums;border-right:1px solid var(--line)}.date small{display:block;color:var(--muted);font-size:11px;font-weight:400}.incident h3{font-size:20px;line-height:1.5;margin:0 0 9px}.badges{display:flex;gap:6px;flex-wrap:wrap}.tag{font-size:11px;background:#edf3f2;border-radius:4px;padding:2px 8px;color:#3d6065}.status{font-size:11px;border:1px solid #d5bd88;color:var(--amber);background:#fff9ed;border-radius:4px;padding:2px 8px}.confirmed{color:var(--red);background:#fff1ef;border-color:#e3b3af}.unknown{color:#4c6571;background:#eef4f8;border-color:#c8d6df}.body{padding:0 24px 22px 152px}.body h4{font-size:11px;letter-spacing:.04em;color:var(--teal);margin:0 0 3px}.body p{margin:0 0 10px;font-size:14px;line-height:1.85}.impact{color:var(--muted)}.detail summary{font-size:12px;cursor:pointer;color:var(--teal);padding:8px 0;font-weight:700}.detailgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px 24px;padding:12px 0}.detailgrid p{font-size:13px}.action{background:#eff7f4;border-left:3px solid #249180;padding:13px 16px;margin:5px 0 15px}.action p{font-size:13px;margin:0}.sources{border-top:1px solid var(--line);padding-top:10px}.sources a{font-size:11px;overflow-wrap:anywhere;display:block;margin:5px 0;line-height:1.6}.note{font-size:11px!important;color:var(--muted)}.edit{font-size:11px;padding:3px 10px;float:right}.empty{text-align:center;padding:70px 20px;background:white;border-radius:10px}footer{padding:35px 0 50px;color:var(--muted);font-size:12px}.primary{background:var(--teal);color:white;border-color:var(--teal)}.primary:hover{background:#075a58;color:white}dialog{border:1px solid #a7bebd;border-radius:14px;padding:26px;width:min(760px,94vw);max-height:90vh;color:var(--ink)}dialog::backdrop{background:#0c2939a0}dialog h2{margin:0 0 10px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.formgrid .full{grid-column:1/-1}textarea{resize:vertical;min-height:85px;font-size:13px}.dialogfoot{display:flex;justify-content:flex-end;gap:10px;margin-top:20px}.help{font-size:12px;color:var(--muted)}#toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#153a3c;color:white;padding:12px 22px;border-radius:8px;z-index:30}#toast:empty{display:none}.countnote{font-size:11px;color:var(--muted);margin-top:-15px}.notice{font-size:12px;color:var(--muted)}
 @media(max-width:760px){.wrap{padding:0 18px}.mast{padding:28px 0}.stats{grid-template-columns:1fr 1fr;gap:8px}.stat{padding:12px 16px}.fields{grid-template-columns:1fr 1fr}.fields label:first-child{grid-column:1/-1}.filters{position:relative}.tools .right{margin-left:0}.cardhead{grid-template-columns:70px 1fr;padding:17px 16px 10px;gap:12px}.date{font-size:18px}.incident h3{font-size:17px}.body{padding:0 16px 18px}.detailgrid{grid-template-columns:1fr;gap:4px}.formgrid{grid-template-columns:1fr}.formgrid .full{grid-column:auto}.dateinput input{width:138px}.month{font-size:17px}}
 @media print{body{background:white;font-size:10pt}.mast{background:white;color:#152e36;padding:10px 0;border-top:3px solid #086c68}.mast p,.eyebrow{color:#334}.mast h1{font-size:24pt}.wrap{padding:0;max-width:none}.filters,.edit,.guide,.tools,.notice,dialog,#toast{display:none!important}.stats{margin:12px 0;gap:6px}.stat{padding:5px 12px}.stat strong{font-size:18pt}.incident{break-inside:avoid;border-radius:0;margin-bottom:10px}.cardhead{padding:10px;grid-template-columns:85px 1fr}.body{padding:0 10px 10px 115px}.body p{font-size:9pt}.detailgrid p,.action p{font-size:9pt}.sources a{font-size:7pt}.month{break-after:avoid}.pill{border-color:#ccc}.mast .meta{margin-top:8px}}
 
 .fields{grid-template-columns:1fr}.filters{position:relative}.checks{display:flex;flex-wrap:wrap;gap:7px}fieldset{min-width:0;border:0;margin:0;padding:0}legend{font-size:12px;font-weight:700;color:var(--muted);padding:0;margin-bottom:7px}.check{display:inline-flex;align-items:center;gap:7px;border:1px solid #c6d5d3;border-radius:6px;background:white;padding:6px 10px;cursor:pointer;color:var(--ink);font-weight:400}.check input{width:16px;height:16px;margin:0;accent-color:var(--teal);padding:0}.check:has(input:checked){background:#e1f1eb;border-color:var(--teal);color:#075c57;font-weight:700}.sensitive{color:#b4232c;font-weight:800}.notice .sensitive{white-space:nowrap}@media print{.sensitive{color:#a51d25!important;font-weight:800}}
-.updatebox{background:#eef6fb;border-left:3px solid #397c9b;padding:10px 14px;margin:0 0 14px}.updatebox p{font-size:12px;margin:3px 0}.updatebadge{background:#dceff4;color:#175368}.excluded{background:#f5f6f6;padding:10px;border-radius:6px}.revision{background:#eaf4f0;border:1px solid #b7d5c8;border-radius:10px;padding:14px 20px;margin:20px 0}.revision p{margin:3px 0;font-size:13px}</style></head><body>
-<header class="mast"><div class="wrap"><div class="eyebrow">SECURITY INCIDENT MONITOR / JAPAN</div><h1>セキュリティインシデント一覧</h1><p>漏えい情報と業務への影響を確認し、対象者への注意喚起につなげるための調査一覧。</p><div class="meta"><span class="pill">調査対象 2026.09.06 – 2026.10.07</span><span class="pill">確認基準日 2026.10.07</span><span class="pill">公表日 ↑ 昇順</span><span class="pill">国内組織・国内向けサービス中心</span></div></div></header>
-<main class="wrap"><section class="stats" aria-label="掲載概要"><div class="stat"><strong id="total">54</strong><span>掲載事案</span></div><div class="stat"><strong id="ransom">3</strong><span>ランサムウェア</span></div><div class="stat"><strong id="confirmed">—</strong><span>漏えい確認・一部確認</span></div><div class="stat"><strong id="categories">—</strong><span>インシデント分類</span></div></section><p class="countnote">件数は掲載事案ベース。分類は重複します。被害人数・アカウント数・注文件数は合算していません。</p>
-<section class="revision"><strong>2026年10月7日 更新：新規10件・既存5件を更新／補足</strong><p>既存44件を保持し、全54件を掲載。共通委託先の事案と利用企業の事案を含むため、独立した攻撃の総数ではありません。</p><p>公表日は昇順を維持。カードの更新欄で、続報公表日・補足資料日と一覧への反映日を区別しています。</p></section><details class="guide"><summary>調査範囲・日付・注意喚起の読み方</summary><p>2026年9月6日〜10月7日に公表・更新された国内組織や国内向けサービスの事案を対象としています。情報漏えいに限定せず、ランサムウェア、アカウント侵害、サービス停止、サイト改ざん、設定不備、誤送信、媒体紛失なども収録しました。公開情報で確認できた事案の一覧であり、国内外すべての公表事案の完全な網羅を保証するものではありません。</p><p>並び順は、各カードに明記した掲載基準の公表日（昇順）、同日の場合は組織名順です。期間外に発生した事案でも、期間内に重要な続報があれば収録しています。初報を確認できた期間内事案は初報日、期間外事案は期間内の続報日を基準とし、調査で参照した続報日を注記しています。発生日・検知日と公表日は別です。</p><p>「漏えい確認」は一部または対象情報の取得・外部流出を確認した事案。「漏えいの可能性」「調査中」「閲覧可能状態」「漏えい未確認」は区別しています。各行の候補人数すべてについて漏えいが確定したことを意味しません。「対象外」「未確認」の内容も確認基準日時点の発表に基づきます。</p><ul><li>パスワードや初期認証情報が対象の場合：公式案内に従い変更し、使い回し先も変更。ハッシュ・暗号化の表記だけで安全とは判断しない。</li><li>氏名・住所・生年月日・本人確認書類の場合：一律の「変更」を求めず、個別通知、なりすまし、偽の本人確認依頼への注意を伝える。</li><li>連絡先・購入履歴の場合：情報を知る相手でも信用せず、公式アプリや自分で開いた公式窓口で確認する。</li></ul><p>各事案の「注意喚起のポイント」は公表事実を踏まえた編集上の提案です。実際の対象項目・必要な措置は運営元の個別通知と最新発表を優先してください。漏えいデータそのものの収集や、被害者への連絡は実施していません。</p></details>
+.updatebox{background:#eef6fb;border-left:3px solid #397c9b;padding:10px 14px;margin:0 0 14px}.updatebox p{font-size:12px;margin:3px 0}.updatebadge{background:#dceff4;color:#175368}.excluded{background:#f5f6f6;padding:10px;border-radius:6px}.revision{background:#eaf4f0;border:1px solid #b7d5c8;border-radius:10px;padding:14px 20px;margin:20px 0}.revision p{margin:3px 0;font-size:13px}.evidence{border:1px solid #d5bd88;background:#fff9ed;padding:10px 14px;border-radius:6px;color:#765019}</style></head><body>
+<header class="mast"><div class="wrap"><div class="eyebrow">SECURITY INCIDENT MONITOR / JAPAN</div><h1>セキュリティインシデント一覧</h1><p>漏えい情報と業務への影響を確認し、対象者への注意喚起につなげるための調査一覧。</p><div class="meta"><span class="pill">調査対象 2026.09.06 – 2026.10.08</span><span class="pill">確認基準日 2026.10.08</span><span class="pill">公表日 ↓ 降順</span><span class="pill">国内組織・国内向けサービス中心</span></div></div></header>
+<main class="wrap"><section class="stats" aria-label="掲載概要"><div class="stat"><strong id="total">67</strong><span>掲載事案</span></div><div class="stat"><strong id="ransom">3</strong><span>ランサムウェア</span></div><div class="stat"><strong id="confirmed">—</strong><span>漏えい確認・一部確認</span></div><div class="stat"><strong id="categories">—</strong><span>インシデント分類</span></div></section><p class="countnote">件数は掲載事案ベース。分類は重複します。被害人数・アカウント数・注文件数は合算していません。</p>
+<section class="revision"><strong>2026年10月8日 更新：新規11件＋報道ベース2件・既存4件を更新</strong><p>既存54件を保持し、全67件を掲載。一次資料未確認の2件は候補として明記しています。共通委託先と利用組織の事案を含むため、独立した攻撃の総数ではありません。</p><p>公表日の降順（新しい順）で表示。続報公表日・補足資料日と一覧への反映日を各カードに表示しています。</p></section><details class="guide"><summary>調査範囲・日付・注意喚起の読み方</summary><p>2026年9月6日〜10月8日に公表・更新された国内組織や国内向けサービスの事案を対象としています。情報漏えいに限定せず、ランサムウェア、アカウント侵害、サービス停止、サイト改ざん、設定不備、誤送信、媒体紛失なども収録しました。公開情報で確認できた事案の一覧であり、国内外すべての公表事案の完全な網羅を保証するものではありません。</p><p>並び順は、各カードに明記した掲載基準の公表日（降順）、同日の場合は組織名順です。期間外に発生した事案でも、期間内に重要な続報があれば収録しています。初報を確認できた期間内事案は初報日、期間外事案は期間内の続報日を基準とし、調査で参照した続報日を注記しています。発生日・検知日と公表日は別です。</p><p>「漏えい確認」は一部または対象情報の取得・外部流出を確認した事案。「漏えいの可能性」「調査中」「閲覧可能状態」「漏えい未確認」は区別しています。各行の候補人数すべてについて漏えいが確定したことを意味しません。「対象外」「未確認」の内容も確認基準日時点の発表に基づきます。</p><ul><li>パスワードや初期認証情報が対象の場合：公式案内に従い変更し、使い回し先も変更。ハッシュ・暗号化の表記だけで安全とは判断しない。</li><li>氏名・住所・生年月日・本人確認書類の場合：一律の「変更」を求めず、個別通知、なりすまし、偽の本人確認依頼への注意を伝える。</li><li>連絡先・購入履歴の場合：情報を知る相手でも信用せず、公式アプリや自分で開いた公式窓口で確認する。</li></ul><p>各事案の「注意喚起のポイント」は公表事実を踏まえた編集上の提案です。実際の対象項目・必要な措置は運営元の個別通知と最新発表を優先してください。漏えいデータそのものの収集や、被害者への連絡は実施していません。</p></details>
 <section class="filters" aria-label="検索と絞り込み"><div class="fields"><label>キーワード<input id="query" type="search" placeholder="組織名、サービス名、漏えい項目など"></label><fieldset><legend>インシデント分類（複数選択可）</legend><div id="category" class="checks"></div></fieldset><fieldset><legend>情報漏えいの状況（複数選択可）</legend><div id="status" class="checks"></div></fieldset></div><div class="tools"><div class="dateinput"><input id="from" type="date" aria-label="公表日 開始"><span>–</span><input id="to" type="date" aria-label="公表日 終了"></div><button id="reset">絞り込み解除</button><div class="right"><button id="expand">詳細をすべて開く</button><button id="print">印刷 / PDF</button></div></div></section>
-<div class="resultbar"><span id="result" role="status" aria-live="polite"></span><span>公表日：古い順 → 新しい順</span></div><p class="notice">同じグループ内は選択したいずれかに一致する事案を表示します。未選択はすべて表示。<strong class="sensitive">赤字・太字</strong>は重要な情報項目を示し、漏えいの確定を意味しません。「対象外・未確認」も併せてご確認ください。</p><section id="list" aria-label="インシデント一覧"></section><noscript><p>この一覧の表示・検索にはJavaScriptを有効にしてください。</p></noscript>
-<footer>一覧更新日：2026年10月7日。出典は各事案のソースURLを参照。保存したHTMLはオフラインで閲覧・検索できます。出典リンクの閲覧にはインターネット接続が必要です。</footer></main>
+<div class="resultbar"><span id="result" role="status" aria-live="polite"></span><span>公表日：新しい順 → 古い順</span></div><p class="notice">同じグループ内は選択したいずれかに一致する事案を表示します。未選択はすべて表示。<strong class="sensitive">赤字・太字</strong>は重要な情報項目を示し、漏えいの確定を意味しません。「対象外・未確認」も併せてご確認ください。</p><section id="list" aria-label="インシデント一覧"></section><noscript><p>この一覧の表示・検索にはJavaScriptを有効にしてください。</p></noscript>
+<footer>一覧更新日：2026年10月8日。出典は各事案のソースURLを参照。保存したHTMLはオフラインで閲覧・検索できます。出典リンクの閲覧にはインターネット接続が必要です。</footer></main>
 
 <script id="incident-data" type="application/json">[
   {
-    "date": "2026-09-07",
-    "org": "学校法人武蔵野大学",
+    "date": "2026-10-08",
+    "org": "ハイホー／BiZiMoほか",
     "cat": [
-      "ランサムウェア",
-      "情報漏えい"
+      "不正アクセス",
+      "アカウント乗っ取り"
     ],
-    "status": "漏えい確認",
-    "info": "共有フォルダ内の複数ファイル。氏名・住所を含む個人情報を確認。その他の項目・対象者・件数は調査中。",
-    "impact": "6月15日にサーバーが感染。バックアップから復旧し、学校運営は継続。",
-    "scope": "対象人数は調査中。",
-    "exclude": "情報の不正利用は未確認。",
-    "action": "学校からの個別通知・続報を確認。氏名や住所を知る相手からの連絡でも、送金や認証情報の要求には公式窓口で確認する。",
+    "status": "不正閲覧確認",
+    "info": "氏名、住所、電話番号、メールアドレス、契約内容、請求情報等。閲覧された、または閲覧された可能性。",
+    "impact": "第三者が電話勧誘でログイン情報を聞き出す等により、マイページへ不正ログイン。電話番号・郵便番号・生年月日による認証を廃止。",
+    "scope": "38,509契約。BiZiMo光・BiZiMoネット・光ギガ・CLOUD LINE・Toppa!・ダントツネット／ひかり・CP WiMAX。契約数であり人数ではない。",
+    "exclude": "マイページにカード・銀行口座情報は保持していない。パスワードのデータベース流出と断定しない。",
+    "action": "ログイン情報を伝えた場合や不審なログインがある場合は、公式サイトでパスワードを変更し、登録メールアドレスに不正変更がないか確認する。",
     "sources": [
       {
         "label": "公式発表",
-        "url": "https://ef.musashino-u.ac.jp/news/20260907-8715.html"
+        "url": "https://bizimo.ne.jp/重要なお知らせお客様情報への第三者によるアク/"
       }
     ],
-    "note": "第二報。発生は6月15日。"
+    "note": "",
+    "updated": "2026-10-08",
+    "changeType": "新規追加",
+    "change": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。"
   },
   {
-    "date": "2026-09-08",
-    "org": "京都サンガF.C.／SANGA CREW",
+    "date": "2026-10-08",
+    "org": "大阪歴史博物館",
     "cat": [
       "誤送信",
       "情報漏えい"
     ],
     "status": "漏えい確認",
-    "info": "氏名、住所、メール、電話、生年月日、性別、会員コース、JリーグID、入退会日・有効期限、ワンタッチパスID、デジタル会員証番号、シーズンパス席種、スクール会場・コース。",
-    "impact": "9月2日、取引先へ会員情報ファイルを誤添付。受信者11人中2人が開封。削除を確認。",
-    "scope": "7月3日時点の会員情報15,612人分。",
-    "exclude": "カード・口座などの決済情報は含まない。二次流出は未確認。",
-    "action": "会員番号などを使ったなりすましに注意。個別通知を確認する。公表された項目にパスワードはない。",
+    "info": "ボランティア4人のメールアドレス、うち1人の氏名。",
+    "impact": "10月7日、BCCにすべき宛先をCCに設定し、他の受信者に表示された。",
+    "scope": "4人。氏名が表示された1人は内数。",
+    "exclude": "不正アクセスではなくメール誤送信。パスワード漏えいを示すものではない。",
+    "action": "運営元の個別通知を確認し、不審な連絡は公式窓口で確認する。",
     "sources": [
       {
         "label": "公式発表",
-        "url": "https://www.sanga-fc.jp/news/detail/21401"
+        "url": "https://www.city.osaka.lg.jp/hodoshiryo/keizaisenryaku/0000688772.html"
       }
     ],
-    "note": ""
+    "note": "",
+    "updated": "2026-10-08",
+    "changeType": "新規追加",
+    "change": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。"
   },
   {
-    "date": "2026-09-10",
-    "org": "さくらインターネット",
-    "cat": [
-      "不正アクセス",
-      "情報漏えい"
-    ],
-    "status": "漏えいの可能性",
-    "info": "販売管理システムの会員情報。会員パスワードのハッシュ30件、一部のレンタルサーバー初期パスワード、VPSのroot初期パスワード。初期パスワードはハッシュ化されず保管されていたものがある。",
-    "impact": "不正アクセスに伴う調査の第三報。認証情報への影響あり。",
-    "scope": "会員情報最大1,360,563件。項目と対象は契約・サービスで異なる。",
-    "exclude": "利用者が変更したパスワードは保管対象外と説明。",
-    "action": "対象通知を確認し、未変更の初期パスワードを変更。VPSのroot認証情報も確認。同じパスワードを使う他サービスも変更する。",
-    "sources": [
-      {
-        "label": "公式発表",
-        "url": "https://www.sakura.ad.jp/corporate/information/newsreleases/2026/09/10/1968225692/"
-      }
-    ],
-    "note": "第三報。パスワードの種類を混同しない。"
-  },
-  {
-    "date": "2026-09-10",
-    "org": "商船三井クルーズ",
-    "cat": [
-      "媒体紛失"
-    ],
-    "status": "漏えいの可能性",
-    "info": "保存されていた可能性のある項目：氏名、生年月日、性別、住所、電話、メール、旅券番号、医療・アレルギー情報。乗組員については銀行口座、考課、予防接種履歴、給与関係情報も候補。",
-    "impact": "船内PC間のデータ移行に用いた外部記憶媒体の一部を紛失。7月に所在不明を確認。",
-    "scope": "約20万ファイルを調査中。20万は対象人数ではない。",
-    "exclude": "媒体内の具体的内容自体が未特定。流出・不正利用の事実は未確認。",
-    "action": "対象情報を確定する続報を待つ。旅券等について個別通知を受けた場合は発行元の相談窓口へ確認する。",
-    "sources": [
-      {
-        "label": "公式発表",
-        "url": "https://www.mitsuioceancruises.com/news/20260910.html"
-      }
-    ],
-    "note": ""
-  },
-  {
-    "date": "2026-09-11",
-    "org": "デジタル庁／GSS",
-    "cat": [
-      "不正アクセス",
-      "情報漏えい"
-    ],
-    "status": "漏えいの可能性",
-    "info": "政府職員や委託事業者等の氏名、メールアドレス、電話番号、住所。",
-    "impact": "ガバメントソリューションサービスに関する情報への不正アクセス。",
-    "scope": "約24.6万件。一般国民の情報ではないと説明。",
-    "exclude": "マイナンバー、銀行口座、年金情報は対象外。",
-    "action": "所属組織の通知を確認。職員を装う連絡や業務情報を使ったフィッシングに注意する。",
-    "sources": [
-      {
-        "label": "公式発表",
-        "url": "https://www.digital.go.jp/news/2026-0911-01"
-      }
-    ],
-    "note": ""
-  },
-  {
-    "date": "2026-09-11",
-    "org": "ロート製薬",
-    "cat": [
-      "不正アクセス",
-      "情報漏えい"
-    ],
-    "status": "漏えいの可能性",
-    "info": "問い合わせ対応の通話録音・付随情報、顧客管理情報。公表資料で具体的な全項目は未確定。",
-    "impact": "問い合わせ関連システムへの不正アクセスについて調査。",
-    "scope": "対象人数・詳細範囲は調査中。",
-    "exclude": "医療情報・カード情報等の含有は断定できない。",
-    "action": "相談内容を知る相手からの連絡にも注意。会社の個別通知で実際の対象項目を確認する。",
-    "sources": [
-      {
-        "label": "公式発表",
-        "url": "https://www.rohto.co.jp/news/whatsnew/2026/0915_01"
-      }
-    ],
-    "note": "9月11日公表、9月15日続報を反映。"
-  },
-  {
-    "date": "2026-09-11",
-    "org": "日本大学法学部",
-    "cat": [
-      "アカウント侵害",
-      "情報漏えい"
-    ],
-    "status": "漏えいの可能性",
-    "info": "被害職員のメールボックスに含まれる本文・添付ファイル等。個人情報の具体的項目と件数は未公表。",
-    "impact": "フィッシングで職員メールアカウントを侵害。迷惑メール送信、学内への影響拡大。",
-    "scope": "迷惑メール3,177通は送信通数であり、漏えい人数ではない。",
-    "exclude": "メールが閲覧された可能性と、具体的な流出確認を区別。",
-    "action": "当該アカウント発の不審メールを開かない。リンク先へ認証情報を入力した場合は、公式経路でパスワード変更・管理者への連絡。",
-    "sources": [
-      {
-        "label": "公式発表",
-        "url": "https://www.law.nihon-u.ac.jp/news/32278"
-      }
-    ],
-    "note": ""
-  },
-  {
-    "date": "2026-09-15",
-    "org": "LEAN BODY",
-    "cat": [
-      "不正アクセス",
-      "情報漏えい"
-    ],
-    "status": "漏えい確認",
-    "info": "メール、ニックネーム、性別、生年月日、身長・体重、利用状況、暗号化されたパスワード、契約・支払いに関する情報等。",
-    "impact": "社内分析ツールMetabaseへの不正アクセスで顧客情報を取得された。",
-    "scope": "退会者を含む約44万アカウント。",
-    "exclude": "支払い情報の記載からカード番号そのものの流出は断定できない。",
-    "action": "公式案内に従いパスワードを変更。同じパスワードの使い回しを解消する。",
-    "sources": [
-      {
-        "label": "公式発表",
-        "url": "https://lean-body.co.jp/news/JlBWMCs7"
-      },
-      {
-        "label": "報道：USEN ICT Solutions",
-        "url": "https://www.gate02.ne.jp/lab/incident-news/lean-body-20260925/"
-      }
-    ],
-    "note": "公式ページの本文取得ができなかったため、詳細項目は報道で補完。"
-  },
-  {
-    "date": "2026-09-15",
-    "org": "あいの風とやま鉄道／観光列車予約",
-    "cat": [
-      "不正アクセス",
-      "情報漏えい"
-    ],
-    "status": "漏えいの可能性",
-    "info": "予約者の氏名、住所、電話番号、メールアドレス。",
-    "impact": "観光列車の予約関連情報への影響。",
-    "scope": "1,409人分。",
-    "exclude": "カード情報は別管理で対象外。",
-    "action": "予約の確認や返金を装った連絡は公式窓口に確認する。",
-    "sources": [
-      {
-        "label": "公式発表",
-        "url": "https://ainokaze.co.jp/wp-content/uploads/2026/09/6f52a51d7d840aedb7b617d8c92c6626.pdf"
-      }
-    ],
-    "note": ""
-  },
-  {
-    "date": "2026-09-15",
-    "org": "ムラウチドットコム",
-    "cat": [
-      "不正アクセス",
-      "情報漏えい"
-    ],
-    "status": "漏えい確認",
-    "info": "氏名、住所、電話番号、メールアドレス、生年月日、性別。",
-    "impact": "7月の不正アクセスについて調査結果を追加公表。",
-    "scope": "7,716,811件。件数を実人数と同一視しない。",
-    "exclude": "カード情報・パスワードは対象外。",
-    "action": "購入先を装う返金・再決済の案内や、個人情報を使った電話に注意する。",
-    "sources": [
-      {
-        "label": "公式発表",
-        "url": "https://murauchi.com/static-pages/privacy/弊社における不正アクセスによるお客様情報漏えいに関するお詫びとご報告（第二報）.pdf"
-      }
-    ],
-    "note": "第二報。"
-  },
-  {
-    "date": "2026-09-16",
-    "org": "Helpfeel／Gyazo",
-    "cat": [
-      "不正アクセス",
-      "情報漏えい"
-    ],
-    "status": "漏えい確認",
-    "info": "氏名・ニックネーム、メール、パスワードハッシュ、ユーザーID、端末ID、セッションID、X連携トークン、Google SSO関連プロフィール、登録・ログイン・契約情報。画像URL・ID、送信元IP、EXIF位置情報、OCR、タイトル、元URL、非公開画像のパスフレーズハッシュ等のメタデータ。",
-    "impact": "ユーザー情報と画像メタデータへの不正アクセス。削除済みデータの一部にも影響。",
-    "scope": "9月25日続報では匿名を含む約2,362万ユーザー記録。",
-    "exclude": "カード情報は含まない。メタデータの漏えいと全画像本体の流出を同一視しない。",
-    "action": "Gyazoと同一・類似パスワードを使うサービスのパスワード変更。連携アプリ・セッションも確認。画像URLや位置情報を含む公開範囲を見直す。",
-    "sources": [
-      {
-        "label": "公式発表",
-        "url": "https://corp.helpfeel.com/news/news-20260916-1"
-      },
-      {
-        "label": "公式続報 9/25",
-        "url": "https://corp.helpfeel.com/en/news/news-20260925"
-      }
-    ],
-    "note": "9月25日の続報を反映。"
-  },
-  {
-    "date": "2026-09-18",
-    "org": "PFU／旧PFUダイレクト",
-    "cat": [
-      "委託先被害",
-      "情報漏えい"
-    ],
-    "status": "漏えい確認",
-    "info": "購入者・配送先の氏名、住所、電話、FAX、メール、勤務先、自由記入欄等。",
-    "impact": "旧ショップサーブ利用店舗への攻撃に伴う影響。",
-    "scope": "最大169,355件の注文情報。主に2008年12月5日〜2025年10月31日の旧店舗注文等。",
-    "exclude": "注文件数であり実人数ではない。入力の有無で項目が異なる。",
-    "action": "過去の注文を使った返金詐欺・配送通知に注意。自由記入欄に何を書いたかも確認する。",
-    "sources": [
-      {
-        "label": "公式発表",
-        "url": "https://www.pfu.ricoh.com/news/2026/news260918-2.html"
-      }
-    ],
-    "note": ""
-  },
-  {
-    "date": "2026-09-18",
-    "org": "ニチレイグループ",
-    "cat": [
-      "不正アクセス",
-      "情報漏えい",
-      "サービス停止"
-    ],
-    "status": "漏えい確認",
-    "info": "配送先：氏名・住所・電話。取引先：会社・部署・役職・氏名・住所・電話・メール。従業員等：氏名、生年月日、性別、住所、電話、メール、社員ID、給与・賞与、在留資格、人事・異動情報等。",
-    "impact": "7月の攻撃について第7報。停止した業務は7月24日までに復旧。",
-    "scope": "53,866件（配送先3,308、取引先6,849、従業員等43,709）。家族・応募者・一部退職者も含む。",
-    "exclude": "カード情報は含まない。",
-    "action": "人事や配送を装った連絡に注意。給与・家族情報を知っていることだけで相手を信用しない。",
-    "sources": [
-      {
-        "label": "公式発表",
-        "url": "https://www.nichirei.co.jp/news/2026/524.html"
-      }
-    ],
-    "note": "第7報。"
-  },
-  {
-    "date": "2026-09-25",
-    "org": "タイムズカー",
-    "cat": [
-      "不正アクセス",
-      "情報漏えい"
-    ],
-    "status": "漏えい確認",
-    "info": "氏名、住所、生年月日、電話、メール、法人・部署、運転免許証情報、連携ID、不可逆変換済みパスワード。約160万アカウントでは免許証、公共料金書類、学生証、家族確認書類等の画像にも影響。",
-    "impact": "会員システムへの不正アクセス。",
-    "scope": "退会者を含む約660万アカウント。画像対象はその一部。",
-    "exclude": "カード情報は対象外。不可逆変換済みでも使い回しは避ける。",
-    "action": "同一パスワードを使う他サービスを変更。本人確認書類が対象の場合は個別通知を確認し、不審な契約・本人確認依頼に注意する。",
-    "sources": [
-      {
-        "label": "公式発表",
-        "url": "https://share.timescar.jp/news/2026/0929/1816.html"
-      },
-      {
-        "label": "公式FAQ",
-        "url": "https://corp.timescar.jp/mail/announce/faq.pdf"
-      }
-    ],
-    "note": "9月25日初報。9月29日続報・10月1日FAQを反映。"
-  },
-  {
-    "date": "2026-09-26",
-    "org": "京王電鉄グループ",
+    "date": "2026-10-07",
+    "org": "IDCフロンティア／IDCFクラウド",
     "cat": [
       "ランサムウェア",
       "サービス停止"
     ],
     "status": "調査中",
-    "info": "機密情報・顧客情報の流出有無を調査中。具体的な情報項目・件数は未公表。",
-    "impact": "9月26日未明にサーバーのランサムウェア被害。一部の業務・営業システムに影響し、ネットワークを隔離。",
-    "scope": "グループの一部システム。",
-    "exclude": "鉄道運行への影響はないと説明。情報流出は確認されていない。",
-    "action": "サービスの最新稼働状況を公式サイトで確認。パスワード流出が判明した事案として断定して案内しない。",
+    "info": "漏えいの有無、具体的な情報項目・件数は未確定。",
+    "impact": "東日本リージョン1でランサムウェア被害を確認。サービス障害が発生し調査・対応を継続。 シックス・アパートは10月8日、Movable Typeクラウド版の対象31台はIDCF上で復旧の見込みがないと発表。10月7日午前1時の別基盤バックアップを用い、さくらのクラウドへ移行・復旧中。",
+    "scope": "495の企業・自治体に影響。",
+    "exclude": "影響組織数は漏えい人数ではない。利用先のサイト停止も個別の攻撃とは限らない。 この31台の状況からIDCF全利用者のデータ消失を推定しない。",
+    "action": "利用組織は公式障害情報と自組織のサービス影響を確認。復旧予定やデータ状況が確定するまで、推測を事実として案内しない。",
     "sources": [
       {
         "label": "公式発表",
-        "url": "https://www.keio.co.jp/news/update/announce/nr260926v13404/"
+        "url": "https://www.idcf.jp/news/topics/20261007002"
+      },
+      {
+        "label": "シックス・アパート第2報（10/8）",
+        "url": "https://www.sixapart.jp/movabletype/news/2026/10/08-0900.html"
+      },
+      {
+        "label": "サイバー大学第2報（10/8）",
+        "url": "https://www.cyber-u.ac.jp/information/y261008_02.html"
       }
     ],
-    "note": ""
+    "note": "",
+    "updated": "2026-10-08",
+    "changeType": "利用先続報",
+    "change": "シックス・アパートの復旧対応とサイバー大学への影響を追加。IDCF自身の新たな発表日とは区別。",
+    "followup": "2026-10-07",
+    "relatedDate": "2026-10-08"
   },
   {
-    "date": "2026-09-27",
-    "org": "スターツ出版／OZmall",
+    "date": "2026-10-07",
+    "org": "戸田建設",
+    "cat": [
+      "不正アクセス",
+      "情報漏えい"
+    ],
+    "status": "漏えい確認",
+    "info": "取引先のメールアドレス最大7,200件、取引データ最大6,000件。従業員4,778人の氏名、住所、電話番号、メールアドレス、所属部署。",
+    "impact": "取引先への支払いを管理するシステム等への不正アクセス。対象システムを隔離。",
+    "scope": "取引先と従業員が対象。各区分の件数は単純合算しない。",
+    "exclude": "取引データの詳細項目は未公表。銀行口座情報などを含むとは推定しない。公開・不正利用は未確認。",
+    "action": "運営元の個別通知を確認し、関係者を装う不審な連絡は公式窓口で確認する。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.toda.co.jp/news/2026/20261007_006350.html"
+      }
+    ],
+    "note": "",
+    "updated": "2026-10-07",
+    "changeType": "新規追加",
+    "change": "今回の一覧に新規掲載。"
+  },
+  {
+    "date": "2026-10-07",
+    "org": "HIS／H.I.S. TOURS（タイ子会社）",
     "cat": [
       "不正アクセス",
       "情報漏えい"
     ],
     "status": "漏えいの可能性",
-    "info": "メールアドレス。一部に氏名・都道府県。",
-    "impact": "会員関連情報への不正アクセスについて調査。",
-    "scope": "退会者を含む442,779件。",
-    "exclude": "詳細住所・電話の流出を示す情報はなく、カード情報は外部管理。",
-    "action": "予約や特典を装うメールに注意。メールアドレスだけの流出からパスワード漏えいを推定しない。",
+    "info": "パスポート情報（ローマ字氏名、署名の氏名、性別、生年月日、パスポート番号、有効期限）およびアレルギー情報。",
+    "impact": "タイ子会社への不正アクセスに関する調査結果を公表。10月7日19:30に対象外項目を追記。",
+    "scope": "最大627人。2017年、2019〜2020年、2024〜2025年の公表された条件に該当するタイ旅行客。全旅行客ではない。",
+    "exclude": "電話番号、住所、メールアドレス、クレジットカード情報は対象外（19:30追記）。",
+    "action": "対象旅行・個別通知を確認。パスポート情報を知る相手でも信用せず、偽の本人確認・再提出要求に注意する。",
     "sources": [
       {
         "label": "公式発表",
-        "url": "https://starts-pub.jp/info20261001"
+        "url": "https://www.his.co.jp/assets/20261007.pdf"
       }
     ],
-    "note": "9月27日初報、10月1日続報を反映。"
+    "note": "",
+    "updated": "2026-10-07",
+    "changeType": "新規追加",
+    "change": "今回の一覧に新規掲載。",
+    "followup": "2026-10-07 19:30"
   },
   {
-    "date": "2026-09-27",
-    "org": "東京メトロ／To Me CARD",
+    "date": "2026-10-07",
+    "org": "損保ジャパン／SMILING ROAD",
+    "cat": [
+      "委託先被害",
+      "情報漏えい"
+    ],
+    "status": "漏えいの可能性",
+    "info": "氏名、電話番号、住所、メールアドレス、勤務先会社・部署・業種・代理店、ドライバーID、運転アラートの種類・日時、車載機シリアル番号、申込番号、問い合わせ件名・本文等。",
+    "impact": "委託先i-askへの不正アクセス。自社システムへの侵入は確認されていない。",
+    "scope": "延べ約6万件の問い合わせ。人数ではない。i-ask全体の件数と重複合算しない。",
+    "exclude": "金融機関口座、クレジットカード情報、マイナンバーカード情報は含まれない。",
+    "action": "運営元の個別通知を確認し、関係者を装う不審な連絡は公式窓口で確認する。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.sompo-japan.co.jp/-/media/SJNK/files/news/2026/20261007_1.pdf?la=ja-JP"
+      }
+    ],
+    "note": "",
+    "updated": "2026-10-07",
+    "changeType": "新規追加",
+    "change": "今回の一覧に新規掲載。"
+  },
+  {
+    "date": "2026-10-07",
+    "org": "埼玉県／渋沢MIX",
+    "cat": [
+      "不正アクセス",
+      "情報漏えい",
+      "サービス停止"
+    ],
+    "status": "不正閲覧確認",
+    "info": "約2,200人の氏名・メールアドレス等を含む一覧が不正閲覧された。うち3人はさらに詳細な情報を閲覧されたが、具体的項目は未公表。",
+    "impact": "登録情報の一部改ざんと不正なメール送信も確認。会員登録・施設予約を停止。",
+    "scope": "会員申請を受け付けた約2,200人。3人はその内数。",
+    "exclude": "データ窃取・不正利用・二次被害は未確認。不正閲覧の確認とは区別する。",
+    "action": "運営元の個別通知を確認し、関係者を装う不審な連絡は公式窓口で確認する。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.pref.saitama.lg.jp/a0803/news/page/news2026100702.html"
+      }
+    ],
+    "note": "",
+    "updated": "2026-10-07",
+    "changeType": "新規追加",
+    "change": "今回の一覧に新規掲載。"
+  },
+  {
+    "date": "2026-10-07",
+    "org": "セレス／ポイントインカム",
     "cat": [
       "不正アクセス",
       "情報漏えい"
     ],
     "status": "漏えいの可能性",
-    "info": "配信停止管理の対象となったメールアドレス。",
-    "impact": "関連サーバーへの不正アクセス。",
-    "scope": "不達等により配信停止管理されていた約5.9万件。",
-    "exclude": "当該サーバーに他の個人情報は保管されていないと説明。",
-    "action": "カード会社や交通事業者を装うメールに注意。カード番号やパスワード流出と混同しない。",
+    "info": "会員および従業員等の情報が閲覧されたおそれ。具体的な情報項目は未公表。",
+    "impact": "10月5日に不正アクセスを検知し停止。対象者へ個別連絡。",
+    "scope": "会員88件、従業員等107件、計195件。",
+    "exclude": "クレジットカード等の決済情報は保有していない。パスワードなど未公表項目を推測で対象に含めない。",
+    "action": "運営元の個別通知を確認し、不審な連絡は公式窓口で確認する。",
     "sources": [
       {
         "label": "公式発表",
-        "url": "https://www.to-me-card.jp/important/202609-01/index.html"
+        "url": "https://next.ceres-inc.jp/news/detail/20261007-2/"
       }
     ],
-    "note": ""
+    "note": "",
+    "updated": "2026-10-08",
+    "changeType": "新規追加",
+    "change": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。"
   },
   {
-    "date": "2026-09-28",
-    "org": "サンポー食品",
+    "date": "2026-10-07",
+    "org": "サイバー大学",
     "cat": [
-      "サイト改ざん",
-      "不正アクセス"
+      "委託先被害",
+      "サービス停止"
     ],
     "status": "漏えい未確認",
-    "info": "漏えいが確認された個人情報項目の公表なし。",
-    "impact": "Webシステムの脆弱性悪用が疑われ、管理者権限取得・サイト改ざんを確認。",
-    "scope": "Webサイト。",
-    "exclude": "個人情報漏えいは確認されていないと報道。",
-    "action": "不審な遷移先で情報を入力していた場合は、入力先と内容を確認し該当アカウントを保護する。",
+    "info": "個人情報漏えいは確認されていない。",
+    "impact": "IDCFクラウド障害で履修登録、学費決済、シラバス等が停止。10月8日、退避バックアップを用いた別基盤への再構築を検討中と公表。",
+    "scope": "復旧時期未定。",
+    "exclude": "授業用Cloud Campusは別基盤で正常稼働。大学全体の授業停止とは異なる。",
+    "action": "運営元の個別通知を確認し、不審な連絡は公式窓口で確認する。",
     "sources": [
       {
         "label": "公式発表",
-        "url": "https://sanpofoods.co.jp/news/archives/1658/"
-      },
-      {
-        "label": "報道：セキュリティ対策Lab",
-        "url": "https://rocket-boys.co.jp/security-measures-lab/sanpo-foods-website-unauthorized-access-defacement/"
+        "url": "https://www.cyber-u.ac.jp/information/y261008_02.html"
       }
     ],
-    "note": "公式検索結果で改ざんを確認。本文取得ができなかったため報道も併記。"
+    "note": "IDCFクラウド事案の利用組織側への影響。同一攻撃を重複計上しない。",
+    "updated": "2026-10-08",
+    "changeType": "新規追加",
+    "change": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。",
+    "followup": "2026-10-08"
   },
   {
-    "date": "2026-09-29",
-    "org": "イープラス／払戻し申請",
-    "cat": [
-      "不正アクセス",
-      "情報漏えい"
-    ],
-    "status": "漏えい確認",
-    "info": "共通：メール、カタカナ氏名、公演・会場・日時。銀行振込の751件は銀行名・支店・口座種別・口座番号・名義。郵便払戻し68件は郵便番号・住所・氏名も対象。",
-    "impact": "払戻し申請情報への不正アクセス。",
-    "scope": "2022年6月30日〜2026年9月11日の申請1,463件。カード返金644件を含む。",
-    "exclude": "パスワード・カード情報は含まない。",
-    "action": "返金のための送金・暗証番号入力を求める連絡に注意。口座情報対象者は利用明細も確認する。",
-    "sources": [
-      {
-        "label": "公式発表",
-        "url": "https://support-qa.eplus.jp/hc/ja/articles/62711500727961"
-      }
-    ],
-    "note": ""
-  },
-  {
-    "date": "2026-09-29",
-    "org": "セイコーマート",
-    "cat": [
-      "不正アクセス",
-      "情報漏えい"
-    ],
-    "status": "漏えいの可能性",
-    "info": "氏名、性別、生年月日、住所、電話、メール、入退会日。",
-    "impact": "会員情報への不正アクセス。",
-    "scope": "約57万件。",
-    "exclude": "パスワードは対象外、カード情報は保管していない。",
-    "action": "会員特典や配送・返金を装う連絡に注意する。",
-    "sources": [
-      {
-        "label": "公式発表",
-        "url": "https://online.seicomart.co.jp/delivery/cms/preview.php?pre_no=119"
-      }
-    ],
-    "note": ""
-  },
-  {
-    "date": "2026-09-29",
-    "org": "ヤマト運輸／クロネコ代金後払いサービス",
-    "cat": [
-      "不正アクセス",
-      "情報漏えい",
-      "サービス停止"
-    ],
-    "status": "漏えいの可能性",
-    "info": "利用者の氏名、住所、電話、メール、与信番号、請求金額、債権残高、商品明細。一部加盟店の名称・コード、担当社員の氏名。",
-    "impact": "9月28日に不正アクセスを確認。後払いサービスの復旧時期を調査。",
-    "scope": "一部利用者・加盟店等。範囲と件数は調査中。",
-    "exclude": "カード情報・パスワードは含まない。宅急便等の他サービスは通常どおり。",
-    "action": "正しい購入明細や請求金額を示す連絡でも、支払先変更は公式窓口で確認する。",
-    "sources": [
-      {
-        "label": "公式発表",
-        "url": "https://www.yamato-hd.co.jp/important/info_260929_1.html"
-      }
-    ],
-    "note": "9月29日初報。10月2日第2報を反映。"
-  },
-  {
-    "date": "2026-09-29",
-    "org": "日本郵便／ゆうID等",
-    "cat": [
-      "アカウント侵害",
-      "情報漏えい"
-    ],
-    "status": "漏えい確認",
-    "info": "ゆうID、氏名、住所、生年月日、性別、電話、メール、勤務先、家族構成、アドレス帳。アドレス帳内の第三者の氏名・住所・会社・電話・メール、発送の送り主／受取人、追跡番号、内容品、発送日等も対象になり得る。",
-    "impact": "第三者による情報の取得。",
-    "scope": "19人に関する69件。項目は各人の登録内容による。",
-    "exclude": "全利用者・全項目の漏えいではない。",
-    "action": "公式の通知を確認。配送先や家族情報を使った偽の再配達通知に注意。ログイン情報を入力した場合は認証情報を変更する。",
-    "sources": [
-      {
-        "label": "公式発表",
-        "url": "https://files.japanpost.jp/assets/34d9d11432734cfaa759e78fe395b688/18239b871f714763aa7eb15c25e7b30b/20260929_01.pdf"
-      }
-    ],
-    "note": ""
-  },
-  {
-    "date": "2026-09-30",
-    "org": "ベネフィット・ワン／ベネワン・プラットフォーム",
-    "cat": [
-      "設定不備",
-      "情報漏えい"
-    ],
-    "status": "漏えい確認",
-    "info": "社員・職員番号、氏名、性別、生年月日、企業・団体名、所属・役職、入退社情報。",
-    "impact": "アンケート結果のダウンロードで他企業の従業員情報が混入。条件設定の不備。",
-    "scope": "2,322企業・団体、13,460人。実際のダウンロードは1社1人。",
-    "exclude": "カード・銀行口座・要配慮情報・メール・パスワードは含まない。受領先で削除、転送・複製なしを確認。",
-    "action": "勤務先の個別通知を確認。人事情報を利用したなりすましに注意。",
-    "sources": [
-      {
-        "label": "公式発表",
-        "url": "https://corp.benefit-one.co.jp/company/news/news/2026/20260930/20260930.pdf"
-      }
-    ],
-    "note": ""
-  },
-  {
-    "date": "2026-09-30",
-    "org": "佐川急便",
-    "cat": [
-      "不正アクセス",
-      "情報漏えい",
-      "サービス停止"
-    ],
-    "status": "漏えいの可能性",
-    "info": "配送の送り主・受取人の氏名／会社名、住所、電話。契約荷主情報、スマートクラブの氏名、住所、電話、メール、ID等。",
-    "impact": "不正アクセスに伴い一部Webサービスを停止。荷物の配送は継続。",
-    "scope": "約100日分の配送情報等が対象候補。 横須賀市は6月下旬以降の対象配送について寄付者の氏名・住所・電話番号が漏えいした可能性を公表。人数・漏えい確定は未公表。",
-    "exclude": "カード・パスワードは対象外と報道。",
-    "action": "実際の配送情報を使う再配達詐欺に注意。公式アプリや直接開いた公式サイトで確認する。",
-    "sources": [
-      {
-        "label": "公式発表",
-        "url": "https://www2.sagawa-exp.co.jp/information/detail/420/"
-      },
-      {
-        "label": "報道：ITmedia",
-        "url": "https://www.itmedia.co.jp/news/article/2610/01/2000001933/"
-      },
-      {
-        "label": "横須賀市発表（10/7）",
-        "url": "https://www.city.yokosuka.kanagawa.jp/4430/nagekomi/20261007.html"
-      }
-    ],
-    "note": "9月30日初報。詳細は10月1日報道で補完。",
-    "updated": "2026-10-07",
-    "followup": "2026-10-07",
-    "changeType": "関連先追加",
-    "change": "横須賀市のふるさと納税返礼品配送に伴う寄付者情報への影響を追加。"
-  },
-  {
-    "date": "2026-10-01",
-    "org": "ニッポンレンタカー",
-    "cat": [
-      "アカウント侵害",
-      "情報漏えい"
-    ],
-    "status": "漏えいの可能性",
-    "info": "氏名、電話、メール、ログインID、利用・予約履歴、免許証番号、住所、生年月日。登録があればカード下4桁・名義。",
-    "impact": "9月19〜21日の不正アクセスを9月29日に確認。",
-    "scope": "55人。9月26日公表の41人の別事案と区別。",
-    "exclude": "カード番号全桁の流出とはされていない。",
-    "action": "不審な予約や登録変更を確認。使い回しのパスワードを解消し、本人確認資料の悪用を装う連絡にも注意する。",
-    "sources": [
-      {
-        "label": "公式発表",
-        "url": "https://www.nipponrentacar.co.jp/info/202610_2.html"
-      }
-    ],
-    "note": ""
-  },
-  {
-    "date": "2026-10-01",
-    "org": "日本原子力研究開発機構（JAEA）",
-    "cat": [
-      "不正アクセス",
-      "情報漏えい"
-    ],
-    "status": "漏えい確認",
-    "info": "運転免許証、マイナンバーカード、旅券、在留カード等の本人確認画像、放射線業務従事者の健康診断、資格証明。マイナンバー6人分を含む。",
-    "impact": "不正ダウンロードされた2,419ファイル中、367ファイルに個人情報。",
-    "scope": "175人分。本人確認200、健康診断146、資格証明21ファイル。",
-    "exclude": "ID・パスワードや申込フォームの口座情報は対象外。",
-    "action": "本人確認資料の悪用が疑われる連絡は保存し、機構の窓口と発行元へ相談。パスワード変更だけでは書類情報の漏えいは解消しない。",
-    "sources": [
-      {
-        "label": "公式発表",
-        "url": "https://www.jaea.go.jp/02/press2026/p26100105/"
-      }
-    ],
-    "note": ""
-  },
-  {
-    "date": "2026-10-02",
-    "org": "JOGMEC",
-    "cat": [
-      "不正アクセス",
-      "情報漏えい"
-    ],
-    "status": "漏えいの可能性",
-    "info": "公表された対象項目はメールアドレス。",
-    "impact": "9月9日に不正アクセスを確認。",
-    "scope": "職員約1,100人、外部関係者約7,400人。",
-    "exclude": "他の具体的項目の漏えいは本資料から断定しない。",
-    "action": "JOGMECや取引先を装うメールに注意する。",
-    "sources": [
-      {
-        "label": "公式発表",
-        "url": "https://www.jogmec.go.jp/news/information/information_00706.html"
-      }
-    ],
-    "note": ""
-  },
-  {
-    "date": "2026-10-02",
-    "org": "サミーネットワークス／777CON-PASS",
-    "cat": [
-      "不正アクセス",
-      "情報漏えい"
-    ],
-    "status": "漏えいの可能性",
-    "info": "店舗予約者の電話番号、性別、生年月日、ユーザーID、ニックネーム、任意プロフィール写真、お気に入りホール、位置情報に基づく行動エリア等。",
-    "impact": "9月25日の攻撃、9月30日に経路遮断。",
-    "scope": "登録内容によって対象項目が異なる。",
-    "exclude": "本人認証用顔写真、ログイン用メール・パスワード、氏名は対象外。",
-    "action": "SMSや利用店舗を装う連絡に注意。位置・行動情報とプロフィール情報の組合せに留意する。",
-    "sources": [
-      {
-        "label": "公式発表",
-        "url": "https://www.sammy-net.jp/news/2026/10/777con-pass-6.html"
-      }
-    ],
-    "note": ""
-  },
-  {
-    "date": "2026-10-02",
-    "org": "セーファーインターネット協会（SIA）",
+    "date": "2026-10-07",
+    "org": "日水物流／ニッスイ",
     "cat": [
       "委託先被害",
-      "情報漏えい"
-    ],
-    "status": "漏えいの可能性",
-    "info": "氏名、メール、通報・問い合わせ内容、フォーム送信内容、イベント・研修申込、メール本文等。",
-    "impact": "さくらのレンタルサーバへの不正アクセスに伴う影響の可能性。",
-    "scope": "各窓口等に情報を送信した人。",
-    "exclude": "第三者の取得は確認されていない。",
-    "action": "通報・相談内容を知る相手からの連絡でも真偽確認。内容に認証情報を書いていた場合は該当情報の変更を検討する。",
-    "sources": [
-      {
-        "label": "公式発表",
-        "url": "https://www.saferinternet.or.jp/info/35403/"
-      }
-    ],
-    "note": ""
-  },
-  {
-    "date": "2026-10-02",
-    "org": "ムーンスター",
-    "cat": [
-      "不正アクセス",
-      "情報漏えい"
-    ],
-    "status": "漏えいの可能性",
-    "info": "氏名、住所、電話、メール、注文情報。",
-    "impact": "3月公表事案の続報。注文情報等に関連するフィッシングが確認された。",
-    "scope": "対象範囲は公式通知を参照。",
-    "exclude": "カード・パスワードは保管していない。",
-    "action": "注文内容の一致だけで信用しない。偽の返金案内や送金要求を公式窓口で確認する。",
-    "sources": [
-      {
-        "label": "公式発表",
-        "url": "https://www.moonstar.co.jp/information/2026/10/post-4.html"
-      }
-    ],
-    "note": "期間内の続報を掲載。初報は3月26日。"
-  },
-  {
-    "date": "2026-10-02",
-    "org": "大阪公立大学",
-    "cat": [
-      "ランサムウェア",
       "サービス停止"
     ],
     "status": "調査中",
-    "info": "個人情報流出の有無は調査中。具体的な漏えい項目・漏えい人数は未確定。報道の約13万人分は保管情報の規模であり流出人数ではない。",
-    "impact": "10月2日未明に仮想化基盤で大規模障害。ネットワーク、メール、Web、教務、財務、人事給与、図書館等が停止。10月8日まで休講。 10月7日発表では10月9日の授業再開に向け準備中、詳細は10月8日告知予定。メールの確認・返信ができず、復旧後も過去の受信メールが読めない可能性がある。",
-    "scope": "全キャンパスの多くの情報システム。",
-    "exclude": "附属病院・獣医臨床センターは通常運営と説明。",
-    "action": "休講・履修登録・復旧予定を大学の臨時サイトで確認。流出が確定したとして個別項目の変更を一律に求めない。",
+    "info": "個人情報・顧客情報等の漏えい有無を調査中。具体的な項目・件数は未公表。",
+    "impact": "委託先データセンターへの不正アクセス疑いに伴う障害で、入出庫業務が停止。",
+    "scope": "業務影響の範囲・復旧状況は公式続報を確認。",
+    "exclude": "公式発表はデータセンター事業者名を明示していないため、IDCFとの同一性を断定しない。",
+    "action": "運営元の個別通知を確認し、不審な連絡は公式窓口で確認する。",
     "sources": [
       {
         "label": "公式発表",
-        "url": "https://www.omu.moe/news/2026-10-06-7fb5a624.html"
-      },
-      {
-        "label": "公式：障害初報・休講案内",
-        "url": "https://e.omu.ac.jp/"
-      },
-      {
-        "label": "報道：保管情報の規模（MBS）",
-        "url": "https://newsdig.tbs.co.jp/articles/mbs/2990964?display=1"
-      },
-      {
-        "label": "授業に関する続報（10/7）",
-        "url": "https://www.omu.moe/news/2026-10-06-0e4be7e6.html"
-      },
-      {
-        "label": "メールに関する続報（10/7）",
-        "url": "https://www.omu.moe/news/2026-10-06-9a161963.html"
+        "url": "https://www.nissui.co.jp/news/2026100702.html"
       }
     ],
-    "note": "10月2日障害初報。10月5日会見、10月6日公式資料でランサムウェアとの判断を確認。",
-    "updated": "2026-10-07",
-    "followup": "2026-10-07",
-    "changeType": "続報",
-    "change": "10/9の授業再開に向けた準備と、メールの確認・返信ができない状況を追記。"
+    "note": "",
+    "updated": "2026-10-08",
+    "changeType": "新規追加",
+    "change": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。"
   },
   {
-    "date": "2026-10-02",
-    "org": "第一生命保険",
+    "date": "2026-10-07",
+    "org": "小平市",
+    "cat": [
+      "委託先被害",
+      "ランサムウェア",
+      "サービス停止",
+      "情報漏えい"
+    ],
+    "status": "漏えいの可能性",
+    "info": "問い合わせフォームに入力された氏名、住所、電話番号、メールアドレス等が漏えいしたおそれ。",
+    "impact": "委託先クラウドのランサムウェア被害により、ホームページや関連サービスに障害と報道。",
+    "scope": "件数・対象期間は未確認。10月7日障害、8日漏えい注意喚起。",
+    "exclude": "漏えい確定ではない。IDCFとの関連は断定しない。",
+    "action": "運営元の個別通知を確認し、不審な連絡は公式窓口で確認する。",
+    "sources": [
+      {
+        "label": "報道（一次資料本文未確認）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/kodaira_city_website_ransomware/"
+      }
+    ],
+    "note": "追加候補として掲載。発表元の一次資料本文を取得できておらず、記載内容は報道ベース。",
+    "updated": "2026-10-08",
+    "changeType": "新規追加",
+    "change": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。",
+    "followup": "2026-10-08",
+    "evidence": "一次資料未確認"
+  },
+  {
+    "date": "2026-10-06",
+    "org": "MrMax",
     "cat": [
       "不正アクセス",
       "情報漏えい"
     ],
-    "status": "漏えいの可能性",
-    "info": "社員番号、氏名、住所、電話、性別、所属・役職、資格、担当業務、管理者名等。",
-    "impact": "従業員等に関する情報への不正アクセス。",
-    "scope": "約12万人。退職者約7万人を含む。内勤1967年以降・営業2017年以降の一部退職者も対象。",
-    "exclude": "顧客情報の事案ではない。",
-    "action": "在籍・退職時の人事情報を使った連絡に注意。会社からの対象通知を確認する。",
+    "status": "一部漏えい確認",
+    "info": "会員ID、氏名、メール、電話。",
+    "impact": "会員情報の一部が外部へ流出したことを確認し、範囲を調査。",
+    "scope": "10月3日時点で最大1,735,154人が対象候補。",
+    "exclude": "住所、生年月日、カード、パスワード、購入履歴は対象外。",
+    "action": "会員特典・配送・返金を装う連絡に注意する。",
     "sources": [
       {
         "label": "公式発表",
-        "url": "https://www.dai-ichi-life.co.jp/information/pdf/index_192.pdf"
+        "url": "https://www.mrmax.co.jp/info/incident_20261006/"
       }
     ],
     "note": ""
   },
   {
-    "date": "2026-10-02",
-    "org": "藤田観光／ホテル椿山荘東京等",
+    "date": "2026-10-06",
+    "org": "nimoca",
+    "cat": [
+      "不正アクセス",
+      "情報漏えい",
+      "サービス停止"
+    ],
+    "status": "漏えい確認",
+    "info": "17桁のカード番号、生年月日、メールアドレス。",
+    "impact": "不正アクセスに伴い10月4日にサービス停止。",
+    "scope": "521件。",
+    "exclude": "氏名、住所、電話、性別、利用履歴の漏えいは確認されていない。",
+    "action": "カード番号等を使った問い合わせ・本人確認を装う連絡に注意。対象通知とサービス再開情報を確認する。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.nimoca.jp/storage/files/information/107/20261006.pdf"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "date": "2026-10-06",
+    "org": "シチズン時計／問い合わせフォーム",
     "cat": [
       "委託先被害",
       "情報漏えい"
     ],
     "status": "漏えいの可能性",
-    "info": "予約管理サービスTEMAIRAZUに関連する宿泊者情報。具体的項目の全容は未公表。",
-    "impact": "外部予約管理システムに関連して、不審な宿泊案内・フィッシングに注意喚起。",
-    "scope": "ホテル椿山荘東京など対象13施設。",
-    "exclude": "同システムでカード情報は扱っていないと説明。",
-    "action": "宿泊予約の内容が正しくても再決済リンクへ進まない。ホテルへ直接確認する。",
+    "info": "氏名、住所、電話、メール、問い合わせ内容。自由記入欄に口座・カード等を書いた場合はその内容も対象候補。",
+    "impact": "スカラコミュニケーションズの委託サービスへの不正アクセス。",
+    "scope": "シチズン、ブローバ、フレデリック・コンスタント関連で約10万人。",
+    "exclude": "社内システム・EC会員データ全体への侵入ではない。",
+    "action": "問い合わせ内容を使った連絡に注意。自由記入欄に機密情報を書いた人は内容に応じた変更・相談を行う。",
     "sources": [
       {
         "label": "公式発表",
-        "url": "https://hotel-chinzanso-tokyo.jp/news/20260924/"
-      }
-    ],
-    "note": "掲載対象の10月2日更新に基づく。URLの数字を公表日とみなさない。"
-  },
-  {
-    "date": "2026-10-03",
-    "org": "アバハウスインターナショナル",
-    "cat": [
-      "不正アクセス",
-      "情報漏えい"
-    ],
-    "status": "漏えいの可能性",
-    "info": "会員ID、氏名、住所、電話、メール、生年月日、性別、注文日・商品・金額・配送先。退会者の残存取引情報も対象候補。",
-    "impact": "注文情報と一致する不審な返金案内メールを確認。",
-    "scope": "対象人数は調査中。",
-    "exclude": "カード情報・セキュリティコードは保管していない。",
-    "action": "公式案内に従いAMCパスワードを変更。返金のための送金・外部連絡アプリへの誘導を警戒する。",
-    "sources": [
+        "url": "https://www.citizen.co.jp/release/news/detail/2026/20261006.html"
+      },
       {
-        "label": "公式発表",
-        "url": "https://abahouse.co.jp/news/2005/"
+        "label": "委託先発表（10/6）",
+        "url": "https://scala-com.jp/news/2026/10-1/"
+      },
+      {
+        "label": "関連：損保ジャパン（10/7）",
+        "url": "https://www.sompo-japan.co.jp/-/media/SJNK/files/news/2026/20261007_1.pdf?la=ja-JP"
       }
     ],
-    "note": "10月2日付案内を含む、Web掲載10月3日。"
+    "note": " 委託先全体の最大5社・延べ713,126件には重複する情報があるため、各社の件数と合算しない。",
+    "updated": "2026-10-07",
+    "relatedDate": "2026-10-06・10-07",
+    "changeType": "関連情報補足",
+    "change": "共通委託先i-askの発表と損保ジャパンへの影響を関連付け。自社単独の件数増加を示す続報ではない。"
   },
   {
-    "date": "2026-10-03",
-    "org": "リクルート／スタディサプリ",
+    "date": "2026-10-06",
+    "org": "楽天ドライブ",
     "cat": [
       "不正アクセス",
       "情報漏えい"
     ],
     "status": "漏えい確認",
-    "info": "登録メールアドレス。",
-    "impact": "会員登録に関する機能を利用したメールアドレスの取得。9月30日に発見し修正。",
-    "scope": "3,687件。小学・中学・高校・大学受験講座。",
-    "exclude": "メールボックスの中身やパスワードの流出ではない。",
-    "action": "教育サービスを装うメールに注意。パスワードの漏えいが確認されたとの案内はしない。",
+    "info": "687アカウントのアカウント名・表示名・プロフィール画像URL。うち313件は加工されたパスワード情報とソルト。別途、保存ファイル（写真・文書等）へのアクセス。",
+    "impact": "8月27日のアカウント情報取得と、1月29日〜9月17日の保存データへの不正アクセス。",
+    "scope": "保存データは15,382アカウント。687件・313件と単純加算しない。",
+    "exclude": "保存文書の内容は利用者ごとに異なり、具体的な全項目は一律に確定できない。",
+    "action": "対象パスワードと使い回し先を変更。保存文書にAPIキー、パスワード、本人確認書類等がないか確認し、該当する秘密情報を更新する。",
     "sources": [
       {
-        "label": "報道：ITmedia",
-        "url": "https://www.itmedia.co.jp/news/article/2610/06/2000002019/"
+        "label": "公式発表",
+        "url": "https://support.rakuten-drive.com/hc/ja/articles/62934949147929"
       }
     ],
-    "note": "10月3日公表を10月6日報道で確認。一次資料未確認。"
+    "note": ""
+  },
+  {
+    "date": "2026-10-06",
+    "org": "アクティブ／食品通販サイト",
+    "cat": [
+      "不正アクセス",
+      "情報漏えい"
+    ],
+    "status": "漏えいの可能性",
+    "info": "店舗・取引先名、住所、電話番号、メールアドレス、注文金額、商品コード、配送先住所等。",
+    "impact": "SQLインジェクションによる不正アクセス。不正な管理者権限による情報出力の痕跡を確認。",
+    "scope": "最大54,916件。",
+    "exclude": "カード情報・銀行口座情報は保有せず、ログインパスワードは対象外。",
+    "action": "運営元の個別通知を確認し、関係者を装う不審な連絡は公式窓口で確認する。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.active-pro.jp/news/4303/"
+      }
+    ],
+    "note": "",
+    "updated": "2026-10-07",
+    "changeType": "新規追加",
+    "change": "今回の一覧に新規掲載。"
+  },
+  {
+    "date": "2026-10-06",
+    "org": "旭化成セラピューティクス／Pharma DIGITAL",
+    "cat": [
+      "委託先被害",
+      "不正アクセス",
+      "情報漏えい"
+    ],
+    "status": "漏えいの可能性",
+    "info": "医療従事者の氏名、所属施設名・所在地、職種、診療科等。メールアドレス等を含む区分もある。従業員の氏名・メールアドレス・写真。",
+    "impact": "委託先の医薬情報ネットへの不正アクセス。サイトを停止し侵入経路に対処。",
+    "scope": "公表区分：約514,000件、メールアドレス等を含む区分約44,000件、従業員約700件。区分間の重複が明確でないため単純合算しない。",
+    "exclude": "カード情報・要配慮個人情報は保有していないと説明。不正利用は未確認。",
+    "action": "運営元の個別通知を確認し、関係者を装う不審な連絡は公式窓口で確認する。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.asahi-kasei.co.jp/pharma/oshirase_20261006.html"
+      }
+    ],
+    "note": "",
+    "updated": "2026-10-07",
+    "changeType": "新規追加",
+    "change": "今回の一覧に新規掲載。"
+  },
+  {
+    "date": "2026-10-06",
+    "org": "スカラコミュニケーションズ／i-ask",
+    "cat": [
+      "不正アクセス",
+      "情報漏えい"
+    ],
+    "status": "漏えいの可能性",
+    "info": "氏名、メールアドレス、問い合わせ内容等。具体的項目は利用企業によって異なる。",
+    "impact": "管理画面への不正ログインと不正プログラム設置。同一サーバーの利用企業データが取得された可能性。",
+    "scope": "最大5社・延べ713,126件の問い合わせ。人数の重複排除は調査中。",
+    "exclude": "大和証券・シチズン時計・損保ジャパンの事案と関連。各社の件数と重複合算しない。",
+    "action": "運営元の個別通知を確認し、関係者を装う不審な連絡は公式窓口で確認する。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://scala-com.jp/news/2026/10-1/"
+      }
+    ],
+    "note": "",
+    "updated": "2026-10-07",
+    "changeType": "新規追加",
+    "change": "今回の一覧に新規掲載。"
+  },
+  {
+    "date": "2026-10-06",
+    "org": "ソルティドッグ／Google広告管理アカウント",
+    "cat": [
+      "アカウント乗っ取り",
+      "不正アクセス"
+    ],
+    "status": "調査中",
+    "info": "個人情報の漏えい項目・件数は未公表。",
+    "impact": "管理アカウントが侵害され、配下の広告アカウントでオンラインカジノ広告の作成・配信や予算の不正変更が発生。 10月8日も管理者権限は未復旧で、同社は顧客アカウントへログイン・確認できない。Googleの「調査完了」通知は同社の権限復旧を意味しない。",
+    "scope": "管理下の広告アカウントが影響対象候補。実際の配信や費用はアカウントごとに異なる。",
+    "exclude": "Google全体への侵入を意味しない。侵入原因は確定していない。",
+    "action": "広告管理者はキャンペーン、予算、請求、管理権限の不審な変更を確認し、運営会社の案内に従う。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://saltydog.jp/post-389/"
+      }
+    ],
+    "note": "",
+    "updated": "2026-10-08",
+    "changeType": "続報",
+    "change": "管理者権限が未復旧であることを追記。",
+    "followup": "2026-10-08"
+  },
+  {
+    "date": "2026-10-06",
+    "org": "さいたま市民医療センター",
+    "cat": [
+      "媒体紛失",
+      "情報漏えい"
+    ],
+    "status": "漏えいの可能性",
+    "info": "外科手術部位・検体の画像約200枚と、一部患者ID。",
+    "impact": "電子媒体を紛失。媒体にはパスワードが設定されていなかったと報道。",
+    "scope": "約200枚であり、200人ではない。人数は未確認。",
+    "exclude": "顔を識別できる画像は含まれないと報道。外部持ち出し・漏えいは未確認。",
+    "action": "運営元の個別通知を確認し、不審な連絡は公式窓口で確認する。",
+    "sources": [
+      {
+        "label": "報道（一次資料本文未確認）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/saitama-citizens-medical-center-lost-media-surgical-images/"
+      }
+    ],
+    "note": "追加候補として掲載。発表元PDF本文を取得できておらず、記載内容は報道ベース。",
+    "updated": "2026-10-08",
+    "changeType": "新規追加",
+    "change": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。",
+    "evidence": "一次資料未確認"
   },
   {
     "date": "2026-10-05",
@@ -926,101 +642,398 @@
     "note": ""
   },
   {
-    "date": "2026-10-06",
-    "org": "MrMax",
+    "date": "2026-10-05",
+    "org": "アマナ",
     "cat": [
       "不正アクセス",
       "情報漏えい"
     ],
-    "status": "一部漏えい確認",
-    "info": "会員ID、氏名、メール、電話。",
-    "impact": "会員情報の一部が外部へ流出したことを確認し、範囲を調査。",
-    "scope": "10月3日時点で最大1,735,154人が対象候補。",
-    "exclude": "住所、生年月日、カード、パスワード、購入履歴は対象外。",
-    "action": "会員特典・配送・返金を装う連絡に注意する。",
+    "status": "漏えいの可能性",
+    "info": "取引先等の個人情報。具体的な項目・人数は未特定。",
+    "impact": "6月18〜19日、24日に従業員アカウントを使ったVPN不正接続を確認。6月24日に遮断。",
+    "scope": "対象人数・詳細項目は未特定。",
+    "exclude": "漏えいは未確認。一部詳細ログが保存されておらず、漏えい可能性を否定できない。",
+    "action": "運営元の個別通知を確認し、不審な連絡は公式窓口で確認する。",
     "sources": [
       {
         "label": "公式発表",
-        "url": "https://www.mrmax.co.jp/info/incident_20261006/"
+        "url": "https://amana.jp/news/6782/"
       }
     ],
-    "note": ""
+    "note": "",
+    "updated": "2026-10-08",
+    "changeType": "新規追加",
+    "change": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。"
   },
   {
-    "date": "2026-10-06",
-    "org": "nimoca",
+    "date": "2026-10-05",
+    "org": "ホテルリゾートイン石垣島／リゾーツ琉球",
     "cat": [
+      "委託先被害",
       "不正アクセス",
-      "情報漏えい",
-      "サービス停止"
+      "情報漏えい"
     ],
     "status": "漏えい確認",
-    "info": "17桁のカード番号、生年月日、メールアドレス。",
-    "impact": "不正アクセスに伴い10月4日にサービス停止。",
-    "scope": "521件。",
-    "exclude": "氏名、住所、電話、性別、利用履歴の漏えいは確認されていない。",
-    "action": "カード番号等を使った問い合わせ・本人確認を装う連絡に注意。対象通知とサービス再開情報を確認する。",
+    "info": "氏名、ふりがな、メールアドレス、電話番号、郵便番号、住所、生年月日、性別、職業、国籍、入国港、ニックネーム、事前チェックイン用4桁番号。一部にパスポート画像234人、署名画像6人、顔写真5人を含む。",
+    "impact": "委託先の宿泊管理システムに9月18日夜〜19日夕方、不正アクセス。ホテル初報10月5日、運営会社発表10月6日。",
+    "scope": "17,170人。2023年2月12日〜2027年6月24日の宿泊者・予約者・同行者。画像対象者は内数。",
+    "exclude": "カード情報、予約サイト・SNS・メールのパスワードは対象外。他のグループホテルは対象外。",
+    "action": "個別通知を確認。パスポート情報を知る相手でも信用せず、偽の本人確認や書類の再提出要求に注意する。",
     "sources": [
       {
         "label": "公式発表",
-        "url": "https://www.nimoca.jp/storage/files/information/107/20261006.pdf"
+        "url": "https://www.company.resorts.co.jp/news/102/"
+      }
+    ],
+    "note": "",
+    "updated": "2026-10-08",
+    "changeType": "新規追加",
+    "change": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。",
+    "followup": "2026-10-06"
+  },
+  {
+    "date": "2026-10-04",
+    "org": "こしの都ネットワーク",
+    "cat": [
+      "不正アクセス",
+      "フィッシング",
+      "サービス停止"
+    ],
+    "status": "不正閲覧確認",
+    "info": "メールサーバーに保存されたメールアドレス4,082件への不正アクセスを確認。",
+    "impact": "自社メールサーバーからセゾンカードを装うフィッシングメールが送信された。10月4日障害初報、6日注意喚起、7日調査結果。",
+    "scope": "メールアドレス4,082件。人数とは限らない。",
+    "exclude": "外部持ち出しを示すログは未確認。氏名、住所、電話番号、ID、パスワード、カード情報は当該サーバーに保存していない。",
+    "action": "偽メールのURLを開かず削除する。偽サイトに認証情報を入力した場合は公式サイトでパスワードを変更し、使い回し先も変更。カード情報を入力した場合はカード会社に相談する。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://koshinomiyako.jp/info/important/phishing-email2/"
+      }
+    ],
+    "note": "",
+    "updated": "2026-10-08",
+    "changeType": "新規追加",
+    "change": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。",
+    "followup": "2026-10-07"
+  },
+  {
+    "date": "2026-10-03",
+    "org": "アバハウスインターナショナル",
+    "cat": [
+      "不正アクセス",
+      "情報漏えい"
+    ],
+    "status": "漏えいの可能性",
+    "info": "会員ID、氏名、住所、電話、メール、生年月日、性別、注文日・商品・金額・配送先。退会者の残存取引情報も対象候補。",
+    "impact": "注文情報と一致する不審な返金案内メールを確認。",
+    "scope": "対象人数は調査中。",
+    "exclude": "カード情報・セキュリティコードは保管していない。",
+    "action": "公式案内に従いAMCパスワードを変更。返金のための送金・外部連絡アプリへの誘導を警戒する。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://abahouse.co.jp/news/2005/"
+      }
+    ],
+    "note": "10月2日付案内を含む、Web掲載10月3日。"
+  },
+  {
+    "date": "2026-10-03",
+    "org": "リクルート／スタディサプリ",
+    "cat": [
+      "不正アクセス",
+      "情報漏えい"
+    ],
+    "status": "漏えい確認",
+    "info": "登録メールアドレス。",
+    "impact": "会員登録に関する機能を利用したメールアドレスの取得。9月30日に発見し修正。",
+    "scope": "3,687件。小学・中学・高校・大学受験講座。",
+    "exclude": "メールボックスの中身やパスワードの流出ではない。",
+    "action": "教育サービスを装うメールに注意。パスワードの漏えいが確認されたとの案内はしない。",
+    "sources": [
+      {
+        "label": "報道：ITmedia",
+        "url": "https://www.itmedia.co.jp/news/article/2610/06/2000002019/"
+      }
+    ],
+    "note": "10月3日公表を10月6日報道で確認。一次資料未確認。"
+  },
+  {
+    "date": "2026-10-02",
+    "org": "JOGMEC",
+    "cat": [
+      "不正アクセス",
+      "情報漏えい"
+    ],
+    "status": "漏えいの可能性",
+    "info": "公表された対象項目はメールアドレス。",
+    "impact": "9月9日に不正アクセスを確認。",
+    "scope": "職員約1,100人、外部関係者約7,400人。",
+    "exclude": "他の具体的項目の漏えいは本資料から断定しない。",
+    "action": "JOGMECや取引先を装うメールに注意する。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.jogmec.go.jp/news/information/information_00706.html"
       }
     ],
     "note": ""
   },
   {
-    "date": "2026-10-06",
-    "org": "シチズン時計／問い合わせフォーム",
+    "date": "2026-10-02",
+    "org": "サミーネットワークス／777CON-PASS",
+    "cat": [
+      "不正アクセス",
+      "情報漏えい"
+    ],
+    "status": "漏えいの可能性",
+    "info": "店舗予約者の電話番号、性別、生年月日、ユーザーID、ニックネーム、任意プロフィール写真、お気に入りホール、位置情報に基づく行動エリア等。",
+    "impact": "9月25日の攻撃、9月30日に経路遮断。",
+    "scope": "登録内容によって対象項目が異なる。",
+    "exclude": "本人認証用顔写真、ログイン用メール・パスワード、氏名は対象外。",
+    "action": "SMSや利用店舗を装う連絡に注意。位置・行動情報とプロフィール情報の組合せに留意する。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.sammy-net.jp/news/2026/10/777con-pass-6.html"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "date": "2026-10-02",
+    "org": "セーファーインターネット協会（SIA）",
     "cat": [
       "委託先被害",
       "情報漏えい"
     ],
     "status": "漏えいの可能性",
-    "info": "氏名、住所、電話、メール、問い合わせ内容。自由記入欄に口座・カード等を書いた場合はその内容も対象候補。",
-    "impact": "スカラコミュニケーションズの委託サービスへの不正アクセス。",
-    "scope": "シチズン、ブローバ、フレデリック・コンスタント関連で約10万人。",
-    "exclude": "社内システム・EC会員データ全体への侵入ではない。",
-    "action": "問い合わせ内容を使った連絡に注意。自由記入欄に機密情報を書いた人は内容に応じた変更・相談を行う。",
+    "info": "氏名、メール、通報・問い合わせ内容、フォーム送信内容、イベント・研修申込、メール本文等。",
+    "impact": "さくらのレンタルサーバへの不正アクセスに伴う影響の可能性。",
+    "scope": "各窓口等に情報を送信した人。",
+    "exclude": "第三者の取得は確認されていない。",
+    "action": "通報・相談内容を知る相手からの連絡でも真偽確認。内容に認証情報を書いていた場合は該当情報の変更を検討する。",
     "sources": [
       {
         "label": "公式発表",
-        "url": "https://www.citizen.co.jp/release/news/detail/2026/20261006.html"
-      },
-      {
-        "label": "委託先発表（10/6）",
-        "url": "https://scala-com.jp/news/2026/10-1/"
-      },
-      {
-        "label": "関連：損保ジャパン（10/7）",
-        "url": "https://www.sompo-japan.co.jp/-/media/SJNK/files/news/2026/20261007_1.pdf?la=ja-JP"
+        "url": "https://www.saferinternet.or.jp/info/35403/"
       }
     ],
-    "note": " 委託先全体の最大5社・延べ713,126件には重複する情報があるため、各社の件数と合算しない。",
-    "updated": "2026-10-07",
-    "relatedDate": "2026-10-06・10-07",
-    "changeType": "関連情報補足",
-    "change": "共通委託先i-askの発表と損保ジャパンへの影響を関連付け。自社単独の件数増加を示す続報ではない。"
+    "note": ""
   },
   {
-    "date": "2026-10-06",
-    "org": "楽天ドライブ",
+    "date": "2026-10-02",
+    "org": "ムーンスター",
+    "cat": [
+      "不正アクセス",
+      "情報漏えい"
+    ],
+    "status": "漏えいの可能性",
+    "info": "氏名、住所、電話、メール、注文情報。",
+    "impact": "3月公表事案の続報。注文情報等に関連するフィッシングが確認された。",
+    "scope": "対象範囲は公式通知を参照。",
+    "exclude": "カード・パスワードは保管していない。",
+    "action": "注文内容の一致だけで信用しない。偽の返金案内や送金要求を公式窓口で確認する。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.moonstar.co.jp/information/2026/10/post-4.html"
+      }
+    ],
+    "note": "期間内の続報を掲載。初報は3月26日。"
+  },
+  {
+    "date": "2026-10-02",
+    "org": "大阪公立大学",
+    "cat": [
+      "ランサムウェア",
+      "サービス停止"
+    ],
+    "status": "調査中",
+    "info": "個人情報流出の有無は調査中。具体的な漏えい項目・漏えい人数は未確定。報道の約13万人分は保管情報の規模であり流出人数ではない。",
+    "impact": "10月9日から全キャンパスで対面授業を再開予定。Moodle等は暫定利用を案内。10月8日17時発表で学生・教職員間メールは利用可能。外部からの受信は10月8日中、外部への送信は10月13日頃の再開予定。調査・復旧は継続中。全面復旧ではない。",
+    "scope": "全キャンパスの多くの情報システム。",
+    "exclude": "附属病院・獣医臨床センターは通常運営と説明。",
+    "action": "休講・履修登録・復旧予定を大学の臨時サイトで確認。流出が確定したとして個別項目の変更を一律に求めない。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.omu.moe/news/2026-10-06-7fb5a624.html"
+      },
+      {
+        "label": "公式：障害初報・休講案内",
+        "url": "https://e.omu.ac.jp/"
+      },
+      {
+        "label": "報道：保管情報の規模（MBS）",
+        "url": "https://newsdig.tbs.co.jp/articles/mbs/2990964?display=1"
+      },
+      {
+        "label": "授業に関する続報（10/7）",
+        "url": "https://www.omu.moe/news/2026-10-06-0e4be7e6.html"
+      },
+      {
+        "label": "メールに関する続報（10/7）",
+        "url": "https://www.omu.moe/news/2026-10-06-9a161963.html"
+      },
+      {
+        "label": "授業・システム続報（10/8）",
+        "url": "https://www.omu.moe/news/2026-10-08-c5873744.html"
+      },
+      {
+        "label": "メール復旧状況（10/8）",
+        "url": "https://www.omu.moe/news/2026-10-08-a832f149.html"
+      }
+    ],
+    "note": "10月2日障害初報。10月5日会見、10月6日公式資料でランサムウェアとの判断を確認。",
+    "updated": "2026-10-08",
+    "followup": "2026-10-08 17:00",
+    "changeType": "続報",
+    "change": "10/9の全キャンパス対面授業再開予定と、学内メールの一部復旧を反映。"
+  },
+  {
+    "date": "2026-10-02",
+    "org": "第一生命保険",
+    "cat": [
+      "不正アクセス",
+      "情報漏えい"
+    ],
+    "status": "漏えいの可能性",
+    "info": "社員番号、氏名、住所、電話、性別、所属・役職、資格、担当業務、管理者名等。",
+    "impact": "従業員等に関する情報への不正アクセス。",
+    "scope": "約12万人。退職者約7万人を含む。内勤1967年以降・営業2017年以降の一部退職者も対象。",
+    "exclude": "顧客情報の事案ではない。",
+    "action": "在籍・退職時の人事情報を使った連絡に注意。会社からの対象通知を確認する。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.dai-ichi-life.co.jp/information/pdf/index_192.pdf"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "date": "2026-10-02",
+    "org": "藤田観光／ホテル椿山荘東京等",
+    "cat": [
+      "委託先被害",
+      "情報漏えい"
+    ],
+    "status": "漏えいの可能性",
+    "info": "予約管理サービスTEMAIRAZUに関連する宿泊者情報。具体的項目の全容は未公表。",
+    "impact": "外部予約管理システムに関連して、不審な宿泊案内・フィッシングに注意喚起。",
+    "scope": "ホテル椿山荘東京など対象13施設。",
+    "exclude": "同システムでカード情報は扱っていないと説明。",
+    "action": "宿泊予約の内容が正しくても再決済リンクへ進まない。ホテルへ直接確認する。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://hotel-chinzanso-tokyo.jp/news/20260924/"
+      }
+    ],
+    "note": "掲載対象の10月2日更新に基づく。URLの数字を公表日とみなさない。"
+  },
+  {
+    "date": "2026-10-01",
+    "org": "ニッポンレンタカー",
+    "cat": [
+      "アカウント侵害",
+      "情報漏えい"
+    ],
+    "status": "漏えいの可能性",
+    "info": "氏名、電話、メール、ログインID、利用・予約履歴、免許証番号、住所、生年月日。登録があればカード下4桁・名義。",
+    "impact": "9月19〜21日の不正アクセスを9月29日に確認。",
+    "scope": "55人。9月26日公表の41人の別事案と区別。",
+    "exclude": "カード番号全桁の流出とはされていない。",
+    "action": "不審な予約や登録変更を確認。使い回しのパスワードを解消し、本人確認資料の悪用を装う連絡にも注意する。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.nipponrentacar.co.jp/info/202610_2.html"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "date": "2026-10-01",
+    "org": "日本原子力研究開発機構（JAEA）",
     "cat": [
       "不正アクセス",
       "情報漏えい"
     ],
     "status": "漏えい確認",
-    "info": "687アカウントのアカウント名・表示名・プロフィール画像URL。うち313件は加工されたパスワード情報とソルト。別途、保存ファイル（写真・文書等）へのアクセス。",
-    "impact": "8月27日のアカウント情報取得と、1月29日〜9月17日の保存データへの不正アクセス。",
-    "scope": "保存データは15,382アカウント。687件・313件と単純加算しない。",
-    "exclude": "保存文書の内容は利用者ごとに異なり、具体的な全項目は一律に確定できない。",
-    "action": "対象パスワードと使い回し先を変更。保存文書にAPIキー、パスワード、本人確認書類等がないか確認し、該当する秘密情報を更新する。",
+    "info": "運転免許証、マイナンバーカード、旅券、在留カード等の本人確認画像、放射線業務従事者の健康診断、資格証明。マイナンバー6人分を含む。",
+    "impact": "不正ダウンロードされた2,419ファイル中、367ファイルに個人情報。",
+    "scope": "175人分。本人確認200、健康診断146、資格証明21ファイル。",
+    "exclude": "ID・パスワードや申込フォームの口座情報は対象外。",
+    "action": "本人確認資料の悪用が疑われる連絡は保存し、機構の窓口と発行元へ相談。パスワード変更だけでは書類情報の漏えいは解消しない。",
     "sources": [
       {
         "label": "公式発表",
-        "url": "https://support.rakuten-drive.com/hc/ja/articles/62934949147929"
+        "url": "https://www.jaea.go.jp/02/press2026/p26100105/"
       }
     ],
     "note": ""
+  },
+  {
+    "date": "2026-09-30",
+    "org": "ベネフィット・ワン／ベネワン・プラットフォーム",
+    "cat": [
+      "設定不備",
+      "情報漏えい"
+    ],
+    "status": "漏えい確認",
+    "info": "社員・職員番号、氏名、性別、生年月日、企業・団体名、所属・役職、入退社情報。",
+    "impact": "アンケート結果のダウンロードで他企業の従業員情報が混入。条件設定の不備。",
+    "scope": "2,322企業・団体、13,460人。実際のダウンロードは1社1人。",
+    "exclude": "カード・銀行口座・要配慮情報・メール・パスワードは含まない。受領先で削除、転送・複製なしを確認。",
+    "action": "勤務先の個別通知を確認。人事情報を利用したなりすましに注意。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://corp.benefit-one.co.jp/company/news/news/2026/20260930/20260930.pdf"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "date": "2026-09-30",
+    "org": "佐川急便",
+    "cat": [
+      "不正アクセス",
+      "情報漏えい",
+      "サービス停止"
+    ],
+    "status": "漏えいの可能性",
+    "info": "配送の送り主・受取人の氏名／会社名、住所、電話。契約荷主情報、スマートクラブの氏名、住所、電話、メール、ID等。",
+    "impact": "不正アクセスに伴い一部Webサービスを停止。荷物の配送は継続。",
+    "scope": "約100日分の配送情報等が対象候補。 横須賀市は6月下旬以降の対象配送について寄付者の氏名・住所・電話番号が漏えいした可能性を公表。人数・漏えい確定は未公表。 富士薬品公式通販は9月30日以前100日間の該当購入者（定期購入を含む）について、送り主・届け先の氏名・住所・電話番号が対象となる可能性を公表。実際に含まれるかは調査中。",
+    "exclude": "カード・パスワードは対象外と報道。",
+    "action": "実際の配送情報を使う再配達詐欺に注意。公式アプリや直接開いた公式サイトで確認する。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www2.sagawa-exp.co.jp/information/detail/420/"
+      },
+      {
+        "label": "報道：ITmedia",
+        "url": "https://www.itmedia.co.jp/news/article/2610/01/2000001933/"
+      },
+      {
+        "label": "横須賀市発表（10/7）",
+        "url": "https://www.city.yokosuka.kanagawa.jp/4430/nagekomi/20261007.html"
+      },
+      {
+        "label": "富士薬品公式発表（10/8）",
+        "url": "https://www.fujiyakuhin.co.jp/notice/article/20261008111035.html"
+      }
+    ],
+    "note": "9月30日初報。詳細は10月1日報道で補完。",
+    "updated": "2026-10-08",
+    "followup": "2026-10-08",
+    "changeType": "関連先追加",
+    "change": "富士薬品公式通販の利用者への影響可能性を追記。"
   },
   {
     "date": "2026-09-30",
@@ -1049,224 +1062,559 @@
     "followup": "2026-10-06"
   },
   {
-    "date": "2026-10-06",
-    "org": "アクティブ／食品通販サイト",
+    "date": "2026-09-30",
+    "org": "修道学園",
     "cat": [
       "不正アクセス",
       "情報漏えい"
     ],
     "status": "漏えいの可能性",
-    "info": "店舗・取引先名、住所、電話番号、メールアドレス、注文金額、商品コード、配送先住所等。",
-    "impact": "SQLインジェクションによる不正アクセス。不正な管理者権限による情報出力の痕跡を確認。",
-    "scope": "最大54,916件。",
-    "exclude": "カード情報・銀行口座情報は保有せず、ログインパスワードは対象外。",
-    "action": "運営元の個別通知を確認し、関係者を装う不審な連絡は公式窓口で確認する。",
+    "info": "教職員、一部学生、外部講師等の氏名、住所、電話番号、銀行口座情報。設置校の取引先口座情報等。",
+    "impact": "9月26日にサーバーへの不正アクセスを確認。",
+    "scope": "広島修道大学、修道中学校・高等学校、広島修道大学ひろしま協創中学校・高等学校に関する情報。人数未公表。",
+    "exclude": "公開・不正利用は未確認。ランサムウェアとは断定しない。",
+    "action": "運営元の個別通知を確認し、不審な連絡は公式窓口で確認する。",
     "sources": [
       {
         "label": "公式発表",
-        "url": "https://www.active-pro.jp/news/4303/"
+        "url": "https://www.shudo-u.ac.jp/gakuen/information/b53fil000000008q.html"
       }
     ],
     "note": "",
-    "updated": "2026-10-07",
+    "updated": "2026-10-08",
     "changeType": "新規追加",
-    "change": "今回の一覧に新規掲載。"
+    "change": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。"
   },
   {
-    "date": "2026-10-06",
-    "org": "旭化成セラピューティクス／Pharma DIGITAL",
-    "cat": [
-      "委託先被害",
-      "不正アクセス",
-      "情報漏えい"
-    ],
-    "status": "漏えいの可能性",
-    "info": "医療従事者の氏名、所属施設名・所在地、職種、診療科等。メールアドレス等を含む区分もある。従業員の氏名・メールアドレス・写真。",
-    "impact": "委託先の医薬情報ネットへの不正アクセス。サイトを停止し侵入経路に対処。",
-    "scope": "公表区分：約514,000件、メールアドレス等を含む区分約44,000件、従業員約700件。区分間の重複が明確でないため単純合算しない。",
-    "exclude": "カード情報・要配慮個人情報は保有していないと説明。不正利用は未確認。",
-    "action": "運営元の個別通知を確認し、関係者を装う不審な連絡は公式窓口で確認する。",
-    "sources": [
-      {
-        "label": "公式発表",
-        "url": "https://www.asahi-kasei.co.jp/pharma/oshirase_20261006.html"
-      }
-    ],
-    "note": "",
-    "updated": "2026-10-07",
-    "changeType": "新規追加",
-    "change": "今回の一覧に新規掲載。"
-  },
-  {
-    "date": "2026-10-06",
-    "org": "スカラコミュニケーションズ／i-ask",
-    "cat": [
-      "不正アクセス",
-      "情報漏えい"
-    ],
-    "status": "漏えいの可能性",
-    "info": "氏名、メールアドレス、問い合わせ内容等。具体的項目は利用企業によって異なる。",
-    "impact": "管理画面への不正ログインと不正プログラム設置。同一サーバーの利用企業データが取得された可能性。",
-    "scope": "最大5社・延べ713,126件の問い合わせ。人数の重複排除は調査中。",
-    "exclude": "大和証券・シチズン時計・損保ジャパンの事案と関連。各社の件数と重複合算しない。",
-    "action": "運営元の個別通知を確認し、関係者を装う不審な連絡は公式窓口で確認する。",
-    "sources": [
-      {
-        "label": "公式発表",
-        "url": "https://scala-com.jp/news/2026/10-1/"
-      }
-    ],
-    "note": "",
-    "updated": "2026-10-07",
-    "changeType": "新規追加",
-    "change": "今回の一覧に新規掲載。"
-  },
-  {
-    "date": "2026-10-06",
-    "org": "ソルティドッグ／Google広告管理アカウント",
-    "cat": [
-      "アカウント乗っ取り",
-      "不正アクセス"
-    ],
-    "status": "調査中",
-    "info": "個人情報の漏えい項目・件数は未公表。",
-    "impact": "管理アカウントが侵害され、配下の広告アカウントでオンラインカジノ広告の作成・配信や予算の不正変更が発生。",
-    "scope": "管理下の広告アカウントが影響対象候補。実際の配信や費用はアカウントごとに異なる。",
-    "exclude": "Google全体への侵入を意味しない。侵入原因は確定していない。",
-    "action": "広告管理者はキャンペーン、予算、請求、管理権限の不審な変更を確認し、運営会社の案内に従う。",
-    "sources": [
-      {
-        "label": "公式発表",
-        "url": "https://saltydog.jp/post-389/"
-      }
-    ],
-    "note": "",
-    "updated": "2026-10-07",
-    "changeType": "新規追加",
-    "change": "今回の一覧に新規掲載。"
-  },
-  {
-    "date": "2026-10-07",
-    "org": "IDCフロンティア／IDCFクラウド",
-    "cat": [
-      "ランサムウェア",
-      "サービス停止"
-    ],
-    "status": "調査中",
-    "info": "漏えいの有無、具体的な情報項目・件数は未確定。",
-    "impact": "東日本リージョン1でランサムウェア被害を確認。サービス障害が発生し調査・対応を継続。",
-    "scope": "495の企業・自治体に影響。",
-    "exclude": "影響組織数は漏えい人数ではない。利用先のサイト停止も個別の攻撃とは限らない。",
-    "action": "利用組織は公式障害情報と自組織のサービス影響を確認。復旧予定やデータ状況が確定するまで、推測を事実として案内しない。",
-    "sources": [
-      {
-        "label": "公式発表",
-        "url": "https://www.idcf.jp/news/topics/20261007002"
-      }
-    ],
-    "note": "",
-    "updated": "2026-10-07",
-    "changeType": "新規追加",
-    "change": "今回の一覧に新規掲載。",
-    "followup": "2026-10-07"
-  },
-  {
-    "date": "2026-10-07",
-    "org": "戸田建設",
+    "date": "2026-09-29",
+    "org": "イープラス／払戻し申請",
     "cat": [
       "不正アクセス",
       "情報漏えい"
     ],
     "status": "漏えい確認",
-    "info": "取引先のメールアドレス最大7,200件、取引データ最大6,000件。従業員4,778人の氏名、住所、電話番号、メールアドレス、所属部署。",
-    "impact": "取引先への支払いを管理するシステム等への不正アクセス。対象システムを隔離。",
-    "scope": "取引先と従業員が対象。各区分の件数は単純合算しない。",
-    "exclude": "取引データの詳細項目は未公表。銀行口座情報などを含むとは推定しない。公開・不正利用は未確認。",
-    "action": "運営元の個別通知を確認し、関係者を装う不審な連絡は公式窓口で確認する。",
+    "info": "共通：メール、カタカナ氏名、公演・会場・日時。銀行振込の751件は銀行名・支店・口座種別・口座番号・名義。郵便払戻し68件は郵便番号・住所・氏名も対象。",
+    "impact": "払戻し申請情報への不正アクセス。",
+    "scope": "2022年6月30日〜2026年9月11日の申請1,463件。カード返金644件を含む。",
+    "exclude": "パスワード・カード情報は含まない。",
+    "action": "返金のための送金・暗証番号入力を求める連絡に注意。口座情報対象者は利用明細も確認する。",
     "sources": [
       {
         "label": "公式発表",
-        "url": "https://www.toda.co.jp/news/2026/20261007_006350.html"
+        "url": "https://support-qa.eplus.jp/hc/ja/articles/62711500727961"
       }
     ],
-    "note": "",
-    "updated": "2026-10-07",
-    "changeType": "新規追加",
-    "change": "今回の一覧に新規掲載。"
+    "note": ""
   },
   {
-    "date": "2026-10-07",
-    "org": "HIS／H.I.S. TOURS（タイ子会社）",
+    "date": "2026-09-29",
+    "org": "セイコーマート",
     "cat": [
       "不正アクセス",
       "情報漏えい"
     ],
     "status": "漏えいの可能性",
-    "info": "パスポート情報（ローマ字氏名、署名の氏名、性別、生年月日、パスポート番号、有効期限）およびアレルギー情報。",
-    "impact": "タイ子会社への不正アクセスに関する調査結果を公表。10月7日19:30に対象外項目を追記。",
-    "scope": "最大627人。2017年、2019〜2020年、2024〜2025年の公表された条件に該当するタイ旅行客。全旅行客ではない。",
-    "exclude": "電話番号、住所、メールアドレス、クレジットカード情報は対象外（19:30追記）。",
-    "action": "対象旅行・個別通知を確認。パスポート情報を知る相手でも信用せず、偽の本人確認・再提出要求に注意する。",
+    "info": "氏名、性別、生年月日、住所、電話、メール、入退会日。",
+    "impact": "会員情報への不正アクセス。",
+    "scope": "約57万件。",
+    "exclude": "パスワードは対象外、カード情報は保管していない。",
+    "action": "会員特典や配送・返金を装う連絡に注意する。",
     "sources": [
       {
         "label": "公式発表",
-        "url": "https://www.his.co.jp/assets/20261007.pdf"
+        "url": "https://online.seicomart.co.jp/delivery/cms/preview.php?pre_no=119"
       }
     ],
-    "note": "",
-    "updated": "2026-10-07",
-    "changeType": "新規追加",
-    "change": "今回の一覧に新規掲載。",
-    "followup": "2026-10-07 19:30"
+    "note": ""
   },
   {
-    "date": "2026-10-07",
-    "org": "損保ジャパン／SMILING ROAD",
-    "cat": [
-      "委託先被害",
-      "情報漏えい"
-    ],
-    "status": "漏えいの可能性",
-    "info": "氏名、電話番号、住所、メールアドレス、勤務先会社・部署・業種・代理店、ドライバーID、運転アラートの種類・日時、車載機シリアル番号、申込番号、問い合わせ件名・本文等。",
-    "impact": "委託先i-askへの不正アクセス。自社システムへの侵入は確認されていない。",
-    "scope": "延べ約6万件の問い合わせ。人数ではない。i-ask全体の件数と重複合算しない。",
-    "exclude": "金融機関口座、クレジットカード情報、マイナンバーカード情報は含まれない。",
-    "action": "運営元の個別通知を確認し、関係者を装う不審な連絡は公式窓口で確認する。",
-    "sources": [
-      {
-        "label": "公式発表",
-        "url": "https://www.sompo-japan.co.jp/-/media/SJNK/files/news/2026/20261007_1.pdf?la=ja-JP"
-      }
-    ],
-    "note": "",
-    "updated": "2026-10-07",
-    "changeType": "新規追加",
-    "change": "今回の一覧に新規掲載。"
-  },
-  {
-    "date": "2026-10-07",
-    "org": "埼玉県／渋沢MIX",
+    "date": "2026-09-29",
+    "org": "ヤマト運輸／クロネコ代金後払いサービス",
     "cat": [
       "不正アクセス",
       "情報漏えい",
       "サービス停止"
     ],
-    "status": "不正閲覧確認",
-    "info": "約2,200人の氏名・メールアドレス等を含む一覧が不正閲覧された。うち3人はさらに詳細な情報を閲覧されたが、具体的項目は未公表。",
-    "impact": "登録情報の一部改ざんと不正なメール送信も確認。会員登録・施設予約を停止。",
-    "scope": "会員申請を受け付けた約2,200人。3人はその内数。",
-    "exclude": "データ窃取・不正利用・二次被害は未確認。不正閲覧の確認とは区別する。",
-    "action": "運営元の個別通知を確認し、関係者を装う不審な連絡は公式窓口で確認する。",
+    "status": "漏えいの可能性",
+    "info": "利用者の氏名、住所、電話、メール、与信番号、請求金額、債権残高、商品明細。一部加盟店の名称・コード、担当社員の氏名。",
+    "impact": "9月28日に不正アクセスを確認。後払いサービスの復旧時期を調査。",
+    "scope": "一部利用者・加盟店等。範囲と件数は調査中。",
+    "exclude": "カード情報・パスワードは含まない。宅急便等の他サービスは通常どおり。",
+    "action": "正しい購入明細や請求金額を示す連絡でも、支払先変更は公式窓口で確認する。",
     "sources": [
       {
         "label": "公式発表",
-        "url": "https://www.pref.saitama.lg.jp/a0803/news/page/news2026100702.html"
+        "url": "https://www.yamato-hd.co.jp/important/info_260929_1.html"
+      }
+    ],
+    "note": "9月29日初報。10月2日第2報を反映。"
+  },
+  {
+    "date": "2026-09-29",
+    "org": "日本郵便／ゆうID等",
+    "cat": [
+      "アカウント侵害",
+      "情報漏えい"
+    ],
+    "status": "漏えい確認",
+    "info": "ゆうID、氏名、住所、生年月日、性別、電話、メール、勤務先、家族構成、アドレス帳。アドレス帳内の第三者の氏名・住所・会社・電話・メール、発送の送り主／受取人、追跡番号、内容品、発送日等も対象になり得る。",
+    "impact": "第三者による情報の取得。",
+    "scope": "19人に関する69件。項目は各人の登録内容による。",
+    "exclude": "全利用者・全項目の漏えいではない。",
+    "action": "公式の通知を確認。配送先や家族情報を使った偽の再配達通知に注意。ログイン情報を入力した場合は認証情報を変更する。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://files.japanpost.jp/assets/34d9d11432734cfaa759e78fe395b688/18239b871f714763aa7eb15c25e7b30b/20260929_01.pdf"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "date": "2026-09-28",
+    "org": "サンポー食品",
+    "cat": [
+      "サイト改ざん",
+      "不正アクセス"
+    ],
+    "status": "漏えい未確認",
+    "info": "漏えいが確認された個人情報項目の公表なし。",
+    "impact": "Webシステムの脆弱性悪用が疑われ、管理者権限取得・サイト改ざんを確認。",
+    "scope": "Webサイト。",
+    "exclude": "個人情報漏えいは確認されていないと報道。",
+    "action": "不審な遷移先で情報を入力していた場合は、入力先と内容を確認し該当アカウントを保護する。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://sanpofoods.co.jp/news/archives/1658/"
+      },
+      {
+        "label": "報道：セキュリティ対策Lab",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/sanpo-foods-website-unauthorized-access-defacement/"
+      }
+    ],
+    "note": "公式検索結果で改ざんを確認。本文取得ができなかったため報道も併記。"
+  },
+  {
+    "date": "2026-09-27",
+    "org": "スターツ出版／OZmall",
+    "cat": [
+      "不正アクセス",
+      "情報漏えい"
+    ],
+    "status": "漏えいの可能性",
+    "info": "メールアドレス。一部に氏名・都道府県。",
+    "impact": "会員関連情報への不正アクセスについて調査。",
+    "scope": "退会者を含む442,779件。",
+    "exclude": "詳細住所・電話の流出を示す情報はなく、カード情報は外部管理。",
+    "action": "予約や特典を装うメールに注意。メールアドレスだけの流出からパスワード漏えいを推定しない。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://starts-pub.jp/info20261001"
+      }
+    ],
+    "note": "9月27日初報、10月1日続報を反映。"
+  },
+  {
+    "date": "2026-09-27",
+    "org": "東京メトロ／To Me CARD",
+    "cat": [
+      "不正アクセス",
+      "情報漏えい"
+    ],
+    "status": "漏えいの可能性",
+    "info": "配信停止管理の対象となったメールアドレス。",
+    "impact": "関連サーバーへの不正アクセス。",
+    "scope": "不達等により配信停止管理されていた約5.9万件。",
+    "exclude": "当該サーバーに他の個人情報は保管されていないと説明。",
+    "action": "カード会社や交通事業者を装うメールに注意。カード番号やパスワード流出と混同しない。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.to-me-card.jp/important/202609-01/index.html"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "date": "2026-09-26",
+    "org": "京王電鉄グループ",
+    "cat": [
+      "ランサムウェア",
+      "サービス停止"
+    ],
+    "status": "調査中",
+    "info": "機密情報・顧客情報の流出有無を調査中。具体的な情報項目・件数は未公表。",
+    "impact": "9月26日未明にサーバーのランサムウェア被害。一部の業務・営業システムに影響し、ネットワークを隔離。",
+    "scope": "グループの一部システム。",
+    "exclude": "鉄道運行への影響はないと説明。情報流出は確認されていない。",
+    "action": "サービスの最新稼働状況を公式サイトで確認。パスワード流出が判明した事案として断定して案内しない。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.keio.co.jp/news/update/announce/nr260926v13404/"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "date": "2026-09-25",
+    "org": "タイムズカー",
+    "cat": [
+      "不正アクセス",
+      "情報漏えい"
+    ],
+    "status": "漏えい確認",
+    "info": "氏名、住所、生年月日、電話、メール、法人・部署、運転免許証情報、連携ID、不可逆変換済みパスワード。約160万アカウントでは免許証、公共料金書類、学生証、家族確認書類等の画像にも影響。",
+    "impact": "会員システムへの不正アクセス。",
+    "scope": "退会者を含む約660万アカウント。画像対象はその一部。",
+    "exclude": "カード情報は対象外。不可逆変換済みでも使い回しは避ける。",
+    "action": "同一パスワードを使う他サービスを変更。本人確認書類が対象の場合は個別通知を確認し、不審な契約・本人確認依頼に注意する。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://share.timescar.jp/news/2026/0929/1816.html"
+      },
+      {
+        "label": "公式FAQ",
+        "url": "https://corp.timescar.jp/mail/announce/faq.pdf"
+      }
+    ],
+    "note": "9月25日初報。9月29日続報・10月1日FAQを反映。"
+  },
+  {
+    "date": "2026-09-18",
+    "org": "PFU／旧PFUダイレクト",
+    "cat": [
+      "委託先被害",
+      "情報漏えい"
+    ],
+    "status": "漏えい確認",
+    "info": "購入者・配送先の氏名、住所、電話、FAX、メール、勤務先、自由記入欄等。",
+    "impact": "旧ショップサーブ利用店舗への攻撃に伴う影響。",
+    "scope": "最大169,355件の注文情報。主に2008年12月5日〜2025年10月31日の旧店舗注文等。",
+    "exclude": "注文件数であり実人数ではない。入力の有無で項目が異なる。",
+    "action": "過去の注文を使った返金詐欺・配送通知に注意。自由記入欄に何を書いたかも確認する。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.pfu.ricoh.com/news/2026/news260918-2.html"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "date": "2026-09-18",
+    "org": "ニチレイグループ",
+    "cat": [
+      "不正アクセス",
+      "情報漏えい",
+      "サービス停止"
+    ],
+    "status": "漏えい確認",
+    "info": "配送先：氏名・住所・電話。取引先：会社・部署・役職・氏名・住所・電話・メール。従業員等：氏名、生年月日、性別、住所、電話、メール、社員ID、給与・賞与、在留資格、人事・異動情報等。",
+    "impact": "7月の攻撃について第7報。停止した業務は7月24日までに復旧。",
+    "scope": "53,866件（配送先3,308、取引先6,849、従業員等43,709）。家族・応募者・一部退職者も含む。",
+    "exclude": "カード情報は含まない。",
+    "action": "人事や配送を装った連絡に注意。給与・家族情報を知っていることだけで相手を信用しない。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.nichirei.co.jp/news/2026/524.html"
+      }
+    ],
+    "note": "第7報。"
+  },
+  {
+    "date": "2026-09-17",
+    "org": "ちばぎん商店・千葉銀行",
+    "cat": [
+      "サイト改ざん",
+      "情報漏えい"
+    ],
+    "status": "漏えいの可能性",
+    "info": "ちばぎん商店：氏名、住所、メールアドレス、電話番号、ユーザー名。一部対象者の銀行口座情報（支店・預金種目・口座番号）。千葉銀行ギフト企画：送り先・カード会員の氏名、配送先住所、申込メールアドレス、電話番号、申込番号。",
+    "impact": "9月3日にサイト改ざんを確認。保存情報の漏えいのおそれを公表。",
+    "scope": "商店：個人約192先、法人約722先、メールのみ約7,670先。口座情報はキャッシュバック申込者約31先。銀行ギフト：個人722先、法人1,616先。別集団のため単純合算しない。",
+    "exclude": "流出の形跡は未確認。カード情報・パスワードは保存していない。",
+    "action": "運営元の個別通知を確認し、不審な連絡は公式窓口で確認する。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://shop.c-value.jp/view/news/20260917153001"
+      },
+      {
+        "label": "千葉銀行公式発表PDF",
+        "url": "https://www.chibabank.co.jp/news/news20260917_01"
       }
     ],
     "note": "",
-    "updated": "2026-10-07",
+    "updated": "2026-10-08",
     "changeType": "新規追加",
-    "change": "今回の一覧に新規掲載。"
+    "change": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。"
+  },
+  {
+    "date": "2026-09-16",
+    "org": "Helpfeel／Gyazo",
+    "cat": [
+      "不正アクセス",
+      "情報漏えい"
+    ],
+    "status": "漏えい確認",
+    "info": "氏名・ニックネーム、メール、パスワードハッシュ、ユーザーID、端末ID、セッションID、X連携トークン、Google SSO関連プロフィール、登録・ログイン・契約情報。画像URL・ID、送信元IP、EXIF位置情報、OCR、タイトル、元URL、非公開画像のパスフレーズハッシュ等のメタデータ。",
+    "impact": "ユーザー情報と画像メタデータへの不正アクセス。削除済みデータの一部にも影響。",
+    "scope": "9月25日続報では匿名を含む約2,362万ユーザー記録。",
+    "exclude": "カード情報は含まない。メタデータの漏えいと全画像本体の流出を同一視しない。",
+    "action": "Gyazoと同一・類似パスワードを使うサービスのパスワード変更。連携アプリ・セッションも確認。画像URLや位置情報を含む公開範囲を見直す。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://corp.helpfeel.com/news/news-20260916-1"
+      },
+      {
+        "label": "公式続報 9/25",
+        "url": "https://corp.helpfeel.com/en/news/news-20260925"
+      }
+    ],
+    "note": "9月25日の続報を反映。"
+  },
+  {
+    "date": "2026-09-16",
+    "org": "スコア・ジャパン",
+    "cat": [
+      "サイト改ざん",
+      "不正アクセス"
+    ],
+    "status": "漏えい未確認",
+    "info": "会社は個人情報の外部流出はないと説明。",
+    "impact": "9月14日にトップページの改ざんと、検索結果から無関係なサイトへの誘導を確認。同日18時に復旧。",
+    "scope": "Webサイトの閲覧者。人数未公表。",
+    "exclude": "情報漏えい事例とは区別して掲載。",
+    "action": "運営元の個別通知を確認し、不審な連絡は公式窓口で確認する。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.scorejp.com/news.html"
+      }
+    ],
+    "note": "",
+    "updated": "2026-10-08",
+    "changeType": "新規追加",
+    "change": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。"
+  },
+  {
+    "date": "2026-09-15",
+    "org": "LEAN BODY",
+    "cat": [
+      "不正アクセス",
+      "情報漏えい"
+    ],
+    "status": "漏えい確認",
+    "info": "メール、ニックネーム、性別、生年月日、身長・体重、利用状況、暗号化されたパスワード、契約・支払いに関する情報等。",
+    "impact": "社内分析ツールMetabaseへの不正アクセスで顧客情報を取得された。",
+    "scope": "退会者を含む約44万アカウント。",
+    "exclude": "支払い情報の記載からカード番号そのものの流出は断定できない。",
+    "action": "公式案内に従いパスワードを変更。同じパスワードの使い回しを解消する。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://lean-body.co.jp/news/JlBWMCs7"
+      },
+      {
+        "label": "報道：USEN ICT Solutions",
+        "url": "https://www.gate02.ne.jp/lab/incident-news/lean-body-20260925/"
+      }
+    ],
+    "note": "公式ページの本文取得ができなかったため、詳細項目は報道で補完。"
+  },
+  {
+    "date": "2026-09-15",
+    "org": "あいの風とやま鉄道／観光列車予約",
+    "cat": [
+      "不正アクセス",
+      "情報漏えい"
+    ],
+    "status": "漏えいの可能性",
+    "info": "予約者の氏名、住所、電話番号、メールアドレス。",
+    "impact": "観光列車の予約関連情報への影響。",
+    "scope": "1,409人分。",
+    "exclude": "カード情報は別管理で対象外。",
+    "action": "予約の確認や返金を装った連絡は公式窓口に確認する。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://ainokaze.co.jp/wp-content/uploads/2026/09/6f52a51d7d840aedb7b617d8c92c6626.pdf"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "date": "2026-09-15",
+    "org": "ムラウチドットコム",
+    "cat": [
+      "不正アクセス",
+      "情報漏えい"
+    ],
+    "status": "漏えい確認",
+    "info": "氏名、住所、電話番号、メールアドレス、生年月日、性別。",
+    "impact": "7月の不正アクセスについて調査結果を追加公表。",
+    "scope": "7,716,811件。件数を実人数と同一視しない。",
+    "exclude": "カード情報・パスワードは対象外。",
+    "action": "購入先を装う返金・再決済の案内や、個人情報を使った電話に注意する。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://murauchi.com/static-pages/privacy/弊社における不正アクセスによるお客様情報漏えいに関するお詫びとご報告（第二報）.pdf"
+      }
+    ],
+    "note": "第二報。"
+  },
+  {
+    "date": "2026-09-11",
+    "org": "デジタル庁／GSS",
+    "cat": [
+      "不正アクセス",
+      "情報漏えい"
+    ],
+    "status": "漏えいの可能性",
+    "info": "政府職員や委託事業者等の氏名、メールアドレス、電話番号、住所。",
+    "impact": "ガバメントソリューションサービスに関する情報への不正アクセス。",
+    "scope": "約24.6万件。一般国民の情報ではないと説明。",
+    "exclude": "マイナンバー、銀行口座、年金情報は対象外。",
+    "action": "所属組織の通知を確認。職員を装う連絡や業務情報を使ったフィッシングに注意する。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.digital.go.jp/news/2026-0911-01"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "date": "2026-09-11",
+    "org": "ロート製薬",
+    "cat": [
+      "不正アクセス",
+      "情報漏えい"
+    ],
+    "status": "漏えいの可能性",
+    "info": "問い合わせ対応の通話録音・付随情報、顧客管理情報。公表資料で具体的な全項目は未確定。",
+    "impact": "問い合わせ関連システムへの不正アクセスについて調査。",
+    "scope": "対象人数・詳細範囲は調査中。",
+    "exclude": "医療情報・カード情報等の含有は断定できない。",
+    "action": "相談内容を知る相手からの連絡にも注意。会社の個別通知で実際の対象項目を確認する。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.rohto.co.jp/news/whatsnew/2026/0915_01"
+      }
+    ],
+    "note": "9月11日公表、9月15日続報を反映。"
+  },
+  {
+    "date": "2026-09-11",
+    "org": "日本大学法学部",
+    "cat": [
+      "アカウント侵害",
+      "情報漏えい"
+    ],
+    "status": "漏えいの可能性",
+    "info": "被害職員のメールボックスに含まれる本文・添付ファイル等。個人情報の具体的項目と件数は未公表。",
+    "impact": "フィッシングで職員メールアカウントを侵害。迷惑メール送信、学内への影響拡大。",
+    "scope": "迷惑メール3,177通は送信通数であり、漏えい人数ではない。",
+    "exclude": "メールが閲覧された可能性と、具体的な流出確認を区別。",
+    "action": "当該アカウント発の不審メールを開かない。リンク先へ認証情報を入力した場合は、公式経路でパスワード変更・管理者への連絡。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.law.nihon-u.ac.jp/news/32278"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "date": "2026-09-10",
+    "org": "さくらインターネット",
+    "cat": [
+      "不正アクセス",
+      "情報漏えい"
+    ],
+    "status": "漏えいの可能性",
+    "info": "販売管理システムの会員情報。会員パスワードのハッシュ30件、一部のレンタルサーバー初期パスワード、VPSのroot初期パスワード。初期パスワードはハッシュ化されず保管されていたものがある。",
+    "impact": "不正アクセスに伴う調査の第三報。認証情報への影響あり。",
+    "scope": "会員情報最大1,360,563件。項目と対象は契約・サービスで異なる。",
+    "exclude": "利用者が変更したパスワードは保管対象外と説明。",
+    "action": "対象通知を確認し、未変更の初期パスワードを変更。VPSのroot認証情報も確認。同じパスワードを使う他サービスも変更する。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.sakura.ad.jp/corporate/information/newsreleases/2026/09/10/1968225692/"
+      }
+    ],
+    "note": "第三報。パスワードの種類を混同しない。"
+  },
+  {
+    "date": "2026-09-10",
+    "org": "商船三井クルーズ",
+    "cat": [
+      "媒体紛失"
+    ],
+    "status": "漏えいの可能性",
+    "info": "保存されていた可能性のある項目：氏名、生年月日、性別、住所、電話、メール、旅券番号、医療・アレルギー情報。乗組員については銀行口座、考課、予防接種履歴、給与関係情報も候補。",
+    "impact": "船内PC間のデータ移行に用いた外部記憶媒体の一部を紛失。7月に所在不明を確認。",
+    "scope": "約20万ファイルを調査中。20万は対象人数ではない。",
+    "exclude": "媒体内の具体的内容自体が未特定。流出・不正利用の事実は未確認。",
+    "action": "対象情報を確定する続報を待つ。旅券等について個別通知を受けた場合は発行元の相談窓口へ確認する。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.mitsuioceancruises.com/news/20260910.html"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "date": "2026-09-08",
+    "org": "京都サンガF.C.／SANGA CREW",
+    "cat": [
+      "誤送信",
+      "情報漏えい"
+    ],
+    "status": "漏えい確認",
+    "info": "氏名、住所、メール、電話、生年月日、性別、会員コース、JリーグID、入退会日・有効期限、ワンタッチパスID、デジタル会員証番号、シーズンパス席種、スクール会場・コース。",
+    "impact": "9月2日、取引先へ会員情報ファイルを誤添付。受信者11人中2人が開封。削除を確認。",
+    "scope": "7月3日時点の会員情報15,612人分。",
+    "exclude": "カード・口座などの決済情報は含まない。二次流出は未確認。",
+    "action": "会員番号などを使ったなりすましに注意。個別通知を確認する。公表された項目にパスワードはない。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.sanga-fc.jp/news/detail/21401"
+      }
+    ],
+    "note": ""
+  },
+  {
+    "date": "2026-09-07",
+    "org": "学校法人武蔵野大学",
+    "cat": [
+      "ランサムウェア",
+      "情報漏えい"
+    ],
+    "status": "漏えい確認",
+    "info": "共有フォルダ内の複数ファイル。氏名・住所を含む個人情報を確認。その他の項目・対象者・件数は調査中。",
+    "impact": "6月15日にサーバーが感染。バックアップから復旧し、学校運営は継続。",
+    "scope": "対象人数は調査中。",
+    "exclude": "情報の不正利用は未確認。",
+    "action": "学校からの個別通知・続報を確認。氏名や住所を知る相手からの連絡でも、送金や認証情報の要求には公式窓口で確認する。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://ef.musashino-u.ac.jp/news/20260907-8715.html"
+      }
+    ],
+    "note": "第二報。発生は6月15日。"
   }
 ]</script>
 <script>
@@ -1274,12 +1622,12 @@
 const data=JSON.parse(document.getElementById('incident-data').textContent);
 const $=id=>document.getElementById(id),esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const safeURL=s=>{try{const u=new URL(s);return ['https:','http:'].includes(u.protocol)?u.href:'#'}catch{return '#'}};
-const sensitiveTerms=/パスポート(?:情報|番号)?|アレルギー情報|パスワード(?:ハッシュ)?|パスフレーズ(?:ハッシュ)?|(?:クレジット)?カード(?:情報|番号|下4桁)|運転免許証(?:情報|番号)?|免許証(?:情報|番号)?|マイナンバー(?:カード)?|本人確認(?:書類|画像|資料)|旅券(?:番号)?|在留カード|銀行口座|口座番号|口座情報|暗証番号|セキュリティコード|認証情報|APIキー|セッションID|連携トークン|健康診断|医療・アレルギー情報/g;
+const sensitiveTerms=/パスポート(?:情報|番号|画像)?|署名画像|顔写真|患者ID|事前チェックイン用4桁番号|外科手術部位・検体の画像|アレルギー情報|パスワード(?:ハッシュ)?|パスフレーズ(?:ハッシュ)?|(?:クレジット)?カード(?:情報|番号|下4桁)|運転免許証(?:情報|番号)?|免許証(?:情報|番号)?|マイナンバー(?:カード)?|本人確認(?:書類|画像|資料)|旅券(?:番号)?|在留カード|銀行口座|口座番号|口座情報|暗証番号|セキュリティコード|認証情報|APIキー|セッションID|連携トークン|健康診断|医療・アレルギー情報/g;
 const highlight=s=>esc(s).replace(sensitiveTerms,m=>'<strong class="sensitive">'+m+'</strong>');
 const selected=id=>[...$(id).querySelectorAll('input:checked')].map(x=>x.value);
 function options(){for(const [id,values] of [['category',[...new Set(data.flatMap(x=>x.cat))].sort()],['status',[...new Set(data.map(x=>x.status))].sort()]]){$(id).innerHTML=values.map(v=>'<label class="check"><input type="checkbox" value="'+esc(v)+'"><span>'+esc(v)+'</span></label>').join('')}
 $('total').textContent=data.length;$('ransom').textContent=data.filter(x=>x.cat.includes('ランサムウェア')).length;$('confirmed').textContent=data.filter(x=>['漏えい確認','一部漏えい確認'].includes(x.status)).length;$('categories').textContent=new Set(data.flatMap(x=>x.cat)).size;}
-function render(){const q=$('query').value.trim().toLocaleLowerCase(),cat=selected('category'),st=selected('status'),from=$('from').value,to=$('to').value;const filtered=data.map((x,i)=>({...x,idx:i})).filter(x=>(!q||JSON.stringify(x).toLocaleLowerCase().includes(q))&&(!cat.length||cat.some(c=>x.cat.includes(c)))&&(!st.length||st.includes(x.status))&&(!from||x.date>=from)&&(!to||x.date<=to)).sort((a,b)=>a.date.localeCompare(b.date)||a.org.localeCompare(b.org,'ja'));let month='';$('list').innerHTML=filtered.map(x=>{let heading='';if(month!==x.date.slice(0,7)){month=x.date.slice(0,7);heading='<h2 class="month">'+esc(month.replace('-','年 '))+'月</h2>'}const confirmed=['漏えい確認','一部漏えい確認'].includes(x.status),unknown=['調査中','漏えい未確認'].includes(x.status);return heading+`<article class="incident"><div class="cardhead"><time class="date" datetime="${esc(x.date)}"><small>公表日 ${esc(x.date.slice(0,4))}</small>${esc(x.date.slice(5).replace('-',' / '))}</time><div><h3>${esc(x.org)}</h3><div class="badges"><span class="status ${confirmed?'confirmed':unknown?'unknown':''}">${esc(x.status)}</span>${x.updated?'<span class="tag updatebadge">'+esc(x.changeType)+' · '+esc(x.updated)+'</span>':''}${x.cat.map(c=>'<span class="tag">'+esc(c)+'</span>').join('')}</div></div></div><div class="body">${x.updated?`<div class="updatebox"><p><b>一覧への反映日：${esc(x.updated)}</b>${x.followup?' ／ 続報公表日：'+esc(x.followup):''}${x.relatedDate?' ／ 補足資料公表日：'+esc(x.relatedDate):''}</p><p>${esc(x.change)}</p></div>`:''}<h4>漏えい情報・可能性のある情報</h4><p>${highlight(x.info)}</p><p class="impact">${highlight(x.impact)}</p><details class="detail"><summary>対象・注意喚起・ソースURLを確認</summary><div class="detailgrid"><div><h4>対象・規模</h4><p>${highlight(x.scope||'未公表')}</p></div><div class="excluded"><h4>対象外・未確認（漏えい対象とは区別）</h4><p>${esc(x.exclude||'公表内容を確認してください。')}</p></div></div><div class="action"><h4>注意喚起のポイント（編集上の提案）</h4><p>${highlight(x.action||'公式発表と対象者への個別通知を確認してください。')}</p></div><p class="note">${highlight(x.note)}</p><div class="sources"><h4>ソースURL</h4>${x.sources.map(s=>'<a href="'+esc(safeURL(s.url))+'" target="_blank" rel="noopener noreferrer">'+esc(s.label)+' ↗<br>'+esc(s.url)+'</a>').join('')}</div></details></div></article>`}).join('')||'<p class="empty">条件に一致する事案はありません。</p>';$('result').textContent=filtered.length+' 件を表示 / 全 '+data.length+' 件';$('expand').textContent='詳細をすべて開く';}
+function render(){const q=$('query').value.trim().toLocaleLowerCase(),cat=selected('category'),st=selected('status'),from=$('from').value,to=$('to').value;const filtered=data.map((x,i)=>({...x,idx:i})).filter(x=>(!q||JSON.stringify(x).toLocaleLowerCase().includes(q))&&(!cat.length||cat.some(c=>x.cat.includes(c)))&&(!st.length||st.includes(x.status))&&(!from||x.date>=from)&&(!to||x.date<=to)).sort((a,b)=>b.date.localeCompare(a.date)||a.org.localeCompare(b.org,'ja'));let month='';$('list').innerHTML=filtered.map(x=>{let heading='';if(month!==x.date.slice(0,7)){month=x.date.slice(0,7);heading='<h2 class="month">'+esc(month.replace('-','年 '))+'月</h2>'}const confirmed=['漏えい確認','一部漏えい確認'].includes(x.status),unknown=['調査中','漏えい未確認'].includes(x.status);return heading+`<article class="incident"><div class="cardhead"><time class="date" datetime="${esc(x.date)}"><small>公表日 ${esc(x.date.slice(0,4))}</small>${esc(x.date.slice(5).replace('-',' / '))}</time><div><h3>${esc(x.org)}</h3><div class="badges"><span class="status ${confirmed?'confirmed':unknown?'unknown':''}">${esc(x.status)}</span>${x.updated?'<span class="tag updatebadge">'+esc(x.changeType)+' · '+esc(x.updated)+'</span>':''}${x.cat.map(c=>'<span class="tag">'+esc(c)+'</span>').join('')}</div></div></div><div class="body">${x.evidence?'<p class="evidence"><b>報道ベース・一次資料未確認</b> — 追加候補として掲載</p>':''}${x.updated?`<div class="updatebox"><p><b>一覧への反映日：${esc(x.updated)}</b>${x.followup?' ／ 続報公表日：'+esc(x.followup):''}${x.relatedDate?' ／ 補足資料公表日：'+esc(x.relatedDate):''}</p><p>${esc(x.change)}</p></div>`:''}<h4>漏えい情報・可能性のある情報</h4><p>${highlight(x.info)}</p><p class="impact">${highlight(x.impact)}</p><details class="detail"><summary>対象・注意喚起・ソースURLを確認</summary><div class="detailgrid"><div><h4>対象・規模</h4><p>${highlight(x.scope||'未公表')}</p></div><div class="excluded"><h4>対象外・未確認（漏えい対象とは区別）</h4><p>${esc(x.exclude||'公表内容を確認してください。')}</p></div></div><div class="action"><h4>注意喚起のポイント（編集上の提案）</h4><p>${highlight(x.action||'公式発表と対象者への個別通知を確認してください。')}</p></div><p class="note">${highlight(x.note)}</p><div class="sources"><h4>ソースURL</h4>${x.sources.map(s=>'<a href="'+esc(safeURL(s.url))+'" target="_blank" rel="noopener noreferrer">'+esc(s.label)+' ↗<br>'+esc(s.url)+'</a>').join('')}</div></details></div></article>`}).join('')||'<p class="empty">条件に一致する事案はありません。</p>';$('result').textContent=filtered.length+' 件を表示 / 全 '+data.length+' 件';$('expand').textContent='詳細をすべて開く';}
 function reset(){$('query').value='';document.querySelectorAll('.checks input').forEach(x=>x.checked=false);$('from').value='';$('to').value='';render()}
 for(const id of ['query','category','status','from','to'])$(id).addEventListener('input',render);
 $('reset').onclick=reset;$('expand').onclick=()=>{const ds=[...document.querySelectorAll('.detail')],open=ds.some(x=>!x.open);ds.forEach(d=>d.open=open);$('expand').textContent=open?'詳細をすべて閉じる':'詳細をすべて開く'};
