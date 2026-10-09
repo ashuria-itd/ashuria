@@ -1,19 +1,11 @@
-<!doctype html>
-<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>セキュリティインシデント一覧｜2026.09.06–10.09</title>
-<style>
-:root{--ink:#152e36;--muted:#5e7278;--line:#dce5e5;--paper:#f3f6f5;--teal:#086c68;--navy:#132f38;--red:#a73e38;--amber:#88601a}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.8 -apple-system,BlinkMacSystemFont,'Noto Sans JP','Yu Gothic',Meiryo,sans-serif}button,input,select,textarea{font:inherit}button,select{cursor:pointer}button{border:1px solid #b9caca;background:white;color:var(--ink);border-radius:7px;padding:8px 14px}button:hover{background:#eaf2f1}button:focus-visible,a:focus-visible,input:focus,select:focus,textarea:focus{outline:3px solid #55aaa0;outline-offset:2px}a{color:#076d74;text-underline-offset:3px}.wrap{max-width:1240px;margin:auto;padding:0 32px}.mast{background:var(--navy);color:white;padding:42px 0 34px;border-top:6px solid #47b5a4}.eyebrow{font-size:12px;letter-spacing:.17em;color:#a4d6cf;font-weight:700}.mast h1{font-size:clamp(26px,4vw,40px);line-height:1.4;margin:12px 0 10px;letter-spacing:.03em}.mast p{max-width:790px;color:#d1e2e4;margin:10px 0}.mast .meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.pill{font-size:12px;border:1px solid #56747c;border-radius:30px;padding:4px 12px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:26px 0}.stat{background:white;border:1px solid var(--line);padding:17px 22px;border-radius:10px}.stat strong{display:block;font-size:30px;line-height:1.4;font-variant-numeric:tabular-nums}.stat span{color:var(--muted);font-size:12px}.guide{border:1px solid var(--line);background:white;border-radius:10px;margin:20px 0;padding:15px 22px}.guide summary{cursor:pointer;font-weight:700}.guide p{margin:10px 0;font-size:13px}.guide ul{font-size:13px;padding-left:20px}.filters{background:#f3f6f5f5;border-block:1px solid var(--line);padding:18px 0;position:sticky;top:0;z-index:5;backdrop-filter:blur(10px)}.fields{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px}label{display:block;font-size:12px;font-weight:700;color:var(--muted)}input,select,textarea{width:100%;border:1px solid #b9caca;border-radius:7px;padding:9px 11px;background:white;color:var(--ink)}.tools{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:12px}.dateinput{display:flex;gap:8px;align-items:center}.dateinput input{width:155px;font-size:13px;padding:6px}.tools .right{margin-left:auto;display:flex;gap:8px}.tools button{font-size:12px}.resultbar{display:flex;justify-content:space-between;align-items:center;margin:22px 0 12px;color:var(--muted);font-size:13px}.month{font-size:19px;margin:28px 0 12px;display:flex;gap:15px;align-items:center}.month:after{content:'';height:1px;background:#ccdada;flex:1}.incident{background:white;border:1px solid var(--line);border-radius:11px;margin-bottom:14px;overflow:hidden}.cardhead{display:grid;grid-template-columns:108px 1fr;gap:20px;padding:21px 24px 14px}.date{font-size:24px;font-weight:700;line-height:1.5;font-variant-numeric:tabular-nums;border-right:1px solid var(--line)}.date small{display:block;color:var(--muted);font-size:11px;font-weight:400}.incident h3{font-size:20px;line-height:1.5;margin:0 0 9px}.badges{display:flex;gap:6px;flex-wrap:wrap}.tag{font-size:11px;background:#edf3f2;border-radius:4px;padding:2px 8px;color:#3d6065}.status{font-size:11px;border:1px solid #d5bd88;color:var(--amber);background:#fff9ed;border-radius:4px;padding:2px 8px}.confirmed{color:var(--red);background:#fff1ef;border-color:#e3b3af}.unknown{color:#4c6571;background:#eef4f8;border-color:#c8d6df}.body{padding:0 24px 22px 152px}.body h4{font-size:11px;letter-spacing:.04em;color:var(--teal);margin:0 0 3px}.body p{margin:0 0 10px;font-size:14px;line-height:1.85}.impact{color:var(--muted)}.detail summary{font-size:12px;cursor:pointer;color:var(--teal);padding:8px 0;font-weight:700}.detailgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px 24px;padding:12px 0}.detailgrid p{font-size:13px}.action{background:#eff7f4;border-left:3px solid #249180;padding:13px 16px;margin:5px 0 15px}.action p{font-size:13px;margin:0}.sources{border-top:1px solid var(--line);padding-top:10px}.sources a{font-size:11px;overflow-wrap:anywhere;display:block;margin:5px 0;line-height:1.6}.note{font-size:11px!important;color:var(--muted)}.edit{font-size:11px;padding:3px 10px;float:right}.empty{text-align:center;padding:70px 20px;background:white;border-radius:10px}footer{padding:35px 0 50px;color:var(--muted);font-size:12px}.primary{background:var(--teal);color:white;border-color:var(--teal)}.primary:hover{background:#075a58;color:white}dialog{border:1px solid #a7bebd;border-radius:14px;padding:26px;width:min(760px,94vw);max-height:90vh;color:var(--ink)}dialog::backdrop{background:#0c2939a0}dialog h2{margin:0 0 10px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.formgrid .full{grid-column:1/-1}textarea{resize:vertical;min-height:85px;font-size:13px}.dialogfoot{display:flex;justify-content:flex-end;gap:10px;margin-top:20px}.help{font-size:12px;color:var(--muted)}#toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#153a3c;color:white;padding:12px 22px;border-radius:8px;z-index:30}#toast:empty{display:none}.countnote{font-size:11px;color:var(--muted);margin-top:-15px}.notice{font-size:12px;color:var(--muted)}
-@media(max-width:760px){.wrap{padding:0 18px}.mast{padding:28px 0}.stats{grid-template-columns:1fr 1fr;gap:8px}.stat{padding:12px 16px}.fields{grid-template-columns:1fr 1fr}.fields label:first-child{grid-column:1/-1}.filters{position:relative}.tools .right{margin-left:0}.cardhead{grid-template-columns:70px 1fr;padding:17px 16px 10px;gap:12px}.date{font-size:18px}.incident h3{font-size:17px}.body{padding:0 16px 18px}.detailgrid{grid-template-columns:1fr;gap:4px}.formgrid{grid-template-columns:1fr}.formgrid .full{grid-column:auto}.dateinput input{width:138px}.month{font-size:17px}}
-@media print{body{background:white;font-size:10pt}.mast{background:white;color:#152e36;padding:10px 0;border-top:3px solid #086c68}.mast p,.eyebrow{color:#334}.mast h1{font-size:24pt}.wrap{padding:0;max-width:none}.filters,.edit,.guide,.tools,.notice,dialog,#toast{display:none!important}.stats{margin:12px 0;gap:6px}.stat{padding:5px 12px}.stat strong{font-size:18pt}.incident{break-inside:avoid;border-radius:0;margin-bottom:10px}.cardhead{padding:10px;grid-template-columns:85px 1fr}.body{padding:0 10px 10px 115px}.body p{font-size:9pt}.detailgrid p,.action p{font-size:9pt}.sources a{font-size:7pt}.month{break-after:avoid}.pill{border-color:#ccc}.mast .meta{margin-top:8px}}
-
-.fields{grid-template-columns:1fr}.filters{position:relative}.checks{display:flex;flex-wrap:wrap;gap:7px}fieldset{min-width:0;border:0;margin:0;padding:0}legend{font-size:12px;font-weight:700;color:var(--muted);padding:0;margin-bottom:7px}.check{display:inline-flex;align-items:center;gap:7px;border:1px solid #c6d5d3;border-radius:6px;background:white;padding:6px 10px;cursor:pointer;color:var(--ink);font-weight:400}.check input{width:16px;height:16px;margin:0;accent-color:var(--teal);padding:0}.check:has(input:checked){background:#e1f1eb;border-color:var(--teal);color:#075c57;font-weight:700}.sensitive{color:#b4232c;font-weight:800}.notice .sensitive{white-space:nowrap}@media print{.sensitive{color:#a51d25!important;font-weight:800}}
-.updatebox{background:#eef6fb;border-left:3px solid #397c9b;padding:10px 14px;margin:0 0 14px}.updatebox p{font-size:12px;margin:3px 0}.updatebadge{background:#dceff4;color:#175368}.excluded{background:#f5f6f6;padding:10px;border-radius:6px}.revision{background:#eaf4f0;border:1px solid #b7d5c8;border-radius:10px;padding:14px 20px;margin:20px 0}.revision p{margin:3px 0;font-size:13px}.evidence{border:1px solid #d5bd88;background:#fff9ed;padding:10px 14px;border-radius:6px;color:#765019}</style></head><body>
-<header class="mast"><div class="wrap"><div class="eyebrow">SECURITY INCIDENT MONITOR / JAPAN</div><h1>セキュリティインシデント一覧</h1><p>漏えい情報と業務への影響を確認し、対象者への注意喚起につなげるための調査一覧。</p><div class="meta"><span class="pill">調査対象 2026.09.06 – 2026.10.09</span><span class="pill">確認基準日 2026.10.09</span><span class="pill">公表日 ↓ 降順</span><span class="pill">国内組織・国内向けサービス中心</span></div></div></header>
-<main class="wrap"><section class="stats" aria-label="掲載概要"><div class="stat"><strong id="total">75</strong><span>掲載事案</span></div><div class="stat"><strong id="ransom">3</strong><span>ランサムウェア</span></div><div class="stat"><strong id="confirmed">—</strong><span>漏えい確認・一部確認</span></div><div class="stat"><strong id="categories">—</strong><span>インシデント分類</span></div></section><p class="countnote">件数は掲載事案ベース。分類は重複します。被害人数・アカウント数・注文件数は合算していません。</p>
-<section class="revision"><strong>2026年10月9日 朝 更新：新規8件・既存3件を更新／補足</strong><p>全75件を公表日の新しい順に掲載。一次資料未確認の既存2件に加え、skyticketの詳細項目は報道ベースとして明記。NewsPicksの詳細は公式発表を引用する報道で補完しています。</p><p>続報公表日・補足資料日と一覧への反映日を区別。共通委託先と利用組織の事案を含むため、独立した攻撃の総数ではありません。既存の掲載期間を保持し、9月6日以降の記録を蓄積しています。</p></section><details class="guide"><summary>調査範囲・日付・注意喚起の読み方</summary><p>2026年9月6日〜10月9日に公表・更新された国内組織や国内向けサービスの事案を対象としています。情報漏えいに限定せず、ランサムウェア、アカウント侵害、サービス停止、サイト改ざん、設定不備、誤送信、媒体紛失なども収録しました。公開情報で確認できた事案の一覧であり、国内外すべての公表事案の完全な網羅を保証するものではありません。</p><p>並び順は、各カードに明記した掲載基準の公表日（降順）、同日の場合は組織名順です。期間外に発生した事案でも、期間内に重要な続報があれば収録しています。初報を確認できた期間内事案は初報日、期間外事案は期間内の続報日を基準とし、調査で参照した続報日を注記しています。発生日・検知日と公表日は別です。</p><p>「漏えい確認」は一部または対象情報の取得・外部流出を確認した事案。「漏えいの可能性」「調査中」「閲覧可能状態」「漏えい未確認」は区別しています。各行の候補人数すべてについて漏えいが確定したことを意味しません。「対象外」「未確認」の内容も確認基準日時点の発表に基づきます。</p><ul><li>パスワードや初期認証情報が対象の場合：公式案内に従い変更し、使い回し先も変更。ハッシュ・暗号化の表記だけで安全とは判断しない。</li><li>氏名・住所・生年月日・本人確認書類の場合：一律の「変更」を求めず、個別通知、なりすまし、偽の本人確認依頼への注意を伝える。</li><li>連絡先・購入履歴の場合：情報を知る相手でも信用せず、公式アプリや自分で開いた公式窓口で確認する。</li></ul><p>各事案の「注意喚起のポイント」は公表事実を踏まえた編集上の提案です。実際の対象項目・必要な措置は運営元の個別通知と最新発表を優先してください。漏えいデータそのものの収集や、被害者への連絡は実施していません。</p></details>
-<section class="filters" aria-label="検索と絞り込み"><div class="fields"><label>キーワード<input id="query" type="search" placeholder="組織名、サービス名、漏えい項目など"></label><fieldset><legend>インシデント分類（複数選択可）</legend><div id="category" class="checks"></div></fieldset><fieldset><legend>情報漏えいの状況（複数選択可）</legend><div id="status" class="checks"></div></fieldset></div><div class="tools"><div class="dateinput"><input id="from" type="date" aria-label="公表日 開始"><span>–</span><input id="to" type="date" aria-label="公表日 終了"></div><button id="reset">絞り込み解除</button><div class="right"><button id="expand">詳細をすべて開く</button><button id="print">印刷 / PDF</button></div></div></section>
-<div class="resultbar"><span id="result" role="status" aria-live="polite"></span><span>公表日：新しい順 → 古い順</span></div><p class="notice">同じグループ内は選択したいずれかに一致する事案を表示します。未選択はすべて表示。<strong class="sensitive">赤字・太字</strong>は重要な情報項目を示し、漏えいの確定を意味しません。「対象外・未確認」も併せてご確認ください。</p><section id="list" aria-label="インシデント一覧"></section><noscript><p>この一覧の表示・検索にはJavaScriptを有効にしてください。</p></noscript>
-<footer>一覧更新日：2026年10月9日。出典は各事案のソースURLを参照。保存したHTMLはオフラインで閲覧・検索できます。出典リンクの閲覧にはインターネット接続が必要です。</footer></main>
-
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>セキュリティインシデント・レポート｜2026年10月10日更新</title><style>
+:root{--navy:#122d3a;--teal:#077c75;--ink:#18323d;--muted:#596d76;--line:#d9e3e5;--bg:#f2f5f5;--red:#b32231}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.8 -apple-system,BlinkMacSystemFont,'Yu Gothic',Meiryo,sans-serif}button,input,select{font:inherit}button,select{cursor:pointer}button{background:white;border:1px solid #bacdd0;border-radius:7px;padding:8px 16px;color:var(--ink)}button:hover{background:#e7f2ef}button.active,button.primary{background:var(--teal);border-color:var(--teal);color:white}a{color:#076d77;text-underline-offset:3px}a,button,input,select,summary{outline-offset:4px}a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #b07910}.wrap{max-width:1300px;margin:auto;padding:0 32px}header{background:var(--navy);color:white;border-top:5px solid #41b9a7;padding:36px 0 28px}.eyebrow{font-size:12px;letter-spacing:.16em;color:#8dded0;font-weight:700}h1{font-size:clamp(26px,3.3vw,40px);margin:8px 0;line-height:1.4;letter-spacing:.02em}header p{color:#c7dadd;margin:6px 0}header .top{display:flex;justify-content:space-between;gap:20px;align-items:center}.stamp{border:1px solid #57717a;border-radius:8px;padding:12px 20px;font-size:12px;white-space:nowrap}.stamp strong{display:block;font-size:21px;color:white}.nav{background:white;border-bottom:1px solid var(--line)}.nav .wrap{display:flex;gap:24px}.nav button{border:0;border-radius:0;padding:18px 3px;background:none;color:var(--muted);border-bottom:3px solid transparent;font-weight:700}.nav button.active{color:var(--teal);border-color:var(--teal)}.period{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:22px 0 10px}.period>span{font-size:12px;font-weight:700;margin-right:8px}.period button{font-size:13px;padding:6px 13px}select{padding:7px;border:1px solid var(--line);border-radius:7px;background:white}.subtle{color:var(--muted);font-size:12px}h2{font-size:21px;margin:26px 0 14px}h3{font-size:16px;margin:0 0 10px}.sectionhead{display:flex;align-items:center;justify-content:space-between;gap:12px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:20px 0 12px}.stat,.panel{background:white;border:1px solid var(--line);border-radius:12px}.stat{padding:20px 24px}.stat strong{display:block;font-size:36px;line-height:1.4;font-variant-numeric:tabular-nums}.stat span{font-size:12px;color:var(--muted)}.stat:first-child{border-top:3px solid var(--teal)}.panel{padding:22px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.alerts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.alert{background:white;border:1px solid var(--line);border-top:3px solid #ad7937;border-radius:10px;padding:18px}.alert p{font-size:13px;margin:6px 0}.label{display:inline-block;border-radius:4px;background:#eaf3f2;color:#28625e;padding:2px 8px;font-size:11px;margin:0 4px 5px 0}.new{background:#e4f4ed;color:#176248}.upd{background:#eef0fc;color:#48589a}.danger{color:var(--red);font-weight:800}.status{border:1px solid #d4c191;background:#fffbef;color:#725519}.safe{background:#eef4f5;border-color:#cbdadd;color:#48606a}.barrow{display:grid;grid-template-columns:150px 1fr 35px;gap:9px;align-items:center;margin:11px 0;font-size:12px}.track{background:#edf2f3;border-radius:3px;height:13px;overflow:hidden}.bar{background:#208b84;height:100%;border-radius:3px}.barrow b{text-align:right}.chartnote{margin:10px 0 0;font-size:11px;color:var(--muted)}.recent{display:grid;grid-template-columns:1fr 1fr;gap:10px}.recent a{display:block;background:white;border:1px solid var(--line);border-radius:8px;padding:13px 16px;text-decoration:none}.recent small{display:block;color:var(--muted);font-size:12px}.controls{background:white;border:1px solid var(--line);border-radius:12px;padding:20px;margin:20px 0}.searchline{display:flex;gap:10px;flex-wrap:wrap}.searchline input[type=search]{flex:1;min-width:200px;padding:10px 14px;border:1px solid #adbec4;border-radius:7px}.filtergrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:15px}fieldset{border:0;padding:0;margin:0}legend{font-size:12px;font-weight:700;margin-bottom:8px}.checks{display:flex;gap:5px 12px;flex-wrap:wrap}.checks label,.options label{font-size:12px;display:inline-flex;align-items:center;gap:5px}input[type=checkbox]{accent-color:var(--teal);width:16px;height:16px}.options{display:flex;gap:15px;flex-wrap:wrap;margin:16px 0 0}.resultsbar{display:flex;justify-content:space-between;gap:12px;align-items:center;margin:16px 0}.tools{display:flex;gap:7px;flex-wrap:wrap}.tools button{font-size:12px;padding:6px 10px}.incident{background:white;border:1px solid var(--line);border-radius:10px;margin:12px 0;scroll-margin-top:20px;overflow:hidden}.incident>summary{cursor:pointer;list-style:none;padding:20px 22px;display:grid;grid-template-columns:100px 1fr 25px;gap:18px}.incident>summary::-webkit-details-marker{display:none}.incident>summary:after{content:'＋';font-size:20px;color:var(--teal)}.incident[open]>summary:after{content:'−'}.date{font-size:21px;font-weight:700;line-height:1.5;border-right:1px solid var(--line)}.date small{font-size:11px;font-weight:400;display:block;color:var(--muted)}.incident h3{font-size:18px;line-height:1.6;margin-bottom:7px}.preview{font-size:13px;margin:4px 0 0;color:#3f5561}.change{font-size:12px;color:#546587;margin:8px 0 0}.detailbody{padding:0 24px 24px 142px}.detailbody h4{color:var(--teal);font-size:12px;margin:15px 0 4px}.detailbody p{font-size:13px;margin:0}.action{padding:14px 18px;background:#edf7f3;border-left:3px solid var(--teal);margin-top:15px}.action h4{margin-top:0}.sources a{font-size:12px;display:block;overflow-wrap:anywhere;margin:5px 0}.grouphead{background:#e5efee;border-radius:8px;padding:12px 16px;margin-top:20px;font-size:15px}.empty{padding:45px;text-align:center;background:white;border:1px dashed var(--line);border-radius:10px}.about{max-width:900px}.about li{margin:8px 0}.about table{border-collapse:collapse;width:100%;font-size:13px}.about th,.about td{padding:12px;border:1px solid var(--line);text-align:left}footer{margin-top:35px;padding:24px 0 35px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}[hidden]{display:none!important}.printheading{display:none}.skip{position:absolute;left:-9999px}.skip:focus{left:10px;top:10px;background:white;padding:10px;z-index:5}noscript{display:block;padding:30px;color:var(--red)}
+@media(max-width:760px){.wrap{padding:0 16px}header{padding:25px 0}.stamp{display:none}.nav .wrap{gap:18px}.nav button{font-size:13px}.stats{grid-template-columns:1fr 1fr;gap:8px}.stat{padding:14px}.stat strong{font-size:29px}.grid,.alerts,.recent,.filtergrid{grid-template-columns:1fr}.panel{padding:17px}.incident>summary{grid-template-columns:65px 1fr 15px;gap:10px;padding:16px 13px}.date{font-size:17px}.incident h3{font-size:16px}.detailbody{padding:0 16px 20px}.resultsbar{align-items:flex-start;flex-direction:column}.barrow{grid-template-columns:125px 1fr 30px}.sectionhead{align-items:flex-start}.sectionhead button{font-size:12px}.period{gap:5px}}
+@media print{@page{size:A4;margin:14mm}body{background:white;font-size:10pt;color:black}.wrap{max-width:none;padding:0}header{background:white;color:black;padding:0;border:0}header p,.eyebrow,.stamp,.nav,.period,.periodnote,.controls,.resultsbar,.skip,footer,.incident>summary:after,#dashboard,#about{display:none!important}h1{font-size:20pt}#list{display:block!important}.printheading{display:block;font-size:10pt;margin:10px 0 20px}.incident{break-inside:avoid;border:1px solid #bbb;margin:12px 0}.incident>summary{padding:12px;grid-template-columns:70px 1fr}.detailbody{padding:0 15px 15px}.incident h3{font-size:12pt}.detailbody p,.preview{font-size:9pt}.label{border:1px solid #aaa;background:white;color:black}.danger{color:#9d1222;font-weight:900}.action{background:white;border:1px solid #aaa}.sources a{font-size:8pt;color:black}.tools{display:none}.change{color:black}.grouphead{background:white;border:1px solid #999}}
+</style></head><body><a class="skip" href="#main">本文へ移動</a><header><div class="wrap top"><div><div class="eyebrow">SECURITY INCIDENT REPORT</div><h1>セキュリティインシデント・レポート</h1><p>漏えい情報を確かめる。必要な対応を知る。動向を振り返る。</p></div><div class="stamp">情報確認・一覧更新日<strong>2026.10.10</strong>国内の公開情報を収録</div></div></header><nav class="nav" aria-label="画面選択"><div class="wrap"><button class="active" data-tab="dashboard" aria-pressed="true">ダッシュボード</button><button data-tab="list" aria-pressed="false">インシデント一覧</button><button data-tab="about" aria-pressed="false">この資料について</button></div></nav><main id="main" class="wrap"><div class="period" id="period"><span>公表期間</span><button data-period="30">直近30日</button><button class="active" data-period="2026-10">2026年10月</button><button data-period="2026-09">2026年9月</button><button data-period="all">全期間</button></div><p class="subtle periodnote">初回公表日で分類します。続報は元の月に保持し、「今回の更新」にも表示します。</p><noscript>この資料はJavaScriptを有効にしてブラウザーで開いてください。外部通信やログインは不要です。</noscript>
+<section id="dashboard"><div class="sectionhead"><h2 id="dashTitle">今月の概況</h2><button id="viewList">この期間の一覧を見る →</button></div><div id="stats" class="stats"></div><p class="subtle">本資料の掲載項目を集計。国内全体の発生件数ではありません。対象人数・予約数・書類数は合算していません。</p><div class="sectionhead"><h2>今回の追加・更新</h2><button id="changes">新規28件・続報8件を見る →</button></div><p class="subtle">2026/10/10反映分・期間選択に関係なく表示。過去月の続報も含みます。</p><div class="alerts" id="alerts"></div><h2>掲載事例から見る動向</h2><div class="grid"><div class="panel"><h3>月別の新規公表項目数</h3><div id="monthly"></div><p class="chartnote">全収録期間を表示。9月は9/6以降、10月は10/10までの途中集計。月間比較は参考値です。</p></div><div class="panel"><h3>インシデント種別</h3><div id="catsChart"></div><p class="chartnote">複数分類あり。同じ掲載項目が複数の棒に含まれます。</p></div><div class="panel"><h3>業種別</h3><div id="industryChart"></div><p class="chartnote">編集上の大分類。提供元と影響先の双方を含みます。</p></div><div class="panel"><h3>注意を要する情報の種類</h3><div id="sensitiveChart"></div><p class="chartnote">対象情報欄から分類。調査中・部分情報・誤処理を含み、流出確定数ではありません。</p></div></div><h2>続報の要点 <span class="subtle">今回更新した8件</span></h2><div id="recent" class="recent"></div></section>
+<section id="list" hidden><div class="printheading" id="printheading"></div><div class="controls"><div class="searchline"><input type="search" id="query" aria-label="組織・サービス・キーワード検索" placeholder="組織・サービス・漏えい情報を検索"><button id="reset">絞り込みを解除</button></div><details><summary style="cursor:pointer;margin-top:13px;font-weight:700;font-size:13px">チェックボックスで絞り込む</summary><div class="filtergrid"><fieldset><legend>インシデント種別</legend><div id="categoryFilters" class="checks"></div></fieldset><fieldset><legend>業種</legend><div id="industryFilters" class="checks"></div></fieldset><fieldset><legend>重要情報の種類</legend><div id="sensitiveFilters" class="checks"></div></fieldset></div><p class="subtle">同じ条件内は「いずれか」、異なる条件間は「すべて一致」で絞り込みます。</p></details><div class="options"><label><input id="onlyChanges" type="checkbox">今回の追加・更新のみ</label><label><input id="grouping" type="checkbox">共通原因ごとにまとめる</label></div></div><div class="resultsbar"><strong id="resultCount" aria-live="polite"></strong><div class="tools"><button id="expand">詳細をすべて開く</button><button id="collapse">閉じる</button><button id="print">印刷・PDF保存</button></div></div><p class="subtle">初回公表日の降順。赤字・太字は注意を要する情報。対象外・未確認情報は詳細で区別します。</p><div id="results"></div></section>
+<section id="about" hidden class="about"><h2>この資料について</h2><div class="panel"><h3>対象と使い方</h3><p>国内で公表されたセキュリティインシデントを、注意喚起・動向把握・資料参照のために整理しています。不正アクセスだけでなく、ランサムウェア、サービス停止、誤送信・誤交付等も含みます。収録は2026年9月6日以降、今回の情報確認日は2026年10月10日です。公表の遅れや未把握の事例があり、国内の全事例を網羅した統計ではありません。</p><h3>日付と件数の扱い</h3><table><tr><th>初回公表日</th><td>月別表示と一覧の並び順に使用。発生日とは異なります。</td></tr><tr><th>続報・情報日</th><td>今回参照した発表・続報の日付。過去情報は各出典も参照してください。</td></tr><tr><th>一覧反映日</th><td>その掲載項目を本資料に追加・更新した日付。</td></tr><tr><th>掲載項目数</th><td>一覧の行数。1行に複数サービスや月次一括公表を含む場合があります。</td></tr><tr><th>共通原因をまとめた件数</th><td>確認できた共通基盤への攻撃を1グループとして集計。因果関係が未確認の事例はまとめません。独立した攻撃件数の確定統計ではありません。</td></tr></table><h3 style="margin-top:24px">状況の読み方</h3><ul><li><strong>漏えい確認</strong>：公表元または明示した報道で流出等の確認が示されたもの。対象範囲の全件が確定したとは限りません。</li><li><strong>漏えいの可能性・調査中</strong>：流出の有無または範囲が未確定です。</li><li><strong>閲覧可能状態</strong>：外部から見られる状態だったことと、実際の閲覧・取得は区別します。</li><li><strong>漏えいなし・障害</strong>：情報漏えいがないと公表されたサービス停止等です。</li><li><strong>赤字・太字</strong>：漏えい対象等に含まれる重要情報や不正変更された認証情報。色だけで流出確定を意味しません。パスワード変更案内も漏えいの証拠とは限りません。</li></ul><h3>資料としての利用</h3><p>出典を確認したうえで、確認日と対象期間を添えてご利用ください。一覧を絞り込み「印刷・PDF保存」を押すと、該当する案件の詳細・出典を展開して印刷します。外部ライブラリ・通信を使わず、HTML単体で閲覧できます。編集・追加機能はありません。</p><p class="subtle">公式発表を優先し、報道で補った場合は出典を区別しています。過去の掲載全件を今回同じ深度で再調査したものではありません。通知対象・最新の手続きは各組織の公式案内を優先してください。</p></div></section></main><footer><div class="wrap">セキュリティインシデント・レポート　／　2026年10月10日更新<br>公開情報をもとに整理。個人情報の実データは掲載していません。</div></footer>
 <script id="incident-data" type="application/json">[
   {
     "date": "2026-10-08",
@@ -37,7 +29,17 @@
     "note": "",
     "updated": "2026-10-08",
     "changeType": "新規追加",
-    "change": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。"
+    "change": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。",
+    "history": [
+      {
+        "date": "2026-10-08",
+        "text": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。"
+      }
+    ],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-08",
+    "id": "inc-f3a6714dfb",
+    "industry": "IT・通信"
   },
   {
     "date": "2026-10-08",
@@ -61,7 +63,17 @@
     "note": "",
     "updated": "2026-10-08",
     "changeType": "新規追加",
-    "change": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。"
+    "change": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。",
+    "history": [
+      {
+        "date": "2026-10-08",
+        "text": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。"
+      }
+    ],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-08",
+    "id": "inc-6e116edb6b",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-10-08",
@@ -85,7 +97,17 @@
     "note": "",
     "updated": "2026-10-09",
     "changeType": "新規追加",
-    "change": "10月9日朝の調査で新規掲載。公表日と一覧反映日は区別。"
+    "change": "10月9日朝の調査で新規掲載。公表日と一覧反映日は区別。",
+    "history": [
+      {
+        "date": "2026-10-09",
+        "text": "10月9日朝の調査で新規掲載。公表日と一覧反映日は区別。"
+      }
+    ],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-09",
+    "id": "inc-22f6c0d5e9",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-10-08",
@@ -95,25 +117,43 @@
       "情報漏えい"
     ],
     "status": "漏えいの可能性",
-    "info": "氏名、勤務先、メールアドレス、住所、電話番号、クレジットカード名義、クレジットカード番号の下3桁または下4桁等。",
+    "info": "メールアドレス、氏名、生年月日、配送先住所・宛名、勤務先、勤務先電話番号、役職区分。カードの一部情報（名義・番号末尾3～4桁等）。法人・教育向け担当者の氏名・メール。",
     "impact": "業務用管理ツールへの不正アクセス。10月8日12時48分に検知し、14時1分に該当サーバーを遮断。サービスは継続。",
-    "scope": "10月8日までのサービス利用者の一部。対象人数は調査中。",
-    "exclude": "暗号化されたパスワードの漏えいは未確認。カード番号末尾は全桁やセキュリティコードとは異なる。",
+    "scope": "項目別最大：メール323,000件、氏名59,000件、生年月日28,000件、配送先31,000件、勤務先65,000件、勤務先電話29,000件、役職区分273,000件、カード一部362,000件。法人・教育向け122件。合算不可。",
+    "exclude": "カード番号全桁・セキュリティコードは保有していない。パスワード漏えいは未確認。",
     "action": "対象者への個別通知を確認し、不審な連絡は公式窓口へ確認する。",
     "sources": [
       {
-        "label": "公式発表",
+        "label": "公式第2報",
+        "url": "https://newspicks.com/news/17665641/body/"
+      },
+      {
+        "label": "過去の出典：公式発表",
         "url": "https://corp.newspicks.com/info/20261008"
       },
       {
-        "label": "詳細報道（ITmedia）",
+        "label": "過去の出典：詳細報道（ITmedia）",
         "url": "https://www.itmedia.co.jp/business/spv/2610/08/news105.html"
       }
     ],
     "note": "公式ページの本文取得が限定的なため、詳細は公式発表を引用するITmediaの報道で補完。",
-    "updated": "2026-10-09",
-    "changeType": "新規追加",
-    "change": "10月9日朝の調査で新規掲載。公表日と一覧反映日は区別。"
+    "updated": "2026-10-10",
+    "changeType": "続報",
+    "change": "項目別の最大対象数と、カード情報の対象範囲を追記。",
+    "history": [
+      {
+        "date": "2026-10-09",
+        "text": "10月9日朝の調査で新規掲載。公表日と一覧反映日は区別。"
+      },
+      {
+        "date": "2026-10-09",
+        "text": "項目別の最大対象数と、カード情報の対象範囲を追記。"
+      }
+    ],
+    "batch": "続報",
+    "sourceUpdated": "2026-10-09",
+    "id": "inc-b68abdfcc0",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-10-08",
@@ -138,7 +178,17 @@
     "note": "",
     "updated": "2026-10-09",
     "changeType": "新規追加",
-    "change": "10月9日朝の調査で新規掲載。公表日と一覧反映日は区別。"
+    "change": "10月9日朝の調査で新規掲載。公表日と一覧反映日は区別。",
+    "history": [
+      {
+        "date": "2026-10-09",
+        "text": "10月9日朝の調査で新規掲載。公表日と一覧反映日は区別。"
+      }
+    ],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-09",
+    "id": "inc-63babe8a79",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-10-08",
@@ -147,27 +197,45 @@
       "不正アクセス",
       "情報漏えい"
     ],
-    "status": "情報流出通知・詳細確認中",
-    "info": "報道による対象項目：氏名、生年月日、メールアドレス、電話番号、郵便番号・住所、ハッシュ化されたパスワード、銀行口座情報（金融機関名・支店名・口座種別・口座番号・口座名義）、振込依頼人名義。これらの詳細項目は公式詳細の再確認待ち。",
+    "status": "一部漏えい確認",
+    "info": "①氏名（パスポート表記含む）、生年月日、メール、電話番号、住所、振込依頼人名、ハッシュ化されたログインパスワード。②氏名・電話番号・返金先銀行口座（金融機関・支店・種別・番号・名義）。一部メール、生年月日、住所。③高速バスの氏名カナ、年齢・性別、生年月日（入力時）、メール、電話、会員ID、予約日時、乗車日、乗降地、支払方法・金額、同行者情報など。",
     "impact": "公式に確認できたのは、情報流出の通知メールを10月8日19時頃から送付したことと、パスワード変更要請。取得できた公式ページでは詳しい内容を10月9日以降に公表予定としている。",
-    "scope": "対象人数未公表。個別通知によって対象項目が異なる可能性がある。",
-    "exclude": "報道はカード情報を対象外としているが、取得できた公式ページでは詳細未確認。パスポート表記の氏名と、旅券画像・旅券番号の流出を混同しない。",
-    "action": "公式サイトまたは公式アプリからパスワードを変更し、使い回している他サービスも変更する。メール内リンクから変更しない。口座情報を知る相手からの返金・振込要求にも応じず、公式窓口に確認する。",
+    "scope": "①約1,464万件の流出確認、うち約413万件にパスワードのハッシュ値。②17,780件（重複含む）に加え調査中。③約12,000予約。人数と予約数・件数は異なり合算不可。",
+    "exclude": "カード番号・パスポート画像は保有していない。①にはパスポート番号を含まない。②のパスポート番号は漏えい未確認・調査中。",
+    "action": "公式サイト・アプリからパスワードを変更し、同じパスワードを使用する他サービスも変更する。利用履歴・カード明細を確認。不審な連絡のリンクから手続きしない。",
     "sources": [
       {
-        "label": "公式発表",
+        "label": "公式続報 10/9",
+        "url": "https://jp.adventurekk.com/news/apology-notice-unauthorized-access-data-leak/"
+      },
+      {
+        "label": "過去の出典：公式発表",
         "url": "https://jp.adventurekk.com/news/apology-unauthorized-access-data-leak/"
       },
       {
-        "label": "詳細項目の報道（公式詳細再確認待ち）",
+        "label": "過去の出典：詳細項目の報道（公式詳細再確認待ち）",
         "url": "https://rocket-boys.co.jp/security-measures-lab/skyticket_account_breach_notification_reset_error/"
       }
     ],
     "note": "公式案内と報道の情報差を明記。パスワード変更要請は公式確認済み。",
-    "updated": "2026-10-09",
-    "changeType": "新規追加",
-    "change": "10月9日朝の調査で新規掲載。公表日と一覧反映日は区別。",
-    "evidence": "詳細項目は報道ベース・公式詳細の再確認待ち"
+    "updated": "2026-10-10",
+    "changeType": "続報",
+    "change": "3経路の対象情報・件数を更新。サーバーから約1,464万件の流出、約413万件にハッシュ化パスワード。",
+    "evidence": "詳細項目は報道ベース・公式詳細の再確認待ち",
+    "history": [
+      {
+        "date": "2026-10-09",
+        "text": "10月9日朝の調査で新規掲載。公表日と一覧反映日は区別。"
+      },
+      {
+        "date": "2026-10-09",
+        "text": "3経路の対象情報・件数を更新。サーバーから約1,464万件の流出、約413万件にハッシュ化パスワード。"
+      }
+    ],
+    "batch": "続報",
+    "sourceUpdated": "2026-10-09",
+    "id": "inc-333a2dbe9b",
+    "industry": "交通・旅行・宿泊"
   },
   {
     "date": "2026-10-08",
@@ -192,7 +260,17 @@
     "note": "",
     "updated": "2026-10-09",
     "changeType": "新規追加",
-    "change": "10月9日朝の調査で新規掲載。公表日と一覧反映日は区別。"
+    "change": "10月9日朝の調査で新規掲載。公表日と一覧反映日は区別。",
+    "history": [
+      {
+        "date": "2026-10-09",
+        "text": "10月9日朝の調査で新規掲載。公表日と一覧反映日は区別。"
+      }
+    ],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-09",
+    "id": "inc-e0a82b848b",
+    "industry": "金融・保険"
   },
   {
     "date": "2026-10-08",
@@ -216,7 +294,17 @@
     "note": "",
     "updated": "2026-10-09",
     "changeType": "新規追加",
-    "change": "10月9日朝の調査で新規掲載。公表日と一覧反映日は区別。"
+    "change": "10月9日朝の調査で新規掲載。公表日と一覧反映日は区別。",
+    "history": [
+      {
+        "date": "2026-10-09",
+        "text": "10月9日朝の調査で新規掲載。公表日と一覧反映日は区別。"
+      }
+    ],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-09",
+    "id": "inc-6b3aa18d3e",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-10-07",
@@ -233,28 +321,47 @@
     "action": "利用組織は公式障害情報と自組織のサービス影響を確認。復旧予定やデータ状況が確定するまで、推測を事実として案内しない。",
     "sources": [
       {
-        "label": "公式発表",
+        "label": "公式第4報",
+        "url": "https://www.idcf.jp/news/topics/20261009001/"
+      },
+      {
+        "label": "過去の出典：公式発表",
         "url": "https://www.idcf.jp/news/topics/20261007002"
       },
       {
-        "label": "シックス・アパート第2報（10/8）",
+        "label": "過去の出典：シックス・アパート第2報（10/8）",
         "url": "https://www.sixapart.jp/movabletype/news/2026/10/08-0900.html"
       },
       {
-        "label": "サイバー大学第2報（10/8）",
+        "label": "過去の出典：サイバー大学第2報（10/8）",
         "url": "https://www.cyber-u.ac.jp/information/y261008_02.html"
       },
       {
-        "label": "公式第3報（10/8）",
+        "label": "過去の出典：公式第3報（10/8）",
         "url": "https://www.idcf.jp/news/topics/20261008001"
       }
     ],
     "note": "",
-    "updated": "2026-10-09",
-    "changeType": "公式第3報",
-    "change": "対象4ゾーンのデータ取り出し・復元が困難な見通しと、利用者自身のバックアップによる再構築の案内を追記。",
+    "updated": "2026-10-10",
+    "changeType": "続報",
+    "change": "第4報：移行・バックアップ案内、仮想マシン起動停止代行、外部専門家の調査。全面復旧の発表ではない。",
     "followup": "2026-10-08",
-    "relatedDate": "2026-10-08"
+    "relatedDate": "2026-10-08",
+    "history": [
+      {
+        "date": "2026-10-09",
+        "text": "対象4ゾーンのデータ取り出し・復元が困難な見通しと、利用者自身のバックアップによる再構築の案内を追記。"
+      },
+      {
+        "date": "2026-10-09",
+        "text": "第4報：移行・バックアップ案内、仮想マシン起動停止代行、外部専門家の調査。全面復旧の発表ではない。"
+      }
+    ],
+    "batch": "続報",
+    "sourceUpdated": "2026-10-09",
+    "id": "inc-ccef27afb5",
+    "group": "IDCF",
+    "industry": "IT・通信"
   },
   {
     "date": "2026-10-07",
@@ -278,7 +385,17 @@
     "note": "",
     "updated": "2026-10-07",
     "changeType": "新規追加",
-    "change": "今回の一覧に新規掲載。"
+    "change": "今回の一覧に新規掲載。",
+    "history": [
+      {
+        "date": "2026-10-07",
+        "text": "今回の一覧に新規掲載。"
+      }
+    ],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-07",
+    "id": "inc-026a358646",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-10-07",
@@ -303,7 +420,17 @@
     "updated": "2026-10-07",
     "changeType": "新規追加",
     "change": "今回の一覧に新規掲載。",
-    "followup": "2026-10-07 19:30"
+    "followup": "2026-10-07 19:30",
+    "history": [
+      {
+        "date": "2026-10-07",
+        "text": "今回の一覧に新規掲載。"
+      }
+    ],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-07",
+    "id": "inc-812a25fd09",
+    "industry": "交通・旅行・宿泊"
   },
   {
     "date": "2026-10-07",
@@ -327,7 +454,17 @@
     "note": "",
     "updated": "2026-10-07",
     "changeType": "新規追加",
-    "change": "今回の一覧に新規掲載。"
+    "change": "今回の一覧に新規掲載。",
+    "history": [
+      {
+        "date": "2026-10-07",
+        "text": "今回の一覧に新規掲載。"
+      }
+    ],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-07",
+    "id": "inc-de612529af",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-10-07",
@@ -352,7 +489,17 @@
     "note": "",
     "updated": "2026-10-07",
     "changeType": "新規追加",
-    "change": "今回の一覧に新規掲載。"
+    "change": "今回の一覧に新規掲載。",
+    "history": [
+      {
+        "date": "2026-10-07",
+        "text": "今回の一覧に新規掲載。"
+      }
+    ],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-07",
+    "id": "inc-cd61e48302",
+    "industry": "自治体・公的機関"
   },
   {
     "date": "2026-10-07",
@@ -376,7 +523,17 @@
     "note": "",
     "updated": "2026-10-08",
     "changeType": "新規追加",
-    "change": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。"
+    "change": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。",
+    "history": [
+      {
+        "date": "2026-10-08",
+        "text": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。"
+      }
+    ],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-08",
+    "id": "inc-719f265921",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-10-07",
@@ -401,7 +558,18 @@
     "updated": "2026-10-08",
     "changeType": "新規追加",
     "change": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。",
-    "followup": "2026-10-08"
+    "followup": "2026-10-08",
+    "history": [
+      {
+        "date": "2026-10-08",
+        "text": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。"
+      }
+    ],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-08",
+    "id": "inc-a3814aecb1",
+    "group": "IDCF",
+    "industry": "教育・研究"
   },
   {
     "date": "2026-10-07",
@@ -425,7 +593,17 @@
     "note": "",
     "updated": "2026-10-08",
     "changeType": "新規追加",
-    "change": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。"
+    "change": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。",
+    "history": [
+      {
+        "date": "2026-10-08",
+        "text": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。"
+      }
+    ],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-08",
+    "id": "inc-70a14ecdc9",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-10-07",
@@ -444,16 +622,34 @@
     "action": "運営元の個別通知を確認し、不審な連絡は公式窓口で確認する。",
     "sources": [
       {
-        "label": "報道（一次資料本文未確認）",
+        "label": "公式臨時ページ",
+        "url": "https://www.city.kodaira.tokyo.jp/"
+      },
+      {
+        "label": "過去の出典：報道（一次資料本文未確認）",
         "url": "https://rocket-boys.co.jp/security-measures-lab/kodaira_city_website_ransomware/"
       }
     ],
     "note": "追加候補として掲載。発表元の一次資料本文を取得できておらず、記載内容は報道ベース。",
-    "updated": "2026-10-08",
-    "changeType": "新規追加",
-    "change": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。",
+    "updated": "2026-10-10",
+    "changeType": "続報",
+    "change": "10/9 14:00に臨時案内ページ更新。通常サイト停止継続。電子申請・施設予約等の利用可能なサービスを案内。漏えい項目の新情報なし。",
     "followup": "2026-10-08",
-    "evidence": "一次資料未確認"
+    "evidence": "一次資料未確認",
+    "history": [
+      {
+        "date": "2026-10-08",
+        "text": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。"
+      },
+      {
+        "date": "2026-10-09",
+        "text": "10/9 14:00に臨時案内ページ更新。通常サイト停止継続。電子申請・施設予約等の利用可能なサービスを案内。漏えい項目の新情報なし。"
+      }
+    ],
+    "batch": "続報",
+    "sourceUpdated": "2026-10-09",
+    "id": "inc-daa1eb4466",
+    "industry": "自治体・公的機関"
   },
   {
     "date": "2026-10-06",
@@ -474,7 +670,12 @@
         "url": "https://www.mrmax.co.jp/info/incident_20261006/"
       }
     ],
-    "note": ""
+    "note": "",
+    "history": [],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-06",
+    "id": "inc-f36a918e16",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-10-06",
@@ -496,7 +697,12 @@
         "url": "https://www.nimoca.jp/storage/files/information/107/20261006.pdf"
       }
     ],
-    "note": ""
+    "note": "",
+    "history": [],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-06",
+    "id": "inc-3db0ea705c",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-10-06",
@@ -529,7 +735,17 @@
     "updated": "2026-10-07",
     "relatedDate": "2026-10-06・10-07",
     "changeType": "関連情報補足",
-    "change": "共通委託先i-askの発表と損保ジャパンへの影響を関連付け。自社単独の件数増加を示す続報ではない。"
+    "change": "共通委託先i-askの発表と損保ジャパンへの影響を関連付け。自社単独の件数増加を示す続報ではない。",
+    "history": [
+      {
+        "date": "2026-10-07",
+        "text": "共通委託先i-askの発表と損保ジャパンへの影響を関連付け。自社単独の件数増加を示す続報ではない。"
+      }
+    ],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-07",
+    "id": "inc-fa24810333",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-10-06",
@@ -550,7 +766,12 @@
         "url": "https://support.rakuten-drive.com/hc/ja/articles/62934949147929"
       }
     ],
-    "note": ""
+    "note": "",
+    "history": [],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-06",
+    "id": "inc-2a8f0fb523",
+    "industry": "IT・通信"
   },
   {
     "date": "2026-10-06",
@@ -574,7 +795,17 @@
     "note": "",
     "updated": "2026-10-07",
     "changeType": "新規追加",
-    "change": "今回の一覧に新規掲載。"
+    "change": "今回の一覧に新規掲載。",
+    "history": [
+      {
+        "date": "2026-10-07",
+        "text": "今回の一覧に新規掲載。"
+      }
+    ],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-07",
+    "id": "inc-e663028fc8",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-10-06",
@@ -599,7 +830,17 @@
     "note": "",
     "updated": "2026-10-07",
     "changeType": "新規追加",
-    "change": "今回の一覧に新規掲載。"
+    "change": "今回の一覧に新規掲載。",
+    "history": [
+      {
+        "date": "2026-10-07",
+        "text": "今回の一覧に新規掲載。"
+      }
+    ],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-07",
+    "id": "inc-d571c6d5dd",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-10-06",
@@ -623,7 +864,17 @@
     "note": "",
     "updated": "2026-10-07",
     "changeType": "新規追加",
-    "change": "今回の一覧に新規掲載。"
+    "change": "今回の一覧に新規掲載。",
+    "history": [
+      {
+        "date": "2026-10-07",
+        "text": "今回の一覧に新規掲載。"
+      }
+    ],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-07",
+    "id": "inc-6588bcbeeb",
+    "industry": "IT・通信"
   },
   {
     "date": "2026-10-06",
@@ -648,7 +899,17 @@
     "updated": "2026-10-08",
     "changeType": "続報",
     "change": "管理者権限が未復旧であることを追記。",
-    "followup": "2026-10-08"
+    "followup": "2026-10-08",
+    "history": [
+      {
+        "date": "2026-10-08",
+        "text": "管理者権限が未復旧であることを追記。"
+      }
+    ],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-08",
+    "id": "inc-1516ffb61a",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-10-06",
@@ -673,7 +934,17 @@
     "updated": "2026-10-08",
     "changeType": "新規追加",
     "change": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。",
-    "evidence": "一次資料未確認"
+    "evidence": "一次資料未確認",
+    "history": [
+      {
+        "date": "2026-10-08",
+        "text": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。"
+      }
+    ],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-08",
+    "id": "inc-77d6aa39dc",
+    "industry": "自治体・公的機関"
   },
   {
     "date": "2026-10-05",
@@ -695,7 +966,12 @@
         "url": "https://gmo-research.ai/pressroom/notice/notice-20261005"
       }
     ],
-    "note": ""
+    "note": "",
+    "history": [],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-05",
+    "id": "inc-510cafc2dd",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-10-05",
@@ -723,7 +999,17 @@
     "updated": "2026-10-07",
     "relatedDate": "2026-10-05",
     "changeType": "詳細補足",
-    "change": "10/5公式発表から対象人数・卒業年・期間を補足。本日の新たな続報ではない。"
+    "change": "10/5公式発表から対象人数・卒業年・期間を補足。本日の新たな続報ではない。",
+    "history": [
+      {
+        "date": "2026-10-07",
+        "text": "10/5公式発表から対象人数・卒業年・期間を補足。本日の新たな続報ではない。"
+      }
+    ],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-07",
+    "id": "inc-6fe3d182ef",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-10-05",
@@ -756,7 +1042,17 @@
     "updated": "2026-10-07",
     "relatedDate": "2026-10-06・10-07",
     "changeType": "関連情報補足",
-    "change": "共通委託先i-askの発表と損保ジャパンへの影響を関連付け。自社単独の件数増加を示す続報ではない。"
+    "change": "共通委託先i-askの発表と損保ジャパンへの影響を関連付け。自社単独の件数増加を示す続報ではない。",
+    "history": [
+      {
+        "date": "2026-10-07",
+        "text": "共通委託先i-askの発表と損保ジャパンへの影響を関連付け。自社単独の件数増加を示す続報ではない。"
+      }
+    ],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-07",
+    "id": "inc-013c8fbd19",
+    "industry": "金融・保険"
   },
   {
     "date": "2026-10-05",
@@ -777,7 +1073,12 @@
         "url": "https://www.daiki-suisan.co.jp/files/optionallink/00000164_file.pdf"
       }
     ],
-    "note": "10月6日更新も反映。"
+    "note": "10月6日更新も反映。",
+    "history": [],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-05",
+    "id": "inc-4851f6ec60",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-10-05",
@@ -798,7 +1099,12 @@
         "url": "https://www.monogatari.co.jp/news/261005_news/"
       }
     ],
-    "note": ""
+    "note": "",
+    "history": [],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-05",
+    "id": "inc-c3b533bf8e",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-10-05",
@@ -822,7 +1128,17 @@
     "note": "",
     "updated": "2026-10-08",
     "changeType": "新規追加",
-    "change": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。"
+    "change": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。",
+    "history": [
+      {
+        "date": "2026-10-08",
+        "text": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。"
+      }
+    ],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-08",
+    "id": "inc-56f4040999",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-10-05",
@@ -848,7 +1164,17 @@
     "updated": "2026-10-08",
     "changeType": "新規追加",
     "change": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。",
-    "followup": "2026-10-06"
+    "followup": "2026-10-06",
+    "history": [
+      {
+        "date": "2026-10-08",
+        "text": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。"
+      }
+    ],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-08",
+    "id": "inc-0c080bf13c",
+    "industry": "交通・旅行・宿泊"
   },
   {
     "date": "2026-10-04",
@@ -874,7 +1200,17 @@
     "updated": "2026-10-08",
     "changeType": "新規追加",
     "change": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。",
-    "followup": "2026-10-07"
+    "followup": "2026-10-07",
+    "history": [
+      {
+        "date": "2026-10-08",
+        "text": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。"
+      }
+    ],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-08",
+    "id": "inc-4fd2685964",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-10-03",
@@ -888,14 +1224,31 @@
     "impact": "注文情報と一致する不審な返金案内メールを確認。",
     "scope": "対象人数は調査中。",
     "exclude": "カード情報・セキュリティコードは保管していない。",
-    "action": "公式案内に従いAMCパスワードを変更。返金のための送金・外部連絡アプリへの誘導を警戒する。",
+    "action": "公式サイトからAMCパスワードの変更を検討し、カード利用明細を確認。返金を装う連絡に注意する。パスワード漏えいが確認されたとの発表ではない。",
     "sources": [
       {
-        "label": "公式発表",
+        "label": "公式続報",
+        "url": "https://abahouse.co.jp/news/2026/"
+      },
+      {
+        "label": "過去の出典：公式発表",
         "url": "https://abahouse.co.jp/news/2005/"
       }
     ],
-    "note": "10月2日付案内を含む、Web掲載10月3日。"
+    "note": "10月2日付案内を含む、Web掲載10月3日。",
+    "history": [
+      {
+        "date": "2026-10-09",
+        "text": "侵入経路遮断・調査継続。新たな項目・人数の確定なし。AMCパスワード変更推奨。"
+      }
+    ],
+    "batch": "続報",
+    "sourceUpdated": "2026-10-09",
+    "updated": "2026-10-10",
+    "changeType": "続報",
+    "change": "侵入経路遮断・調査継続。新たな項目・人数の確定なし。AMCパスワード変更推奨。",
+    "id": "inc-541f77d1ae",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-10-03",
@@ -916,7 +1269,12 @@
         "url": "https://www.itmedia.co.jp/news/article/2610/06/2000002019/"
       }
     ],
-    "note": "10月3日公表を10月6日報道で確認。一次資料未確認。"
+    "note": "10月3日公表を10月6日報道で確認。一次資料未確認。",
+    "history": [],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-03",
+    "id": "inc-8c0b1cd9ee",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-10-02",
@@ -937,7 +1295,12 @@
         "url": "https://www.jogmec.go.jp/news/information/information_00706.html"
       }
     ],
-    "note": ""
+    "note": "",
+    "history": [],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-02",
+    "id": "inc-f320f79068",
+    "industry": "教育・研究"
   },
   {
     "date": "2026-10-02",
@@ -958,7 +1321,12 @@
         "url": "https://www.sammy-net.jp/news/2026/10/777con-pass-6.html"
       }
     ],
-    "note": ""
+    "note": "",
+    "history": [],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-02",
+    "id": "inc-7e895a24eb",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-10-02",
@@ -979,7 +1347,12 @@
         "url": "https://www.saferinternet.or.jp/info/35403/"
       }
     ],
-    "note": ""
+    "note": "",
+    "history": [],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-02",
+    "id": "inc-660e772652",
+    "industry": "IT・通信"
   },
   {
     "date": "2026-10-02",
@@ -1000,7 +1373,12 @@
         "url": "https://www.moonstar.co.jp/information/2026/10/post-4.html"
       }
     ],
-    "note": "期間内の続報を掲載。初報は3月26日。"
+    "note": "期間内の続報を掲載。初報は3月26日。",
+    "history": [],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-02",
+    "id": "inc-e7b677efa1",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-10-02",
@@ -1014,42 +1392,64 @@
     "impact": "10月9日から全キャンパスで対面授業を再開予定。Moodle等は暫定利用を案内。10月8日17時発表で学生・教職員間メールは利用可能。外部からの受信は10月8日中、外部への送信は10月13日頃の再開予定。調査・復旧は継続中。全面復旧ではない。",
     "scope": "全キャンパスの多くの情報システム。",
     "exclude": "附属病院・獣医臨床センターは通常運営と説明。",
-    "action": "休講・履修登録・復旧予定を大学の臨時サイトで確認。流出が確定したとして個別項目の変更を一律に求めない。",
+    "action": "大学の案内に従いOMU認証パスワードのリセットを行う。10/2～8に届く予定だったメールは再送を依頼。パスワード漏えい確認を意味しない。",
     "sources": [
       {
-        "label": "公式発表",
+        "label": "臨時お知らせ・10/10相談窓口案内",
+        "url": "https://www.omu.moe/news/"
+      },
+      {
+        "label": "10/9メール復旧状況",
+        "url": "https://www.omu.moe/news/2026-10-09-2a387318.html"
+      },
+      {
+        "label": "過去の出典：公式発表",
         "url": "https://www.omu.moe/news/2026-10-06-7fb5a624.html"
       },
       {
-        "label": "公式：障害初報・休講案内",
+        "label": "過去の出典：公式：障害初報・休講案内",
         "url": "https://e.omu.ac.jp/"
       },
       {
-        "label": "報道：保管情報の規模（MBS）",
+        "label": "過去の出典：報道：保管情報の規模（MBS）",
         "url": "https://newsdig.tbs.co.jp/articles/mbs/2990964?display=1"
       },
       {
-        "label": "授業に関する続報（10/7）",
+        "label": "過去の出典：授業に関する続報（10/7）",
         "url": "https://www.omu.moe/news/2026-10-06-0e4be7e6.html"
       },
       {
-        "label": "メールに関する続報（10/7）",
+        "label": "過去の出典：メールに関する続報（10/7）",
         "url": "https://www.omu.moe/news/2026-10-06-9a161963.html"
       },
       {
-        "label": "授業・システム続報（10/8）",
+        "label": "過去の出典：授業・システム続報（10/8）",
         "url": "https://www.omu.moe/news/2026-10-08-c5873744.html"
       },
       {
-        "label": "メール復旧状況（10/8）",
+        "label": "過去の出典：メール復旧状況（10/8）",
         "url": "https://www.omu.moe/news/2026-10-08-a832f149.html"
       }
     ],
     "note": "10月2日障害初報。10月5日会見、10月6日公式資料でランサムウェアとの判断を確認。",
-    "updated": "2026-10-08",
+    "updated": "2026-10-10",
     "followup": "2026-10-08 17:00",
     "changeType": "続報",
-    "change": "10/9の全キャンパス対面授業再開予定と、学内メールの一部復旧を反映。"
+    "change": "10/9にOMU認証パスワードのリセット案内、10/10に相談窓口の案内。メールも段階的に復旧。",
+    "history": [
+      {
+        "date": "2026-10-08",
+        "text": "10/9の全キャンパス対面授業再開予定と、学内メールの一部復旧を反映。"
+      },
+      {
+        "date": "2026-10-10",
+        "text": "10/9にOMU認証パスワードのリセット案内、10/10に相談窓口の案内。メールも段階的に復旧。"
+      }
+    ],
+    "batch": "続報",
+    "sourceUpdated": "2026-10-10",
+    "id": "inc-5070a0a689",
+    "industry": "教育・研究"
   },
   {
     "date": "2026-10-02",
@@ -1070,7 +1470,12 @@
         "url": "https://www.dai-ichi-life.co.jp/information/pdf/index_192.pdf"
       }
     ],
-    "note": ""
+    "note": "",
+    "history": [],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-02",
+    "id": "inc-bd22f9bc35",
+    "industry": "金融・保険"
   },
   {
     "date": "2026-10-02",
@@ -1099,7 +1504,17 @@
     "updated": "2026-10-09",
     "relatedDate": "2026-10-07（委託先）",
     "changeType": "委託先情報補足",
-    "change": "委託先TEMAIRAZUの第2報から対象情報7項目を補足。施設単独の新たな発表とは区別。"
+    "change": "委託先TEMAIRAZUの第2報から対象情報7項目を補足。施設単独の新たな発表とは区別。",
+    "history": [
+      {
+        "date": "2026-10-09",
+        "text": "委託先TEMAIRAZUの第2報から対象情報7項目を補足。施設単独の新たな発表とは区別。"
+      }
+    ],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-09",
+    "id": "inc-2024434329",
+    "industry": "交通・旅行・宿泊"
   },
   {
     "date": "2026-10-01",
@@ -1120,7 +1535,12 @@
         "url": "https://www.nipponrentacar.co.jp/info/202610_2.html"
       }
     ],
-    "note": ""
+    "note": "",
+    "history": [],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-01",
+    "id": "inc-e96a6159e2",
+    "industry": "交通・旅行・宿泊"
   },
   {
     "date": "2026-10-01",
@@ -1141,7 +1561,12 @@
         "url": "https://www.jaea.go.jp/02/press2026/p26100105/"
       }
     ],
-    "note": ""
+    "note": "",
+    "history": [],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-01",
+    "id": "inc-575a6266e2",
+    "industry": "教育・研究"
   },
   {
     "date": "2026-09-30",
@@ -1162,7 +1587,12 @@
         "url": "https://corp.benefit-one.co.jp/company/news/news/2026/20260930/20260930.pdf"
       }
     ],
-    "note": ""
+    "note": "",
+    "history": [],
+    "batch": "以前",
+    "sourceUpdated": "2026-09-30",
+    "id": "inc-d9304538be",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-09-30",
@@ -1180,27 +1610,45 @@
     "action": "実際の配送情報を使う再配達詐欺に注意。公式アプリや直接開いた公式サイトで確認する。",
     "sources": [
       {
-        "label": "公式発表",
+        "label": "公式第4報",
+        "url": "https://www2.sagawa-exp.co.jp/information/detail/426/"
+      },
+      {
+        "label": "過去の出典：公式発表",
         "url": "https://www2.sagawa-exp.co.jp/information/detail/420/"
       },
       {
-        "label": "報道：ITmedia",
+        "label": "過去の出典：報道：ITmedia",
         "url": "https://www.itmedia.co.jp/news/article/2610/01/2000001933/"
       },
       {
-        "label": "横須賀市発表（10/7）",
+        "label": "過去の出典：横須賀市発表（10/7）",
         "url": "https://www.city.yokosuka.kanagawa.jp/4430/nagekomi/20261007.html"
       },
       {
-        "label": "富士薬品公式発表（10/8）",
+        "label": "過去の出典：富士薬品公式発表（10/8）",
         "url": "https://www.fujiyakuhin.co.jp/notice/article/20261008111035.html"
       }
     ],
     "note": "9月30日初報。詳細は10月1日報道で補完。",
-    "updated": "2026-10-08",
+    "updated": "2026-10-10",
     "followup": "2026-10-08",
-    "changeType": "関連先追加",
-    "change": "富士薬品公式通販の利用者への影響可能性を追記。"
+    "changeType": "続報",
+    "change": "第4報：対象範囲・人数は調査中。他システム・グループ会社への影響と悪用は未確認。9/30 7:30は検知時刻。配送は通常継続。",
+    "history": [
+      {
+        "date": "2026-10-08",
+        "text": "富士薬品公式通販の利用者への影響可能性を追記。"
+      },
+      {
+        "date": "2026-10-09",
+        "text": "第4報：対象範囲・人数は調査中。他システム・グループ会社への影響と悪用は未確認。9/30 7:30は検知時刻。配送は通常継続。"
+      }
+    ],
+    "batch": "続報",
+    "sourceUpdated": "2026-10-09",
+    "id": "inc-445a38d6c5",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-09-30",
@@ -1226,7 +1674,17 @@
     "updated": "2026-10-07",
     "changeType": "新規追加",
     "change": "今回の一覧に新規掲載。",
-    "followup": "2026-10-06"
+    "followup": "2026-10-06",
+    "history": [
+      {
+        "date": "2026-10-07",
+        "text": "今回の一覧に新規掲載。"
+      }
+    ],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-07",
+    "id": "inc-ebc60fb30c",
+    "industry": "教育・研究"
   },
   {
     "date": "2026-09-30",
@@ -1250,7 +1708,17 @@
     "note": "",
     "updated": "2026-10-08",
     "changeType": "新規追加",
-    "change": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。"
+    "change": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。",
+    "history": [
+      {
+        "date": "2026-10-08",
+        "text": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。"
+      }
+    ],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-08",
+    "id": "inc-13c6071831",
+    "industry": "教育・研究"
   },
   {
     "date": "2026-09-29",
@@ -1271,7 +1739,12 @@
         "url": "https://support-qa.eplus.jp/hc/ja/articles/62711500727961"
       }
     ],
-    "note": ""
+    "note": "",
+    "history": [],
+    "batch": "以前",
+    "sourceUpdated": "2026-09-29",
+    "id": "inc-121909dc11",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-09-29",
@@ -1292,7 +1765,12 @@
         "url": "https://online.seicomart.co.jp/delivery/cms/preview.php?pre_no=119"
       }
     ],
-    "note": ""
+    "note": "",
+    "history": [],
+    "batch": "以前",
+    "sourceUpdated": "2026-09-29",
+    "id": "inc-313252d13c",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-09-29",
@@ -1314,7 +1792,12 @@
         "url": "https://www.yamato-hd.co.jp/important/info_260929_1.html"
       }
     ],
-    "note": "9月29日初報。10月2日第2報を反映。"
+    "note": "9月29日初報。10月2日第2報を反映。",
+    "history": [],
+    "batch": "以前",
+    "sourceUpdated": "2026-09-29",
+    "id": "inc-5581ba10c4",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-09-29",
@@ -1335,7 +1818,12 @@
         "url": "https://files.japanpost.jp/assets/34d9d11432734cfaa759e78fe395b688/18239b871f714763aa7eb15c25e7b30b/20260929_01.pdf"
       }
     ],
-    "note": ""
+    "note": "",
+    "history": [],
+    "batch": "以前",
+    "sourceUpdated": "2026-09-29",
+    "id": "inc-289633f1ff",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-09-28",
@@ -1360,7 +1848,12 @@
         "url": "https://rocket-boys.co.jp/security-measures-lab/sanpo-foods-website-unauthorized-access-defacement/"
       }
     ],
-    "note": "公式検索結果で改ざんを確認。本文取得ができなかったため報道も併記。"
+    "note": "公式検索結果で改ざんを確認。本文取得ができなかったため報道も併記。",
+    "history": [],
+    "batch": "以前",
+    "sourceUpdated": "2026-09-28",
+    "id": "inc-e57cf7c17c",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-09-28",
@@ -1372,31 +1865,49 @@
       "フィッシング"
     ],
     "status": "漏えいの可能性",
-    "info": "宿泊者氏名、電話番号、メールアドレス、宿泊施設名、チェックイン日、チェックアウト日、宿泊料金。10月7日第2報で7項目を明示。",
+    "info": "氏名、電話番号、メールアドレス、チェックイン日・チェックアウト日、宿泊料金。",
     "impact": "宿泊予約管理システムへの不正アクセス。WhatsApp、メール、SMSで、偽の事前チェックイン・予約維持・決済要求が届く事象を確認。THE FARMは10月8日20時36分、宿泊前日・当日の偽メールにも注意喚起。",
-    "scope": "対象人数未公表。THE FARMで不審メッセージを確認した予約は、9月21日までに成立し、宿泊日が9月21日以降のものの一部。この条件を全施設に一律適用しない。",
-    "exclude": "カード情報と宿泊予約サイトのログイン情報は保持していない。藤田観光等の利用施設と同一の委託先事案であり、独立した攻撃として重複計上しない。",
+    "scope": "最大約445万人分の漏えいの可能性。",
+    "exclude": "クレジットカード情報は保有していない。",
     "action": "予約内容が正しくても、メッセージ内の決済リンクから情報を入力しない。ホテル・予約サイトの公式窓口に確認。偽サイトへカード情報を入力した場合はカード会社へ相談する。",
     "sources": [
       {
-        "label": "公式発表",
+        "label": "公式続報PDF",
+        "url": "https://www.temairazu.co.jp/pdf/1212/ir-news"
+      },
+      {
+        "label": "過去の出典：公式発表",
         "url": "https://www.temairazu.co.jp/pdf/1210/news-update"
       },
       {
-        "label": "初報（9/28）",
+        "label": "過去の出典：初報（9/28）",
         "url": "https://www.temairazu.co.jp/pdf/1206/news-update"
       },
       {
-        "label": "THE FARM続報（10/8）",
+        "label": "過去の出典：THE FARM続報（10/8）",
         "url": "https://www.thefarm.jp/news/41017/"
       }
     ],
     "note": "",
-    "updated": "2026-10-09",
-    "changeType": "新規追加",
-    "change": "10月9日朝の調査で新規掲載。公表日と一覧反映日は区別。",
+    "updated": "2026-10-10",
+    "changeType": "続報",
+    "change": "最大約445万人分の漏えいの可能性を追記。停止機能は復旧済み。",
     "followup": "2026-10-07",
-    "relatedDate": "2026-10-08（THE FARM）"
+    "relatedDate": "2026-10-08（THE FARM）",
+    "history": [
+      {
+        "date": "2026-10-09",
+        "text": "10月9日朝の調査で新規掲載。公表日と一覧反映日は区別。"
+      },
+      {
+        "date": "2026-10-09",
+        "text": "最大約445万人分の漏えいの可能性を追記。停止機能は復旧済み。"
+      }
+    ],
+    "batch": "続報",
+    "sourceUpdated": "2026-10-09",
+    "id": "inc-64f12c2825",
+    "industry": "交通・旅行・宿泊"
   },
   {
     "date": "2026-09-27",
@@ -1417,7 +1928,12 @@
         "url": "https://starts-pub.jp/info20261001"
       }
     ],
-    "note": "9月27日初報、10月1日続報を反映。"
+    "note": "9月27日初報、10月1日続報を反映。",
+    "history": [],
+    "batch": "以前",
+    "sourceUpdated": "2026-09-27",
+    "id": "inc-5584ed2b27",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-09-27",
@@ -1438,7 +1954,12 @@
         "url": "https://www.to-me-card.jp/important/202609-01/index.html"
       }
     ],
-    "note": ""
+    "note": "",
+    "history": [],
+    "batch": "以前",
+    "sourceUpdated": "2026-09-27",
+    "id": "inc-896331ff9f",
+    "industry": "交通・旅行・宿泊"
   },
   {
     "date": "2026-09-26",
@@ -1459,7 +1980,12 @@
         "url": "https://www.keio.co.jp/news/update/announce/nr260926v13404/"
       }
     ],
-    "note": ""
+    "note": "",
+    "history": [],
+    "batch": "以前",
+    "sourceUpdated": "2026-09-26",
+    "id": "inc-e1cbe6d84e",
+    "industry": "交通・旅行・宿泊"
   },
   {
     "date": "2026-09-25",
@@ -1492,7 +2018,17 @@
     "updated": "2026-10-09",
     "relatedDate": "2026-10-06（公式FAQ）・10-08（関連報道）",
     "changeType": "対応情報補足",
-    "change": "公式FAQの10/6追加分と、宮崎県等の免許証再交付に関する報道を補足。漏えい件数の増加ではない。"
+    "change": "公式FAQの10/6追加分と、宮崎県等の免許証再交付に関する報道を補足。漏えい件数の増加ではない。",
+    "history": [
+      {
+        "date": "2026-10-09",
+        "text": "公式FAQの10/6追加分と、宮崎県等の免許証再交付に関する報道を補足。漏えい件数の増加ではない。"
+      }
+    ],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-09",
+    "id": "inc-eb7e432ef8",
+    "industry": "交通・旅行・宿泊"
   },
   {
     "date": "2026-09-18",
@@ -1513,7 +2049,12 @@
         "url": "https://www.pfu.ricoh.com/news/2026/news260918-2.html"
       }
     ],
-    "note": ""
+    "note": "",
+    "history": [],
+    "batch": "以前",
+    "sourceUpdated": "2026-09-18",
+    "id": "inc-b3954863f9",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-09-18",
@@ -1535,7 +2076,12 @@
         "url": "https://www.nichirei.co.jp/news/2026/524.html"
       }
     ],
-    "note": "第7報。"
+    "note": "第7報。",
+    "history": [],
+    "batch": "以前",
+    "sourceUpdated": "2026-09-18",
+    "id": "inc-37d03e4cb5",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-09-17",
@@ -1563,7 +2109,17 @@
     "note": "",
     "updated": "2026-10-08",
     "changeType": "新規追加",
-    "change": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。"
+    "change": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。",
+    "history": [
+      {
+        "date": "2026-10-08",
+        "text": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。"
+      }
+    ],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-08",
+    "id": "inc-b738c7d931",
+    "industry": "金融・保険"
   },
   {
     "date": "2026-09-16",
@@ -1588,7 +2144,12 @@
         "url": "https://corp.helpfeel.com/en/news/news-20260925"
       }
     ],
-    "note": "9月25日の続報を反映。"
+    "note": "9月25日の続報を反映。",
+    "history": [],
+    "batch": "以前",
+    "sourceUpdated": "2026-09-16",
+    "id": "inc-00911a8c6d",
+    "industry": "IT・通信"
   },
   {
     "date": "2026-09-16",
@@ -1612,7 +2173,17 @@
     "note": "",
     "updated": "2026-10-08",
     "changeType": "新規追加",
-    "change": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。"
+    "change": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。",
+    "history": [
+      {
+        "date": "2026-10-08",
+        "text": "10月8日の調査で新規掲載。公表日と本日の報道日は区別。"
+      }
+    ],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-08",
+    "id": "inc-14c88876b8",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-09-15",
@@ -1637,7 +2208,12 @@
         "url": "https://www.gate02.ne.jp/lab/incident-news/lean-body-20260925/"
       }
     ],
-    "note": "公式ページの本文取得ができなかったため、詳細項目は報道で補完。"
+    "note": "公式ページの本文取得ができなかったため、詳細項目は報道で補完。",
+    "history": [],
+    "batch": "以前",
+    "sourceUpdated": "2026-09-15",
+    "id": "inc-303696004b",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-09-15",
@@ -1658,7 +2234,12 @@
         "url": "https://ainokaze.co.jp/wp-content/uploads/2026/09/6f52a51d7d840aedb7b617d8c92c6626.pdf"
       }
     ],
-    "note": ""
+    "note": "",
+    "history": [],
+    "batch": "以前",
+    "sourceUpdated": "2026-09-15",
+    "id": "inc-7b4667505f",
+    "industry": "交通・旅行・宿泊"
   },
   {
     "date": "2026-09-15",
@@ -1679,7 +2260,12 @@
         "url": "https://murauchi.com/static-pages/privacy/弊社における不正アクセスによるお客様情報漏えいに関するお詫びとご報告（第二報）.pdf"
       }
     ],
-    "note": "第二報。"
+    "note": "第二報。",
+    "history": [],
+    "batch": "以前",
+    "sourceUpdated": "2026-09-15",
+    "id": "inc-3fea585871",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-09-11",
@@ -1700,7 +2286,12 @@
         "url": "https://www.digital.go.jp/news/2026-0911-01"
       }
     ],
-    "note": ""
+    "note": "",
+    "history": [],
+    "batch": "以前",
+    "sourceUpdated": "2026-09-11",
+    "id": "inc-2535e7043a",
+    "industry": "自治体・公的機関"
   },
   {
     "date": "2026-09-11",
@@ -1721,7 +2312,12 @@
         "url": "https://www.rohto.co.jp/news/whatsnew/2026/0915_01"
       }
     ],
-    "note": "9月11日公表、9月15日続報を反映。"
+    "note": "9月11日公表、9月15日続報を反映。",
+    "history": [],
+    "batch": "以前",
+    "sourceUpdated": "2026-09-11",
+    "id": "inc-09961079f6",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-09-11",
@@ -1742,7 +2338,12 @@
         "url": "https://www.law.nihon-u.ac.jp/news/32278"
       }
     ],
-    "note": ""
+    "note": "",
+    "history": [],
+    "batch": "以前",
+    "sourceUpdated": "2026-09-11",
+    "id": "inc-d3b14d6cf8",
+    "industry": "教育・研究"
   },
   {
     "date": "2026-09-10",
@@ -1763,7 +2364,12 @@
         "url": "https://www.sakura.ad.jp/corporate/information/newsreleases/2026/09/10/1968225692/"
       }
     ],
-    "note": "第三報。パスワードの種類を混同しない。"
+    "note": "第三報。パスワードの種類を混同しない。",
+    "history": [],
+    "batch": "以前",
+    "sourceUpdated": "2026-09-10",
+    "id": "inc-f79b019c16",
+    "industry": "IT・通信"
   },
   {
     "date": "2026-09-10",
@@ -1783,7 +2389,12 @@
         "url": "https://www.mitsuioceancruises.com/news/20260910.html"
       }
     ],
-    "note": ""
+    "note": "",
+    "history": [],
+    "batch": "以前",
+    "sourceUpdated": "2026-09-10",
+    "id": "inc-8d45f569d9",
+    "industry": "交通・旅行・宿泊"
   },
   {
     "date": "2026-09-09",
@@ -1807,7 +2418,17 @@
     "note": "",
     "updated": "2026-10-09",
     "changeType": "新規追加",
-    "change": "10月9日朝の調査で新規掲載。公表日と一覧反映日は区別。"
+    "change": "10月9日朝の調査で新規掲載。公表日と一覧反映日は区別。",
+    "history": [
+      {
+        "date": "2026-10-09",
+        "text": "10月9日朝の調査で新規掲載。公表日と一覧反映日は区別。"
+      }
+    ],
+    "batch": "以前",
+    "sourceUpdated": "2026-10-09",
+    "id": "inc-19a56bb8a7",
+    "industry": "自治体・公的機関"
   },
   {
     "date": "2026-09-08",
@@ -1828,7 +2449,12 @@
         "url": "https://www.sanga-fc.jp/news/detail/21401"
       }
     ],
-    "note": ""
+    "note": "",
+    "history": [],
+    "batch": "以前",
+    "sourceUpdated": "2026-09-08",
+    "id": "inc-defe068855",
+    "industry": "その他企業・団体"
   },
   {
     "date": "2026-09-07",
@@ -1849,22 +2475,901 @@
         "url": "https://ef.musashino-u.ac.jp/news/20260907-8715.html"
       }
     ],
-    "note": "第二報。発生は6月15日。"
+    "note": "第二報。発生は6月15日。",
+    "history": [],
+    "batch": "以前",
+    "sourceUpdated": "2026-09-07",
+    "id": "inc-e00975cdfe",
+    "industry": "教育・研究"
+  },
+  {
+    "date": "2026-10-09",
+    "org": "ブックオフグループ",
+    "info": "氏名、生年月日、性別、メール、電話番号、郵便番号・住所、パスワードのハッシュ値、ポイントカード番号、会員番号。",
+    "scope": "最大約643万件の会員番号。実人数ではない。流出自体を確認、範囲は調査中。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.bookoff.co.jp/info/news/2026/post_113.html"
+      }
+    ],
+    "status": "一部漏えい確認",
+    "cat": [
+      "不正アクセス",
+      "情報漏えい"
+    ],
+    "exclude": "決済情報は対象システムに保有していない。",
+    "action": "公式通知を確認。安全側の対応として、当該サービスと使い回し先のパスワード変更を検討する（編集上の推奨）。不審なSMS・電話に認証コード等を伝えない。",
+    "impact": "",
+    "note": "",
+    "updated": "2026-10-10",
+    "sourceUpdated": "2026-10-09",
+    "batch": "新規",
+    "changeType": "新規追加",
+    "change": "今回新規掲載。",
+    "history": [],
+    "group": "",
+    "id": "inc-afdb3f8662",
+    "industry": "その他企業・団体"
+  },
+  {
+    "date": "2026-10-09",
+    "org": "ココナラ／ココナラエージェント",
+    "info": "履歴書・職務経歴書関連書類に記載された個人情報。個別の項目は未公表。",
+    "scope": "履歴書449件、職務経歴書関連書類1,845件。書類数であり人数ではない。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://coconala.co.jp/news-20261009/"
+      }
+    ],
+    "status": "漏えい確認",
+    "cat": [
+      "不正アクセス",
+      "情報漏えい"
+    ],
+    "exclude": "パスワード・カード情報は対象外。",
+    "action": "対象サービスの公式案内・個別通知を確認する。登録情報を利用した不審なメール・電話に注意し、連絡中のリンクではなく公式窓口から確認する。",
+    "impact": "",
+    "note": "",
+    "updated": "2026-10-10",
+    "sourceUpdated": "2026-10-09",
+    "batch": "新規",
+    "changeType": "新規追加",
+    "change": "今回新規掲載。",
+    "history": [],
+    "group": "",
+    "id": "inc-3a635d04b3",
+    "industry": "その他企業・団体"
+  },
+  {
+    "date": "2026-10-09",
+    "org": "JR東日本／えきねっと・大人の休日倶楽部",
+    "info": "えきねっと：メール。大人の休日倶楽部：メール、会員番号、生年月日、カード有効期限。",
+    "scope": "えきねっと最大約167万件、大人の休日倶楽部最大約39万件。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.jreast.co.jp/press/2026/20261009_ho02.pdf"
+      },
+      {
+        "label": "報道・内容確認",
+        "url": "https://www.watch.impress.co.jp/docs/news/2147202.html"
+      }
+    ],
+    "status": "漏えいの可能性",
+    "cat": [
+      "不正アクセス",
+      "情報漏えい"
+    ],
+    "exclude": "氏名・カード番号の漏えいとの発表ではない。",
+    "action": "対象サービスの公式案内・個別通知を確認する。登録情報を利用した不審なメール・電話に注意し、連絡中のリンクではなく公式窓口から確認する。",
+    "impact": "IDCF関連の影響。",
+    "note": "",
+    "updated": "2026-10-10",
+    "sourceUpdated": "2026-10-09",
+    "batch": "新規",
+    "changeType": "新規追加",
+    "change": "今回新規掲載。",
+    "history": [],
+    "group": "IDCF",
+    "id": "inc-a4b484f4a2",
+    "industry": "交通・旅行・宿泊"
+  },
+  {
+    "date": "2026-10-09",
+    "org": "ビューカード／VIEW's NET",
+    "info": "メールアドレス。",
+    "scope": "最大約403万件。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.jreast.co.jp/card/news/pdf/20261009.pdf"
+      }
+    ],
+    "status": "漏えいの可能性",
+    "cat": [
+      "不正アクセス",
+      "情報漏えい"
+    ],
+    "exclude": "カード番号の漏えいとの発表ではない。",
+    "action": "対象サービスの公式案内・個別通知を確認する。登録情報を利用した不審なメール・電話に注意し、連絡中のリンクではなく公式窓口から確認する。",
+    "impact": "IDCF関連の影響。",
+    "note": "",
+    "updated": "2026-10-10",
+    "sourceUpdated": "2026-10-09",
+    "batch": "新規",
+    "changeType": "新規追加",
+    "change": "今回新規掲載。",
+    "history": [],
+    "group": "IDCF",
+    "id": "inc-26fcea7f78",
+    "industry": "金融・保険"
+  },
+  {
+    "date": "2026-10-09",
+    "org": "JR九州／JR九州メルマガ",
+    "info": "メールアドレス。",
+    "scope": "最大約130万件。9/5以降のメルマガ配信対象。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.jrkyushu.co.jp/news/__icsFiles/afieldfile/2026/10/09/202691009_mail_address_access_1.pdf"
+      },
+      {
+        "label": "報道・内容確認",
+        "url": "https://www.fnn.jp/articles/-/1130298"
+      }
+    ],
+    "status": "漏えいの可能性",
+    "cat": [
+      "不正アクセス",
+      "情報漏えい"
+    ],
+    "exclude": "",
+    "action": "対象サービスの公式案内・個別通知を確認する。登録情報を利用した不審なメール・電話に注意し、連絡中のリンクではなく公式窓口から確認する。",
+    "impact": "IDCF関連の影響。",
+    "note": "",
+    "updated": "2026-10-10",
+    "sourceUpdated": "2026-10-09",
+    "batch": "新規",
+    "changeType": "新規追加",
+    "change": "今回新規掲載。",
+    "history": [],
+    "group": "IDCF",
+    "id": "inc-be7b753327",
+    "industry": "交通・旅行・宿泊"
+  },
+  {
+    "date": "2026-10-09",
+    "org": "エネコム",
+    "info": "顧客情報等の可能性。具体的項目・件数は調査中。",
+    "scope": "複数の電子ファイルが外部送信された痕跡。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.enecom.co.jp/information/3920/"
+      }
+    ],
+    "status": "漏えいの可能性",
+    "cat": [
+      "不正アクセス",
+      "情報漏えい"
+    ],
+    "exclude": "メガ・エッグの顧客情報漏えいは未確認。",
+    "action": "対象サービスの公式案内・個別通知を確認する。登録情報を利用した不審なメール・電話に注意し、連絡中のリンクではなく公式窓口から確認する。",
+    "impact": "",
+    "note": "",
+    "updated": "2026-10-10",
+    "sourceUpdated": "2026-10-09",
+    "batch": "新規",
+    "changeType": "新規追加",
+    "change": "今回新規掲載。",
+    "history": [],
+    "group": "",
+    "id": "inc-69f4e391ad",
+    "industry": "その他企業・団体"
+  },
+  {
+    "date": "2026-10-09",
+    "org": "キッセイ商事／キッセイ薬品工業グループ",
+    "info": "営業秘密、顧客情報、要配慮個人情報などの機微情報。具体的項目は調査中。",
+    "scope": "人数・件数は調査中。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.kissei.co.jp/news/uploaded/8799a42c0104c787a0519f1fabd3b2a5.pdf"
+      }
+    ],
+    "status": "漏えいの可能性",
+    "cat": [
+      "不正アクセス",
+      "情報漏えい"
+    ],
+    "exclude": "",
+    "action": "対象サービスの公式案内・個別通知を確認する。登録情報を利用した不審なメール・電話に注意し、連絡中のリンクではなく公式窓口から確認する。",
+    "impact": "",
+    "note": "",
+    "updated": "2026-10-10",
+    "sourceUpdated": "2026-10-09",
+    "batch": "新規",
+    "changeType": "新規追加",
+    "change": "今回新規掲載。",
+    "history": [],
+    "group": "",
+    "id": "inc-bfd418b357",
+    "industry": "その他企業・団体"
+  },
+  {
+    "date": "2026-10-09",
+    "org": "日本酒類販売／東京酒粋",
+    "info": "氏名、メールアドレス、誕生月（暗号化して保存）。",
+    "scope": "対象期間・件数は調査中。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.nishuhan.co.jp/news/2026/20261009.html"
+      }
+    ],
+    "status": "漏えいの可能性",
+    "cat": [
+      "不正アクセス",
+      "情報漏えい"
+    ],
+    "exclude": "住所、電話番号、パスワード、カード情報は対象外。",
+    "action": "対象サービスの公式案内・個別通知を確認する。登録情報を利用した不審なメール・電話に注意し、連絡中のリンクではなく公式窓口から確認する。",
+    "impact": "IDCF関連の影響。",
+    "note": "",
+    "updated": "2026-10-10",
+    "sourceUpdated": "2026-10-09",
+    "batch": "新規",
+    "changeType": "新規追加",
+    "change": "今回新規掲載。",
+    "history": [],
+    "group": "IDCF",
+    "id": "inc-214e62b0bb",
+    "industry": "その他企業・団体"
+  },
+  {
+    "date": "2026-10-09",
+    "org": "岩手県／賃上げ支援事業・テレビ岩手",
+    "info": "事業者の銀行口座情報、従業員の氏名・時給額など。",
+    "scope": "1事業者、従業員47人。10/6の誤送信が10/9に判明。",
+    "sources": [
+      {
+        "label": "報道",
+        "url": "https://www.fnn.jp/articles/-/1130264"
+      }
+    ],
+    "status": "漏えい確認",
+    "cat": [
+      "誤送信",
+      "情報漏えい"
+    ],
+    "exclude": "",
+    "action": "対象サービスの公式案内・個別通知を確認する。登録情報を利用した不審なメール・電話に注意し、連絡中のリンクではなく公式窓口から確認する。",
+    "impact": "",
+    "note": "報道で確認。",
+    "updated": "2026-10-10",
+    "sourceUpdated": "2026-10-09",
+    "batch": "新規",
+    "changeType": "新規追加",
+    "change": "今回新規掲載。",
+    "history": [],
+    "group": "",
+    "id": "inc-f87ae38799",
+    "industry": "自治体・公的機関"
+  },
+  {
+    "date": "2026-10-09",
+    "org": "大阪市／個人情報関連事故の月次公表",
+    "info": "マイナンバーに関する誤処理、母子健康手帳の写し、税額通知書、身長・体重等の成長記録、生活保護医療券、各種書類・メールの誤送付等。",
+    "scope": "13件の一括公表（うち2件公表済み）。報告対象8/21～9/20。漏えいと誤記載等を含む。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.city.osaka.lg.jp/hodoshiryo/somu/0000688424.html"
+      }
+    ],
+    "status": "漏えい・誤処理等",
+    "cat": [
+      "誤送信",
+      "情報漏えい"
+    ],
+    "exclude": "",
+    "action": "対象サービスの公式案内・個別通知を確認する。登録情報を利用した不審なメール・電話に注意し、連絡中のリンクではなく公式窓口から確認する。",
+    "impact": "",
+    "note": "1掲載項目として集計。13件すべてが10/9に発生したものではない。",
+    "updated": "2026-10-10",
+    "sourceUpdated": "2026-10-09",
+    "batch": "新規",
+    "changeType": "新規追加",
+    "change": "今回新規掲載。",
+    "history": [],
+    "group": "",
+    "id": "inc-d490d2b141",
+    "industry": "自治体・公的機関"
+  },
+  {
+    "date": "2026-10-09",
+    "org": "コミューン／Commune・Commune for Work",
+    "info": "メールアドレス、プロフィール・所属グループ等。144アカウントで本人の意図なくパスワードが一時パスワードへ変更された。",
+    "scope": "推計約30.7万人。メール含む約12.6万人（従業員・テスト用約4.2万人含む）、メールなし約18.1万人。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://communeinc.com/ja/news/2026oct09"
+      }
+    ],
+    "status": "漏えい確認",
+    "cat": [
+      "不正アクセス",
+      "情報漏えい"
+    ],
+    "exclude": "パスワード自体の漏えいは未確認。提供元と各サービスの人数は合算不可。",
+    "action": "対象サービスの公式案内・個別通知を確認する。登録情報を利用した不審なメール・電話に注意し、連絡中のリンクではなく公式窓口から確認する。",
+    "impact": "Commune関連の影響。",
+    "note": "",
+    "updated": "2026-10-10",
+    "sourceUpdated": "2026-10-09",
+    "batch": "新規",
+    "changeType": "新規追加",
+    "change": "今回新規掲載。",
+    "history": [],
+    "group": "Commune",
+    "id": "inc-a3bc671409",
+    "industry": "IT・通信"
+  },
+  {
+    "date": "2026-10-09",
+    "org": "LIXIL／すまい・猫壁コミュニティ",
+    "info": "メール、ニックネーム・アカウント名、自己紹介、アイコン、グループ、ポイント・利用履歴。すまい：保有製品・参加理由・関心テーマ。猫壁：性別・年代・都道府県、猫の名前・品種・毛柄、購入・関心情報。",
+    "scope": "件数は確認中。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.lixil.co.jp/announce/notice-info-leak.htm"
+      }
+    ],
+    "status": "漏えいの可能性",
+    "cat": [
+      "不正アクセス",
+      "委託先被害",
+      "情報漏えい"
+    ],
+    "exclude": "",
+    "action": "対象サービスの公式案内・個別通知を確認する。登録情報を利用した不審なメール・電話に注意し、連絡中のリンクではなく公式窓口から確認する。",
+    "impact": "Commune関連の影響。",
+    "note": "",
+    "updated": "2026-10-10",
+    "sourceUpdated": "2026-10-09",
+    "batch": "新規",
+    "changeType": "新規追加",
+    "change": "今回新規掲載。",
+    "history": [],
+    "group": "Commune",
+    "id": "inc-b8e30fefba",
+    "industry": "その他企業・団体"
+  },
+  {
+    "date": "2026-10-09",
+    "org": "スズキ／コミュニティサービス",
+    "info": "メール、ニックネーム、入会日、性別、年代、都道府県、保有車名。",
+    "scope": "約3,000人。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.suzuki.co.jp/release/d/2026/1009/"
+      }
+    ],
+    "status": "漏えいの可能性",
+    "cat": [
+      "不正アクセス",
+      "委託先被害",
+      "情報漏えい"
+    ],
+    "exclude": "",
+    "action": "対象サービスの公式案内・個別通知を確認する。登録情報を利用した不審なメール・電話に注意し、連絡中のリンクではなく公式窓口から確認する。",
+    "impact": "Commune関連の影響。",
+    "note": "",
+    "updated": "2026-10-10",
+    "sourceUpdated": "2026-10-09",
+    "batch": "新規",
+    "changeType": "新規追加",
+    "change": "今回新規掲載。",
+    "history": [],
+    "group": "Commune",
+    "id": "inc-9afbe2cfc0",
+    "industry": "その他企業・団体"
+  },
+  {
+    "date": "2026-10-09",
+    "org": "森永乳業／マウントカフェ部",
+    "info": "メール、表示名・ユーザー名、自己紹介、登録プロフィール、グループ、ポイント・最終利用日時。",
+    "scope": "291人。実際の外部漏えいは未確認。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.morinagamilk.co.jp/information/newsentry-4168.html"
+      }
+    ],
+    "status": "漏えいの可能性",
+    "cat": [
+      "不正アクセス",
+      "委託先被害",
+      "情報漏えい"
+    ],
+    "exclude": "",
+    "action": "対象サービスの公式案内・個別通知を確認する。登録情報を利用した不審なメール・電話に注意し、連絡中のリンクではなく公式窓口から確認する。",
+    "impact": "Commune関連の影響。",
+    "note": "",
+    "updated": "2026-10-10",
+    "sourceUpdated": "2026-10-09",
+    "batch": "新規",
+    "changeType": "新規追加",
+    "change": "今回新規掲載。",
+    "history": [],
+    "group": "Commune",
+    "id": "inc-abee2ff59b",
+    "industry": "その他企業・団体"
+  },
+  {
+    "date": "2026-10-09",
+    "org": "LINEヤフー／DS.LAB",
+    "info": "氏名、メール、ニックネーム・アカウント名、自己紹介、アイコン、グループ、プロフィール項目、ポイント・最終利用日時。",
+    "scope": "1,750人。DS.INSIGHT利用者向けコミュニティ。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.lycorp.co.jp/ja/privacy-security/announcement/020892/"
+      }
+    ],
+    "status": "漏えいの可能性",
+    "cat": [
+      "不正アクセス",
+      "委託先被害",
+      "情報漏えい"
+    ],
+    "exclude": "",
+    "action": "対象サービスの公式案内・個別通知を確認する。登録情報を利用した不審なメール・電話に注意し、連絡中のリンクではなく公式窓口から確認する。",
+    "impact": "Commune関連の影響。",
+    "note": "",
+    "updated": "2026-10-10",
+    "sourceUpdated": "2026-10-09",
+    "batch": "新規",
+    "changeType": "新規追加",
+    "change": "今回新規掲載。",
+    "history": [],
+    "group": "Commune",
+    "id": "inc-92e30ddaac",
+    "industry": "IT・通信"
+  },
+  {
+    "date": "2026-10-09",
+    "org": "Sansan／Sansan User Forum",
+    "info": "メール、アカウント名・表示名、自己紹介、画像、所属グループ等。別の可能性対象にはメールを含まない。",
+    "scope": "1,325人は漏えい確認、8,687人はメール以外のプロフィール等に可能性。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://jp.corp-sansan.com/news/2026/1009.html"
+      }
+    ],
+    "status": "一部漏えい確認",
+    "cat": [
+      "不正アクセス",
+      "委託先被害",
+      "情報漏えい"
+    ],
+    "exclude": "パスワードは対象外。",
+    "action": "対象サービスの公式案内・個別通知を確認する。登録情報を利用した不審なメール・電話に注意し、連絡中のリンクではなく公式窓口から確認する。",
+    "impact": "Commune関連の影響。",
+    "note": "",
+    "updated": "2026-10-10",
+    "sourceUpdated": "2026-10-09",
+    "batch": "新規",
+    "changeType": "新規追加",
+    "change": "今回新規掲載。",
+    "history": [],
+    "group": "Commune",
+    "id": "inc-21d2fb2ee9",
+    "industry": "IT・通信"
+  },
+  {
+    "date": "2026-10-09",
+    "org": "ソフトブレーン／eセールスマネージャーRemix CLOUDコミュニティ",
+    "info": "会社名、氏名、ふりがな、アカウント名、メール、プロフィール。",
+    "scope": "1,164人。CRM本体のデータとは区別。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.softbrain.co.jp/news/topics/2026/20261009_1817/"
+      }
+    ],
+    "status": "漏えいの可能性",
+    "cat": [
+      "不正アクセス",
+      "委託先被害",
+      "情報漏えい"
+    ],
+    "exclude": "",
+    "action": "対象サービスの公式案内・個別通知を確認する。登録情報を利用した不審なメール・電話に注意し、連絡中のリンクではなく公式窓口から確認する。",
+    "impact": "Commune関連の影響。",
+    "note": "",
+    "updated": "2026-10-10",
+    "sourceUpdated": "2026-10-09",
+    "batch": "新規",
+    "changeType": "新規追加",
+    "change": "今回新規掲載。",
+    "history": [],
+    "group": "Commune",
+    "id": "inc-c697b6ab9a",
+    "industry": "IT・通信"
+  },
+  {
+    "date": "2026-10-09",
+    "org": "湖池屋／湖池屋GOGO!ランド",
+    "info": "メール、ニックネーム・アカウント名、自己紹介、性別・年代・都道府県、参加目的・好きな菓子、ポイント、入会日・最終利用、所属グループ（非公開含む）。",
+    "scope": "最大1,800件。ECサイトは対象外。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://koikeya.co.jp/images/pdf/info_20261009.pdf"
+      }
+    ],
+    "status": "漏えい確認",
+    "cat": [
+      "不正アクセス",
+      "委託先被害",
+      "情報漏えい"
+    ],
+    "exclude": "",
+    "action": "対象サービスの公式案内・個別通知を確認する。登録情報を利用した不審なメール・電話に注意し、連絡中のリンクではなく公式窓口から確認する。",
+    "impact": "Commune関連の影響。",
+    "note": "",
+    "updated": "2026-10-10",
+    "sourceUpdated": "2026-10-09",
+    "batch": "新規",
+    "changeType": "新規追加",
+    "change": "今回新規掲載。",
+    "history": [],
+    "group": "Commune",
+    "id": "inc-df6e49402e",
+    "industry": "その他企業・団体"
+  },
+  {
+    "date": "2026-10-09",
+    "org": "ヤマハ／YNE",
+    "info": "メール、表示名・アカウント名、自己紹介、アイコン、所属グループ等。",
+    "scope": "約1,600人。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.yamaha.com/ja/news_release/files/news/26100901/pdf/2610090101.pdf"
+      }
+    ],
+    "status": "漏えい確認",
+    "cat": [
+      "不正アクセス",
+      "委託先被害",
+      "情報漏えい"
+    ],
+    "exclude": "",
+    "action": "対象サービスの公式案内・個別通知を確認する。登録情報を利用した不審なメール・電話に注意し、連絡中のリンクではなく公式窓口から確認する。",
+    "impact": "Commune関連の影響。",
+    "note": "",
+    "updated": "2026-10-10",
+    "sourceUpdated": "2026-10-09",
+    "batch": "新規",
+    "changeType": "新規追加",
+    "change": "今回新規掲載。",
+    "history": [],
+    "group": "Commune",
+    "id": "inc-857bde980a",
+    "industry": "その他企業・団体"
+  },
+  {
+    "date": "2026-10-09",
+    "org": "パナソニック／LUMIXコミュニティ・ヘアサプ",
+    "info": "メールを含む会員情報。その他の具体的項目は未確認。",
+    "scope": "それぞれ約2,000人・約3,000人。両サービス停止。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.panasonic.com/jp/about/news/20261009.html"
+      }
+    ],
+    "status": "漏えい確認",
+    "cat": [
+      "不正アクセス",
+      "委託先被害",
+      "情報漏えい"
+    ],
+    "exclude": "",
+    "action": "対象サービスの公式案内・個別通知を確認する。登録情報を利用した不審なメール・電話に注意し、連絡中のリンクではなく公式窓口から確認する。",
+    "impact": "Commune関連の影響。",
+    "note": "",
+    "updated": "2026-10-10",
+    "sourceUpdated": "2026-10-09",
+    "batch": "新規",
+    "changeType": "新規追加",
+    "change": "今回新規掲載。",
+    "history": [],
+    "group": "Commune",
+    "id": "inc-e9dc436663",
+    "industry": "その他企業・団体"
+  },
+  {
+    "date": "2026-10-09",
+    "org": "ZENB JAPAN／ZENB GARDEN",
+    "info": "メール、性別、ニックネーム・アカウント名、自己紹介等。",
+    "scope": "897人で漏えい確認、最大949人に可能性（10/9訂正）。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://zenb.jp/blogs/news/20261009"
+      }
+    ],
+    "status": "一部漏えい確認",
+    "cat": [
+      "不正アクセス",
+      "委託先被害",
+      "情報漏えい"
+    ],
+    "exclude": "パスワードは対象外。",
+    "action": "対象サービスの公式案内・個別通知を確認する。登録情報を利用した不審なメール・電話に注意し、連絡中のリンクではなく公式窓口から確認する。",
+    "impact": "Commune関連の影響。",
+    "note": "",
+    "updated": "2026-10-10",
+    "sourceUpdated": "2026-10-09",
+    "batch": "新規",
+    "changeType": "新規追加",
+    "change": "今回新規掲載。",
+    "history": [],
+    "group": "Commune",
+    "id": "inc-af8573b9ec",
+    "industry": "その他企業・団体"
+  },
+  {
+    "date": "2026-10-09",
+    "org": "ベースフード／BASE FOOD Labo",
+    "info": "メール、ニックネーム・アカウント名、自己紹介、プロフィール回答、グループ、ポイント・最終利用。",
+    "scope": "約1,500人。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://basefood.co.jp/news/4346"
+      }
+    ],
+    "status": "漏えいの可能性",
+    "cat": [
+      "不正アクセス",
+      "委託先被害",
+      "情報漏えい"
+    ],
+    "exclude": "パスワード・DMの漏えいは未確認。通販の住所・カード等の情報とは別。",
+    "action": "対象サービスの公式案内・個別通知を確認する。登録情報を利用した不審なメール・電話に注意し、連絡中のリンクではなく公式窓口から確認する。",
+    "impact": "Commune関連の影響。",
+    "note": "",
+    "updated": "2026-10-10",
+    "sourceUpdated": "2026-10-09",
+    "batch": "新規",
+    "changeType": "新規追加",
+    "change": "今回新規掲載。",
+    "history": [],
+    "group": "Commune",
+    "id": "inc-160ef391dc",
+    "industry": "その他企業・団体"
+  },
+  {
+    "date": "2026-10-09",
+    "org": "ユニファ／ルクミールーム",
+    "info": "ユーザーID、表示名、メール、任意登録の法人名・施設名・施設電話番号・申込区分等。",
+    "scope": "1,450人。園児写真・保育記録・保護者情報は対象外。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://unifa-e.com/news/info/20261009-info"
+      }
+    ],
+    "status": "漏えいの可能性",
+    "cat": [
+      "不正アクセス",
+      "委託先被害",
+      "情報漏えい"
+    ],
+    "exclude": "",
+    "action": "対象サービスの公式案内・個別通知を確認する。登録情報を利用した不審なメール・電話に注意し、連絡中のリンクではなく公式窓口から確認する。",
+    "impact": "Commune関連の影響。",
+    "note": "",
+    "updated": "2026-10-10",
+    "sourceUpdated": "2026-10-09",
+    "batch": "新規",
+    "changeType": "新規追加",
+    "change": "今回新規掲載。",
+    "history": [],
+    "group": "Commune",
+    "id": "inc-cfe7ac810e",
+    "industry": "その他企業・団体"
+  },
+  {
+    "date": "2026-10-09",
+    "org": "ちとせ研究所／ちとせアカデミー",
+    "info": "氏名・ふりがな、性別、メール、表示名・ユーザー名、自己紹介、Xアカウント、参加理由、「腸と心のタイプ診断」の結果、利用日時、投稿等の回数、ポイント・所属グループ等。",
+    "scope": "最大843人。診断結果は病歴と断定しない。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://chitose-bio.com/jp/news/12177/"
+      }
+    ],
+    "status": "漏えいの可能性",
+    "cat": [
+      "不正アクセス",
+      "委託先被害",
+      "情報漏えい"
+    ],
+    "exclude": "",
+    "action": "対象サービスの公式案内・個別通知を確認する。登録情報を利用した不審なメール・電話に注意し、連絡中のリンクではなく公式窓口から確認する。",
+    "impact": "Commune関連の影響。",
+    "note": "",
+    "updated": "2026-10-10",
+    "sourceUpdated": "2026-10-09",
+    "batch": "新規",
+    "changeType": "新規追加",
+    "change": "今回新規掲載。",
+    "history": [],
+    "group": "Commune",
+    "id": "inc-c5b034b936",
+    "industry": "その他企業・団体"
+  },
+  {
+    "date": "2026-10-09",
+    "org": "東急不動産・ライフ＆ワークデザイン／ビジネスエアポート",
+    "info": "情報漏えいは発生していないと会社が確認。",
+    "scope": "コミュニティサイトの停止。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://business-airport.net/news/コミュニティサイトの機能障害発生とサービス提/"
+      }
+    ],
+    "status": "漏えいなし・障害",
+    "cat": [
+      "サービス停止"
+    ],
+    "exclude": "",
+    "action": "対象サービスの公式案内・個別通知を確認する。登録情報を利用した不審なメール・電話に注意し、連絡中のリンクではなく公式窓口から確認する。",
+    "impact": "Commune関連の影響。",
+    "note": "",
+    "updated": "2026-10-10",
+    "sourceUpdated": "2026-10-09",
+    "batch": "新規",
+    "changeType": "新規追加",
+    "change": "今回新規掲載。",
+    "history": [],
+    "group": "Commune",
+    "id": "inc-2bd7125d33",
+    "industry": "その他企業・団体"
+  },
+  {
+    "date": "2026-10-08",
+    "org": "VALX／FUNコミュニティ",
+    "info": "メール、ニックネーム・アカウント名、自己紹介、グループ、登録地域、ポイント・最終利用等。",
+    "scope": "3,813人中2,950人に可能性。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://corp.valx.jp/news/451vhhqdf29c/"
+      }
+    ],
+    "status": "漏えいの可能性",
+    "cat": [
+      "不正アクセス",
+      "委託先被害",
+      "情報漏えい"
+    ],
+    "exclude": "パスワード・DMの漏えいは未確認。通販の住所・カード等の情報とは別。",
+    "action": "対象サービスの公式案内・個別通知を確認する。登録情報を利用した不審なメール・電話に注意し、連絡中のリンクではなく公式窓口から確認する。",
+    "impact": "Commune関連の影響。",
+    "note": "",
+    "updated": "2026-10-10",
+    "sourceUpdated": "2026-10-08",
+    "batch": "新規",
+    "changeType": "新規追加",
+    "change": "今回新規掲載。",
+    "history": [],
+    "group": "Commune",
+    "id": "inc-e4f59bd8c3",
+    "industry": "その他企業・団体"
+  },
+  {
+    "date": "2026-10-08",
+    "org": "ウイングアーク1st／nest Portal",
+    "info": "会社名、役職、氏名・ふりがな、メール等の登録情報。",
+    "scope": "約1,200人。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://corp.wingarc.com/public/202610/news3042.html"
+      }
+    ],
+    "status": "漏えいの可能性",
+    "cat": [
+      "不正アクセス",
+      "委託先被害",
+      "情報漏えい"
+    ],
+    "exclude": "",
+    "action": "対象サービスの公式案内・個別通知を確認する。登録情報を利用した不審なメール・電話に注意し、連絡中のリンクではなく公式窓口から確認する。",
+    "impact": "Commune関連の影響。",
+    "note": "",
+    "updated": "2026-10-10",
+    "sourceUpdated": "2026-10-08",
+    "batch": "新規",
+    "changeType": "新規追加",
+    "change": "今回新規掲載。",
+    "history": [],
+    "group": "Commune",
+    "id": "inc-7d7bb88412",
+    "industry": "IT・通信"
+  },
+  {
+    "date": "2026-10-08",
+    "org": "青森県／青森びいき",
+    "info": "メール、年代、性別、居住都道府県等。",
+    "scope": "10/8初報。10/9報道で2,950人の漏えい確認。",
+    "sources": [
+      {
+        "label": "公式発表",
+        "url": "https://www.pref.aomori.lg.jp/release/2026/81561.html"
+      },
+      {
+        "label": "10/9続報（報道）",
+        "url": "https://newsdig.tbs.co.jp/articles/-/3003053?display=1"
+      }
+    ],
+    "status": "漏えい確認",
+    "cat": [
+      "不正アクセス",
+      "委託先被害",
+      "情報漏えい"
+    ],
+    "exclude": "",
+    "action": "対象サービスの公式案内・個別通知を確認する。登録情報を利用した不審なメール・電話に注意し、連絡中のリンクではなく公式窓口から確認する。",
+    "impact": "Commune関連の影響。",
+    "note": "",
+    "updated": "2026-10-10",
+    "sourceUpdated": "2026-10-09",
+    "batch": "新規",
+    "changeType": "新規追加",
+    "change": "今回新規掲載。",
+    "history": [],
+    "group": "Commune",
+    "id": "inc-bd1c8095e3",
+    "industry": "自治体・公的機関"
   }
-]</script>
-<script>
-'use strict';
-const data=JSON.parse(document.getElementById('incident-data').textContent);
-const $=id=>document.getElementById(id),esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const safeURL=s=>{try{const u=new URL(s);return ['https:','http:'].includes(u.protocol)?u.href:'#'}catch{return '#'}};
-const sensitiveTerms=/パスポート(?:情報|番号|画像)?|署名画像|顔写真|患者ID|事前チェックイン用4桁番号|外科手術部位・検体の画像|アレルギー情報|パスワード(?:ハッシュ)?|パスフレーズ(?:ハッシュ)?|(?:クレジット)?カード(?:情報|番号(?:の(?:一部|下3桁または下4桁))?|名義|下4桁)|運転免許証(?:情報|番号)?|免許証(?:情報|番号)?|マイナンバー(?:カード)?|本人確認(?:書類|画像|資料)|旅券(?:番号)?|在留カード|銀行口座|口座番号|口座情報|暗証番号|セキュリティコード|認証情報|APIキー|セッションID|連携トークン|健康診断|医療・アレルギー情報/g;
-const highlight=s=>esc(s).replace(sensitiveTerms,m=>'<strong class="sensitive">'+m+'</strong>');
+]</script><script>
+const data=JSON.parse(document.getElementById('incident-data').textContent),today='2026-10-10';let period='2026-10';const $=id=>document.getElementById(id),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const kinds={'パスワード':/パスワード/,'カード情報':/カード(情報|番号|有効期限|の一部)/,'本人確認書類':/免許証|本人確認|パスポート/,'マイナンバー':/マイナンバー/,'銀行口座':/口座/,'健康・機微情報':/健康|病歴|要配慮|タイプ診断|身長|体重|医療/};
+const positive=x=>x.info.split(/(?<=[。])/).filter(s=>!/(対象外|含まれない|保有していない|未確認|発生していない|とは別|ではない)/.test(s)).join('');
+const tags=x=>Object.entries(kinds).filter(([k,r])=>r.test(positive(x))).map(([k])=>k);
+const highlight=s=>esc(s).split(/(?<=[。])/).map(t=>/(対象外|含まれない|保有していない|未確認|発生していない|ではない)/.test(t)?t:t.replace(/パスワード(?:のハッシュ値)?|カード(?:有効期限|の一部情報|情報|番号)|免許証|マイナンバー|銀行口座|口座番号|パスポート(?:番号)?|要配慮個人情報|母子健康手帳|税額通知書|生活保護医療券|タイプ診断/g,'<strong class="danger">$&</strong>')).join('');
+const inPeriod=x=>period==='all'||(period==='30'?x.date>='2026-09-11'&&x.date<=today:x.date.startsWith(period));
+const labelPeriod=()=>period==='all'?'全期間':period==='30'?'直近30日（9/11–10/10）':period.replace('-','年')+'月';
+function switchTab(id){['dashboard','list','about'].forEach(t=>$(t).hidden=t!==id);document.querySelectorAll('[data-tab]').forEach(b=>{b.classList.toggle('active',b.dataset.tab===id);b.setAttribute('aria-pressed',String(b.dataset.tab===id))});$('period').hidden=id==='about';document.querySelector('.periodnote').hidden=id==='about'}
+function setPeriod(p){period=p;document.querySelectorAll('[data-period]').forEach(b=>{b.classList.toggle('active',b.dataset.period===p);b.setAttribute('aria-pressed',String(b.dataset.period===p))});render()}
+function checks(id,values){$(id).innerHTML=values.map(v=>`<label><input type="checkbox" value="${esc(v)}">${esc(v)}</label>`).join('');$(id).addEventListener('change',renderList)}
+checks('categoryFilters',[...new Set(data.flatMap(x=>x.cat))].sort());checks('industryFilters',[...new Set(data.map(x=>x.industry))].sort());checks('sensitiveFilters',Object.keys(kinds));
 const selected=id=>[...$(id).querySelectorAll('input:checked')].map(x=>x.value);
-function options(){for(const [id,values] of [['category',[...new Set(data.flatMap(x=>x.cat))].sort()],['status',[...new Set(data.map(x=>x.status))].sort()]]){$(id).innerHTML=values.map(v=>'<label class="check"><input type="checkbox" value="'+esc(v)+'"><span>'+esc(v)+'</span></label>').join('')}
-$('total').textContent=data.length;$('ransom').textContent=data.filter(x=>x.cat.includes('ランサムウェア')).length;$('confirmed').textContent=data.filter(x=>['漏えい確認','一部漏えい確認'].includes(x.status)).length;$('categories').textContent=new Set(data.flatMap(x=>x.cat)).size;}
-function render(){const q=$('query').value.trim().toLocaleLowerCase(),cat=selected('category'),st=selected('status'),from=$('from').value,to=$('to').value;const filtered=data.map((x,i)=>({...x,idx:i})).filter(x=>(!q||JSON.stringify(x).toLocaleLowerCase().includes(q))&&(!cat.length||cat.some(c=>x.cat.includes(c)))&&(!st.length||st.includes(x.status))&&(!from||x.date>=from)&&(!to||x.date<=to)).sort((a,b)=>b.date.localeCompare(a.date)||a.org.localeCompare(b.org,'ja'));let month='';$('list').innerHTML=filtered.map(x=>{let heading='';if(month!==x.date.slice(0,7)){month=x.date.slice(0,7);heading='<h2 class="month">'+esc(month.replace('-','年 '))+'月</h2>'}const confirmed=['漏えい確認','一部漏えい確認'].includes(x.status),unknown=['調査中','漏えい未確認'].includes(x.status);return heading+`<article class="incident"><div class="cardhead"><time class="date" datetime="${esc(x.date)}"><small>公表日 ${esc(x.date.slice(0,4))}</small>${esc(x.date.slice(5).replace('-',' / '))}</time><div><h3>${esc(x.org)}</h3><div class="badges"><span class="status ${confirmed?'confirmed':unknown?'unknown':''}">${esc(x.status)}</span>${x.updated?'<span class="tag updatebadge">'+esc(x.changeType)+' · '+esc(x.updated)+'</span>':''}${x.cat.map(c=>'<span class="tag">'+esc(c)+'</span>').join('')}</div></div></div><div class="body">${x.evidence?'<p class="evidence"><b>'+esc(x.evidence)+'</b></p>':''}${x.updated?`<div class="updatebox"><p><b>一覧への反映日：${esc(x.updated)}</b>${x.followup?' ／ 続報公表日：'+esc(x.followup):''}${x.relatedDate?' ／ 補足資料公表日：'+esc(x.relatedDate):''}</p><p>${esc(x.change)}</p></div>`:''}<h4>漏えい情報・可能性のある情報</h4><p>${highlight(x.info)}</p><p class="impact">${highlight(x.impact)}</p><details class="detail"><summary>対象・注意喚起・ソースURLを確認</summary><div class="detailgrid"><div><h4>対象・規模</h4><p>${highlight(x.scope||'未公表')}</p></div><div class="excluded"><h4>対象外・未確認（漏えい対象とは区別）</h4><p>${esc(x.exclude||'公表内容を確認してください。')}</p></div></div><div class="action"><h4>注意喚起のポイント（編集上の提案）</h4><p>${highlight(x.action||'公式発表と対象者への個別通知を確認してください。')}</p></div><p class="note">${highlight(x.note)}</p><div class="sources"><h4>ソースURL</h4>${x.sources.map(s=>'<a href="'+esc(safeURL(s.url))+'" target="_blank" rel="noopener noreferrer">'+esc(s.label)+' ↗<br>'+esc(s.url)+'</a>').join('')}</div></details></div></article>`}).join('')||'<p class="empty">条件に一致する事案はありません。</p>';$('result').textContent=filtered.length+' 件を表示 / 全 '+data.length+' 件';$('expand').textContent='詳細をすべて開く';}
-function reset(){$('query').value='';document.querySelectorAll('.checks input').forEach(x=>x.checked=false);$('from').value='';$('to').value='';render()}
-for(const id of ['query','category','status','from','to'])$(id).addEventListener('input',render);
-$('reset').onclick=reset;$('expand').onclick=()=>{const ds=[...document.querySelectorAll('.detail')],open=ds.some(x=>!x.open);ds.forEach(d=>d.open=open);$('expand').textContent=open?'詳細をすべて閉じる':'詳細をすべて開く'};
-let beforePrint=[];window.addEventListener('beforeprint',()=>{beforePrint=[...document.querySelectorAll('.detail')].map(d=>d.open);document.querySelectorAll('.detail').forEach(d=>d.open=true)});window.addEventListener('afterprint',()=>document.querySelectorAll('.detail').forEach((d,i)=>d.open=beforePrint[i]||false));$('print').onclick=()=>window.print();options();reset();
+function filtered(){const q=$('query').value.trim().toLowerCase(),cs=selected('categoryFilters'),is=selected('industryFilters'),ss=selected('sensitiveFilters');return data.filter(x=>inPeriod(x)&&(!q||[x.org,x.info,x.impact,x.scope,x.change].join(' ').toLowerCase().includes(q))&&(!cs.length||cs.some(c=>x.cat.includes(c)))&&(!is.length||is.includes(x.industry))&&(!ss.length||ss.some(s=>tags(x).includes(s)))&&(!$('onlyChanges').checked||x.batch!=='以前')).sort((a,b)=>b.date.localeCompare(a.date)||a.org.localeCompare(b.org,'ja'))}
+function card(x){return `<details class="incident" id="${x.id}"><summary><div class="date">${x.date.slice(5).replace('-','/')}<small>${x.date.slice(0,4)}年 公表</small></div><div><h3>${esc(x.org)}</h3>${x.batch!=='以前'?`<span class="label ${x.batch==='新規'?'new':'upd'}">今回${x.batch==='新規'?'追加':'更新'}</span>`:''}<span class="label status ${/未確認|調査中|なし/.test(x.status)?'safe':''}">${esc(x.status)}</span>${x.cat.map(c=>`<span class="label">${esc(c)}</span>`).join('')}${x.group?`<span class="label">関連：${esc(x.group)}</span>`:''}<p class="preview">${highlight(x.info)}</p>${x.batch==='続報'?`<p class="change">${esc(x.sourceUpdated)} 続報：${esc(x.change)}</p>`:''}</div></summary><div class="detailbody"><h4>対象範囲・件数</h4><p>${esc(x.scope||'調査中・未公表')}</p><h4>経緯・業務への影響</h4><p>${esc(x.impact||'出典の発表をご確認ください。')}</p>${x.exclude?`<h4>対象外・未確認の情報</h4><p>${esc(x.exclude)}</p>`:''}<div class="action"><h4>利用者への注意喚起・対応</h4><p>${esc(x.action)}</p></div><h4>情報の日付</h4><p>初回公表：${x.date} ／ 続報・情報日：${x.sourceUpdated} ／ 一覧反映：${x.updated||x.date}</p>${x.history.length?`<h4>掲載・更新履歴</h4>${x.history.map(h=>`<p>${esc(h.date)}：${esc(h.text)}</p>`).join('')}`:''}${x.note?`<h4>補足</h4><p>${esc(x.note)}</p>`:''}<div class="sources"><h4>出典</h4>${x.sources.map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.label)} — ${esc(s.url)}</a>`).join('')}<a href="#${x.id}" data-direct="${x.id}">この案件のリンク</a></div></div></details>`}
+function renderList(){const rows=filtered();$('resultCount').textContent=`${rows.length}件 / ${labelPeriod()}　初回公表日・降順`;$('printheading').textContent=`${labelPeriod()} ／ 絞り込み後 ${rows.length}件 ／ 情報確認・一覧更新日 ${today} ／ 条件：${[$('query').value,...selected('categoryFilters'),...selected('industryFilters'),...selected('sensitiveFilters'),$('onlyChanges').checked?'今回の追加・更新のみ':''].filter(Boolean).join('・')||'なし'}`;if(!$('grouping').checked){$('results').innerHTML=rows.map(card).join('')}else{const groups=new Map;rows.forEach(x=>{const k=x.group||x.id;if(!groups.has(k))groups.set(k,[]);groups.get(k).push(x)});$('results').innerHTML=[...groups].map(([k,v])=>(v[0].group?`<h3 class="grouphead">${esc(k)}関連 — ${v.length}掲載項目</h3>`:'')+v.map(card).join('')).join('')}if(!rows.length)$('results').innerHTML='<p class="empty">該当する案件はありません。期間や条件を変更してください。</p>'}
+function bars(id,counts){let a=Object.entries(counts).sort((a,b)=>b[1]-a[1]),max=Math.max(1,...a.map(x=>x[1]));$(id).innerHTML=a.length?a.map(([k,n])=>`<div class="barrow"><span>${esc(k)}</span><div class="track" aria-hidden="true"><div class="bar" style="width:${n/max*100}%"></div></div><b>${n}</b></div>`).join(''):'<p class="subtle">対象なし</p>'}
+function count(rows,fn){const c={};rows.forEach(x=>fn(x).forEach(k=>c[k]=(c[k]||0)+1));return c}
+function dashboard(){const rows=data.filter(inPeriod);$('dashTitle').textContent=labelPeriod()+'の概況';const nums=[[rows.length,'掲載項目'],[new Set(rows.map(x=>x.group||x.id)).size,'共通原因をまとめた件数'],[rows.filter(x=>/確認/.test(x.status)&&!/未確認|確認中/.test(x.status)).length,'漏えい・不正閲覧を確認した項目'],[rows.filter(x=>x.cat.includes('サービス停止')).length,'サービス停止の掲載項目']];$('stats').innerHTML=nums.map(([n,t])=>`<div class="stat"><strong>${n}<small style="font-size:13px;font-weight:400"> 件</small></strong><span>${t}</span></div>`).join('');bars('monthly',count(data,x=>[x.date.slice(0,7)]));bars('catsChart',count(rows,x=>x.cat));bars('industryChart',count(rows,x=>[x.industry]));bars('sensitiveChart',count(rows,tags));const notices=[['skyticket','パスワード変更','ハッシュ化パスワードと返金先銀行口座などの情報。公式案内に従い、使い回し先も変更。'],['大阪公立大学','公式リセット案内','OMU認証パスワードのリセットと相談窓口の案内。漏えい確認とは区別。'],['ブックオフ','認証情報に注意','パスワードのハッシュ値を含む可能性。公式通知の確認と、なりすまし連絡への警戒を。']];$('alerts').innerHTML=notices.map(([key,title,body])=>{const x=data.find(x=>x.org.includes(key));return `<article class="alert"><span class="label">${title}</span><h3>${esc(x.org)}</h3><p>${esc(body)}</p><a href="#${x.id}" data-direct="${x.id}">情報と出典を確認 →</a></article>`}).join('');$('recent').innerHTML=data.filter(x=>x.batch==='続報').sort((a,b)=>b.sourceUpdated.localeCompare(a.sourceUpdated)).map(x=>`<a href="#${x.id}" data-direct="${x.id}"><span class="label upd">${x.sourceUpdated}</span><strong>${esc(x.org)}</strong><small>${esc(x.change)}</small></a>`).join('')}
+function render(){dashboard();renderList()}
+function reset(){document.querySelectorAll('.controls input[type=checkbox]').forEach(x=>x.checked=false);$('query').value='';renderList()}
+function openItem(id){const x=data.find(x=>x.id===id);if(!x)return;reset();setPeriod('all');switchTab('list');const el=$(id);el.open=true;el.scrollIntoView({block:'start'});}
+document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>switchTab(b.dataset.tab));document.querySelectorAll('[data-period]').forEach(b=>b.onclick=()=>setPeriod(b.dataset.period));$('viewList').onclick=()=>switchTab('list');$('changes').onclick=()=>{reset();$('onlyChanges').checked=true;setPeriod('all');switchTab('list')};$('reset').onclick=reset;$('query').oninput=renderList;$('onlyChanges').onchange=renderList;$('grouping').onchange=renderList;$('expand').onclick=()=>document.querySelectorAll('.incident').forEach(x=>x.open=true);$('collapse').onclick=()=>document.querySelectorAll('.incident').forEach(x=>x.open=false);document.addEventListener('click',e=>{const a=e.target.closest('[data-direct]');if(a){e.preventDefault();history.replaceState(null,'','#'+a.dataset.direct);openItem(a.dataset.direct)}});window.addEventListener('hashchange',()=>openItem(location.hash.slice(1)));let printState=[];window.addEventListener('beforeprint',()=>{printState=[...document.querySelectorAll('.incident')].map(x=>[x,x.open]);printState.forEach(([x])=>x.open=true)});window.addEventListener('afterprint',()=>printState.forEach(([x,o])=>x.open=o));$('print').onclick=()=>window.print();render();if(location.hash)openItem(location.hash.slice(1));
 </script></body></html>
