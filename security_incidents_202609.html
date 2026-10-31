@@ -6,6 +6,7 @@
 <meta name="color-scheme" content="light">
 <meta name="description" content="公開インシデントを、自組織の点検・社内注意喚起・初動対応・IT-BCPへつなげる情シス向け実務資料。">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHBhdGggZmlsbD0iIzBmMTcyYSIgZD0iTTMyIDMgNTYgMTJ2MThjMCAxNS05LjkgMjUuNi0yNCAzMUMxNy45IDU1LjYgOCA0NSA4IDMwVjEyeiIvPjxwYXRoIGZpbGw9IiMxNGI4YTYiIGQ9Ik0zMiA5IDUwIDE2djE0YzAgMTEtNi43IDE5LjItMTggMjQtMTEuMy00LjgtMTgtMTMtMTgtMjRWMTZ6Ii8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTI5IDIwaDZ2OWg5djZoLTl2OWgtNnYtOWgtOXYtNmg5eiIvPjwvc3ZnPg==">
 <title>セキュリティインテリジェンスハブ</title>
 <style>
 :root{--navy:#142b41;--teal:#087f83;--teal-light:#eaf6f4;--red:#b33640;--red-light:#fff2f2;--amber:#9b6814;--amber-light:#fff8e8;--ink:#203547;--muted:#607281;--line:#dce4e9;--bg:#f4f7f9;--white:#fff;--radius:12px;--shadow:0 4px 18px #16314807}
@@ -164,26 +165,26 @@ details.card{align-self:start}main:focus{outline:none}
 <script id="app-data" type="application/json">{
   "meta": {
     "schemaVersion": "1.0",
-    "version": "1.0.23",
+    "version": "1.0.24",
     "title": "セキュリティインテリジェンスハブ",
-    "compiledDate": "2026-10-31",
-    "incidentSnapshotDate": "2026-10-31",
+    "compiledDate": "2026-11-01",
+    "incidentSnapshotDate": "2026-11-01",
     "technicalReviewed": "2026-10-25",
     "timezone": "Asia/Tokyo",
-    "incidentSource": "10/30公表を中心に新規13項目を追加し、既存3項目を続報更新。",
-    "coverage": "2026-10-31 07:01 JSTまで。前回以降と直近7日、教育・行政・医療・委託先波及を複数の公式新着・個別検索で確認。国内全件の網羅を保証しない。",
-    "vulnerabilityCoverage": "58製品・テーマ。Cisco ASA/FTDを追加し、Chrome・ChromeOS・Ivanti・GitLabを更新。テーマ数は固有CVE数ではない。",
-    "verification": "被害組織・大学・提供元、JPCERT/CC・JVN、Google・Cisco・Ivanti・GitLab・CISAの本文を照合。可能性・確定・対象外・停止継続を区別。",
+    "incidentSource": "10/30～31公表を中心に新規12項目を追加。委託先波及は同一攻撃として関連付け、件数を合算しない。",
+    "coverage": "2026-11-01 07:04 JSTまで。前回以降と直近7日、教育・行政・医療・金融・委託先波及を複数の公式新着・個別検索で確認。国内全件の網羅を保証しない。",
+    "vulnerabilityCoverage": "60製品・テーマ。Linux Kernel CVE-2026-46300とVMware ESX CVE-2026-41709を追加し、IvantiのKEV追加日を訂正。テーマ数は固有CVE数ではない。",
+    "verification": "被害組織・提供元・自治体、JPCERT/CC・JVN・CISA KEV、Linux・Ubuntu・Broadcomの本文を照合。可能性・確定・対象外・停止継続・関連件数を区別。",
     "reconciliation": {
       "newerRows": 180,
       "olderBiRows": 155,
       "preservedIds": 285,
       "addedAgainstBi": 28,
-      "previousRows": 320,
-      "addedThisUpdate": 13,
-      "updatedThisUpdate": 3,
-      "currentRows": 333,
-      "associationThisUpdate": 5,
+      "previousRows": 333,
+      "addedThisUpdate": 12,
+      "updatedThisUpdate": 0,
+      "currentRows": 345,
+      "associationThisUpdate": 8,
       "referenceFixesThisUpdate": 0
     },
     "changelog": [
@@ -305,11 +306,16 @@ details.card{align-self:start}main:focus{outline:none}
         "date": "2026-10-31",
         "version": "1.0.23",
         "text": "新規インシデント13項目、既存3項目を続報更新。Cisco ASA/FTDを追加、Chrome・ChromeOS・Ivanti・GitLabを更新。KillSecのEuropol公表を補完。320→333項目、57→58脆弱性、16アクター・11動向を保持。"
+      },
+      {
+        "date": "2026-11-01",
+        "version": "1.0.24",
+        "text": "新規インシデント12項目を追加。STdirectServices、JapanTicket、Cuenote FCの波及を関連付け。Linux Kernel・VMware ESXのKEV脆弱性2テーマを追加しIvantiを訂正。ShinyHunters逮捕動向と埋め込みファビコンを追加。333項目から345項目、脆弱性60テーマ、アクター16件、動向12件。"
       }
     ],
     "playbookReviewed": "2026-10-17",
     "actorReviewed": "2026-10-25",
-    "uiReviewed": "2026-10-27",
+    "uiReviewed": "2026-11-01",
     "researchNotes": [
       {
         "checked": "2026-10-28",
@@ -354,10 +360,20 @@ details.card{align-self:start}main:focus{outline:none}
         "checked": "2026-10-31",
         "topic": "確認待ち・継続追跡",
         "text": "十文字学園女子大学のSafePay帰属・窃取、大学コンソーシアム大阪と東急不動産の対象範囲、松屋・良品計画・ティンパンアレイ・AITELの続報、ブラストメール外部調査と再開、ANPICメール機能再開、佐賀大学の対象件数・証明書発行、Chrome配信状況を継続確認する。Microsoftの北朝鮮系アクターAI利用報告は複数追跡名の範囲が広く、既存図鑑の単一主体へ統合していない。"
+      },
+      {
+        "checked": "2026-11-01",
+        "topic": "三分野の日次照合",
+        "text": "インシデントは10/31公表と直近7日、大学・教育・行政・医療・金融・委託先波及を確認。脆弱性はJPCERT/CC・JVN・CISA KEV、Linux・Ubuntu・Broadcom等を照合。アクターは直近90日の当局・調査会社情報を確認しShinyHunters逮捕を補完。全公表・全製品・犯罪市場の網羅を保証しない。"
+      },
+      {
+        "checked": "2026-11-01",
+        "topic": "確認待ち・取得制限",
+        "text": "佐久総合病院のHDD紛失は二次資料で87,765名と要配慮個人情報を確認したが一次公表本文を直接取得できず未掲載。十文字学園女子大学のSafePay主張は公式確認待ちを維持。JapanTicket親公表は取得制限があり、CS-C・PARCO・山梨県の公式本文で最大件数と対象項目を照合した。"
       }
     ],
-    "vulnerabilitySupplementChecked": "2026-10-31",
-    "actorSupplementChecked": "2026-10-31"
+    "vulnerabilitySupplementChecked": "2026-11-01",
+    "actorSupplementChecked": "2026-11-01"
   },
   "incidents": [
     {
@@ -9025,7 +9041,8 @@ details.card{align-self:start}main:focus{outline:none}
         "inc-767804e269",
         "inc-exreservation-cuenote-20261026",
         "inc-cybozu-cuenote-20261026",
-        "inc-gundambase-cuenote-20261027"
+        "inc-gundambase-cuenote-20261027",
+        "inc-satofull-soma-cuenote-20261031"
       ]
     },
     {
@@ -15582,6 +15599,566 @@ details.card{align-self:start}main:focus{outline:none}
           "text": "教育・防災で利用されるANPICの「漏えいなし」とメール機能停止継続を分けて追加。"
         }
       ]
+    },
+    {
+      "id": "inc-club-tourism-20261031",
+      "org": "クラブツーリズム／インターネット会員基盤",
+      "date": "2026-10-31",
+      "dateBasis": "初回公表日。外部アクセス検知は10月30日5時45分。",
+      "sourceUpdated": "2026-10-31",
+      "industry": "旅行・観光",
+      "status": "漏えい可能性・サイト停止",
+      "cat": [
+        "不正アクセス",
+        "情報漏えい",
+        "サービス停止"
+      ],
+      "info": "インターネット会員約432万件の氏名、国籍、性別、生年月日・年齢、住所、電話番号、メールアドレス、会員ID、緊急連絡先が漏えいした可能性。",
+      "scope": "不正アクセスを受けたサーバーを隔離し、通信遮断・問題修正・影響範囲点検を実施。ホームページは調査と安全再確認のため停止し、再開予定は安全確認後。",
+      "impact": "予約・会員向けWeb停止と大量の連絡先情報の悪用リスク。旅行業務の代替受付、問い合わせ増加、再開条件がIT-BCP上の論点。",
+      "exclude": "ログインパスワード、パスポート情報、クレジットカード情報、銀行口座情報は対象外と公表。",
+      "action": "会員基盤の隔離、認証情報・セッションの要否判断、予約・問い合わせの代替運用、再開判定と顧客連絡を確認。",
+      "sources": [
+        {
+          "label": "クラブツーリズム｜第1信 10/31",
+          "url": "https://www.club-tourism.co.jp/jpn/news/2026/1031/"
+        }
+      ],
+      "secondary": {
+        "status": "報告なし（公表日時点）",
+        "date": "2026-10-31",
+        "checked": "2026-11-01",
+        "text": "公表時点で本件に起因する具体的な二次被害は確認されていない。"
+      },
+      "change": "約432万件の漏えい可能性とサイト停止を新規追加。重要情報の対象外と二次被害未確認を区別。",
+      "updated": "2026-11-01",
+      "checked": "2026-11-01",
+      "batch": "日次追加",
+      "changeType": "新規追加",
+      "evidence": "2026-11-01（JST）に被害組織・提供元・公的機関・ベンダーの公式本文を照合。発生・検知・公表・反映日と、可能性・確認・対象外を区別。",
+      "history": [
+        {
+          "date": "2026-11-01",
+          "text": "約432万件の漏えい可能性とサイト停止を新規追加。重要情報の対象外と二次被害未確認を区別。"
+        }
+      ]
+    },
+    {
+      "id": "inc-saison-smart-realestate-20261031",
+      "org": "クレディセゾン／セゾンのスマート不動産投資",
+      "date": "2026-10-31",
+      "dateBasis": "初回公表日。攻撃は10月29日3時42分～6時17分。",
+      "sourceUpdated": "2026-10-31",
+      "industry": "金融・不動産",
+      "status": "漏えい確認・会員基盤停止",
+      "cat": [
+        "委託先被害",
+        "不正アクセス",
+        "情報漏えい",
+        "サービス停止"
+      ],
+      "info": "顧客1,889名の情報が漏えい。39名は氏名・メール・住所・生年月日・電話・国籍・配当金受取口座情報・適合性情報・購入口数等の一部、1,850名は氏名と購入口数。",
+      "scope": "外部委託先の会員管理基盤で、外部公開された認証機構の不備が悪用されたとの報告。10月29日22時から会員基盤を緊急停止し、再開時期は未定。",
+      "impact": "配当金受取口座情報を含む金融関連情報の漏えいと、会員管理停止。本人確認・問い合わせ・投資家対応の代替運用が必要。",
+      "exclude": "クレジットカード情報は保持していない。保有資産記録の書換えやブロックチェーン上の資産移転は確認されていない。",
+      "action": "委託先の認証不備修正、顧客別の漏えい項目、停止中の代替窓口、再開条件、不審な送金・連絡の監視を確認。",
+      "sources": [
+        {
+          "label": "クレディセゾン｜10/31",
+          "url": "https://www.saisoncard.co.jp/customer-support/information/20261031/"
+        }
+      ],
+      "secondary": {
+        "status": "不正取引なし確認",
+        "date": "2026-10-31",
+        "checked": "2026-11-01",
+        "text": "保有資産記録の書換え・資産移転は確認されていない。将来の不正利用がないことを保証する記載ではない。"
+      },
+      "change": "委託先認証不備による1,889名の漏えい確認と会員基盤停止を新規追加。",
+      "updated": "2026-11-01",
+      "checked": "2026-11-01",
+      "batch": "日次追加",
+      "changeType": "新規追加",
+      "evidence": "2026-11-01（JST）に被害組織・提供元・公的機関・ベンダーの公式本文を照合。発生・検知・公表・反映日と、可能性・確認・対象外を区別。",
+      "history": [
+        {
+          "date": "2026-11-01",
+          "text": "委託先認証不備による1,889名の漏えい確認と会員基盤停止を新規追加。"
+        }
+      ]
+    },
+    {
+      "id": "inc-nttdata-stdirect-20261031",
+      "org": "NTTデータ／STdirectServices",
+      "date": "2026-10-31",
+      "sourceUpdated": "2026-10-31",
+      "industry": "IT・金融サービス",
+      "group": "STdirectServices委託先SaaS",
+      "status": "漏えい可能性・サービス停止",
+      "cat": [
+        "委託先被害",
+        "情報漏えい",
+        "サービス停止"
+      ],
+      "info": "STdirectServicesが利用する委託先SaaSへの不正アクセスにより、同サービスで取り扱う個人情報が漏えいした可能性。",
+      "scope": "STdirectServicesは社債購入者への特典付与支援サービス。委託先で調査中であり、件数・侵入経路はNTTデータ公表では未確定。",
+      "impact": "特典付与基盤を停止。公表時点では対象となる社債がなく、現在の特典付与業務への影響はない。",
+      "exclude": "「現時点の業務影響なし」は個人情報漏えい可能性の否定やサービス再開完了を意味しない。",
+      "action": "委託・再委託関係、利用社債、保有データ、通知責任、停止時の代替手順と再開条件を確認。",
+      "sources": [
+        {
+          "label": "NTTデータ｜10/31",
+          "url": "https://www.nttdata.com/global/ja/news/release/2026/103101/"
+        }
+      ],
+      "secondary": {
+        "status": "未公表・未確認",
+        "date": "2026-10-31",
+        "checked": "2026-11-01",
+        "text": "二次被害の有無はNTTデータ公表本文で確認できない。"
+      },
+      "change": "社債特典基盤の委託先SaaS被害と停止を親事案として追加。",
+      "updated": "2026-11-01",
+      "checked": "2026-11-01",
+      "batch": "日次追加",
+      "changeType": "新規追加",
+      "evidence": "2026-11-01（JST）に被害組織・提供元・公的機関・ベンダーの公式本文を照合。発生・検知・公表・反映日と、可能性・確認・対象外を区別。",
+      "history": [
+        {
+          "date": "2026-11-01",
+          "text": "社債特典基盤の委託先SaaS被害と停止を親事案として追加。"
+        }
+      ],
+      "relatedIncidents": [
+        "inc-sbi-kintetsu-bond-20261031",
+        "inc-rakuten-bond-stdirect-20261031"
+      ]
+    },
+    {
+      "id": "inc-sbi-kintetsu-bond-20261031",
+      "org": "SBI証券／近鉄GHD第135回無担保社債",
+      "date": "2026-10-31",
+      "sourceUpdated": "2026-10-31",
+      "industry": "金融",
+      "group": "STdirectServices委託先SaaS",
+      "status": "漏えい可能性",
+      "cat": [
+        "委託先被害",
+        "情報漏えい"
+      ],
+      "info": "SBI証券で対象社債を購入した1,169名の氏名と購入金額が漏えいした可能性。",
+      "scope": "近鉄GHDが2026年7月に発行した第135回無担保社債の特典申込等に使う、NTTデータ委託先提供のデジタル証券プラットフォームへの不正アクセス。",
+      "impact": "証券会社・社債発行体・基盤提供者に通知と照会が波及。金融を装う標的型連絡への注意が必要。",
+      "exclude": "SBI証券のシステムへの不正アクセスではなく、証券口座番号・パスワード等の金融取引情報は対象外。1,169名は発行体側集計の内数になり得るため別集計と合算しない。",
+      "action": "同じ社債・基盤を使う販売会社別の対象者通知、重複集計、問い合わせ窓口、なりすまし対策を確認。",
+      "sources": [
+        {
+          "label": "SBI証券｜10/31",
+          "url": "https://www.sbisec.co.jp/ETGate/?OutSide=on&_ActionID=DefaultAID&_ControlID=WPLETmgR001Control&_DataStoreID=DSWPLETmgR001Control&_PageID=WPLETmgR001Mdtl30&burl=search_home&cat1=home&cat2=info&dir=info&file=home_info261031_bond.html&getFlg=on"
+        }
+      ],
+      "secondary": {
+        "status": "注意喚起のみ",
+        "date": "2026-10-31",
+        "checked": "2026-11-01",
+        "text": "不審メール・SMS・電話への注意喚起。実際の金銭被害確認ではない。"
+      },
+      "change": "STdirectServices波及としてSBI証券取扱分1,169名を関連追加。",
+      "updated": "2026-11-01",
+      "checked": "2026-11-01",
+      "batch": "日次追加",
+      "changeType": "新規追加",
+      "evidence": "2026-11-01（JST）に被害組織・提供元・公的機関・ベンダーの公式本文を照合。発生・検知・公表・反映日と、可能性・確認・対象外を区別。",
+      "history": [
+        {
+          "date": "2026-11-01",
+          "text": "STdirectServices波及としてSBI証券取扱分1,169名を関連追加。"
+        }
+      ],
+      "relatedIncidents": [
+        "inc-nttdata-stdirect-20261031",
+        "inc-rakuten-bond-stdirect-20261031"
+      ]
+    },
+    {
+      "id": "inc-rakuten-bond-stdirect-20261031",
+      "org": "楽天証券／取扱社債3銘柄",
+      "date": "2026-10-31",
+      "sourceUpdated": "2026-10-31",
+      "industry": "金融",
+      "group": "STdirectServices委託先SaaS",
+      "status": "漏えい可能性",
+      "cat": [
+        "委託先被害",
+        "情報漏えい"
+      ],
+      "info": "楽天証券が取り扱った社債3銘柄について、合計362件の顧客情報が漏えいした可能性。",
+      "scope": "NTTデータ委託先の外部サービスへの不正アクセスに伴う波及。銘柄別・販売会社別の人数は同一基盤の親事案と別集計しない。",
+      "impact": "複数の発行体・販売会社へ通知が波及し、問い合わせと本人確認負荷が増える可能性。",
+      "exclude": "楽天証券自身の取引システム侵害とは公表されていない。親事案や発行体公表の件数との重複があり得る。",
+      "action": "対象銘柄、顧客ごとの情報項目、発行体との通知分担、重複排除と連絡チャネルを確認。",
+      "sources": [
+        {
+          "label": "楽天証券｜10/31",
+          "url": "https://www.rakuten-sec.co.jp/web/info/info20261031-01.html"
+        }
+      ],
+      "secondary": {
+        "status": "注意喚起のみ",
+        "date": "2026-10-31",
+        "checked": "2026-11-01",
+        "text": "不審な連絡への注意喚起。実被害確認とは別。"
+      },
+      "change": "STdirectServices波及として楽天証券の3銘柄・362件を関連追加。",
+      "updated": "2026-11-01",
+      "checked": "2026-11-01",
+      "batch": "日次追加",
+      "changeType": "新規追加",
+      "evidence": "2026-11-01（JST）に被害組織・提供元・公的機関・ベンダーの公式本文を照合。発生・検知・公表・反映日と、可能性・確認・対象外を区別。",
+      "history": [
+        {
+          "date": "2026-11-01",
+          "text": "STdirectServices波及として楽天証券の3銘柄・362件を関連追加。"
+        }
+      ],
+      "relatedIncidents": [
+        "inc-nttdata-stdirect-20261031",
+        "inc-sbi-kintetsu-bond-20261031"
+      ]
+    },
+    {
+      "id": "inc-phillip-digital-securities-20261031",
+      "org": "フィリップ・キャピタル証券／デジタル証券",
+      "date": "2026-10-31",
+      "dateBasis": "初回公表日。外部委託先への攻撃は10月29日。",
+      "sourceUpdated": "2026-10-31",
+      "industry": "金融",
+      "status": "漏えい確認・調査中",
+      "cat": [
+        "委託先被害",
+        "不正アクセス",
+        "情報漏えい"
+      ],
+      "info": "162名分の氏名・取引数量・取引後保有数量・国・取引日時、別区分100名分の投資家ID・氏名・メール・生年月日・ステータス・登録日、1名分の氏名・メール・住所・国が漏えい。区分の重複有無は公表文に従い合算しない。",
+      "scope": "外部のデジタル証券サービス提供者1社への不正アクセス。対象者へ詳細判明後に個別連絡予定。",
+      "impact": "保有・取引情報と本人情報の組合せが標的型詐欺や本人確認悪用に使われる可能性。",
+      "exclude": "銀行情報は委託先に保持されていない。本件起因の不正取引、インターネット上への公開・拡散は確認されていない。",
+      "action": "顧客別の対象項目、取引監視、本人確認時の追加検証、公開監視、委託先の再開条件を確認。",
+      "sources": [
+        {
+          "label": "フィリップ・キャピタル証券｜10/31",
+          "url": "https://www.phillip.co.jp/information/news/11486"
+        }
+      ],
+      "secondary": {
+        "status": "不正取引なし・公開なし確認",
+        "date": "2026-10-31",
+        "checked": "2026-11-01",
+        "text": "公表時点で不正取引とインターネット公開・拡散は確認されていない。"
+      },
+      "change": "デジタル証券委託先からの漏えい確認を追加。同一提供元の根拠がないためSTdirectServicesへ統合しない。",
+      "updated": "2026-11-01",
+      "checked": "2026-11-01",
+      "batch": "日次追加",
+      "changeType": "新規追加",
+      "evidence": "2026-11-01（JST）に被害組織・提供元・公的機関・ベンダーの公式本文を照合。発生・検知・公表・反映日と、可能性・確認・対象外を区別。",
+      "history": [
+        {
+          "date": "2026-11-01",
+          "text": "デジタル証券委託先からの漏えい確認を追加。同一提供元の根拠がないためSTdirectServicesへ統合しない。"
+        }
+      ]
+    },
+    {
+      "id": "inc-japanticket-analytics-20261030",
+      "org": "JapanTicket／予約・注文連携基盤",
+      "date": "2026-10-30",
+      "dateBasis": "利用先の初回公表日。親事業者の一次本文は取得制限があり、複数の利用先公式本文で照合。",
+      "sourceUpdated": "2026-10-31",
+      "industry": "予約・観光・飲食",
+      "group": "JapanTicket外部分析ツール",
+      "status": "漏えい確認・範囲調査中",
+      "cat": [
+        "委託先被害",
+        "不正アクセス",
+        "情報漏えい"
+      ],
+      "info": "JapanTicketが利用する外部分析ツールへの不正アクセスで、全体最大約26.4万件の氏名・フリガナ・メール・電話・国/地域・予約/注文内容・備考欄等が漏えい。",
+      "scope": "不正アクセス経路は遮断。利用組織ごとの対象件数は調査中で、最大件数と各利用先候補数を合算しない。",
+      "impact": "予約・観光・行政の複数サービスへ波及。備考欄の自由記述を含み、内容確認と利用者通知の負荷が大きい。",
+      "exclude": "クレジットカード番号は対象外。ログインパスワードの漏えいは確認されていない。",
+      "action": "予約連携先、分析ツールへ送る項目、自由記述、保持期間、利用組織別通知、再発防止とサービス継続判断を確認。",
+      "sources": [
+        {
+          "label": "CS-C／Japan Food Guide｜10/30",
+          "url": "https://s-cs-c.com/news/20261030/"
+        },
+        {
+          "label": "PARCO CAFE｜10/31",
+          "url": "https://cafe.parco.jp/news/detail/?id=39359"
+        },
+        {
+          "label": "山梨県｜10/30",
+          "url": "https://www.pref.yamanashi.jp/fujisan/261030.html"
+        }
+      ],
+      "secondary": {
+        "status": "報告なし（公表日時点）",
+        "date": "2026-10-30",
+        "checked": "2026-11-01",
+        "text": "CS-C公表では他システム影響・改ざん・二次被害は確認されていない。利用組織すべてへの一律評価ではない。"
+      },
+      "change": "複数の利用先公式公表を突合し、最大約26.4万件の親事案を追加。",
+      "updated": "2026-11-01",
+      "checked": "2026-11-01",
+      "batch": "日次追加",
+      "changeType": "新規追加",
+      "evidence": "2026-11-01（JST）に被害組織・提供元・公的機関・ベンダーの公式本文を照合。発生・検知・公表・反映日と、可能性・確認・対象外を区別。",
+      "history": [
+        {
+          "date": "2026-11-01",
+          "text": "複数の利用先公式公表を突合し、最大約26.4万件の親事案を追加。"
+        }
+      ],
+      "relatedIncidents": [
+        "inc-csc-jfg-japanticket-20261030",
+        "inc-parco-chiikawa-japanticket-20261031",
+        "inc-yamanashi-fuji-japanticket-20261030"
+      ]
+    },
+    {
+      "id": "inc-csc-jfg-japanticket-20261030",
+      "org": "CS-C／Japan Food Guide",
+      "date": "2026-10-30",
+      "sourceUpdated": "2026-10-30",
+      "industry": "飲食・予約",
+      "group": "JapanTicket外部分析ツール",
+      "status": "漏えい確認・サービス継続",
+      "cat": [
+        "委託先被害",
+        "情報漏えい"
+      ],
+      "info": "2026年9月15日までにJFG経由で予約・注文した利用者の氏名、フリガナ、メール、電話、国/地域、予約・注文内容、備考欄の情報が漏えい。件数は調査中。",
+      "scope": "予約連携先JapanTicketが利用する外部分析ツールへの不正アクセス。経路遮断と安全確認後、JFGは通常提供を継続。",
+      "impact": "予約受付は継続する一方、顧客通知・問い合わせ・不審連絡監視が必要。",
+      "exclude": "カード番号は対象外、パスワード漏えいは確認されていない。他システム影響・改ざん・二次被害も確認されていない。",
+      "action": "連携項目と自由記述の最小化、件数確定後の通知、分析ツール遮断確認、継続判断の根拠を確認。",
+      "sources": [
+        {
+          "label": "CS-C｜10/30",
+          "url": "https://s-cs-c.com/news/20261030/"
+        }
+      ],
+      "secondary": {
+        "status": "報告なし（公表日時点）",
+        "date": "2026-10-30",
+        "checked": "2026-11-01",
+        "text": "公表時点で本件に起因する具体的な二次被害は確認されていない。"
+      },
+      "change": "JapanTicket事故の利用先として、漏えい確認・件数調査中のJFGを関連追加。",
+      "updated": "2026-11-01",
+      "checked": "2026-11-01",
+      "batch": "日次追加",
+      "changeType": "新規追加",
+      "evidence": "2026-11-01（JST）に被害組織・提供元・公的機関・ベンダーの公式本文を照合。発生・検知・公表・反映日と、可能性・確認・対象外を区別。",
+      "history": [
+        {
+          "date": "2026-11-01",
+          "text": "JapanTicket事故の利用先として、漏えい確認・件数調査中のJFGを関連追加。"
+        }
+      ],
+      "relatedIncidents": [
+        "inc-japanticket-analytics-20261030",
+        "inc-parco-chiikawa-japanticket-20261031",
+        "inc-yamanashi-fuji-japanticket-20261030"
+      ]
+    },
+    {
+      "id": "inc-parco-chiikawa-japanticket-20261031",
+      "org": "PARCO CAFE／ちいかわラーメン豚",
+      "date": "2026-10-31",
+      "sourceUpdated": "2026-10-31",
+      "industry": "飲食・予約",
+      "group": "JapanTicket外部分析ツール",
+      "status": "対象可能性・調査中",
+      "cat": [
+        "委託先被害",
+        "情報漏えい"
+      ],
+      "info": "渋谷店・心斎橋店の予約者3,208名（キャンセル含む）が対象候補。実際に全体最大約26.4万件の漏えい対象へ含まれるかは調査中。",
+      "scope": "両店舗でのJapanTicket利用は販売停止済み。候補数を漏えい確認数やJapanTicket全体件数へ加算しない。",
+      "impact": "過去予約者への注意喚起と問い合わせ対応。自由記述を含む可能性がある。",
+      "exclude": "カード番号は対象外、パスワード漏えいは確認されていない。3,208名全員の漏えい確定ではない。",
+      "action": "対象者確定、予約期間・店舗別の抽出、通知文の可能性表現、フィッシング監視を確認。",
+      "sources": [
+        {
+          "label": "PARCO CAFE｜10/31",
+          "url": "https://cafe.parco.jp/news/detail/?id=39359"
+        }
+      ],
+      "secondary": {
+        "status": "注意喚起のみ",
+        "date": "2026-10-31",
+        "checked": "2026-11-01",
+        "text": "不審メール・SMSへの注意喚起。二次被害確認ではない。"
+      },
+      "change": "JapanTicket利用先の候補3,208名を、漏えい確定数とせず関連追加。",
+      "updated": "2026-11-01",
+      "checked": "2026-11-01",
+      "batch": "日次追加",
+      "changeType": "新規追加",
+      "evidence": "2026-11-01（JST）に被害組織・提供元・公的機関・ベンダーの公式本文を照合。発生・検知・公表・反映日と、可能性・確認・対象外を区別。",
+      "history": [
+        {
+          "date": "2026-11-01",
+          "text": "JapanTicket利用先の候補3,208名を、漏えい確定数とせず関連追加。"
+        }
+      ],
+      "relatedIncidents": [
+        "inc-japanticket-analytics-20261030",
+        "inc-csc-jfg-japanticket-20261030",
+        "inc-yamanashi-fuji-japanticket-20261030"
+      ]
+    },
+    {
+      "id": "inc-yamanashi-fuji-japanticket-20261030",
+      "org": "山梨県／令和6年度富士山吉田ルート通行予約",
+      "date": "2026-10-30",
+      "sourceUpdated": "2026-10-30",
+      "industry": "自治体・観光",
+      "group": "JapanTicket外部分析ツール",
+      "status": "対象可能性・調査中",
+      "cat": [
+        "委託先被害",
+        "情報漏えい"
+      ],
+      "info": "令和6年度の通行予約システム利用者約7万件が、JapanTicket全体最大約26.4万件の漏えい対象に含まれる可能性。",
+      "scope": "氏名・フリガナ・メール・電話・国/地域・利用日・人数・日帰り/宿泊・備考欄が候補。令和7・8年度利用者は対象外。",
+      "impact": "自治体の観光予約業務へ波及し、多言語利用者への連絡・問い合わせ対応が必要。",
+      "exclude": "約7万件全件の漏えい確定ではない。カード番号は対象外で、パスワード漏えいは確認されていない。",
+      "action": "年度別データ分離、委託先からの確定リスト、国内外利用者への通知経路、自由記述の内容を確認。",
+      "sources": [
+        {
+          "label": "山梨県｜10/30",
+          "url": "https://www.pref.yamanashi.jp/fujisan/261030.html"
+        }
+      ],
+      "secondary": {
+        "status": "注意喚起のみ",
+        "date": "2026-10-30",
+        "checked": "2026-11-01",
+        "text": "不審メール等への注意喚起。二次被害確認ではない。"
+      },
+      "change": "JapanTicket利用先として令和6年度約7万件の対象可能性を関連追加。",
+      "updated": "2026-11-01",
+      "checked": "2026-11-01",
+      "batch": "日次追加",
+      "changeType": "新規追加",
+      "evidence": "2026-11-01（JST）に被害組織・提供元・公的機関・ベンダーの公式本文を照合。発生・検知・公表・反映日と、可能性・確認・対象外を区別。",
+      "history": [
+        {
+          "date": "2026-11-01",
+          "text": "JapanTicket利用先として令和6年度約7万件の対象可能性を関連追加。"
+        }
+      ],
+      "relatedIncidents": [
+        "inc-japanticket-analytics-20261030",
+        "inc-csc-jfg-japanticket-20261030",
+        "inc-parco-chiikawa-japanticket-20261031"
+      ]
+    },
+    {
+      "id": "inc-lifenet-kddi-20261030",
+      "org": "ライフネット生命／KDDI「auの生命ほけん」",
+      "date": "2026-10-30",
+      "dateBasis": "初回公表日。漏えい可能性の確認は10月23日。",
+      "sourceUpdated": "2026-10-30",
+      "industry": "保険・通信",
+      "status": "漏えい可能性・一部機能停止",
+      "cat": [
+        "不正アクセス",
+        "情報漏えい",
+        "サービス停止"
+      ],
+      "info": "KDDIからライフネット生命へ連携された顧客22,541件の氏名、郵便番号、電話番号、メールアドレス、会員ID、一部の性別・生年月日が漏えいした可能性。",
+      "scope": "ライフネット生命の一部システムへの不正アクセス。auの生命ほけんの申込等一部機能を停止し、再開時期は未定。",
+      "impact": "保険申込・会員連携の停止、顧客連絡、なりすまし対策、再開判定が必要。",
+      "exclude": "ログインパスワード、カード・銀行口座、運転免許証情報、ライフネット生命の保険契約情報は対象外。",
+      "action": "KDDIとの連携項目、停止機能の代替、対象者通知、本人確認強化、再開条件を確認。",
+      "sources": [
+        {
+          "label": "KDDIニュースルーム｜10/30掲載",
+          "url": "https://newsroom.kddi.com/news/index?tag=tag07"
+        }
+      ],
+      "secondary": {
+        "status": "報告なし（公表日時点）",
+        "date": "2026-10-30",
+        "checked": "2026-11-01",
+        "text": "公表時点で本件に起因する具体的な二次被害は確認されていない。"
+      },
+      "change": "通信・保険連携基盤の22,541件漏えい可能性と一部機能停止を新規追加。",
+      "updated": "2026-11-01",
+      "checked": "2026-11-01",
+      "batch": "日次追加",
+      "changeType": "新規追加",
+      "evidence": "2026-11-01（JST）に被害組織・提供元・公的機関・ベンダーの公式本文を照合。発生・検知・公表・反映日と、可能性・確認・対象外を区別。",
+      "history": [
+        {
+          "date": "2026-11-01",
+          "text": "通信・保険連携基盤の22,541件漏えい可能性と一部機能停止を新規追加。"
+        }
+      ]
+    },
+    {
+      "id": "inc-satofull-soma-cuenote-20261031",
+      "org": "さとふる／相馬市ふるさと納税メール",
+      "date": "2026-10-31",
+      "dateBasis": "相馬市公表日。さとふるからの報告は10月27日。",
+      "sourceUpdated": "2026-10-31",
+      "industry": "自治体・ふるさと納税",
+      "group": "ユミルリンク関連",
+      "status": "漏えい確認・範囲は提供元参照",
+      "cat": [
+        "委託先被害",
+        "情報漏えい"
+      ],
+      "info": "さとふるが一部メール配信に利用するCuenote FCへの不正アクセスで、保存情報の一部が漏えい。相馬市は利用者へ注意喚起。",
+      "scope": "ユミルリンクの既存Cuenote FC事案の波及。相馬市公表では件数・情報項目は示されず、さとふるの公表資料で確認するよう案内。",
+      "impact": "ふるさと納税利用者を狙う官公庁・金融機関なりすましメールへの警戒が必要。",
+      "exclude": "相馬市公表だけで同市寄付者の漏えい人数・項目や金銭被害を確定しない。",
+      "action": "さとふる側の対象者リスト、自治体別通知、Cuenote FCへの連携項目、なりすまし監視を確認。",
+      "sources": [
+        {
+          "label": "相馬市｜10/31",
+          "url": "https://www.city.soma.fukushima.jp/shiseijoho/furusatonozei/21145.html"
+        },
+        {
+          "label": "さとふる｜案内先",
+          "url": "https://www.satofull.jp/static/information/images/20261027/satofull_20261027.pdf"
+        }
+      ],
+      "secondary": {
+        "status": "注意喚起のみ",
+        "date": "2026-10-31",
+        "checked": "2026-11-01",
+        "text": "不審メールへの注意喚起。二次被害確認ではない。"
+      },
+      "change": "既存Cuenote FC事故のふるさと納税利用先波及を関連追加。",
+      "updated": "2026-11-01",
+      "checked": "2026-11-01",
+      "batch": "日次追加",
+      "changeType": "新規追加",
+      "evidence": "2026-11-01（JST）に被害組織・提供元・公的機関・ベンダーの公式本文を照合。発生・検知・公表・反映日と、可能性・確認・対象外を区別。",
+      "history": [
+        {
+          "date": "2026-11-01",
+          "text": "既存Cuenote FC事故のふるさと納税利用先波及を関連追加。"
+        }
+      ],
+      "relatedIncidents": [
+        "inc-77e5f2ea90"
+      ]
     }
   ],
   "caseLinks": {
@@ -21027,6 +21604,210 @@ details.card{align-self:start}main:focus{outline:none}
       "entry": "公表本文参照。未公表の経路は不明。",
       "weakness": "公表で確認された範囲以外は未確認。",
       "actor": "確認情報なし"
+    },
+    "inc-club-tourism-20261031": {
+      "techs": [
+        "public",
+        "outage"
+      ],
+      "checks": [
+        "ck-public",
+        "ck-data",
+        "ck-bcp"
+      ],
+      "ir": "web",
+      "notice": "outage",
+      "basis": "公式公表に関連する自組織向け点検案。関連付けは未公表の侵入原因や攻撃者を認定するものではない。",
+      "entry": "公表本文参照。未公表の経路は不明。",
+      "weakness": "公表で確認された範囲以外は未確認。",
+      "actor": "確認情報なし"
+    },
+    "inc-saison-smart-realestate-20261031": {
+      "techs": [
+        "supplier",
+        "identity"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-bcp"
+      ],
+      "ir": "supplier",
+      "notice": "outage",
+      "basis": "公式公表に関連する自組織向け点検案。関連付けは未公表の侵入原因や攻撃者を認定するものではない。",
+      "entry": "公表本文参照。未公表の経路は不明。",
+      "weakness": "公表で確認された範囲以外は未確認。",
+      "actor": "確認情報なし"
+    },
+    "inc-nttdata-stdirect-20261031": {
+      "techs": [
+        "supplier",
+        "phishing"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-bcp"
+      ],
+      "ir": "supplier",
+      "notice": "outage",
+      "basis": "公式公表に関連する自組織向け点検案。関連付けは未公表の侵入原因や攻撃者を認定するものではない。",
+      "entry": "公表本文参照。未公表の経路は不明。",
+      "weakness": "公表で確認された範囲以外は未確認。",
+      "actor": "確認情報なし"
+    },
+    "inc-sbi-kintetsu-bond-20261031": {
+      "techs": [
+        "supplier",
+        "phishing"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-bcp"
+      ],
+      "ir": "supplier",
+      "notice": "supplier",
+      "basis": "公式公表に関連する自組織向け点検案。関連付けは未公表の侵入原因や攻撃者を認定するものではない。",
+      "entry": "公表本文参照。未公表の経路は不明。",
+      "weakness": "公表で確認された範囲以外は未確認。",
+      "actor": "確認情報なし"
+    },
+    "inc-rakuten-bond-stdirect-20261031": {
+      "techs": [
+        "supplier",
+        "phishing"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-bcp"
+      ],
+      "ir": "supplier",
+      "notice": "supplier",
+      "basis": "公式公表に関連する自組織向け点検案。関連付けは未公表の侵入原因や攻撃者を認定するものではない。",
+      "entry": "公表本文参照。未公表の経路は不明。",
+      "weakness": "公表で確認された範囲以外は未確認。",
+      "actor": "確認情報なし"
+    },
+    "inc-phillip-digital-securities-20261031": {
+      "techs": [
+        "supplier",
+        "identity"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-bcp"
+      ],
+      "ir": "supplier",
+      "notice": "supplier",
+      "basis": "公式公表に関連する自組織向け点検案。関連付けは未公表の侵入原因や攻撃者を認定するものではない。",
+      "entry": "公表本文参照。未公表の経路は不明。",
+      "weakness": "公表で確認された範囲以外は未確認。",
+      "actor": "確認情報なし"
+    },
+    "inc-japanticket-analytics-20261030": {
+      "techs": [
+        "supplier",
+        "phishing"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-bcp"
+      ],
+      "ir": "supplier",
+      "notice": "supplier",
+      "basis": "公式公表に関連する自組織向け点検案。関連付けは未公表の侵入原因や攻撃者を認定するものではない。",
+      "entry": "公表本文参照。未公表の経路は不明。",
+      "weakness": "公表で確認された範囲以外は未確認。",
+      "actor": "確認情報なし"
+    },
+    "inc-csc-jfg-japanticket-20261030": {
+      "techs": [
+        "supplier",
+        "phishing"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-bcp"
+      ],
+      "ir": "supplier",
+      "notice": "supplier",
+      "basis": "公式公表に関連する自組織向け点検案。関連付けは未公表の侵入原因や攻撃者を認定するものではない。",
+      "entry": "公表本文参照。未公表の経路は不明。",
+      "weakness": "公表で確認された範囲以外は未確認。",
+      "actor": "確認情報なし"
+    },
+    "inc-parco-chiikawa-japanticket-20261031": {
+      "techs": [
+        "supplier",
+        "phishing"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-bcp"
+      ],
+      "ir": "supplier",
+      "notice": "supplier",
+      "basis": "公式公表に関連する自組織向け点検案。関連付けは未公表の侵入原因や攻撃者を認定するものではない。",
+      "entry": "公表本文参照。未公表の経路は不明。",
+      "weakness": "公表で確認された範囲以外は未確認。",
+      "actor": "確認情報なし"
+    },
+    "inc-yamanashi-fuji-japanticket-20261030": {
+      "techs": [
+        "supplier",
+        "phishing"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-bcp"
+      ],
+      "ir": "supplier",
+      "notice": "supplier",
+      "basis": "公式公表に関連する自組織向け点検案。関連付けは未公表の侵入原因や攻撃者を認定するものではない。",
+      "entry": "公表本文参照。未公表の経路は不明。",
+      "weakness": "公表で確認された範囲以外は未確認。",
+      "actor": "確認情報なし"
+    },
+    "inc-lifenet-kddi-20261030": {
+      "techs": [
+        "supplier",
+        "identity"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-bcp"
+      ],
+      "ir": "supplier",
+      "notice": "outage",
+      "basis": "公式公表に関連する自組織向け点検案。関連付けは未公表の侵入原因や攻撃者を認定するものではない。",
+      "entry": "公表本文参照。未公表の経路は不明。",
+      "weakness": "公表で確認された範囲以外は未確認。",
+      "actor": "確認情報なし"
+    },
+    "inc-satofull-soma-cuenote-20261031": {
+      "techs": [
+        "supplier",
+        "phishing"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-bcp"
+      ],
+      "ir": "supplier",
+      "notice": "supplier",
+      "basis": "公式公表に関連する自組織向け点検案。関連付けは未公表の侵入原因や攻撃者を認定するものではない。",
+      "entry": "公表本文参照。未公表の経路は不明。",
+      "weakness": "公表で確認された範囲以外は未確認。",
+      "actor": "確認情報なし"
     }
   },
   "techniques": [
@@ -23190,10 +23971,10 @@ details.card{align-self:start}main:focus{outline:none}
         "CVE-2026-118527"
       ],
       "published": "2026-10-13",
-      "sourceUpdated": "2026-10-29",
-      "checked": "2026-10-31",
-      "updated": "2026-10-31",
-      "changeType": "実悪用・修正版更新",
+      "sourceUpdated": "2026-10-30（CISA KEV追加）",
+      "checked": "2026-11-01",
+      "updated": "2026-11-01",
+      "changeType": "続報更新",
       "exploitation": "3件を連鎖した実攻撃をベンダー・調査元が確認",
       "exploitationTone": "red",
       "priority": "対象の製品・版・構成を利用する場合に優先確認",
@@ -23212,10 +23993,14 @@ details.card{align-self:start}main:focus{outline:none}
         {
           "label": "Ivanti｜公式セキュリティアドバイザリー",
           "url": "https://hub.ivanti.com/s/article/Security-Advisory-Ivanti-Connect-Secure-CVE-2026-104935"
+        },
+        {
+          "label": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
         }
       ],
       "sourceNote": "Ivantiの10/29更新、Volexity調査、公的KEV情報を照合。侵害痕跡が限定的で、パッチ適用のみで未侵害としない。",
-      "change": "10/29更新でCVE-2026-111357／118527と追加修正版を反映。3件の連鎖悪用と一部顧客影響を確認。",
+      "change": "CISA KEVの追加日を10月30日として訂正し、CVE-2026-111357・CVE-2026-118527の優先確認根拠を更新。",
       "history": [
         {
           "date": "2026-10-18",
@@ -23226,6 +24011,11 @@ details.card{align-self:start}main:focus{outline:none}
           "date": "2026-10-31",
           "type": "実悪用・修正版更新",
           "note": "10/29更新でCVE-2026-111357／118527と追加修正版を反映。3件の連鎖悪用と一部顧客影響を確認。"
+        },
+        {
+          "date": "2026-11-01",
+          "type": "日付訂正・続報",
+          "note": "KEV追加日を10月30日に訂正し、実悪用根拠を再確認。"
         }
       ]
     },
@@ -24701,6 +25491,94 @@ details.card{align-self:start}main:focus{outline:none}
           "note": "CVE-2026-76418を新規追加。SSL VPN二次認証構成で認証不要DoS、回避策なし、KEV 10/29追加。"
         }
       ]
+    },
+    {
+      "id": "v-linux-cve-2026-46300",
+      "product": "Linux Kernel",
+      "title": "CVE-2026-46300：ローカル権限昇格・コンテナ脱出の実悪用確認",
+      "identifiers": [
+        "CVE-2026-46300"
+      ],
+      "published": "2026-05-23",
+      "sourceUpdated": "2026-10-29（Ubuntu更新、CISA KEVは10/28追加）",
+      "checked": "2026-11-01",
+      "updated": "2026-11-01",
+      "changeType": "新規追加",
+      "exploitation": "CISA KEVに10/28追加（実悪用の根拠あり）",
+      "exploitationTone": "red",
+      "priority": "共有Linux・コンテナホストを優先し、ディストリビューション別修正版を確認",
+      "conditions": "ローカル実行権限を持つ攻撃者が影響カーネルを実行するホストで悪用。認証不要の遠隔攻撃と同一視しない。コンテナ環境ではホスト境界への影響を確認。",
+      "impact": "ネットワークバッファ処理の不備を悪用したローカル権限昇格やコンテナ脱出の可能性。",
+      "fix": "Linux公式修正版系列または各ディストリビューションのセキュリティ更新を適用。上流版番号をディストリビューションパッケージへ直接置換しない。",
+      "investigation": "不審なローカル実行、コンテナからのホスト操作、カーネルログ、特権変更を保全。更新前後の稼働カーネルを確認。",
+      "bcp": "研究計算・仮想基盤・コンテナクラスタは、ノード退避、順次再起動、ジョブ再開条件と切戻しを準備。",
+      "tech": "remote",
+      "check": "ck-public",
+      "sources": [
+        {
+          "label": "Linux Kernel CVE公告",
+          "url": "https://kernel.googlesource.com/pub/scm/linux/security/vulns/+/09b74d1628ea888153f0194df38a4c2f3a80ba5f/cve/published/2026/CVE-2026-46300.mbox"
+        },
+        {
+          "label": "Ubuntu CVE-2026-46300",
+          "url": "https://ubuntu.com/security/CVE-2026-46300"
+        },
+        {
+          "label": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        }
+      ],
+      "sourceNote": "Linux上流、Ubuntu、CISA KEVを2026-11-01に照合。KEV期限は米連邦機関向けで、自組織の法定期限ではない。",
+      "change": "CVE-2026-46300を追加。実悪用、ローカル前提、コンテナ境界、ディストリビューション別更新を区別。",
+      "history": [
+        {
+          "date": "2026-11-01",
+          "type": "新規掲載",
+          "note": "CVE-2026-46300を実悪用確認のLinuxカーネル脆弱性として追加。"
+        }
+      ]
+    },
+    {
+      "id": "v-vmware-esx-cve-2026-41709",
+      "product": "VMware ESX／vSphere ESXi",
+      "title": "CVE-2026-41709：管理者操作の監査ログ不足・実悪用確認",
+      "identifiers": [
+        "CVE-2026-41709"
+      ],
+      "published": "2026-07-29",
+      "sourceUpdated": "2026-10-28（CISA KEV追加）",
+      "checked": "2026-11-01",
+      "updated": "2026-11-01",
+      "changeType": "新規追加",
+      "exploitation": "CISA KEVに10/28追加（実悪用の根拠あり）",
+      "exploitationTone": "red",
+      "priority": "CVSS 2.7だけで後回しにせず、特権侵害後の監査欠落として確認",
+      "conditions": "悪意ある管理者または既に管理権限を得た攻撃者が前提。インターネット公開や認証不要を成立条件としない。",
+      "impact": "特定操作が十分に記録されず、侵害調査・説明責任・不正変更の検知が困難になる可能性。",
+      "fix": "Broadcomの対象製品別修正版へ更新。回避策なし。VCF等は対応表と非同期パッチ手順を確認。",
+      "investigation": "vCenter/ESXi管理者、API・SSH・コンソール操作、外部監査ログ、構成差分を突合。欠落期間を他ログで補完。",
+      "bcp": "仮想基盤の順次更新、ホスト退避、管理系停止窓、外部ログ保全、復旧後の構成整合を計画。",
+      "tech": "identity",
+      "check": "ck-identity",
+      "sources": [
+        {
+          "label": "Broadcom VMSA-2026-0006.2",
+          "url": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38017"
+        },
+        {
+          "label": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        }
+      ],
+      "sourceNote": "Broadcom公式アドバイザリとCISA KEVを2026-11-01に照合。低いCVSSと実悪用・監査影響を分けて記載。",
+      "change": "CVE-2026-41709を追加。特権前提の監査ログ不足とKEV実悪用を整理。",
+      "history": [
+        {
+          "date": "2026-11-01",
+          "type": "新規掲載",
+          "note": "VMware ESXのCVE-2026-41709をKEV追加に基づき掲載。"
+        }
+      ]
     }
   ],
   "actors": [
@@ -25171,8 +26049,8 @@ details.card{align-self:start}main:focus{outline:none}
       ],
       "aliases": [],
       "relationship": "Googleは侵入UNC6040と後続恐喝UNC6240を別追跡。ShinyHuntersの名乗りだけで全活動を同一組織に統合しない。",
-      "activityStatus": "9月の恐喝主張を報告",
-      "activityPeriod": "PeopleSoft教育分野報告：2026-06-11（90日外の背景）。9月主張はAreteが10/6報告。",
+      "activityStatus": "当局による被疑者逮捕と活動報告あり",
+      "activityPeriod": "2026-09-15にオランダ警察が24歳の被疑者を逮捕（9/29公表）。FBIは alleged leader の一人と説明。逮捕をグループ全体の消滅とは扱わない。",
       "domestic": "今回の確認範囲では、既存HTMLの国内個別事例と結び付ける十分な帰属根拠は未確認。国内被害がないという意味ではありません。 海外教育分野のPeopleSoft侵害はGoogleが報告。国内大学への帰属には転用しない。",
       "sources": [
         {
@@ -25186,9 +26064,17 @@ details.card{align-self:start}main:focus{outline:none}
         {
           "label": "Arete｜9月観測・2026/10/6公表",
           "url": "https://areteir.com/resources/ransomware-trends-data-insights-september-2026"
+        },
+        {
+          "label": "オランダ警察｜被疑者逮捕 9/29公表",
+          "url": "https://www.politie.nl/nieuws/2026/september/29/11-verdachte-aangehouden-in-onderzoek-naar-hackersgroep-shinyhunters.html"
+        },
+        {
+          "label": "FBI｜ShinyHunters arrest",
+          "url": "https://www.fbi.gov/video-repository/shinyhunters-arrested-092926.mp4/view"
         }
       ],
-      "checked": "2026-10-25",
+      "checked": "2026-11-01",
       "referenceId": "公開情報に基づく整理",
       "bcp": "SaaS停止と盗難データ公開への対応を準備"
     },
@@ -27156,6 +28042,32 @@ details.card{align-self:start}main:focus{outline:none}
         "actor-noname"
       ],
       "checked": "2026-10-25"
+    },
+    {
+      "id": "ev-shinyhunters-arrest-202609",
+      "period": "2026-09-15",
+      "published": "2026-09-29",
+      "title": "ShinyHunters：オランダ警察が24歳の被疑者を逮捕",
+      "evidenceType": "当局発表・逮捕",
+      "text": "オランダ警察はShinyHunters内で役割を果たした疑いのある24歳を逮捕し、記録媒体を押収。FBIは alleged leader の一人と説明した。容疑・追跡範囲を確定帰属やグループ全体の停止と同一視しない。",
+      "checks": [
+        "重要SaaS・ID基盤の侵害痕跡を継続確認",
+        "摘発後も認証・連携アプリ・恐喝対応を維持"
+      ],
+      "sources": [
+        {
+          "label": "オランダ警察｜9/29",
+          "url": "https://www.politie.nl/nieuws/2026/september/29/11-verdachte-aangehouden-in-onderzoek-naar-hackersgroep-shinyhunters.html"
+        },
+        {
+          "label": "FBI｜発表",
+          "url": "https://www.fbi.gov/video-repository/shinyhunters-arrested-092926.mp4/view"
+        }
+      ],
+      "actors": [
+        "actor-shinyhunters"
+      ],
+      "checked": "2026-11-01"
     }
   ],
   "crimeGlossary": [
