@@ -171,28 +171,29 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
 <dialog id="about-dialog" aria-labelledby="about-title"><div class="dialog-head"><h2 id="about-title">使い方</h2><button class="close-btn" data-close="about-dialog">閉じる ×</button></div><div class="dialog-content" id="about-content"></div></dialog>
 <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
 <!-- DATA-CONTRACT: Keep stable IDs and the schema. Edit data without rebuilding the UI. -->
-<script id="app-data" type="application/json">{
+<script id="app-data" type="application/json">
+{
   "meta": {
     "schemaVersion": "1.0",
-    "version": "1.0.27",
+    "version": "1.0.28",
     "title": "セキュリティインテリジェンスハブ",
     "compiledDate": "2026-11-04",
     "incidentSnapshotDate": "2026-11-04",
     "technicalReviewed": "2026-10-25",
     "timezone": "Asia/Tokyo",
-    "incidentSource": "新規・未掲載11項目を追加し、アララ提供元1件を関連組織の続報として更新。CBcloud／PickGoと利用先、アララと利用組織を同一侵害キーで関連付け、項目別件数・レコード・対象者を合算しない。",
-    "coverage": "2026-11-04 07:04 JSTまで。前回成功時点以降、直近7日、必要に応じ直近30日、教育・行政・企業・医療・SaaS・委託先を公式新着・個別検索で確認。国内全件の網羅を保証しない。",
-    "vulnerabilityCoverage": "62製品・テーマ。11/4にJPCERT/CC・IPA・JVN・CISA KEV・主要ベンダーを再確認し、Firefox 159.0.1とChrome Extended Stableを更新。テーマ数は固有CVE数ではない。",
-    "verification": "被害組織・提供元、JPCERT/CC・IPA・JVN・CISA、主要ベンダー本文を照合。Mリーグ候補とSafePay名義の十文字学園女子大学主張は一次資料未確認・公式確認待ちとして確定件数に含めない。",
+    "incidentSource": "11/4公表の日本福祉大学／ANPIC・b-dash関連事案を1項目追加。大学と提供元の公表範囲の違いを確認待ちとして保持。11/4以前の379項目を維持。",
+    "coverage": "2026-11-04時点で照合済みの既往調査結果を統合。2026-11-05以降の新規公表について、この移行作業ではウェブ再調査を実施していない。",
+    "vulnerabilityCoverage": "67製品・テーマ。11/4にCVE-2026-98432、Airbyte、Hinemos、Akeeba、INFINITT PACSを追加。Chrome 157とFirefox 159.0.1の系列別更新を確認。",
+    "verification": "11/4までの差分調査・一次情報URLを統合。11/5現在のサイト本文を再確認したことを意味しない。出典間の差異・未確認を保持。",
     "reconciliation": {
       "newerRows": 180,
       "olderBiRows": 155,
       "preservedIds": 345,
       "addedAgainstBi": 28,
-      "previousRows": 368,
-      "addedThisUpdate": 11,
-      "updatedThisUpdate": 1,
-      "currentRows": 379,
+      "previousRows": 379,
+      "addedThisUpdate": 1,
+      "updatedThisUpdate": 0,
+      "currentRows": 380,
       "associationThisUpdate": 9,
       "referenceFixesThisUpdate": 18
     },
@@ -335,6 +336,11 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         "date": "2026-11-04",
         "version": "1.0.27",
         "text": "新規・未掲載11項目（CBcloud／PickGo、WILLs／NetMile、関連利用先・自治体等）を追加し、アララ提供元1件を続報更新。Firefox 159.0.1とChrome Extended Stableを更新。IPAの個人・消費者向け相談窓口を組織向け支援と分離して追加。前版18項目の一律更新説明を項目固有の説明へ修正。368→379掲載項目、脆弱性62テーマ・アクター16件を維持。"
+      },
+      {
+        "date": "2026-11-04",
+        "version": "1.0.28",
+        "text": "CVE-2026-98432、Airbyte、Hinemos、Akeeba、INFINITT PACSの5テーマを一次資料に基づき追加。Firefox 159.0.1／Chrome 157を既存カードへ続報。日本福祉大学の委託先関連公表を1項目追加（提供元公表との差を確認待ち）。IPA個人・組織向け相談先を資料に追加。 379→380事例・62→67脆弱性・16アクター。JSONを役割別に分離し、正本から生成した単一HTMLへ移行。"
       }
     ],
     "playbookReviewed": "2026-10-17",
@@ -404,6 +410,11 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         "checked": "2026-11-02",
         "topic": "確認待ち・取得制限",
         "text": "十文字学園女子大学のSafePay帰属・窃取は公式確認待ちを維持。佐賀大学の証明書発行、WASABI SWITCHの再開、Cuenote FC等の追加波及は新たな確定差分を確認できず、影響なし・復旧済みへ進めていない。CISA KEVのJSON/CSVは取得時に403となったため、公式アラート検索と既存カードを照合した。"
+      },
+      {
+        "checked": "2026-11-04",
+        "topic": "11/4差分統合・留保事項",
+        "text": "CVE-2026-98432等の漏れを補完。ANPICについて提供元と大学の公表に対象範囲・時点の相違があり原因断定を避ける。2026-11-05の追加情報収集はこの移行作業の対象外。"
       }
     ],
     "vulnerabilitySupplementChecked": "2026-11-02",
@@ -17750,6 +17761,54 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
           "url": "https://www.ucoop.or.jp/info/2026/info_34571.html"
         }
       ]
+    },
+    {
+      "id": "inc-nihonfukushi-anpic-20261104",
+      "date": "2026-11-04",
+      "org": "日本福祉大学／ANPIC・b-dash（アララ関連）",
+      "cat": [
+        "不正アクセス",
+        "情報漏えい",
+        "メール配信",
+        "委託先"
+      ],
+      "status": "外部サービス経由のメールアドレス流出と大学が公表／対象者数調査中",
+      "industry": "教育機関",
+      "info": "ANPIC（安否確認システム）登録分5,613件、b-dash配信分50,041件のメールアドレスについて、大学は外部サービス経由の流出報告を受領したと公表。いずれも登録・配信情報の件数であり、実際の漏えい人数ではない。",
+      "impact": "メール配信サービス「repica」「アララメッセージ」への不正アクセスに伴う波及。大学は二次被害を確認していないと公表。アララ側では不正メール送信が確認されているが、大学利用者への被害と同一視しない。",
+      "scope": "ANPIC 5,613件／b-dash 50,041件（重複や実漏えい対象者数は調査中）。他組織の件数とは合算しない。",
+      "exclude": "大学は流出情報をメールアドレスのみと説明し、氏名・住所・電話番号・メール本文・ログインID・パスワードの流出は確認されていない旨を記載。ANPIC提供元10/30公表の「情報漏えいなし」と大学11/4公表は、対象範囲・確認時点の差を調査する必要がある。",
+      "action": "配信先の委託経路を確認し、安否確認通知の真正性、代替連絡手段、フィッシング周知を点検する。提供元の10/30公表と大学の11/4公表の対象環境・調査範囲を追加照合する。",
+      "sources": [
+        {
+          "label": "日本福祉大学｜2026-11-04公表",
+          "url": "https://www.n-fukushi.ac.jp/about/news/2026/11/04/d42f534ec77c81eebdf6bfc40ec400e88bf63a67.html"
+        },
+        {
+          "label": "ANPIC提供元｜2026-10-30公表",
+          "url": "https://www.anpic.jp/topics/%E3%80%90%E9%87%8D%E8%A6%81%E3%80%91anpic-%E5%A4%96%E9%83%A8%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E6%83%85%E5%A0%B1%E6%BC%8F%E3%81%88%E3%81%84%E3%81%AB%E9%96%A2/"
+        }
+      ],
+      "note": "提供元と大学の公表が異なるため双方の確認範囲は要継続照合。",
+      "updated": "2026-11-04",
+      "sourceUpdated": "2026-11-04",
+      "checked": "2026-11-04",
+      "changeType": "新規追加・提供元公表との照合待ち",
+      "change": "安否確認システムとメール配信に登録したメールアドレスについて大学が流出を公表。提供元10/30発表と調査結果が一致せず対象範囲の再照合が必要。",
+      "history": [
+        {
+          "date": "2026-11-04",
+          "text": "大学公式の流出公表を新規掲載。ANPIC提供元の10/30「漏えいなし」と対象範囲・調査時点が異なる可能性を明記。"
+        }
+      ],
+      "batch": "今回",
+      "group": "アララメッセージ関連",
+      "secondary": {
+        "status": "報告なし（公表日時点）",
+        "date": "2026-11-04",
+        "text": "日本福祉大学は現時点で二次被害を確認していないと公表。アララ側の不正メール送信は別事実。",
+        "checked": "2026-11-04"
+      }
     }
   ],
   "caseLinks": {
@@ -24039,6 +24098,25 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
       "entry": "公表本文参照。未公表の経路は不明。",
       "weakness": "公表で確認された範囲以外は未確認。",
       "actor": "確認情報なし"
+    },
+    "inc-nihonfukushi-anpic-20261104": {
+      "techs": [
+        "supplier",
+        "phishing",
+        "outage"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-identity",
+        "ck-data",
+        "ck-bcp"
+      ],
+      "ir": "supplier",
+      "notice": "supplier",
+      "basis": "公式公表に関連する自組織向け点検案。関連付けは未公表の侵入原因や攻撃者を認定するものではない。",
+      "entry": "公表本文参照。未公表の経路は不明。",
+      "weakness": "公表で確認された範囲以外は未確認。",
+      "actor": "確認情報なし"
     }
   },
   "techniques": [
@@ -26001,7 +26079,7 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
     {
       "id": "v-chrome-202610",
       "product": "Google Chrome",
-      "title": "Chrome 156：Stableと11/3 Extended Stableの配信確認",
+      "title": "Chrome 157 Stableと156 Extended Stable：系列別の配信確認",
       "identifiers": [
         "CVE-2026-76024",
         "CVE-2026-76025",
@@ -26026,7 +26104,7 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         "CVE-2026-119272"
       ],
       "published": "2026-10-15",
-      "sourceUpdated": "2026-11-03（Extended Stableのセキュリティ詳細追記待ち）",
+      "sourceUpdated": "2026-11-03",
       "checked": "2026-11-04",
       "updated": "2026-11-04",
       "changeType": "配信版更新",
@@ -26035,7 +26113,7 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
       "priority": "日常業務で使うブラウザの配信・再起動・実稼働版を優先確認",
       "conditions": "Windows/macOSのExtended Stable 156.0.8078.88を11/3から段階配信。10/29の通常StableやChromeOSとは別系列。セキュリティ詳細は公式記事で後日追記予定。",
       "impact": "10/29更新は21件のセキュリティ修正。MediaStreamのメモリ破損（Critical）と、FileSystem・V8・Skia等のHighを含む。10/27の52件とは別バッチ。",
-      "fix": "Extended Stable採用端末はWindows/macOS 156.0.8078.88以降を確認。通常Stable・ChromeOSへ同じ版番号を要求せず、採用チャネル・OS・再起動後の実稼働版を照合する。",
+      "fix": "通常Stable採用端末はGoogleが案内するChrome 157の修正版へ更新し、再起動後の実稼働版を確認。Extended Stableは採用チャネルに対応する公式修正版を適用。ChromeOSとは版番号を混同しない。",
       "investigation": "更新配信の成功と、再起動後に修正版が稼働していることを区別。管理対象外端末・長時間起動中の端末も棚卸しし、不審な拡張機能・実行や認証異常があればログ保全と端末調査につなげる。",
       "bcp": "更新・再起動の実施時間、業務Webとの互換性、未完了端末の代替手段を確認。管理された修正版への切替と再開条件を決める。",
       "tech": "public",
@@ -26068,10 +26146,14 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         {
           "label": "Google｜Extended Stable 11/3",
           "url": "https://chromereleases.googleblog.com/2026/11/extended-stable-update-for-desktop.html"
+        },
+        {
+          "label": "Google Chrome公式｜157 Stable（11/3公表）",
+          "url": "https://chromereleases.googleblog.com/2026/11/stable-channel-update-for-desktop.html"
         }
       ],
       "sourceNote": "Google公式の11/3 Extended Stable記事を確認。記事はセキュリティ詳細を後日追記するとしており、未公表CVEを推定していない。",
-      "change": "Windows/macOS向けExtended Stable 156.0.8078.88の段階配信を反映。セキュリティ詳細は追記待ちとして未確定のCVEを追加しない。",
+      "change": "11/3公表のChrome 157 Stableのセキュリティ修正と、156 Extended Stableの11/3配信情報を区別して追記。実稼働チャネル・OS別の適用状況を確認。",
       "history": [
         {
           "date": "2026-10-19",
@@ -27913,6 +27995,208 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
           "date": "2026-11-03",
           "type": "新規掲載",
           "note": "JVN更新に基づき追加。"
+        }
+      ]
+    },
+    {
+      "id": "v-linux-ipv4-tcp-98432-202610",
+      "product": "Linux Kernel（IPv4 TCP）",
+      "title": "CVE-2026-98432：IPv4 TCPのUse-After-Free（遠隔攻撃のおそれ）",
+      "identifiers": [
+        "CVE-2026-98432"
+      ],
+      "published": "2026-10-30",
+      "sourceUpdated": "2026-11-03",
+      "priority": "最優先：公開・内部到達のIPv4 TCP待受があるLinuxを棚卸し",
+      "conditions": "IPv4 TCPの接続要求処理における競合条件。AWSはLinuxカーネル4.4以降を概説するが、ディストリビューション別の修正取り込み・影響判定は個別に確認。MPTCP待受で認証不要RCEの実証あり。",
+      "impact": "不正パケットの送信によりカーネル停止、メモリ破損・情報露出。MPTCP条件下で遠隔コード実行が実証。Red Hat CVSS v3 9.8、AWSは11/3時点で悪用の証拠なし。",
+      "fix": "製品・ディストリビューションの修正済みカーネルへ更新し、再起動。Amazon Linux 2/2023は修正版を公開。暫定的にMPTCP無効化やIP Options制限等を公式資料に沿って検討。ただし暫定策は完全な修正ではない。",
+      "investigation": "稼働中カーネル、IPv4 TCP待受・IP Options、MPTCP設定、外部・学内到達範囲を確認。侵害兆候をログで調査し、不明な場合は更新前に保全方針を確認。",
+      "bcp": "授業・認証・Web・DBの停止許容時間、冗長構成、カーネル更新後の再起動、切戻し・復元を計画。CentOS Linux 8はサポート終了につき更新経路自体を検討。",
+      "exploitation": "AWS：2026-11-03時点で実悪用の証拠なし（RCE実証は存在）",
+      "exploitationTone": "amber",
+      "sources": [
+        {
+          "label": "Red Hat｜CVEと製品別の影響",
+          "url": "https://access.redhat.com/security/cve/cve-2026-98432"
+        },
+        {
+          "label": "AWS｜2026-160-AWS（11/3更新）",
+          "url": "https://aws.amazon.com/security/security-bulletins/2026-160-aws/"
+        }
+      ],
+      "updated": "2026-11-04",
+      "checked": "2026-11-04",
+      "changeType": "新規追加",
+      "change": "対象条件・影響・修正版・調査観点を一次資料から新規登録。",
+      "tech": "public",
+      "check": "ck-public",
+      "sourceNote": "2026-11-04に記載の一次資料を確認。公表日・更新日と確認日を区別。",
+      "history": [
+        {
+          "date": "2026-11-04",
+          "type": "新規追加",
+          "note": "製品別の対象条件、影響、対策、検証状況を追加。"
+        }
+      ]
+    },
+    {
+      "id": "v-airbyte-jvn12040144-20261104",
+      "product": "Airbyte",
+      "title": "JVN#12040144：Connector Builder等の任意コード実行（実悪用確認）",
+      "identifiers": [
+        "JVN#12040144"
+      ],
+      "published": "2026-11-04",
+      "sourceUpdated": "2026-11-04",
+      "priority": "最優先：利用中なら2.2.0以降への更新と侵害調査",
+      "conditions": "Airbyte 1.7.0～2.1.0。Connector Builder／Manifest Serverで、低権限の認証済みユーザーが悪用可能。",
+      "impact": "Airbyteユーザー権限での任意コード実行。JVNが実際の悪用を確認済みと明記。データ連携先の接続情報、トークン等への波及を評価。",
+      "fix": "Airbyte 2.2.0以降へ更新。連携コンテナ・実行環境・連携アカウントも点検。",
+      "investigation": "コネクター定義の変更、実行ログ、コンテナの不審プロセス、連携先アクセスと認証情報の利用履歴を保全して確認。",
+      "bcp": "ETL停止時の学務・研究・会計連携への影響、代替データ取込と再同期の整合性を確認。",
+      "exploitation": "JVN：悪用確認あり",
+      "exploitationTone": "red",
+      "sources": [
+        {
+          "label": "JVN#12040144",
+          "url": "https://jvn.jp/jp/JVN12040144/"
+        }
+      ],
+      "updated": "2026-11-04",
+      "checked": "2026-11-04",
+      "changeType": "新規追加",
+      "change": "対象条件・影響・修正版・調査観点を一次資料から新規登録。",
+      "tech": "public",
+      "check": "ck-public",
+      "sourceNote": "2026-11-04に記載の一次資料を確認。公表日・更新日と確認日を区別。",
+      "history": [
+        {
+          "date": "2026-11-04",
+          "type": "新規追加",
+          "note": "製品別の対象条件、影響、対策、検証状況を追加。"
+        }
+      ]
+    },
+    {
+      "id": "v-hinemos-109849-20261104",
+      "product": "Hinemos",
+      "title": "CVE-2026-109849：権限設定の問題から管理者パスワード変更のおそれ",
+      "identifiers": [
+        "CVE-2026-109849",
+        "JVN#46901199"
+      ],
+      "published": "2026-11-04",
+      "sourceUpdated": "2026-11-04",
+      "priority": "高：監視・運用管理サーバーのバージョンと権限設定を確認",
+      "conditions": "Hinemos 7.2.0、7.1.0～7.1.2、7.0.0～7.0.4、旧6.xの対象版。管理者以外に付与できる特定権限でパスワード変更APIへアクセス可能な場合。",
+      "impact": "管理者アカウントのパスワードを変更される可能性（管理基盤の制御・監視停止リスク）。",
+      "fix": "有償版は提供元パッチ、OSS版は最新インストーラーによる更新。保守終了版は提供元が示す緩和策・移行を確認。",
+      "investigation": "Hinemos利用有無、APIへの到達性、権限割当、管理者パスワード変更履歴、認証ログを確認。",
+      "bcp": "監視基盤・運用操作を失った場合の代替監視と手動復旧を確認。",
+      "exploitation": "JVN本文で実悪用確認の記載を確認できず",
+      "exploitationTone": "amber",
+      "sources": [
+        {
+          "label": "JVN#46901199",
+          "url": "https://jvn.jp/en/jp/JVN46901199/index.html"
+        }
+      ],
+      "updated": "2026-11-04",
+      "checked": "2026-11-04",
+      "changeType": "新規追加",
+      "change": "対象条件・影響・修正版・調査観点を一次資料から新規登録。",
+      "tech": "public",
+      "check": "ck-public",
+      "sourceNote": "2026-11-04に記載の一次資料を確認。公表日・更新日と確認日を区別。",
+      "history": [
+        {
+          "date": "2026-11-04",
+          "type": "新規追加",
+          "note": "製品別の対象条件、影響、対策、検証状況を追加。"
+        }
+      ]
+    },
+    {
+      "id": "v-akeeba-105296-20261104",
+      "product": "Akeeba Backup／Admin Tools",
+      "title": "CVE-2026-105296：バックアップ・管理プラグインでCSRF",
+      "identifiers": [
+        "CVE-2026-105296",
+        "JVN#44272550"
+      ],
+      "published": "2026-11-04",
+      "sourceUpdated": "2026-11-04",
+      "priority": "利用時に対応：WordPress・Joomla!運用サイトの導入プラグインを照合",
+      "conditions": "Akeeba Backup for Joomla! 10.3.7未満、WordPress 9.1.8未満、Akeeba Solo 9.1.8未満、Admin Tools for Joomla! 7.9.0未満。ログイン中利用者による細工ページの閲覧。",
+      "impact": "ログインした管理者等に意図しない操作を実行させられる可能性。CVSS v3 5.4。",
+      "fix": "提供元の修正版へ更新し、管理画面のアクセス制御・セッション管理を確認。",
+      "investigation": "サイトのプラグイン台帳、対象版と管理操作ログ・バックアップ設定変更を確認。",
+      "bcp": "バックアップ・復元の実効性とプラグイン更新時の検証・切戻しを準備。",
+      "exploitation": "JVN本文で実悪用確認の記載を確認できず",
+      "exploitationTone": "amber",
+      "sources": [
+        {
+          "label": "JVN#44272550",
+          "url": "https://jvn.jp/jp/JVN44272550/index.html"
+        }
+      ],
+      "updated": "2026-11-04",
+      "checked": "2026-11-04",
+      "changeType": "新規追加",
+      "change": "対象条件・影響・修正版・調査観点を一次資料から新規登録。",
+      "tech": "public",
+      "check": "ck-public",
+      "sourceNote": "2026-11-04に記載の一次資料を確認。公表日・更新日と確認日を区別。",
+      "history": [
+        {
+          "date": "2026-11-04",
+          "type": "新規追加",
+          "note": "製品別の対象条件、影響、対策、検証状況を追加。"
+        }
+      ]
+    },
+    {
+      "id": "v-infinitt-pacs-16305-20261104",
+      "product": "INFINITT PACS System Manager",
+      "title": "CVE-2026-16305／16306：医療画像管理端末で任意コード実行のおそれ",
+      "identifiers": [
+        "CVE-2026-16305",
+        "CVE-2026-16306",
+        "JVNVU#99859918"
+      ],
+      "published": "2026-11-02",
+      "sourceUpdated": "2026-11-04",
+      "priority": "医療・研究部門など利用環境限定：導入有無と版を確認",
+      "conditions": "System Manager 3.0.11.3／3.0.11.5。16305はローカル低権限＋更新承認、16306は細工されたimodular://リンクを利用者に開かせる条件。",
+      "impact": "管理者権限または利用者権限でのコード実行、医療画像や機密情報へのアクセスのおそれ。",
+      "fix": "提供元案内に基づきSystem Manager 3.0.12.3または3.0.12.5へ更新。",
+      "investigation": "医療画像系端末の版、更新マニフェスト権限、不審URI起動・外向き接続を確認。",
+      "bcp": "画像診断・研究の継続と代替閲覧、端末更新の停止時間を調整。",
+      "exploitation": "CERT/CC：悪用の兆候なし（2026-11-02公表）",
+      "exploitationTone": "amber",
+      "sources": [
+        {
+          "label": "CERT/CC VU#203719",
+          "url": "https://kb.cert.org/vuls/id/203719"
+        },
+        {
+          "label": "JVNVU#99859918",
+          "url": "https://jvn.jp/vu/JVNVU99859918/index.html"
+        }
+      ],
+      "updated": "2026-11-04",
+      "checked": "2026-11-04",
+      "changeType": "新規追加",
+      "change": "対象条件・影響・修正版・調査観点を一次資料から新規登録。",
+      "tech": "public",
+      "check": "ck-public",
+      "sourceNote": "2026-11-04に記載の一次資料を確認。公表日・更新日と確認日を区別。",
+      "history": [
+        {
+          "date": "2026-11-04",
+          "type": "新規追加",
+          "note": "製品別の対象条件、影響、対策、検証状況を追加。"
         }
       ]
     }
@@ -30167,6 +30451,30 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
     {
       "kind": "vuln",
       "id": "v-chrome-202610"
+    },
+    {
+      "kind": "incident",
+      "id": "inc-nihonfukushi-anpic-20261104"
+    },
+    {
+      "kind": "vuln",
+      "id": "v-linux-ipv4-tcp-98432-202610"
+    },
+    {
+      "kind": "vuln",
+      "id": "v-airbyte-jvn12040144-20261104"
+    },
+    {
+      "kind": "vuln",
+      "id": "v-hinemos-109849-20261104"
+    },
+    {
+      "kind": "vuln",
+      "id": "v-akeeba-105296-20261104"
+    },
+    {
+      "kind": "vuln",
+      "id": "v-infinitt-pacs-16305-20261104"
     }
   ],
   "actorTimeline": [
@@ -30636,7 +30944,8 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
     "dateNote": "確認日は出典を確認した日。発生日・観測日・資料公表日とは別。全体の基礎確認は10/25、SafePay・十文字の照合は10/30補完。",
     "timelineSupplementChecked": "2026-10-30"
   }
-}</script>
+}
+</script>
 <script>
 'use strict';
 const DATA=JSON.parse(document.getElementById('app-data').textContent);
@@ -30996,8 +31305,7 @@ function renderActorIntel(){
   body+='<div class="card"><h3>ひとつの侵害に、複数の犯罪者が関わる</h3><p>侵入権限や認証情報を売る者、侵入・窃取を行う者、道具と基盤を提供する者、恐喝・交渉を行う者が分業します。同じ実行者が複数の犯罪ブランドを利用することもあります。</p><div class="crime-flow"><div><strong>入口の供給</strong><p>IAB・窃取ログ<br>アクセスや認証情報を提供</p></div><div><strong>侵入・情報窃取</strong><p>実行者・アフィリエイト<br>データや権限を取得</p></div><div><strong>恐喝・情報販売</strong><p>公開予告・交渉・売買<br>暗号化を伴わない場合もある</p></div></div><p class="subtle">RaaS運営者は、この流れを支える道具・管理画面・恐喝基盤等を提供し、利用料・収益分配を得ます。上記は一般的な役割関係であり、すべての攻撃がこの順序・分業になるわけではありません。</p>'+sources([DATA.actors.find(a=>a.id==='actor-clop').sources[0],DATA.actors.find(a=>a.id==='actor-killsec').sources[1]])+'</div><div class="grid two" style="margin-top:16px">'+DATA.crimeGlossary.map(t=>'<article class="card"><h3>'+esc(t.title)+'</h3><p>'+esc(t.role)+'</p><div class="callout"><strong>自組織の点検</strong><p>'+esc(t.check)+'</p></div>'+sources(t.sources)+'<p class="fine">最終確認 '+esc(t.checked)+'</p></article>').join('')+'</div><div class="card" style="margin-top:16px"><h3>大学で優先して考える組み合わせ</h3><p>研究情報の保護／本人確認とMFA復旧／SaaS連携アプリ／AD・仮想基盤・バックアップ／TOP・入試サイトの継続を、実際の環境に照らして点検します。</p><div class="tools">'+actorButtons(['actor-mirrorface','actor-scattered','actor-shinyhunters','actor-akira','actor-noname'])+'</div></div>';
  }else{
   body+='<p class="subtle" style="margin-bottom:12px">'+esc(m.selection)+' カードを開くと、別名の根拠・国内との関係・活動状況・出典を確認できます。</p><div class="filters"><div class="actor-search"><label class="field"><span>名前・別名・手口・標的・国内関連を検索</span><input id="actor-query" type="search" value="'+esc(state.actorQuery)+'" placeholder="例：大学、VPN、Qilin、MFA"></label><label class="field"><span>分類・役割</span><select id="actor-category" class="control"><option value="">すべて</option>'+[...new Set(DATA.actors.map(a=>a.type))].map(x=>'<option'+(state.actorCategory===x?' selected':'')+'>'+esc(x)+'</option>').join('')+'</select></label><span id="actor-count" class="fine" role="status">'+DATA.actors.length+' / '+DATA.actors.length+'グループ</span>'+btn('条件をクリア','data-actor-reset="1"','small')+'</div></div><div class="grid two">'+DATA.actors.map(a=>'<details class="card actor-card" id="'+a.id+'" data-actor-card="'+a.id+'"><summary><span>'+badge(a.type,'teal')+'<h3>'+esc(a.name)+'</h3><span class="subtle">'+esc(a.summary)+'</span><br>'+badge(a.activityStatus,/未確認|保留/.test(a.activityStatus)?'amber':'')+'</span></summary><div class="content"><dl class="definition">'+actorField('目的',a.purpose)+actorField('主な標的',a.targets)+actorField('別名・表記',a.aliases.length?a.aliases.join('／'):'今回、追加別名なし')+actorField('名称・関係の根拠',a.relationship)+actorField('活動状況',a.activityStatus)+actorField('情報の時期・範囲',a.activityPeriod)+actorField('国内・教育との関係',a.domestic)+'</dl><div class="detail-block"><h4>報告されている活動の特徴</h4>'+bullets(a.patterns)+'</div><div class="detail-block"><h4>自組織で点検すること（編集案）</h4>'+bullets(a.checks)+'</div><div class="detail-block"><h4>IT-BCPの観点（編集案）</h4><p>'+esc(a.bcp)+'</p></div><div class="tools">'+a.techs.map(t=>btn(techById(t)?.title||t,'data-tech="'+t+'"','small')+btn('関連点検','data-tech-check="'+t+'"','small')).join('')+'</div>'+sources(a.sources)+'<p class="fine">出典確認 '+esc(a.checked)+' ／ 出典ごとの情報時点は上記・リンク先を参照。一般的な手口との共通性は個別事案の帰属根拠ではありません。</p></div></details>').join('')+'</div><div id="actor-empty" class="empty" hidden>条件に一致するグループはありません。</div>';
- }
- return body;
+ }return body;
 }
 
 function applyVulnFilters(){
