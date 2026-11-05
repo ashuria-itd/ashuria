@@ -175,7 +175,7 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
 {
   "meta": {
     "schemaVersion": "1.0",
-    "version": "1.0.31",
+    "version": "1.0.32",
     "title": "セキュリティインテリジェンスハブ",
     "compiledDate": "2026-11-06",
     "incidentSnapshotDate": "2026-11-06",
@@ -356,11 +356,16 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         "date": "2026-11-06",
         "version": "1.0.31",
         "text": "新規14事例、既存4件の続報、脆弱性2テーマ追加・1テーマ更新、犯罪基盤動向1項目を追加。ドコモ、SMBC保証基盤、消防庁安否情報、九州電力送配電、大学・委託先波及、SHIRASAGI・Ubuntu nginx・Siemens月例を反映。405事例・70脆弱性・16アクター・15動向。"
+      },
+      {
+        "date": "2026-11-06",
+        "version": "1.0.32",
+        "text": "BI集計修正：dateBasisの説明文を一律に除外していた不具合を修正。初回公表日と確認できる事例を日別・月別推移および初期事案集計に反映し、初回不明の続報等は除外する。掲載405事例・70脆弱性・16アクター・15動向は変更なし。"
       }
     ],
     "playbookReviewed": "2026-10-17",
     "actorReviewed": "2026-10-25",
-    "uiReviewed": "2026-11-02",
+    "uiReviewed": "2026-11-06",
     "researchNotes": [
       {
         "checked": "2026-10-28",
@@ -33051,6 +33056,15 @@ const state={view:'home',filters:defaultFilters(),sort:'new',page:0,pageSize:20,
 const views=['home','incidents','bi','threats','bcp-tools','checks','notices'];
 const dateLabel={date:'公表日（初回等）',sourceUpdated:'続報・情報日',updated:'一覧反映日'};
 const basisNote=r=>r.dateBasis?(typeof r.dateBasis==='string'?r.dateBasis:'続報日（初回未確認）'):'';
+// dateBasis is a descriptive note, not a Boolean 'not first publication' flag.
+// Exclude only cases explicitly based on a follow-up or an unverified publication date.
+function isFirstPublicationDate(r){
+ if(!validDate(r.date))return false;
+ const b=r.dateBasis;
+ if(b===true)return false; // legacy: first publication unverified
+ if(typeof b!=='string')return true;
+ return !/(続報公表|続報日|初回公表日.*(?:未確認|未照合)|初回.*(?:未確認|未照合)|掲載日の明記なし|今回確認した続報の公表日)/.test(b);
+}
 const infoPatterns={'パスワード':/パスワード/,'カード情報':/カード(情報|番号|有効期限|の一部)/,'本人確認書類':/免許証|本人確認|パスポート/,'マイナンバー':/マイナンバー/,'銀行口座':/口座/,'鍵情報':/鍵情報|APIキー|トークン|復号鍵|復号に必要な鍵|メール送信キー|接続キー/,'健康・機微情報':/体温|年収|健康|病歴|要配慮|タイプ診断|身長|体重|医療/};
 function sensitiveOf(r){if(/流出なし|流出痕跡なし|漏えい事実未確認/.test(r.status))return [];const text=r.info.split(/(?<=[。])/).filter(s=>!/(対象外|含まれない|保有していない|未確認|発生していない|とは別|ではない)/.test(s)).join('');return Object.entries(infoPatterns).filter(([k,re])=>re.test(text)).map(([k])=>k);}
 function validDate(s){return /^\d{4}-\d{2}-\d{2}$/.test(s||'');}
@@ -33209,7 +33223,7 @@ function chartBars(items,field,color='var(--teal)',limit=12){
 }
 function renderBi(){
  const rows=selectedRows();const basis=state.filters.basis;
- const dated=rows.filter(r=>validDate(r[basis])&&!(basis==='date'&&r.dateBasis));
+ const dated=rows.filter(r=>validDate(r[basis])&&(basis!=='date'||isFirstPublicationDate(r)));
  const span=state.biSpan||'daily30';
  let series=[],chartTitle='',chartSub='';
  if(span==='monthly'){
@@ -33285,10 +33299,10 @@ function stageTracking(rows){
  const months=[...new Set(rows.flatMap(r=>[r.date.slice(0,7),(r.secondary?.date||'').slice(0,7)]).filter(Boolean))].sort();
  const stages=['不正メール送信確認','不審連絡確認','二次被害確認'];
  return '<article class="card" style="margin-top:16px"><h3>初期事案と、その後の報告</h3><p class="fine">上部の条件で抽出後、初期は公表月、後続は二次被害欄の情報月で分類。共通group・同じ月・同じ段階を1件に集約します。</p><div style="overflow:auto"><table class="data-table" style="min-width:610px"><thead><tr><th>報告月</th><th>初期事案</th>'+stages.map(x=>'<th>'+x+'</th>').join('')+'</tr></thead><tbody>'+months.map(m=>{
-  const initial=new Set(rows.filter(r=>!r.dateBasis&&r.date.startsWith(m)).map(r=>r.group||r.id)).size;
+  const initial=new Set(rows.filter(r=>isFirstPublicationDate(r)&&r.date.startsWith(m)).map(r=>r.group||r.id)).size;
   return '<tr><td>'+m+'</td><td>'+initial+'</td>'+stages.map(status=>'<td>'+new Set(rows.filter(r=>r.secondary?.status===status&&(r.secondary.date||'').startsWith(m)).map(r=>r.group||r.id)).size+'</td>').join('')+'</tr>';
  }).join('')+'</tbody></table></div><p class="fine" style="margin-top:9px">発生日の推移・同一事案からの移行率ではありません。初期事案には誤送信等も含みます。不審連絡は因果未確定を含み、不正送信は受信者の実被害とは区別します。</p>'+
- '<details class="expander"><summary>追跡内容を見る（分類済み '+reported.length+'掲載項目）</summary><div class="content">'+reported.map(r=>'<div class="history-row"><button class="btn-link" data-case="'+r.id+'">'+esc(r.org)+'</button><p class="fine">'+esc(r.date)+' '+(r.dateBasis?'続報日':'公表日')+' → '+esc(r.secondary.date||'情報日未記載')+' '+esc(r.secondary.status)+'</p><p class="subtle">'+esc(r.secondary.text)+'</p></div>').join('')+'</div></details></article>';
+ '<details class="expander"><summary>追跡内容を見る（分類済み '+reported.length+'掲載項目）</summary><div class="content">'+reported.map(r=>'<div class="history-row"><button class="btn-link" data-case="'+r.id+'">'+esc(r.org)+'</button><p class="fine">'+esc(r.date)+' '+(isFirstPublicationDate(r)?'公表日':'続報日・日付基準要確認')+' → '+esc(r.secondary.date||'情報日未記載')+' '+esc(r.secondary.status)+'</p><p class="subtle">'+esc(r.secondary.text)+'</p></div>').join('')+'</div></details></article>';
 }
 function renderDataViews(){renderChips();if(state.view==='incidents')renderIncidents();if(state.view==='bi')renderBi();}
 function applyFilter(k,v){state.filters[k]=v;state.page=0;renderFilters();renderDataViews();}
