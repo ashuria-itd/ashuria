@@ -182,7 +182,7 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
 {
   "meta": {
     "schemaVersion": "1.0",
-    "version": "1.0.33",
+    "version": "1.0.34",
     "title": "セキュリティインテリジェンスハブ",
     "compiledDate": "2026-11-06",
     "incidentSnapshotDate": "2026-11-06",
@@ -373,6 +373,11 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         "date": "2026-11-06",
         "version": "1.0.33",
         "text": "攻撃手法にNICT公表のA2B攻撃を追加。AIによる攻撃工程の変化・不正アクセス増加の背景を比較形式で追加。AIを用いた自衛点検を独立画面に新設。インシデント405件の「自組織で検討すること」を共通対策プレイブック10種類への参照に標準化し、個別公表内容は保持。ファビコンを高視認性デザインに変更。BIと既存データは維持。"
+      },
+      {
+        "date": "2026-11-06",
+        "version": "1.0.34",
+        "text": "共通対策プレイブック10種類の「大学で確認したいこと」を「組織で確認したいこと」に変更。教育機関固有の例を一般企業・自治体・教育機関で共通利用できる確認項目へ置換。インシデント405件、脆弱性70件、アクター16件、BI等の既存機能は変更なし。"
       }
     ],
     "playbookReviewed": "2026-11-06",
@@ -34799,10 +34804,9 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
       "steps": [
         "対象ID・管理者権限・利用中のセッション・MFA登録変更を確認する",
         "安全な経路でセッション失効、認証情報の再設定、不要なアプリ同意や転送設定の解除を判断する",
-        "Entra ID・メール・VPN・SaaSのログを保全し、侵入経路と横展開の有無を確認する",
+        "ID基盤（Entra IDなど）・メール・VPN・SaaSのログを保全し、侵入経路と横展開の有無を確認する",
         "利用者への注意喚起と再発防止（強固なMFA、条件付きアクセス、復旧手順）を見直す"
       ],
-      "university": "教職員・学生・非常勤・委託先のID、Microsoft 365とLMSの連携を確認。",
       "sources": [
         {
           "label": "CISA｜Identity and Access Management",
@@ -34810,7 +34814,8 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         }
       ],
       "reviewed": "2026-11-06",
-      "kind": "共通の検討手順（個別事案の原因認定ではない）"
+      "kind": "共通の検討手順（個別事案の原因認定ではない）",
+      "organization": "従業員・契約社員・外部委託先・利用者のアカウントと、ID基盤・メール・業務システムの連携を確認。"
     },
     {
       "id": "P02",
@@ -34822,9 +34827,8 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         "被害疑いの端末・接続を影響を見ながら隔離し、記録を保全する",
         "認証基盤、共有ストレージ、バックアップ、委託先接続への波及を調査する",
         "復元元の安全性・侵入原因・残存アクセスを確認して復旧順序を決める",
-        "学生・教職員への代替サービス案内と業務継続計画を実施する"
+        "従業員・利用者への代替サービス案内と業務継続計画を実施する"
       ],
-      "university": "学務・研究データ・共有ドライブ・PC教室・シンクライアントの停止影響を確認。",
       "sources": [
         {
           "label": "JPCERT/CC｜侵入型ランサムウェアFAQ",
@@ -34832,7 +34836,8 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         }
       ],
       "reviewed": "2026-11-06",
-      "kind": "共通の検討手順（個別事案の原因認定ではない）"
+      "kind": "共通の検討手順（個別事案の原因認定ではない）",
+      "organization": "基幹業務システム・顧客情報・重要資料・共有ストレージ・業務端末の停止影響と復旧優先順位を確認。"
     },
     {
       "id": "P03",
@@ -34846,7 +34851,6 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         "製品と設定の修正、秘密情報の再発行、侵害痕跡の除去を検討する",
         "復旧・再公開は原因対処、検証、監視の条件を満たしてから判断する"
       ],
-      "university": "学部・研究室・入試・広報サイトと制作会社の管理境界、DNSを確認。",
       "sources": [
         {
           "label": "OWASP｜Web Security Testing Guide",
@@ -34854,7 +34858,8 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         }
       ],
       "reviewed": "2026-11-06",
-      "kind": "共通の検討手順（個別事案の原因認定ではない）"
+      "kind": "共通の検討手順（個別事案の原因認定ではない）",
+      "organization": "企業・団体サイト、採用・EC・顧客向けサイトと制作・保守委託先の管理範囲、DNSや公開設定を確認。"
     },
     {
       "id": "P04",
@@ -34868,7 +34873,6 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         "適用前の侵害可能性をログで確認し、更新・再起動・切戻しを計画する",
         "例外・未対応システムの代替策、責任者、再確認日を記録する"
       ],
-      "university": "学内サーバ・VPN・ネットワーク機器・Webホスティング・LMS連携を確認。",
       "sources": [
         {
           "label": "JVN｜脆弱性対策情報ポータル",
@@ -34880,7 +34884,8 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         }
       ],
       "reviewed": "2026-11-06",
-      "kind": "共通の検討手順（個別事案の原因認定ではない）"
+      "kind": "共通の検討手順（個別事案の原因認定ではない）",
+      "organization": "サーバー・VPN・ネットワーク機器・Webホスティング・業務アプリの製品、バージョン、保守状況を確認。"
     },
     {
       "id": "P05",
@@ -34894,7 +34899,6 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         "関係部署・個人情報担当・委託先と通知・報告の要否を判断する",
         "不審メール・詐欺・なりすまし等の二次被害を継続監視する"
       ],
-      "university": "学生・卒業生・教職員・研究参加者の情報種別と通知先を確認。",
       "sources": [
         {
           "label": "個人情報保護委員会｜漏えい等報告",
@@ -34902,7 +34906,8 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         }
       ],
       "reviewed": "2026-11-06",
-      "kind": "共通の検討手順（個別事案の原因認定ではない）"
+      "kind": "共通の検討手順（個別事案の原因認定ではない）",
+      "organization": "顧客・取引先・従業員・採用応募者などの情報種別、影響範囲、本人通知・報告の要否を確認。"
     },
     {
       "id": "P06",
@@ -34916,7 +34921,6 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         "APIキー・連携アカウント・SSO・メール配信経路の影響を確認する",
         "代替運用・個別通知・復旧後の再開条件を決める"
       ],
-      "university": "LMS・安否確認・学生支援・メール配信・採用システムの委託先を確認。",
       "sources": [
         {
           "label": "NIST｜Cybersecurity Supply Chain Risk Management",
@@ -34924,7 +34928,8 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         }
       ],
       "reviewed": "2026-11-06",
-      "kind": "共通の検討手順（個別事案の原因認定ではない）"
+      "kind": "共通の検討手順（個別事案の原因認定ではない）",
+      "organization": "メール配信・勤怠・会計・人事・顧客管理・安否確認など、利用中の外部サービスと委託先への影響を確認。"
     },
     {
       "id": "P07",
@@ -34938,7 +34943,6 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         "メール認証、転送ルール、アカウント操作、侵害の有無を調べる",
         "利用者への短い注意喚起と報告窓口を周知する"
       ],
-      "university": "学長・理事長・教員を騙る依頼、学生のMFA通知・学内メールを想定。",
       "sources": [
         {
           "label": "IPA｜フィッシング対策",
@@ -34946,7 +34950,8 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         }
       ],
       "reviewed": "2026-11-06",
-      "kind": "共通の検討手順（個別事案の原因認定ではない）"
+      "kind": "共通の検討手順（個別事案の原因認定ではない）",
+      "organization": "経営層・取引先・管理者を装う送金・情報提供依頼、MFA通知や業務メールの悪用を想定して確認。"
     },
     {
       "id": "P08",
@@ -34960,7 +34965,6 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         "代替手段・連絡経路・復旧優先順位を業務責任者と決める",
         "段階的再開の範囲を確認し、全面復旧と混同しない"
       ],
-      "university": "授業・出願・成績・安否確認・学内認証の代替運用を確認。",
       "sources": [
         {
           "label": "NIST｜Computer Security Incident Handling Guide",
@@ -34968,7 +34972,8 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         }
       ],
       "reviewed": "2026-11-06",
-      "kind": "共通の検討手順（個別事案の原因認定ではない）"
+      "kind": "共通の検討手順（個別事案の原因認定ではない）",
+      "organization": "受発注・決済・顧客対応・社内認証・連絡手段の停止を想定し、重要業務の代替運用を確認。"
     },
     {
       "id": "P09",
@@ -34982,7 +34987,6 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         "異常な大量取得・API呼出し・権限外アクセスのログと侵害指標を照合する",
         "レート制限・キー管理・公開範囲縮小などの暫定対策と恒久修正を検討する"
       ],
-      "university": "学生アプリ、ポータル、LMS・学務APIの外部公開と委託先開発を確認。",
       "sources": [
         {
           "label": "NICT｜A2B攻撃の注意喚起",
@@ -34994,7 +34998,8 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         }
       ],
       "reviewed": "2026-11-06",
-      "kind": "共通の検討手順（個別事案の原因認定ではない）"
+      "kind": "共通の検討手順（個別事案の原因認定ではない）",
+      "organization": "モバイルアプリ・顧客向けポータル・業務APIの外部公開、認証・認可、開発委託先との責任分担を確認。"
     },
     {
       "id": "P10",
@@ -35008,7 +35013,6 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         "秘密情報やビルド環境・配布経路への波及を調査する",
         "正常な配布元と検証方法を確認し、更新・再導入・監視を計画する"
       ],
-      "university": "研究室のソフトウェア、学内共通配布、制作会社・運用委託先の更新経路を確認。",
       "sources": [
         {
           "label": "NIST｜Software Supply Chain Security",
@@ -35016,7 +35020,8 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         }
       ],
       "reviewed": "2026-11-06",
-      "kind": "共通の検討手順（個別事案の原因認定ではない）"
+      "kind": "共通の検討手順（個別事案の原因認定ではない）",
+      "organization": "業務用ソフトウェア・社内配布物・外部委託先・クラウドサービスの更新経路と依存関係を確認。"
     }
   ],
   "aiThreatEvolution": {
@@ -35541,7 +35546,7 @@ function renderResponsePatterns(){
  $('view-response-patterns').innerHTML=head('RESPONSE PLAYBOOKS','共通対策プレイブック','各インシデントの「自組織で検討すること」から参照する標準対策です。該当パターンは関連する点検テーマを示すもので、原因や実際の被害を断定するものではありません。',state.caseId?btn('直前の事例に戻る','data-case="'+esc(state.caseId)+'"'):btn('インシデント一覧へ','data-nav="incidents"'))+
   '<div class="callout section-note">対策を更新した場合は、この共通ページの記載を更新します。緊急時の隔離・証拠保全・復旧判断は、上部の「緊急時の初動対応」を優先してください。</div><div class="pattern-list">'+DATA.responsePatterns.map(p=>{
    const related=DATA.incidents.filter(r=>(DATA.caseLinks[r.id]?.responsePatterns||[]).includes(p.id)).slice(0,5);
-   return '<details class="card pattern-card" id="pattern-'+esc(p.id)+'"'+(selected===p.id?' open':'')+'><summary><span><span class="pattern-code">'+esc(p.id)+'</span>　'+badge(p.priority,p.priority==='緊急'?'red':p.priority==='高'?'amber':'')+'<h3>'+esc(p.title)+'</h3><span class="subtle">'+esc(p.summary)+'</span><br><span class="fine">関連する掲載項目 '+patternCounts[p.id]+'件（重複あり）</span></span></summary><div class="content"><h4>適用を検討する場面</h4><p>'+esc(p.trigger)+'</p><h4 style="margin-top:13px">標準の確認手順</h4><ol>'+p.steps.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ol><div class="detail-block"><h4>大学で確認したいこと</h4><p>'+esc(p.university)+'</p></div><h4>関連する掲載事例（例）</h4><div class="pattern-case-list">'+related.map(r=>btn(r.org,'data-case="'+esc(r.id)+'"','small')).join('')+'</div>'+sources(p.sources)+'<p class="fine">編集確認 '+esc(p.reviewed)+' ／ '+esc(p.kind)+'</p></div></details>';
+   return '<details class="card pattern-card" id="pattern-'+esc(p.id)+'"'+(selected===p.id?' open':'')+'><summary><span><span class="pattern-code">'+esc(p.id)+'</span>　'+badge(p.priority,p.priority==='緊急'?'red':p.priority==='高'?'amber':'')+'<h3>'+esc(p.title)+'</h3><span class="subtle">'+esc(p.summary)+'</span><br><span class="fine">関連する掲載項目 '+patternCounts[p.id]+'件（重複あり）</span></span></summary><div class="content"><h4>適用を検討する場面</h4><p>'+esc(p.trigger)+'</p><h4 style="margin-top:13px">標準の確認手順</h4><ol>'+p.steps.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ol><div class="detail-block"><h4>組織で確認したいこと</h4><p>'+esc(p.organization)+'</p></div><h4>関連する掲載事例（例）</h4><div class="pattern-case-list">'+related.map(r=>btn(r.org,'data-case="'+esc(r.id)+'"','small')).join('')+'</div>'+sources(p.sources)+'<p class="fine">編集確認 '+esc(p.reviewed)+' ／ '+esc(p.kind)+'</p></div></details>';
   }).join('')+'</div>';
 }
 function focusPattern(id){
