@@ -135,6 +135,22 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
 
 /* v1.0.33: response playbooks / AI literacy */
 .pattern-card{scroll-margin-top:130px}.pattern-card summary{cursor:pointer;list-style:none;display:flex;gap:12px;align-items:start;justify-content:space-between}.pattern-card summary::-webkit-details-marker{display:none}.pattern-card summary:after{content:'＋';font-size:20px;color:var(--teal);line-height:1}.pattern-card[open] summary:after{content:'−'}.pattern-card .content{margin-top:15px;padding-top:13px;border-top:1px solid var(--line)}.pattern-code{display:inline-flex;align-items:center;justify-content:center;background:var(--navy);color:white;font-weight:750;border-radius:6px;font-size:11px;padding:3px 8px;flex:none}.pattern-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.pattern-links{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.pattern-ref{background:var(--teal-light);border:1px solid #b8dedb;color:var(--teal);border-radius:6px;padding:8px 11px;font-weight:700;font-size:12px}.pattern-ref:hover{background:#d7efec}.comparison-table{width:100%;border-collapse:collapse;min-width:640px}.comparison-table th,.comparison-table td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;font-size:12px}.comparison-table th{background:#edf3f6}.ai-step{scroll-margin-top:120px}.ai-prompt{white-space:pre-wrap;background:#f3f7fa;border:1px solid var(--line);padding:14px;border-radius:8px;font-size:12px;line-height:1.75;max-height:220px;overflow:auto}.section-note{margin:15px 0}.pattern-case-list{display:flex;gap:8px;flex-wrap:wrap}.pattern-case-list button{max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}@media(max-width:800px){.pattern-list{grid-template-columns:1fr}}
+
+/* v1.0.35 / time-series BI dashboard */
+.bi-primary-card{padding:22px 24px;margin-bottom:16px}.bi-main-grid{margin-bottom:16px}.bi-secondary-card{margin-bottom:16px}
+.bi-control-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.3fr;gap:13px;margin:16px 0 12px;padding:14px;background:#f5f9fa;border:1px solid var(--line);border-radius:10px}
+.bi-switch{min-width:0}.bi-switch-label{display:block;font-size:11px;font-weight:700;color:var(--muted);margin-bottom:5px}.bi-switch-options{display:flex;gap:4px;flex-wrap:wrap}.bi-switch-options .pill-btn{font-size:11px;padding:5px 9px}
+.bi-chart-note{margin-bottom:10px!important;line-height:1.7}.bi-axis-caption{font-size:11px;color:var(--muted);margin:8px 0}.bi-stack-scroll{overflow-x:auto;max-width:100%;padding-bottom:6px}
+.bi-stack-layout{height:250px;display:flex;gap:7px;align-items:stretch;padding:8px 5px 0;border-bottom:1px solid var(--line);background:repeating-linear-gradient(to top,transparent 0,transparent 45px,#dfe7eb 46px,transparent 47px)}
+.bi-stack-col{flex:1;min-width:28px;display:flex;flex-direction:column;align-items:center;justify-content:end;gap:4px}
+.bi-stack-number{font-size:11px;font-weight:700;color:var(--navy);line-height:1}.bi-stack-track{height:190px;width:100%;max-width:42px;display:flex;flex-direction:column-reverse;justify-content:flex-start;overflow:hidden;border-radius:4px 4px 0 0}
+.bi-stack-segment{display:block;min-height:0;width:100%;border:0;border-bottom:1px solid #ffffff50;padding:0;flex:none;transition:filter .12s}.bi-stack-segment:hover,.bi-stack-segment:focus-visible{filter:brightness(.80);outline:2px solid var(--navy);outline-offset:-2px;z-index:1}
+.bi-stack-period{font-size:10px;line-height:1.2;color:var(--muted);border:0;background:none;padding:4px 1px;white-space:nowrap}.bi-stack-period:hover{color:var(--teal);text-decoration:underline}
+.bi-legend{display:flex;gap:9px 15px;flex-wrap:wrap;margin:12px 0 6px}.bi-legend span{font-size:11px;display:inline-flex;gap:6px;align-items:center;color:var(--muted)}.bi-legend i{display:inline-block;width:11px;height:11px;border-radius:2px;flex:none}
+.bi-svg-scroll,.bi-heat-scroll{overflow-x:auto;width:100%;margin:13px 0}.bi-svg-scroll svg{display:block;height:auto}.bi-heat-table{border-collapse:separate;border-spacing:3px;font-size:11px;min-width:100%}.bi-heat-table th{color:var(--muted);font-weight:650;white-space:nowrap;padding:6px;text-align:center}.bi-heat-table th:first-child{text-align:left;position:sticky;left:0;background:white;z-index:1;max-width:160px;overflow:hidden;text-overflow:ellipsis}.bi-heat-table td{text-align:center;padding:0}.bi-heat-cell{border:1px solid #ffffff;border-radius:4px;min-width:33px;min-height:31px;width:100%;color:var(--navy);font-size:11px;font-weight:650}.bi-heat-cell:hover,.bi-heat-cell:focus-visible{outline:2px solid var(--teal);outline-offset:-2px}
+.bi-timeline-details{margin-top:10px}.bi-timeline-details summary{cursor:pointer;font-size:12px;color:var(--teal);font-weight:650}.bi-legacy{border:1px solid var(--line);border-radius:12px;background:white;margin:15px 0}.bi-legacy>summary{display:flex;justify-content:space-between;gap:12px;align-items:center;cursor:pointer;padding:16px 20px;list-style:none}.bi-legacy>summary::-webkit-details-marker{display:none}.bi-legacy>summary:after{content:'＋';font-size:22px;color:var(--teal)}.bi-legacy[open]>summary:after{content:'−'}.bi-legacy-content{padding:0 16px 18px;display:grid;gap:16px}.bi-legacy-content>.card{box-shadow:none}.bi-legacy-content .grid.two{gap:16px}
+@media(max-width:1000px){.bi-control-grid{grid-template-columns:1fr 1fr}.bi-main-grid{grid-template-columns:1fr!important}}
+@media(max-width:620px){.bi-control-grid{grid-template-columns:1fr;padding:10px}.bi-primary-card{padding:14px}.bi-legacy>summary{flex-wrap:wrap}.bi-legacy>summary .fine{flex-basis:100%}.bi-stack-layout{height:230px}.bi-stack-track{height:175px}}
 </style>
 </head>
 <body>
@@ -182,7 +198,7 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
 {
   "meta": {
     "schemaVersion": "1.0",
-    "version": "1.0.34",
+    "version": "1.0.35",
     "title": "セキュリティインテリジェンスハブ",
     "compiledDate": "2026-11-06",
     "incidentSnapshotDate": "2026-11-06",
@@ -378,6 +394,11 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         "date": "2026-11-06",
         "version": "1.0.34",
         "text": "共通対策プレイブック10種類の「大学で確認したいこと」を「組織で確認したいこと」に変更。教育機関固有の例を一般企業・自治体・教育機関で共通利用できる確認項目へ置換。インシデント405件、脆弱性70件、アクター16件、BI等の既存機能は変更なし。"
+      },
+      {
+        "date": "2026-11-06",
+        "version": "1.0.35",
+        "text": "BI分析を時系列中心に再構成。カテゴリ・業種・二次被害の週別／月別積み上げ棒グラフ、件数／構成比切替、掲載項目／関連グループ切替、100%構成比面グラフ、時系列ヒートマップ、初回公表と二次被害確認月の比較を追加。グラフから期間・分類で一覧を絞り込む操作を実装。従来の日別推移・分類別・業種×カテゴリ・二次被害追跡表は詳細表示に維持。インシデント・脆弱性・アクターの原データは変更なし。"
       }
     ],
     "playbookReviewed": "2026-11-06",
@@ -35197,9 +35218,9 @@ function relatedMaterials(item){
  return '<div class="detail-block"><h4>関連する事例・製品対応</h4><div class="tools">'+v.map(x=>btn(x.product+'の対応','data-vuln="'+x.id+'"')).join('')+r.map(x=>btn(x.org,'data-case="'+x.id+'"')).join('')+'</div><p class="fine">関連の確度・対象範囲は各本文で確認してください。</p></div>';
 }
 const countBy=(rows,getter)=>{const o={};for(const r of rows){const vs=getter(r);for(const v of Array.isArray(vs)?[...new Set(vs)]:[vs])if(v)o[v]=(o[v]||0)+1;}return Object.entries(o).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0],'ja'));};
-const defaultFilters=()=>({basis:'date',start:'',end:'',industry:'',cat:'',status:'',q:'',theme:'',sensitive:'',secondary:'',group:'',updates:false});
+const defaultFilters=()=>({basis:'date',start:'',end:'',industry:'',cat:'',status:'',q:'',theme:'',sensitive:'',secondary:'',group:'',updates:false,biSliceDimension:'',biSliceValue:'',biSliceOthers:'',biDatedOnly:false});
 const state={view:'home',filters:defaultFilters(),sort:'new',page:0,pageSize:20,grouped:true,expandedGroups:{},advFiltersOpen:false,
- homeFilter:'all',biSpan:'daily30',vulnQuery:'',vulnFilter:'all',bcpTab:'checks',
+ homeFilter:'all',biSpan:'daily30',biAxis:'category',biPeriod:'week',biMetric:'count',biUnit:'items',vulnQuery:'',vulnFilter:'all',bcpTab:'checks',
  threatTab:'vulnerabilities',actorTab:'directory',actorQuery:'',actorCategory:'',actorEvidence:'',checkId:'',checkAnswers:{},checkNotes:{},noticeType:'general',noticeAudience:'user',
  noticeReference:null,noticeText:'',noticeContact:'',noticeScope:'',irId:'',irChecks:{},irMemos:{},caseId:'',patternFocus:''};
 const views=['home','incidents','bi','threats','response-patterns','ai-selfcheck','bcp-tools','checks','notices'];
@@ -35227,6 +35248,8 @@ function filterRows(rows=DATA.incidents,f=state.filters){
    (!f.industry||r.industry===f.industry)&&(!f.cat||(r.cat||[]).includes(f.cat))&&
    (!f.status||r.status===f.status)&&(!f.theme||themesOf(r).includes(f.theme))&&(!f.sensitive||sensitiveOf(r).includes(f.sensitive))&&
    (!f.secondary||(r.secondary?.status||'未分類・未確認')===f.secondary)&&(!f.group||r.group===f.group)&&
+   (!f.biSliceDimension||biMatchSlice(r,f.biSliceDimension,f.biSliceValue,f.biSliceOthers))&&
+   (!f.biDatedOnly||(validDate(r[f.basis])&&(f.basis!=='date'||isFirstPublicationDate(r))))&&
    (!f.updates||r.updated===DATA.meta.incidentSnapshotDate)&&
    (!q||[r.org,r.info,r.impact,r.scope,r.note,r.change,r.action,(r.cat||[]).join(' ')].join(' ').toLocaleLowerCase().includes(q));
  });
@@ -35273,7 +35296,7 @@ function renderHome(){
 function selectOptions(values,selected,all='すべて'){return '<option value="">'+all+'</option>'+[...new Set(values)].filter(Boolean).sort((a,b)=>a.localeCompare(b,'ja')).map(v=>'<option value="'+esc(v)+'"'+(v===selected?' selected':'')+'>'+esc(v)+'</option>').join('');}
 function renderFilters(){
  const f=state.filters;
- const hasAdv=Boolean(f.start||f.end||f.industry||f.cat||f.status||f.theme||f.sensitive||f.secondary||f.group||f.basis!=='date');
+ const hasAdv=Boolean(f.start||f.end||f.industry||f.cat||f.status||f.theme||f.sensitive||f.secondary||f.group||f.biSliceValue||f.biDatedOnly||f.basis!=='date');
  $('shared-filters').innerHTML='<div class="filters-compact">'+
   '<div class="filter-top-bar">'+
    '<div class="search-box-wrap"><input type="search" data-filter="q" value="'+esc(f.q)+'" placeholder="🔍 組織・サービス・原因・情報項目で検索（例：大学、API、パスワード、委託先）" aria-label="インシデントのキーワード検索"></div>'+
@@ -35318,9 +35341,9 @@ function renderFilters(){
 }
 function renderChips(){
  const f=state.filters;
- const entries=Object.entries(f).filter(([k,v])=>v&&k!=='basis');
- const labels={start:'開始',end:'終了',industry:'業種',cat:'カテゴリ',status:'状況',q:'検索',theme:'点検テーマ',sensitive:'対象情報',secondary:'二次被害等',group:'関連グループ',updates:'今回の更新'};
- $('filter-chips').innerHTML=entries.map(([k,v])=>'<span class="chip">'+esc(labels[k]+'：'+(k==='theme'?techById(v)?.title:k==='updates'?'のみ':v))+'<button data-clear="'+k+'" aria-label="'+esc(labels[k])+'の条件を解除">×</button></span>').join('')+
+ const entries=Object.entries(f).filter(([k,v])=>v&&k!=='basis'&&k!=='biSliceDimension'&&k!=='biSliceOthers');
+ const labels={start:'開始',end:'終了',industry:'業種',cat:'カテゴリ',status:'状況',q:'検索',theme:'点検テーマ',sensitive:'対象情報',secondary:'二次被害等',group:'関連グループ',biSliceValue:'BI内訳',biDatedOnly:'BI集計可能な日付',updates:'今回の更新'};
+ $('filter-chips').innerHTML=entries.map(([k,v])=>'<span class="chip">'+esc(labels[k]+'：'+(k==='theme'?techById(v)?.title:k==='updates'||k==='biDatedOnly'?'のみ':v))+'<button data-clear="'+k+'" aria-label="'+esc(labels[k])+'の条件を解除">×</button></span>').join('')+
  (f.start&&f.end&&f.start>f.end?'<span class="badge red">開始日が終了日より後です</span>':'');
 }
 function renderIncidentRow(r,members,isChild=false){
@@ -35370,65 +35393,186 @@ function chartBars(items,field,color='var(--teal)',limit=12){
  const max=Math.max(1,...items.map(x=>x[1]));
  return '<div class="bar-list">'+items.slice(0,limit).map(([l,n])=>'<button class="bar-row" data-bar-field="'+esc(field)+'" data-bar-value="'+esc(l)+'" aria-label="'+esc(l)+' '+n+'項目で絞り込む"><span class="bar-label" title="'+esc(l)+'">'+esc(l)+'</span><span class="bar-track"><span class="bar-fill" style="width:'+(n/max*100)+'%;background:'+color+'"></span></span><span class="bar-number">'+n+'</span></button>').join('')+'</div>';
 }
-function renderBi(){
- const rows=selectedRows();const basis=state.filters.basis;
+/* v1.0.35 BI: all charts are generated locally; no external library or network. */
+const BI_COLORS=['#087f83','#4774ad','#d1963b','#8c6cac','#c46163','#4b9377','#8495a3','#bd9c77'];
+const BI_SECONDARY=['二次被害確認','不審連絡確認','不正メール送信確認','報告なし（公表時点）','注意喚起のみ','未分類・調査中','その他の確認事項'];
+function biIndustry(r){
+ const s=r.industry||'';
+ if(/教育|大学|学校|研究|学術/.test(s))return '教育・研究';
+ if(/行政|自治体|公的|公共|省庁|官公庁/.test(s))return '行政・公共';
+ if(/IT|通信|クラウド|ソフトウェア|SaaS|Webサービス|情報サービス|インターネット/.test(s))return 'IT・通信';
+ if(/医療|福祉|病院|薬局|介護/.test(s))return '医療・福祉';
+ if(/金融|保険|銀行|決済|証券|クレジット/.test(s))return '金融・保険';
+ if(/交通|旅行|宿泊|航空|鉄道|運輸|物流|ホテル/.test(s))return '交通・旅行・宿泊';
+ if(/製造|メーカー|工業/.test(s))return '製造';
+ if(/小売|EC|通販|飲食|外食|商業|販売|サービス/.test(s))return '小売・サービス';
+ if(/エネルギー|電力|ガス/.test(s))return 'エネルギー';
+ return 'その他・未分類';
+}
+function biSecondary(r){
+ const s=r.secondary?.status||'';
+ if(s==='二次被害確認'||/被害確認（不正取引報告）|被害確認（不正発行）/.test(s))return '二次被害確認';
+ if(/不審連絡確認|不審メール確認/.test(s))return '不審連絡確認';
+ if(/不正メール送信確認|不審メール送信確認/.test(s))return '不正メール送信確認';
+ if(/報告なし|不正取引なし/.test(s))return '報告なし（公表時点）';
+ if(/注意喚起のみ/.test(s))return '注意喚起のみ';
+ if(!s||/未公表|未分類|不明|調査中|未確認/.test(s))return '未分類・調査中';
+ return 'その他の確認事項';
+}
+function biValue(r,axis){
+ if(axis==='industry')return biIndustry(r);
+ if(axis==='secondary')return biSecondary(r);
+ return (r.cat||[])[0]||'未分類';
+}
+function biMatchSlice(r,axis,value,otherJson){
+ const v=biValue(r,axis);
+ if(otherJson){try{return !JSON.parse(otherJson).includes(v);}catch(_){return false;}}
+ return v===value;
+}
+function biWeekStart(iso){const d=new Date(iso+'T00:00:00Z');const n=(d.getUTCDay()+6)%7;d.setUTCDate(d.getUTCDate()-n);return d.toISOString().slice(0,10);}
+function biPeriodKey(iso,period){return period==='month'?iso.slice(0,7):biWeekStart(iso);}
+function biAddPeriod(key,period){
+ if(period==='month'){const [y,m]=key.split('-').map(Number);return new Date(Date.UTC(y,m,1)).toISOString().slice(0,7);}
+ return new Date(Date.parse(key+'T00:00:00Z')+7*86400000).toISOString().slice(0,10);
+}
+function biPeriodBounds(key,period){
+ if(period==='month'){const [y,m]=key.split('-').map(Number);return [key+'-01',new Date(Date.UTC(y,m,0)).toISOString().slice(0,10)];}
+ return [key,new Date(Date.parse(key+'T00:00:00Z')+6*86400000).toISOString().slice(0,10)];
+}
+function biPeriodShort(key,period){return period==='month'?key.slice(2).replace('-','/')+'月':key.slice(5).replace('-','/');}
+function biEligible(rows,basis,unit){
+ const eligible=rows.filter(r=>validDate(r[basis])&&(basis!=='date'||isFirstPublicationDate(r)));
+ if(unit==='items')return eligible;
+ const chosen=new Map();
+ for(const r of [...eligible].sort((a,b)=>a[basis].localeCompare(b[basis])||a.id.localeCompare(b.id))){
+  const key=r.group||r.id;if(!chosen.has(key))chosen.set(key,r);
+ }
+ return [...chosen.values()];
+}
+function biBuildSeries(rows,basis,axis,period,unit){
+ const eligible=biEligible(rows,basis,unit);
+ const freq=countBy(eligible,r=>biValue(r,axis));
+ const keep=axis==='secondary'?BI_SECONDARY:freq.slice(0,axis==='category'?5:7).map(x=>x[0]);
+ const other=axis==='category'?'その他のカテゴリ':'その他の業種';
+ const labels=axis==='secondary'?BI_SECONDARY.filter(x=>freq.some(y=>y[0]===x)):keep.concat(freq.length>keep.length?[other]:[]);
+ const buckets=new Map();
+ for(const r of eligible){const k=biPeriodKey(r[basis],period);const val=biValue(r,axis);const label=keep.includes(val)?val:other;
+  if(!buckets.has(k))buckets.set(k,{key:k,total:0,values:{}});
+  const b=buckets.get(k);b.total++;b.values[label]=(b.values[label]||0)+1;
+ }
+ const keys=[...buckets.keys()].sort();const bins=[];
+ if(keys.length){let k=keys[0],n=0;while(k<=keys[keys.length-1]&&n++<150){bins.push(buckets.get(k)||{key:k,total:0,values:{}});k=biAddPeriod(k,period);}}
+ return {bins,labels,keep,other,axis,period,unit,eligibleCount:eligible.length,excluded:rows.length-eligible.length};
+}
+function biLegend(model){return '<div class="bi-legend">'+model.labels.map((l,i)=>'<span><i style="background:'+BI_COLORS[i%BI_COLORS.length]+'"></i>'+esc(l)+'</span>').join('')+'</div>';}
+function biSliceAttrs(model,key,label){const others=label===model.other?JSON.stringify(model.keep):'';return ' data-bi-slice="1" data-bi-key="'+esc(key)+'" data-bi-dim="'+model.axis+'" data-bi-value="'+esc(label)+'" data-bi-others="'+esc(others)+'"';}
+function biStacked(model,metric){
+ if(!model.bins.length)return '<div class="empty">選択した日付基準で集計できるデータがありません。</div>';
+ const max=Math.max(1,...model.bins.map(b=>b.total));
+ const cols=model.bins.map(b=>{
+  const parts=model.labels.map((label,i)=>{const n=b.values[label]||0;if(!n)return '';
+   const h=metric==='ratio'?n/Math.max(1,b.total)*100:n/max*100;
+   return '<button class="bi-stack-segment" type="button" style="height:'+h.toFixed(4)+'%;background:'+BI_COLORS[i%BI_COLORS.length]+'"'+biSliceAttrs(model,b.key,label)+' title="'+esc(b.key+' / '+label+'：'+n+'件')+'" aria-label="'+esc(b.key+' '+label+' '+n+'件で絞り込む')+'"></button>';
+  }).join('');
+  return '<div class="bi-stack-col"><span class="bi-stack-number tabular">'+b.total+'</span><div class="bi-stack-track">'+parts+'</div><button class="bi-stack-period" type="button" data-bi-period-only="'+esc(b.key)+'" title="'+esc(b.key)+'の掲載項目を表示">'+esc(biPeriodShort(b.key,model.period))+'</button></div>';
+ }).join('');
+ return '<div class="bi-axis-caption">'+(metric==='ratio'?'構成比 100%':'最大 '+max+' '+(model.unit==='items'?'掲載項目':'関連グループ'))+'　／　棒の色をクリックすると期間と分類で絞り込み</div><div class="bi-stack-scroll"><div class="bi-stack-layout" style="min-width:'+Math.max(540,model.bins.length*47)+'px">'+cols+'</div></div>'+biLegend(model);
+}
+function biShareArea(model){
+ if(!model.bins.length)return '<div class="empty">構成比を表示できる期間がありません。</div>';
+ const n=model.bins.length,w=Math.max(540,70+n*48),left=43,right=15,top=12,h=155;
+ const xx=i=>left+(n===1?(w-left-right)/2:i*(w-left-right)/(n-1));const yy=v=>top+h*(1-v);
+ const values=model.bins.map(b=>model.labels.map(l=>(b.values[l]||0)/Math.max(1,b.total)));
+ let prior=Array(n).fill(0);const paths=[];
+ for(let i=0;i<model.labels.length;i++){
+  const next=prior.map((v,j)=>v+values[j][i]);
+  const topPoints=next.map((v,j)=>xx(j).toFixed(1)+','+yy(v).toFixed(1));
+  const bottomPoints=prior.map((v,j)=>xx(j).toFixed(1)+','+yy(v).toFixed(1)).reverse();
+  paths.push('<polygon points="'+topPoints.concat(bottomPoints).join(' ')+'" fill="'+BI_COLORS[i%BI_COLORS.length]+'" fill-opacity=".90"><title>'+esc(model.labels[i])+'の期間別構成比</title></polygon>');prior=next;
+ }
+ const ticks=[0,.25,.5,.75,1].map(t=>'<line x1="'+left+'" x2="'+(w-right)+'" y1="'+yy(t)+'" y2="'+yy(t)+'" stroke="currentColor" stroke-opacity=".12"/><text x="'+(left-6)+'" y="'+(yy(t)+3)+'" text-anchor="end" fill="currentColor" font-size="10">'+Math.round(t*100)+'%</text>').join('');
+ const labels=model.bins.map((b,i)=>i%Math.max(1,Math.ceil(n/10))===0||i===n-1?'<text x="'+xx(i)+'" y="'+(top+h+19)+'" font-size="10" text-anchor="middle" fill="currentColor">'+esc(biPeriodShort(b.key,model.period))+'</text>':'').join('');
+ return '<div class="bi-svg-scroll"><svg viewBox="0 0 '+w+' '+(top+h+32)+'" width="100%" style="min-width:'+w+'px" role="img" aria-label="'+esc(model.period==='month'?'月別':'週別')+'の分類構成比の推移">'+paths+ticks+labels+'</svg></div>'+biLegend(model)+'<p class="fine">※各期間の掲載構成比です。件数の増減は上の積み上げ棒グラフで確認してください。データのない期間は構成比を算出できません。</p>';
+}
+function biHeatmap(model){
+ if(!model.bins.length)return '<div class="empty">ヒートマップに表示できるデータがありません。</div>';
+ const max=Math.max(1,...model.bins.flatMap(b=>model.labels.map(l=>b.values[l]||0)));
+ const labels=model.labels.slice(0,8);
+ const cells=labels.map(l=>'<tr><th>'+esc(l)+'</th>'+model.bins.map(b=>{const n=b.values[l]||0;const a=n?.12+.74*n/max:.025;return '<td><button class="bi-heat-cell" style="background:rgba(8,127,131,'+a.toFixed(3)+')"'+biSliceAttrs(model,b.key,l)+' title="'+esc(b.key+' '+l+' '+n+'件')+'" aria-label="'+esc(b.key+' '+l+' '+n+'件で絞り込む')+'">'+(n||'·')+'</button></td>';}).join('')+'</tr>').join('');
+ return '<div class="bi-heat-scroll"><table class="bi-heat-table"><thead><tr><th>分類 / '+(model.period==='month'?'月':'週開始日')+'</th>'+model.bins.map(b=>'<th>'+esc(biPeriodShort(b.key,model.period))+'</th>').join('')+'</tr></thead><tbody>'+cells+'</tbody></table></div><p class="fine">色が濃いほど掲載が集中しています。セルをクリックすると、期間と分類で一覧を絞り込みます。</p>';
+}
+function biSecondaryTimeline(rows){
+ const months=new Map();const ensure=k=>{if(!months.has(k))months.set(k,{initial:new Set(),contact:new Set(),sent:new Set(),damage:new Set()});return months.get(k);};
+ for(const r of rows){
+  if(isFirstPublicationDate(r))ensure(r.date.slice(0,7)).initial.add(r.group||r.id);
+  const date=r.secondary?.date||'';if(!validDate(date))continue;
+  const cls=biSecondary(r);const o=ensure(date.slice(0,7)),id=r.group||r.id;
+  if(cls==='二次被害確認')o.damage.add(id);
+  if(cls==='不審連絡確認')o.contact.add(id);
+  if(cls==='不正メール送信確認')o.sent.add(id);
+ }
+ const keys=[...months.keys()].sort();if(!keys.length)return '<div class="empty">日付が確認できる報告がありません。</div>';
+ const series=[];let k=keys[0],guard=0;while(k<=keys[keys.length-1]&&guard++<120){const m=months.get(k)||{initial:new Set(),contact:new Set(),sent:new Set(),damage:new Set()};series.push({key:k,initial:m.initial.size,contact:m.contact.size,sent:m.sent.size,damage:m.damage.size});k=biAddPeriod(k,'month');}
+ const lines=[['initial','初期公表（関連集約）','#64748b'],['sent','不正メール送信確認','#4774ad'],['contact','不審連絡確認','#d1963b'],['damage','二次被害確認','#b54b55']];
+ const max=Math.max(1,...series.flatMap(s=>lines.map(([id])=>s[id]))),w=Math.max(500,75+series.length*85),h=150,left=40,top=15;
+ const x=i=>left+(series.length===1?(w-left-18)/2:i*(w-left-58)/(series.length-1)),y=v=>top+h-v/max*h;
+ const grid=[0,.5,1].map(t=>'<line x1="'+left+'" x2="'+(w-15)+'" y1="'+y(t*max)+'" y2="'+y(t*max)+'" stroke="currentColor" stroke-opacity=".12"/><text x="'+(left-5)+'" y="'+(y(t*max)+3)+'" font-size="10" fill="currentColor" text-anchor="end">'+Math.round(t*max)+'</text>').join('');
+ const paths=lines.map(([id,label,color])=>'<polyline points="'+series.map((s,i)=>x(i)+','+y(s[id])).join(' ')+'" fill="none" stroke="'+color+'" stroke-width="2.5" stroke-linejoin="round"/>'+series.map((s,i)=>'<circle cx="'+x(i)+'" cy="'+y(s[id])+'" r="3" fill="'+color+'"><title>'+esc(s.key+' '+label+' '+s[id]+'件')+'</title></circle>').join('')).join('');
+ const xl=series.map((s,i)=>'<text x="'+x(i)+'" y="'+(top+h+20)+'" font-size="10" text-anchor="middle" fill="currentColor">'+esc(s.key.slice(2))+'</text>').join('');
+ return '<div class="bi-svg-scroll"><svg viewBox="0 0 '+w+' '+(top+h+30)+'" width="100%" style="min-width:'+w+'px" role="img" aria-label="初期公表と二次被害の確認月別推移">'+grid+paths+xl+'</svg></div><div class="bi-legend">'+lines.map(([id,l,c])=>'<span><i style="background:'+c+'"></i>'+l+'</span>').join('')+'</div><details class="bi-timeline-details"><summary>月別の件数表を表示</summary><div class="bi-heat-scroll"><table class="bi-heat-table"><thead><tr><th>月</th>'+lines.map(x=>'<th>'+esc(x[1])+'</th>').join('')+'</tr></thead><tbody>'+series.map(s=>'<tr><th>'+esc(s.key)+'</th>'+lines.map(([id])=>'<td>'+s[id]+'</td>').join('')+'</tr>').join('')+'</tbody></table></div></details><p class="fine">初期公表は初回公表月、後続3系列は二次被害欄の情報月で集計。後続は情報日が明記された事例のみ。各月・各段階で共通原因グループを集約しています。因果関係・段階間の移行率を示すものではありません。</p>';
+}
+function biLegacyTrend(rows,basis){
  const dated=rows.filter(r=>validDate(r[basis])&&(basis!=='date'||isFirstPublicationDate(r)));
- const span=state.biSpan||'daily30';
- let series=[],chartTitle='',chartSub='';
+ const span=state.biSpan||'daily30';let series=[],chartTitle='',chartSub='';
  if(span==='monthly'){
   series=countBy(dated,r=>r[basis].slice(0,7)).sort((a,b)=>a[0].localeCompare(b[0]));
-  chartTitle='月別の掲載推移';
-  chartSub=dateLabel[basis]+'の月別件数。棒をクリックするとその月で絞り込みます。';
+  chartTitle='月別の掲載推移';chartSub=dateLabel[basis]+'の月別件数。棒をクリックするとその月で絞り込みます。';
  }else{
-  const byDay={};
-  for(const r of dated){const d=r[basis].slice(0,10);byDay[d]=(byDay[d]||0)+1;}
-  const allDays=Object.keys(byDay).sort();
+  const byDay=Object.fromEntries(countBy(dated,r=>r[basis]));const allDays=Object.keys(byDay).sort();
   if(span==='daily30'){
-   const anchor=DATA.meta.incidentSnapshotDate||'2026-10-25';
-   const endDt=new Date(anchor+'T00:00:00Z');
-   const days=[];
-   for(let i=29;i>=0;i--){
-    const dt=new Date(endDt.getTime()-i*86400000);
-    const iso=dt.toISOString().slice(0,10);
-    days.push([iso,byDay[iso]||0]);
-   }
-   series=days;
-   chartTitle='日別の掲載推移（直近30日間）';
-   chartSub=dateLabel[basis]+'の日別件数。スパイク（集中公表日）をクリックするとその日1日分に絞り込みます（再クリックで解除）。';
-  }else{
-   series=allDays.map(d=>[d,byDay[d]]);
-   chartTitle='日別の掲載推移（記録のある全日付：'+allDays.length+'日分）';
-   chartSub=dateLabel[basis]+'の日別件数（0件の日を除く）。日付をクリックするとその日で絞り込みます。';
-  }
+   const anchor=DATA.meta.incidentSnapshotDate||'2026-10-25';const endDt=new Date(anchor+'T00:00:00Z');const days=[];
+   for(let i=29;i>=0;i--){const dt=new Date(endDt.getTime()-i*86400000);const iso=dt.toISOString().slice(0,10);days.push([iso,byDay[iso]||0]);}
+   series=days;chartTitle='日別の掲載推移（直近30日間）';chartSub=dateLabel[basis]+'の日別件数。クリックするとその日で絞り込みます。';
+  }else{series=allDays.map(d=>[d,byDay[d]]);chartTitle='日別の掲載推移（記録のある全日付：'+allDays.length+'日分）';chartSub=dateLabel[basis]+'の日別件数（0件の日を除く）。';}
  }
  const max=Math.max(1,...series.map(x=>x[1]));
- const cats=countBy(rows,r=>r.cat||[]),inds=countBy(rows,r=>r.industry);
- const groups=countBy(rows,r=>r.group);
+ return '<article class="card chart-card"><div class="chart-head-row"><div><h3>'+esc(chartTitle)+'</h3><p class="fine">'+esc(chartSub)+'</p></div><div class="tools" role="group" aria-label="従来の推移グラフの表示単位">'+
+  ['daily30','dailyAll','monthly'].map((v,i)=>'<button class="pill-btn" data-bi-span="'+v+'" aria-pressed="'+(span===v?'true':'false')+'">'+['日別（30日）','日別（全期間）','月別'][i]+'</button>').join('')+'</div></div><div class="'+(span==='monthly'?'trend':'trend-daily')+'">'+series.map(([k,n])=>{
+  const month=span==='monthly';const active=!month&&state.filters.start===k&&state.filters.end===k;
+  return '<button class="trend-item tabular" '+(month?'data-month="'+k+'"':'data-day="'+k+'"')+' aria-pressed="'+active+'" title="'+esc(k)+'：'+n+'件"><span>'+(n||'')+'</span><span class="trend-fill" style="height:'+(n?Math.max(4,Math.round(n/max*130)):2)+'px;opacity:'+(n?1:.2)+'"></span><span class="trend-label">'+esc(month?k:k.slice(5).replace('-','/'))+'</span></button>';
+ }).join('')+'</div></article>';
+}
+function renderBi(){
+ const rows=selectedRows(),basis=state.filters.basis;
+ const axis=state.biAxis||'category',period=state.biPeriod||'week',unit=state.biUnit||'items',metric=state.biMetric||'count';
+ const model=biBuildSeries(rows,basis,axis,period,unit);
+ const cats=countBy(rows,r=>r.cat||[]),inds=countBy(rows,r=>r.industry),groups=countBy(rows,r=>r.group);
  const matrixCats=cats.slice(0,7).map(x=>x[0]),matrixInds=inds.slice(0,8).map(x=>x[0]);
- const allCells=matrixInds.flatMap(i=>matrixCats.map(c=>rows.filter(r=>r.industry===i&&(r.cat||[]).includes(c)).length));
- const cellMax=Math.max(1,...allCells);
+ const cellMax=Math.max(1,...matrixInds.flatMap(i=>matrixCats.map(c=>rows.filter(r=>r.industry===i&&(r.cat||[]).includes(c)).length)));
  const heat=matrixInds.map(i=>'<tr><th>'+esc(i)+'</th>'+matrixCats.map(c=>{const n=rows.filter(r=>r.industry===i&&(r.cat||[]).includes(c)).length;return '<td><button class="tabular" style="background:rgba(8,127,131,'+(n?(.08+.55*n/cellMax):.025)+')" data-matrix-industry="'+esc(i)+'" data-matrix-cat="'+esc(c)+'" aria-label="'+esc(i+'・'+c)+' '+n+'項目">'+n+'</button></td>';}).join('')+'</tr>').join('');
- $('view-bi').innerHTML=head('INTERACTIVE ANALYSIS','BI分析（日別推移・傾向分析）','グラフ・日付・クロス集計をクリックすると、同じ条件で指標・全グラフ・一覧が連動します。',btn('同じ条件の一覧へ','data-nav="incidents"','primary'))+
-  kpis(rows)+'<div class="callout amber">収集・公表状況に影響される掲載データの分析です。発生率や国内全体の増減を示す統計ではありません。人数・契約等の被害規模から重大度を自動採点しません。</div>'+
-  (rows.length?'<div class="grid two"><article class="card chart-card chart-card-wide"><div class="chart-head-row"><div><h3>'+esc(chartTitle)+'</h3><p class="fine">'+esc(chartSub)+'</p></div>'+
-   '<div class="tools" role="group" aria-label="推移グラフの表示単位">'+
-    '<button type="button" class="pill-btn" data-bi-span="daily30" aria-pressed="'+(span==='daily30'?'true':'false')+'">日別（直近30日）</button>'+
-    '<button type="button" class="pill-btn" data-bi-span="dailyAll" aria-pressed="'+(span==='dailyAll'?'true':'false')+'">日別（全期間）</button>'+
-    '<button type="button" class="pill-btn" data-bi-span="monthly" aria-pressed="'+(span==='monthly'?'true':'false')+'">月別</button>'+
-   '</div></div>'+
-   '<div class="'+(span==='monthly'?'trend':'trend-daily')+'">'+series.map(([k,n])=>{
-    const isMonth=span==='monthly';
-    const shortLabel=isMonth?k:k.slice(5).replace('-','/');
-    const active=!isMonth&&state.filters.start===k&&state.filters.end===k;
-    return '<button class="trend-item tabular" '+(isMonth?'data-month="'+k+'"':'data-day="'+k+'"')+' aria-pressed="'+(active?'true':'false')+'" title="'+k+'：'+n+'件" aria-label="'+k+' '+n+'掲載項目"><span>'+(n||'')+'</span><span class="trend-fill" style="height:'+(n?Math.max(4,Math.round(n/max*130)):2)+'px;opacity:'+(n?1:.2)+'"></span><span class="trend-label">'+shortLabel+'</span></button>';
-   }).join('')+'</div><p class="fine" style="margin-top:8px">※特定の日付で絞り込み中の場合は、同じ棒をもう一度クリックするか上部「条件クリア」で全期間に戻せます。</p></article>'+
-   '<article class="card chart-card"><h3>カテゴリ別</h3><p class="fine">複数分類あり。合計は掲載項目数を超えます。</p>'+chartBars(cats,'cat')+'</article>'+
-   '<article class="card chart-card"><h3>業種別</h3><p class="fine">提供元・影響先を含む元資料の分類。異なる表記は保持。</p>'+chartBars(inds,'industry','#5269a4')+'</article>'+
-   '<article class="card chart-card"><h3>確認状況</h3><p class="fine">可能性・確認・未確認を分けて確認。</p>'+chartBars(countBy(rows,r=>r.status),'status','#ab7a35')+'</article>'+
-   '<article class="card chart-card"><h3>二次被害・不審連絡の追跡</h3><p class="fine">未分類は被害なしを意味しません。不正メール送信と受信者の被害は別です。</p>'+chartBars(countBy(rows,r=>r.secondary?.status||'未分類・未確認'),'secondary','#8c729b')+'</article>'+
-   '<article class="card chart-card"><h3>関連グループ別の掲載状況</h3><p class="fine">関連組織の掲載数。被害規模や独立した攻撃件数ではありません。</p>'+(groups.length?chartBars(groups,'group','#648d76'):'<div class="empty">この条件の関連グループはありません。</div>')+'</article>'+
-   '<article class="card chart-card"><h3>注意を要する対象情報</h3><p class="fine">元資料の記載語から推定分類。調査中・部分情報も含み、流出確定数ではありません。</p>'+chartBars(countBy(rows,sensitiveOf),'sensitive','#a56564')+'</article></div>'+
-   '<article class="card" style="margin-top:16px"><h3>業種 × カテゴリ</h3><p class="fine">掲載数上位8業種・7カテゴリ。セルをクリックして両条件を適用。</p><div style="overflow:auto"><table class="matrix"><thead><tr><th>掲載項目数</th>'+matrixCats.map(c=>'<th>'+esc(c)+'</th>').join('')+'</tr></thead><tbody>'+heat+'</tbody></table></div></article>'+stageTracking(rows):'<div class="empty">条件に一致する掲載項目がありません。</div>')+biDefinitions();
+ const switcher=(name,current,options,attr)=>'<div class="bi-switch"><span class="bi-switch-label">'+name+'</span><div class="bi-switch-options" role="group" aria-label="'+name+'">'+options.map(([v,l])=>'<button class="pill-btn" '+attr+'="'+v+'" aria-pressed="'+(current===v?'true':'false')+'">'+l+'</button>').join('')+'</div></div>';
+ $('view-bi').innerHTML=head('INTERACTIVE ANALYSIS','BI分析｜攻撃・被害の変化を読む','積み上げ・構成比・ヒートマップ・二次被害の推移を比較。分類や期間をクリックするとインシデント一覧に連動します。',btn('同じ条件の一覧へ','data-nav="incidents"','primary'))+
+ kpis(rows)+'<div class="callout amber">本画面は収集した公開事例の<strong>掲載傾向</strong>を分析するものです。国内全体の発生率や攻撃の実数を示しません。現在進行中の週・月、続報による掲載数増加、共通原因による複数公表に注意してください。</div>'+
+ (rows.length?'<article class="card bi-primary-card"><div class="chart-head-row"><div><div class="eyebrow">01 / STACKED TREND</div><h3>分類別の積み上げ推移</h3><p class="fine">'+esc(dateLabel[basis])+'を基準に、分類ごとの掲載の増減を比較します。</p></div><span class="badge teal">'+model.eligibleCount+' '+(unit==='items'?'掲載項目':'関連集約キー')+'を集計</span></div>'+
+ '<div class="bi-control-grid">'+
+ switcher('分析軸',axis,[['category','カテゴリ'],['industry','業種'],['secondary','二次被害']], 'data-bi-axis')+
+ switcher('期間',period,[['week','週別'],['month','月別']],'data-bi-period-kind')+
+ switcher('表示',metric,[['count','件数'],['ratio','構成比']],'data-bi-metric')+
+ switcher('集計単位',unit,[['items','掲載項目'],['groups','関連グループ']],'data-bi-unit')+'</div>'+
+ '<p class="fine bi-chart-note">'+(axis==='category'?'カテゴリは各事例の<strong>先頭タグを主分類</strong>として1件1分類に集計。複数タグを全件計上する従来のカテゴリ別集計とは異なります。':axis==='industry'?'元の業種表記は保持したまま、表示上だけ近い業種を大分類に整理しています。':'二次被害欄の状態を表示用に整理。未分類・未確認は「被害なし」ではありません。')+(unit==='groups'?' 共通原因グループのうち<strong>選択した日付基準で最も早い1掲載項目</strong>を代表にします。独立攻撃件数ではありません。グラフは代表項目で集計するため、クリック後の一覧掲載数とは一致しない場合があります。':'')+'</p>'+biStacked(model,metric)+'</article>'+
+ '<div class="grid two bi-main-grid"><article class="card chart-card"><div class="eyebrow">02 / SHARE</div><h3>構成比の推移</h3><p class="fine">件数ではなく、各期間に占める分類の割合の変化を確認します。</p>'+biShareArea(model)+'</article>'+
+ '<article class="card chart-card"><div class="eyebrow">03 / HEATMAP</div><h3>分類 × 時系列ヒートマップ</h3><p class="fine">濃い色が集中期間。上の分析軸・週別／月別・集計単位に連動します。</p>'+biHeatmap(model)+'</article></div>'+
+ '<article class="card chart-card bi-secondary-card"><div class="eyebrow">04 / SECONDARY EFFECTS</div><h3>初期公表と二次被害の確認月別推移</h3><p class="fine">初期公表と、その後の不正メール・不審連絡・二次被害を別の情報日で表示します。上部の検索条件で対象事例を絞れます。</p>'+biSecondaryTimeline(rows)+'</article>'+
+ '<details class="bi-legacy"><summary><strong>05 / 従来の分析・詳細グラフを表示</strong><span class="fine">日別推移、カテゴリ・業種別、確認状況、二次被害別、業種×カテゴリ、追跡表</span></summary><div class="bi-legacy-content">'+
+ biLegacyTrend(rows,basis)+'<div class="grid two">'+
+ '<article class="card chart-card"><h3>カテゴリ別（複数計上）</h3><p class="fine">複数分類あり。合計は掲載項目数を超えます。</p>'+chartBars(cats,'cat')+'</article>'+
+ '<article class="card chart-card"><h3>業種別（元の分類）</h3><p class="fine">提供元・影響先を含む元資料の分類。異なる表記は保持。</p>'+chartBars(inds,'industry','#5269a4')+'</article>'+
+ '<article class="card chart-card"><h3>確認状況</h3>'+chartBars(countBy(rows,r=>r.status),'status','#ab7a35')+'</article>'+
+ '<article class="card chart-card"><h3>二次被害・不審連絡の追跡</h3><p class="fine">未分類は被害なしを意味しません。</p>'+chartBars(countBy(rows,r=>r.secondary?.status||'未分類・未確認'),'secondary','#8c729b')+'</article>'+
+ '<article class="card chart-card"><h3>関連グループ別の掲載状況</h3><p class="fine">関連組織の掲載数。独立した攻撃件数ではありません。</p>'+(groups.length?chartBars(groups,'group','#648d76'):'<div class="empty">この条件の関連グループはありません。</div>')+'</article>'+
+ '<article class="card chart-card"><h3>注意を要する対象情報</h3><p class="fine">元資料の記載語から推定分類。流出確定数ではありません。</p>'+chartBars(countBy(rows,sensitiveOf),'sensitive','#a56564')+'</article></div>'+
+ '<article class="card"><h3>業種 × カテゴリ</h3><p class="fine">掲載数上位8業種・7カテゴリ。セルをクリックして両条件を適用。</p><div style="overflow:auto"><table class="matrix"><thead><tr><th>掲載項目数</th>'+matrixCats.map(c=>'<th>'+esc(c)+'</th>').join('')+'</tr></thead><tbody>'+heat+'</tbody></table></div></article>'+stageTracking(rows)+'</div></details>':
+ '<div class="empty">条件に一致する掲載項目がありません。検索条件を解除してください。</div>')+biDefinitions();
 }
 function biDefinitions(){
  return '<details class="card" style="margin-top:16px"><summary><span><h3>集計の見方・用語</h3><span class="subtle">日付・件数・分類の扱いを確認する</span></span></summary><div class="content">'+bullets([
@@ -35436,7 +35580,9 @@ function biDefinitions(){
   '続報・情報日は参照した発表や続報の日付、一覧反映日はこの一覧へ追加・変更した日付です。未記載の日付を補って集計しません。',
   '掲載項目は一覧の1行です。1項目に複数サービスや一括公表を含む場合があります。',
   '関連集約キーは、共通原因として関連付けたグループをまとめ、そのほかは掲載項目ごとに数えた参考値です。独立した攻撃件数ではありません。',
-  'カテゴリは複数計上されます。業種は提供元と影響先の双方を含む掲載時の分類です。',
+  '新しい積み上げ・構成比・ヒートマップは、カテゴリの先頭タグを主分類として1項目1分類で数えます。従来のカテゴリ別一覧は全タグを複数計上します。',
+  '業種は分析表示用に大分類へ整理していますが、元資料の業種名は保持しています。関連グループ集計は選択した日付基準で最も早い掲載項目を代表にします。独立攻撃件数ではありません。',
+  '二次被害の確認月別推移は二次被害欄の情報日が有効な事例のみ。情報日が不明なものは月別の後続系列に含めず、被害なしとも判断しません。',
   '漏えい・不正閲覧等確認の指標は「漏えい確認」「一部漏えい確認」「不正閲覧確認」「不正照会確認」を対象とします。',
   '人数・契約・予約・書類等は、単位と重複が異なるため合算しません。未記載をゼロと扱いません。',
   '未分類・未確認の二次被害は「被害なし」ではありません。不正メール送信の確認と、受信者への二次被害を区別します。',
@@ -35454,7 +35600,7 @@ function stageTracking(rows){
  '<details class="expander"><summary>追跡内容を見る（分類済み '+reported.length+'掲載項目）</summary><div class="content">'+reported.map(r=>'<div class="history-row"><button class="btn-link" data-case="'+r.id+'">'+esc(r.org)+'</button><p class="fine">'+esc(r.date)+' '+(isFirstPublicationDate(r)?'公表日':'続報日・日付基準要確認')+' → '+esc(r.secondary.date||'情報日未記載')+' '+esc(r.secondary.status)+'</p><p class="subtle">'+esc(r.secondary.text)+'</p></div>').join('')+'</div></details></article>';
 }
 function renderDataViews(){renderChips();if(state.view==='incidents')renderIncidents();if(state.view==='bi')renderBi();}
-function applyFilter(k,v){state.filters[k]=v;state.page=0;renderFilters();renderDataViews();}
+function applyFilter(k,v){state.filters[k]=v;if(k==='biSliceValue'&&!v){state.filters.biSliceDimension='';state.filters.biSliceOthers='';}state.page=0;renderFilters();renderDataViews();}
 function openDialog(id){const d=$(id);if(!d.open){if(typeof d.showModal==='function')d.showModal();else d.setAttribute('open','');}}
 function closeDialogs(){document.querySelectorAll('dialog[open]').forEach(d=>{if(typeof d.close==='function')d.close();else d.removeAttribute('open');});document.body.classList.remove('print-dialog');}
 function showCase(id){
@@ -35819,6 +35965,25 @@ document.addEventListener('click',async e=>{
  if(d.actorReset){state.actorQuery='';state.actorCategory='';renderThreats();return;}
  if(d.actorFocus){state.threatTab='actors';state.actorTab='directory';state.actorQuery='';state.actorCategory='';go('threats');const el=$(d.actorFocus);if(el){el.open=true;el.scrollIntoView({block:'start'});el.querySelector('summary').focus();}return;}
  if(d.homeFilter){state.homeFilter=d.homeFilter;renderHome();return;}
+ if(d.biAxis){state.biAxis=d.biAxis;renderBi();return;}
+ if(d.biPeriodKind){state.biPeriod=d.biPeriodKind;renderBi();return;}
+ if(d.biMetric){state.biMetric=d.biMetric;renderBi();return;}
+ if(d.biUnit){state.biUnit=d.biUnit;renderBi();return;}
+ if(d.biPeriodOnly||d.biSlice){
+  const key=d.biKey||d.biPeriodOnly,period=state.biPeriod;
+  const [start,end]=biPeriodBounds(key,period);
+  const same=state.filters.start===start&&state.filters.end===end;
+  const sameSlice=Boolean(d.biSlice&&state.filters.biSliceDimension===d.biDim&&state.filters.biSliceValue===d.biValue&&state.filters.biSliceOthers===(d.biOthers||''));
+  if(same&&(d.biSlice?sameSlice:!state.filters.biSliceValue)){
+   state.filters.start='';state.filters.end='';state.filters.biSliceDimension='';state.filters.biSliceValue='';state.filters.biSliceOthers='';state.filters.biDatedOnly=false;
+  }else{
+   state.filters.start=start;state.filters.end=end;state.filters.biDatedOnly=true;
+   state.filters.biSliceDimension=d.biSlice?d.biDim:'';
+   state.filters.biSliceValue=d.biSlice?d.biValue:'';
+   state.filters.biSliceOthers=d.biSlice?(d.biOthers||''):'';
+  }
+  state.page=0;renderFilters();renderDataViews();return;
+ }
  if(d.biSpan){state.biSpan=d.biSpan;renderBi();return;}
  if(d.day){
   if(state.filters.start===d.day&&state.filters.end===d.day){state.filters.start='';state.filters.end='';}
