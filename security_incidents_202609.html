@@ -198,26 +198,26 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
 {
   "meta": {
     "schemaVersion": "1.0",
-    "version": "1.0.37",
+    "version": "1.0.38",
     "title": "セキュリティインテリジェンスハブ",
-    "compiledDate": "2026-11-07",
-    "incidentSnapshotDate": "2026-11-07",
+    "compiledDate": "2026-11-08",
+    "incidentSnapshotDate": "2026-11-08",
     "technicalReviewed": "2026-10-25",
     "timezone": "Asia/Tokyo",
-    "incidentSource": "v1.0.36（413掲載項目）から11/7追加照合。SMBC提供元公式PDFとりそな3行公式PDFで関連組織3件を補完。Beast／SevenPlusは第三者の未検証主張として動向にのみ追加。",
-    "coverage": "2026-11-07追加照合：りそなグループ3行とSMBC保証システムの公式PDF、Beast／SevenPlusの第三者観測を個別確認。国内インシデント全般の再調査ではない。",
+    "incidentSource": "v1.0.37（416項目）から11/8公式公表を照合。新規4・委託先関連4を追加、クラブツーリズム続報1件。",
+    "coverage": "11/8日次調査：11/5～11/8の公式公表・続報、直近7日の未掲載候補、JPCERT/JVN、Debian、ChromeOS、SonicWall、CERT-EUを確認。公式本文取得制限と未確認候補はresearchに残す。",
     "vulnerabilityCoverage": "71脆弱性テーマ。JVN/JPCERT、CERT/CC、CISA KEV、Red Hat、Ubuntu、Debian、SUSE、AWS、MSRC、Chrome、Mozilla、Node.js、PHP、主要ネットワーク製品を独立照合。CISA KEV JSONは403、AWS REXと一部公式本文は取得制限として候補キューへ保持。",
-    "verification": "公式PDFによりSMBC既存1件を続報更新、りそな関連組織3件を新規掲載。未検証のBeast／SevenPlus主張をアクター動向1件に追加。脆弱性・アクター図鑑・UIは変更なし。",
+    "verification": "公式一次本文を確認した事案・関連組織8項目、続報1項目、脆弱性3テーマとChromeOS続報を反映。SonicWallとChromeOSの一部詳細は公式本文の直接取得制限を注記。",
     "reconciliation": {
       "newerRows": 180,
       "olderBiRows": 155,
       "preservedIds": 345,
       "addedAgainstBi": 28,
-      "previousRows": 413,
-      "addedThisUpdate": 3,
+      "previousRows": 416,
+      "addedThisUpdate": 8,
       "updatedThisUpdate": 1,
-      "currentRows": 416,
-      "associationThisUpdate": 3,
+      "currentRows": 424,
+      "associationThisUpdate": 4,
       "referenceFixesThisUpdate": 0
     },
     "changelog": [
@@ -409,6 +409,11 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         "date": "2026-11-07",
         "version": "1.0.37",
         "text": "SMBC保証システム既存事案に提供元公表の最大320,118人と11/6りそな3行の関連公表を追記。りそな・関西みらい・みなと3件を同一侵害グループの関連組織として追加（413→416掲載項目）。BeastによるSevenPlus名指し・4TB窃取主張は第三者観測の検証待ち動向1件として追加し、被害確定件数には含めない。71脆弱性・16アクターとBI・UIは維持。"
+      },
+      {
+        "date": "2026-11-08",
+        "version": "1.0.38",
+        "text": "日次調査でインシデント8項目（独立公表4・関連組織4）を追加、クラブツーリズムの部分再開を続報更新。SonicOS SSLVPN、Debian zlib・Ruby 3.3の脆弱性3テーマを追加、ChromeOS Stableを更新。二次被害・提供元関連・確認待ちを分離。"
       }
     ],
     "playbookReviewed": "2026-11-06",
@@ -15815,7 +15820,7 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
       "org": "クラブツーリズム／インターネット会員基盤",
       "date": "2026-10-31",
       "dateBasis": "初回公表日。外部アクセス検知は10月30日5時45分。",
-      "sourceUpdated": "2026-10-31",
+      "sourceUpdated": "2026-11-07",
       "industry": "旅行・観光",
       "status": "漏えい可能性・サイト停止",
       "cat": [
@@ -15825,13 +15830,17 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
       ],
       "info": "インターネット会員約432万件の氏名、国籍、性別、生年月日・年齢、住所、電話番号、メールアドレス、会員ID、緊急連絡先が漏えいした可能性。",
       "scope": "不正アクセスを受けたサーバーを隔離し、通信遮断・問題修正・影響範囲点検を実施。ホームページは調査と安全再確認のため停止し、再開予定は安全確認後。",
-      "impact": "予約・会員向けWeb停止と大量の連絡先情報の悪用リスク。旅行業務の代替受付、問い合わせ増加、再開条件がIT-BCP上の論点。",
+      "impact": "予約・会員向けWeb停止と大量の連絡先情報の悪用リスク。旅行業務の代替受付、問い合わせ増加、再開条件がIT-BCP上の論点。 11/7：必要な対策と再開前の安全確認を経て一部ページを除きホームページ再開。写真募集ページは停止継続、監視継続。",
       "exclude": "ログインパスワード、パスポート情報、クレジットカード情報、銀行口座情報は対象外と公表。",
       "action": "会員基盤の隔離、認証情報・セッションの要否判断、予約・問い合わせの代替運用、再開判定と顧客連絡を確認。",
       "sources": [
         {
           "label": "クラブツーリズム｜第1信 10/31",
           "url": "https://www.club-tourism.co.jp/jpn/news/2026/1031/"
+        },
+        {
+          "label": "クラブツーリズム｜11/7公式第2信",
+          "url": "https://www.club-t.com/ct/news/2026/1107_1/"
         }
       ],
       "secondary": {
@@ -15840,16 +15849,20 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         "checked": "2026-11-01",
         "text": "公表時点で本件に起因する具体的な二次被害は確認されていない。"
       },
-      "change": "約432万件の漏えい可能性とサイト停止を新規追加。重要情報の対象外と二次被害未確認を区別。",
-      "updated": "2026-11-01",
-      "checked": "2026-11-01",
-      "batch": "日次追加",
-      "changeType": "新規追加",
+      "change": "11/7一部ページを除く再開を確認。全面復旧ではない。",
+      "updated": "2026-11-08",
+      "checked": "2026-11-08",
+      "batch": "2026-11-08日次調査",
+      "changeType": "続報",
       "evidence": "2026-11-01（JST）に被害組織・提供元・公的機関・ベンダーの公式本文を照合。発生・検知・公表・反映日と、可能性・確認・対象外を区別。",
       "history": [
         {
           "date": "2026-11-01",
           "text": "約432万件の漏えい可能性とサイト停止を新規追加。重要情報の対象外と二次被害未確認を区別。"
+        },
+        {
+          "date": "2026-11-08",
+          "text": "11/7第2信でclub-t.comの一部ページを除く再開を公表。「旅の思い出 写真大募集」は停止継続。再開後監視・顧客対応継続。全面再開・調査完了としない。"
         }
       ]
     },
@@ -19676,6 +19689,334 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         "checked": "2026-11-07",
         "text": "11/6銀行公表は不審連絡への注意喚起。確認された二次被害は記載されていない。提供元は11/5時点で本件起因の二次被害を確認していない。"
       }
+    },
+    {
+      "id": "inc-ms-ins-mypage-20261106",
+      "date": "2026-11-06",
+      "org": "三井住友海上／ご契約者さま専用ページ",
+      "industry": "金融・保険",
+      "cat": [
+        "不正アクセス",
+        "情報漏えい"
+      ],
+      "status": "顧客情報の漏えいを確認",
+      "info": "保険証券番号、氏名、住所、電話番号、メールアドレスなど。",
+      "scope": "約3.7万件（11/6 9時時点）。件数であり他社公表分との単純合算はしない。",
+      "impact": "11/2夜間に不正アクセス検知、11/3深夜から関連サービスを能動停止。フォレンジック調査中。",
+      "exclude": "クレジットカード情報・口座情報は含まれない。11/6公表時点で不正使用未確認。",
+      "action": "契約者ページ停止時の電話・代理店対応、保険事故受付の代替、保険証券番号を用いたなりすましへの本人確認を点検。",
+      "sources": [
+        {
+          "label": "当事者・公式公表",
+          "url": "https://www.ms-ins.com/news/fy2026/pdf/1106_1.pdf"
+        }
+      ],
+      "sourceUpdated": "2026-11-06",
+      "checked": "2026-11-08",
+      "updated": "2026-11-08",
+      "batch": "2026-11-08日次調査",
+      "changeType": "新規追加",
+      "change": "2026-11-06の公式公表を照合して新規追加。",
+      "history": [
+        {
+          "date": "2026-11-08",
+          "text": "2026-11-06公表の公式本文を確認。新規追加。"
+        }
+      ],
+      "secondary": {
+        "status": "報告なし（11/6時点）",
+        "date": "2026-11-06",
+        "text": "公表時点の確認状況。注意喚起を実際の二次被害確認と混同しない。",
+        "checked": "2026-11-08"
+      }
+    },
+    {
+      "id": "inc-jsps-eshinsei-20261106",
+      "date": "2026-11-06",
+      "org": "日本学術振興会／電子申請システム",
+      "industry": "教育・研究",
+      "cat": [
+        "不正アクセス",
+        "サービス停止"
+      ],
+      "status": "外部公開領域への不正アクセス確認・申請システム停止",
+      "info": "個人情報等を保存していない外部公開領域で不正アクセスを確認。個人情報漏えいは現時点で未確認。",
+      "scope": "科学研究費助成事業・研究者養成事業・国際交流事業の電子申請。人数・件数は未公表。",
+      "impact": "10/29に確認し外部ネットワークから切断。再開・申請継続手続きは検討中。",
+      "exclude": "個人情報漏えい未確認は調査終了や侵害なしを意味しない。",
+      "action": "科研費等の申請期限・代替申請方法、研究者への連絡経路、復旧・再開条件を確認。",
+      "sources": [
+        {
+          "label": "当事者・公式公表",
+          "url": "https://www.jsps.go.jp/j-news/2026/shinsei/index.html"
+        }
+      ],
+      "sourceUpdated": "2026-11-06",
+      "checked": "2026-11-08",
+      "updated": "2026-11-08",
+      "batch": "2026-11-08日次調査",
+      "changeType": "新規追加",
+      "change": "2026-11-06の公式公表を照合して新規追加。",
+      "history": [
+        {
+          "date": "2026-11-08",
+          "text": "2026-11-06公表の公式本文を確認。新規追加。"
+        }
+      ],
+      "secondary": {
+        "status": "未公表・不明",
+        "date": "2026-11-06",
+        "text": "公表時点の確認状況。注意喚起を実際の二次被害確認と混同しない。",
+        "checked": "2026-11-08"
+      }
+    },
+    {
+      "id": "inc-doutor-online-20261106",
+      "date": "2026-11-06",
+      "org": "ドトール／オンラインショップ",
+      "industry": "小売・EC",
+      "cat": [
+        "不正アクセス",
+        "情報漏えい"
+      ],
+      "status": "EC管理画面への不正アクセス・会員情報閲覧と出力確認",
+      "info": "会員ID・氏名・住所・メール・電話・購買情報等。会員24,762件とお届け先9件。",
+      "scope": "合計24,771件（会員情報と配送先情報の件数。人数と断定しない）。",
+      "impact": "10/24～25に管理画面への不正アクセス。10/28決済代行会社から連絡、10/30委託先から報告。EC・定期購入を停止。",
+      "exclude": "ログインパスワード・カード情報は外部に漏えいしていないことを確認。11/6時点二次被害未確認。従業員情報の別事案と混同しない。",
+      "action": "委託先管理画面の権限・ログ、決済代行会社からの異常検知連絡、定期購入停止時の代替を点検。",
+      "sources": [
+        {
+          "label": "当事者・公式公表",
+          "url": "https://www.doutor.co.jp/news/newsrelease/detail/20261106150715.html"
+        }
+      ],
+      "sourceUpdated": "2026-11-06",
+      "checked": "2026-11-08",
+      "updated": "2026-11-08",
+      "batch": "2026-11-08日次調査",
+      "changeType": "新規追加",
+      "change": "2026-11-06の公式公表を照合して新規追加。",
+      "history": [
+        {
+          "date": "2026-11-08",
+          "text": "2026-11-06公表の公式本文を確認。新規追加。"
+        }
+      ],
+      "secondary": {
+        "status": "報告なし（11/6時点）",
+        "date": "2026-11-06",
+        "text": "公表時点の確認状況。注意喚起を実際の二次被害確認と混同しない。",
+        "checked": "2026-11-08"
+      }
+    },
+    {
+      "id": "inc-toyo-account-20261105",
+      "date": "2026-11-05",
+      "org": "東洋大学／学内アカウント",
+      "industry": "教育・大学",
+      "cat": [
+        "不正アクセス",
+        "アカウント乗っ取り"
+      ],
+      "status": "一部関係者アカウントへの不正アクセス確認",
+      "info": "影響範囲は調査中。個人情報漏えいの有無・件数は未公表。",
+      "scope": "対象アカウント数・情報件数は未公表。",
+      "impact": "大学は調査・監視継続、文部科学省・個人情報保護委員会へ報告。",
+      "exclude": "11/5時点で二次被害未確認。不審メールは注意喚起であり実送信・二次被害確認ではない。",
+      "action": "認証ログ・MFA・セッション・メール送信・連携SaaS・研究データへのアクセスを調査し、公式ポータルで周知。",
+      "sources": [
+        {
+          "label": "当事者・公式公表",
+          "url": "https://www.toyo.ac.jp/news/20261105-20479.html"
+        }
+      ],
+      "sourceUpdated": "2026-11-05",
+      "checked": "2026-11-08",
+      "updated": "2026-11-08",
+      "batch": "2026-11-08日次調査",
+      "changeType": "新規追加",
+      "change": "2026-11-05の公式公表を照合して新規追加。",
+      "history": [
+        {
+          "date": "2026-11-08",
+          "text": "2026-11-05公表の公式本文を確認。新規追加。"
+        }
+      ],
+      "secondary": {
+        "status": "報告なし（11/5時点）",
+        "date": "2026-11-05",
+        "text": "公表時点の確認状況。注意喚起を実際の二次被害確認と混同しない。",
+        "checked": "2026-11-08"
+      }
+    },
+    {
+      "id": "inc-kyoto-senior-sagawa-20261106",
+      "date": "2026-11-06",
+      "org": "京都市／いきいきシニアポイント（佐川急便関連）",
+      "industry": "行政・自治体",
+      "cat": [
+        "不正アクセス",
+        "情報漏えい",
+        "委託先"
+      ],
+      "status": "佐川急便追跡サービス侵害による配送先情報漏えいの可能性",
+      "info": "プレゼント当選者の氏名・住所・電話番号。",
+      "scope": "253件。京都市単独の侵害ではなく佐川急便の既存事案に関連。",
+      "impact": "9/30に佐川急便が侵害確認、11/5にJTBから京都市へ報告。対象者へ連絡予定。",
+      "exclude": "カード・銀行口座・パスワードは佐川急便の公表対象外。二次被害は公表時点未確認。",
+      "action": "再委託先の配送情報・通知・削除期限と、当選者への詐欺電話対策を確認。",
+      "sources": [
+        {
+          "label": "当事者・公式公表",
+          "url": "https://www.city.kyoto.lg.jp/hokenfukushi/page/0000359972.html"
+        }
+      ],
+      "sourceUpdated": "2026-11-06",
+      "checked": "2026-11-08",
+      "updated": "2026-11-08",
+      "batch": "2026-11-08日次調査",
+      "changeType": "関連組織の新規掲載",
+      "change": "2026-11-06の公式公表を照合して関連組織の新規掲載。",
+      "history": [
+        {
+          "date": "2026-11-08",
+          "text": "2026-11-06公表の公式本文を確認。関連組織の新規掲載。"
+        }
+      ],
+      "secondary": {
+        "status": "報告なし（11/6時点）",
+        "date": "2026-11-06",
+        "text": "公表時点の確認状況。注意喚起を実際の二次被害確認と混同しない。",
+        "checked": "2026-11-08"
+      },
+      "group": "佐川急便お荷物問い合わせサービス侵害（2026-09-30確認）"
+    },
+    {
+      "id": "inc-kyoto-museum-arara-20261106",
+      "date": "2026-11-06",
+      "org": "京都市／京セラ美術館・二条城（チケット委託先）",
+      "industry": "行政・文化施設",
+      "cat": [
+        "不正アクセス",
+        "情報漏えい",
+        "委託先"
+      ],
+      "status": "アララ委託先に関する複数サービスの影響調査",
+      "info": "ARTPASS事業者のメールアドレス流出可能性。会員団体のメールアドレスは漏えい未確認・調査中。二条城で利用するアソビュー側は利用者情報一部の流出を確認。",
+      "scope": "件数未確定。京都市管理情報の流出や市システム侵入は公表時点で未確認。",
+      "impact": "メール配信基盤アララの侵害に関連。チケット予約自体は利用可能。",
+      "exclude": "ARTPASS・メンバーシップ・アソビューは影響状態が異なる。すべて漏えい確定とは扱わない。",
+      "action": "施設予約と配信基盤を分け、事業者ごとのデータ範囲・連絡経路・予約継続可否を点検。",
+      "sources": [
+        {
+          "label": "当事者・公式公表",
+          "url": "https://www.city.kyoto.lg.jp/bunshi/page/0000359980.html"
+        }
+      ],
+      "sourceUpdated": "2026-11-06",
+      "checked": "2026-11-08",
+      "updated": "2026-11-08",
+      "batch": "2026-11-08日次調査",
+      "changeType": "関連組織の新規掲載",
+      "change": "2026-11-06の公式公表を照合して関連組織の新規掲載。",
+      "history": [
+        {
+          "date": "2026-11-08",
+          "text": "2026-11-06公表の公式本文を確認。関連組織の新規掲載。"
+        }
+      ],
+      "secondary": {
+        "status": "未公表・不明",
+        "date": "2026-11-06",
+        "text": "公表時点の確認状況。注意喚起を実際の二次被害確認と混同しない。",
+        "checked": "2026-11-08"
+      },
+      "group": "アララメッセージ関連"
+    },
+    {
+      "id": "inc-fanplus-arara-20261102",
+      "date": "2026-11-02",
+      "org": "Fanplus／メール配信（アララ関連）",
+      "industry": "IT・サービス",
+      "cat": [
+        "不正アクセス",
+        "情報漏えい",
+        "委託先"
+      ],
+      "status": "アララ配信基盤への侵害に伴うメールアドレス漏えいを確認",
+      "info": "メールアドレス。その他の情報の漏えい可能性は公表時点で確認されていない。",
+      "scope": "件数は今回確認した公式FAQに記載なし。人数を推測しない。",
+      "impact": "Fanplusが専用窓口とFAQを設置。アララの既存侵害と同一原因として関連付け。",
+      "exclude": "Fanplusのサイト自体への侵入やパスワード漏えいを認定しない。",
+      "action": "ファンクラブ会員への公式案内、委託先の配信停止・切替、不審メール監視を点検。",
+      "sources": [
+        {
+          "label": "当事者・公式公表",
+          "url": "https://fanplus.co.jp/feature/arara-inquiry"
+        }
+      ],
+      "sourceUpdated": "2026-11-02",
+      "checked": "2026-11-08",
+      "updated": "2026-11-08",
+      "batch": "2026-11-08日次調査",
+      "changeType": "関連組織の新規掲載",
+      "change": "2026-11-02の公式公表を照合して関連組織の新規掲載。",
+      "history": [
+        {
+          "date": "2026-11-08",
+          "text": "2026-11-02公表の公式本文を確認。関連組織の新規掲載。"
+        }
+      ],
+      "secondary": {
+        "status": "未公表・不明",
+        "date": "2026-11-02",
+        "text": "公表時点の確認状況。注意喚起を実際の二次被害確認と混同しない。",
+        "checked": "2026-11-08"
+      },
+      "group": "アララメッセージ関連"
+    },
+    {
+      "id": "inc-bicgroup-arara-20261102",
+      "date": "2026-11-02",
+      "org": "ビックカメラ・コジマ・ソフマップ／メルマガ（アララ関連）",
+      "industry": "小売・EC",
+      "cat": [
+        "不正アクセス",
+        "情報漏えい",
+        "委託先"
+      ],
+      "status": "アララ配信基盤から顧客情報が流出した可能性を11/2に公表",
+      "info": "メールアドレス等。11/2公式初報はグループ合計約1,490万件の可能性と記載。",
+      "scope": "初報約1,490万件は情報件数であり人数ではない。11/6第2報の15,204,757件は今回公式本文未取得のため確定更新せず追跡。",
+      "impact": "アララとの連携を停止し影響範囲を確認中。",
+      "exclude": "カード情報・ECサイトログイン情報は当該配信サービスの対象外。各社システム侵入とは扱わない。",
+      "action": "メール配信データ最小化、退会済み会員の保持期間、委託先監査・停止時代替を点検。",
+      "sources": [
+        {
+          "label": "当事者・公式公表",
+          "url": "https://www.sofmap.com/contents/?id=info&sid=261102b"
+        }
+      ],
+      "sourceUpdated": "2026-11-02",
+      "checked": "2026-11-08",
+      "updated": "2026-11-08",
+      "batch": "2026-11-08日次調査",
+      "changeType": "関連組織の新規掲載",
+      "change": "2026-11-02の公式公表を照合して関連組織の新規掲載。",
+      "history": [
+        {
+          "date": "2026-11-08",
+          "text": "2026-11-02公表の公式本文を確認。関連組織の新規掲載。"
+        }
+      ],
+      "secondary": {
+        "status": "報告なし（11/2時点）",
+        "date": "2026-11-02",
+        "text": "公表時点の確認状況。注意喚起を実際の二次被害確認と混同しない。",
+        "checked": "2026-11-08"
+      },
+      "group": "アララメッセージ関連"
     }
   ],
   "caseLinks": {
@@ -28498,6 +28839,158 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         "P07",
         "P08"
       ]
+    },
+    "inc-ms-ins-mypage-20261106": {
+      "techs": [
+        "public"
+      ],
+      "checks": [
+        "ck-public",
+        "ck-data",
+        "ck-command"
+      ],
+      "ir": "leak",
+      "notice": "general",
+      "basis": "公式公表の内容に関連する一般点検への導線。個別事案の原因・攻撃者の認定ではない。",
+      "entry": "構造化未確認",
+      "weakness": "構造化未確認",
+      "actor": "確認情報なし",
+      "responsePatterns": [
+        "P05"
+      ]
+    },
+    "inc-jsps-eshinsei-20261106": {
+      "techs": [
+        "public"
+      ],
+      "checks": [
+        "ck-public",
+        "ck-data",
+        "ck-command"
+      ],
+      "ir": "leak",
+      "notice": "general",
+      "basis": "公式公表の内容に関連する一般点検への導線。個別事案の原因・攻撃者の認定ではない。",
+      "entry": "構造化未確認",
+      "weakness": "構造化未確認",
+      "actor": "確認情報なし",
+      "responsePatterns": [
+        "P05"
+      ]
+    },
+    "inc-doutor-online-20261106": {
+      "techs": [
+        "public"
+      ],
+      "checks": [
+        "ck-public",
+        "ck-data",
+        "ck-command"
+      ],
+      "ir": "leak",
+      "notice": "general",
+      "basis": "公式公表の内容に関連する一般点検への導線。個別事案の原因・攻撃者の認定ではない。",
+      "entry": "構造化未確認",
+      "weakness": "構造化未確認",
+      "actor": "確認情報なし",
+      "responsePatterns": [
+        "P05"
+      ]
+    },
+    "inc-toyo-account-20261105": {
+      "techs": [
+        "public"
+      ],
+      "checks": [
+        "ck-public",
+        "ck-data",
+        "ck-command"
+      ],
+      "ir": "leak",
+      "notice": "general",
+      "basis": "公式公表の内容に関連する一般点検への導線。個別事案の原因・攻撃者の認定ではない。",
+      "entry": "構造化未確認",
+      "weakness": "構造化未確認",
+      "actor": "確認情報なし",
+      "responsePatterns": [
+        "P05"
+      ]
+    },
+    "inc-kyoto-senior-sagawa-20261106": {
+      "techs": [
+        "public"
+      ],
+      "checks": [
+        "ck-public",
+        "ck-data",
+        "ck-command"
+      ],
+      "ir": "leak",
+      "notice": "general",
+      "basis": "公式公表の内容に関連する一般点検への導線。個別事案の原因・攻撃者の認定ではない。",
+      "entry": "構造化未確認",
+      "weakness": "構造化未確認",
+      "actor": "確認情報なし",
+      "responsePatterns": [
+        "P05"
+      ]
+    },
+    "inc-kyoto-museum-arara-20261106": {
+      "techs": [
+        "public"
+      ],
+      "checks": [
+        "ck-public",
+        "ck-data",
+        "ck-command"
+      ],
+      "ir": "leak",
+      "notice": "general",
+      "basis": "公式公表の内容に関連する一般点検への導線。個別事案の原因・攻撃者の認定ではない。",
+      "entry": "構造化未確認",
+      "weakness": "構造化未確認",
+      "actor": "確認情報なし",
+      "responsePatterns": [
+        "P05"
+      ]
+    },
+    "inc-fanplus-arara-20261102": {
+      "techs": [
+        "public"
+      ],
+      "checks": [
+        "ck-public",
+        "ck-data",
+        "ck-command"
+      ],
+      "ir": "leak",
+      "notice": "general",
+      "basis": "公式公表の内容に関連する一般点検への導線。個別事案の原因・攻撃者の認定ではない。",
+      "entry": "構造化未確認",
+      "weakness": "構造化未確認",
+      "actor": "確認情報なし",
+      "responsePatterns": [
+        "P05"
+      ]
+    },
+    "inc-bicgroup-arara-20261102": {
+      "techs": [
+        "public"
+      ],
+      "checks": [
+        "ck-public",
+        "ck-data",
+        "ck-command"
+      ],
+      "ir": "leak",
+      "notice": "general",
+      "basis": "公式公表の内容に関連する一般点検への導線。個別事案の原因・攻撃者の認定ではない。",
+      "entry": "構造化未確認",
+      "weakness": "構造化未確認",
+      "actor": "確認情報なし",
+      "responsePatterns": [
+        "P05"
+      ]
     }
   },
   "techniques": [
@@ -32215,18 +32708,22 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         "CVE-2026-118339",
         "CVE-2026-118346",
         "CVE-2026-118331",
-        "CVE-2026-118309"
+        "CVE-2026-118309",
+        "CVE-2026-121076",
+        "CVE-2026-121208",
+        "CVE-2026-79235",
+        "CVE-2026-121233"
       ],
       "published": "2026-10-29",
-      "sourceUpdated": "2026-10-29",
-      "checked": "2026-10-31",
-      "updated": "2026-10-31",
-      "changeType": "詳細補完",
-      "change": "ChromeOS Stable M-156の公式本文からCritical 1件・High 3件の識別子と内容を補完。",
+      "sourceUpdated": "2026-11-06",
+      "checked": "2026-11-08",
+      "updated": "2026-11-08",
+      "changeType": "続報",
+      "change": "11/6 Stable配信情報・CVE追記（配信完了を意味しない）。",
       "priority": "管理対象Chromebookのチャネル・配信・再起動を確認",
       "conditions": "ChromeOS Stable M-156採用端末。LTS-150、LTC、ブラウザ単体とは別の配信系列。",
       "impact": "Animation・Compositingの解放後使用、FileAPIの不適切な入力検証（Critical）、UIの不適切な入力検証（High）の4件。",
-      "fix": "ChromeOS 16836.30.0、Chrome 156.0.8078.77以降の対象Stableへ更新し再起動。別チャネルへ同じ版番号を要求しない。",
+      "fix": "ChromeOS 16836.30.0、Chrome 156.0.8078.77以降の対象Stableへ更新し再起動。別チャネルへ同じ版番号を要求しない。 11/6 Stable Channel: ChromeOS 16836.32.0／Browser 156.0.8078.93を配信。管理対象端末の実際の配信・再起動・適用完了は別途確認。",
       "investigation": "管理コンソールの配信、端末上の版、自動更新期限、更新保留・固定チャネルを照合。",
       "bcp": "授業・試験前の更新時間と予備端末を準備し、LMS・オンライン試験・無線・周辺機器を検証。",
       "tech": "public",
@@ -32237,9 +32734,13 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         {
           "label": "Google｜ChromeOS Stable 10/29",
           "url": "https://chromereleases.googleblog.com/2026/10/stable-channel-update-for-chromeos_0865369125.html"
+        },
+        {
+          "label": "Google Chrome Releases｜ChromeOS Stable 11/6",
+          "url": "https://chromereleases.googleblog.com/2026/11/stable-channel-update-for-chromeos.html"
         }
       ],
-      "sourceNote": "Google公式ChromeOS Stable記事のCVE詳細を2026-10-31に再確認。実悪用確認の記載なし。",
+      "sourceNote": "Google公式ChromeOS Stable記事のCVE詳細を2026-10-31に再確認。実悪用確認の記載なし。 11/8：Google公式検索結果に11/6公開の版・CVEを確認。公式本文の直接openはアクセス制限。",
       "history": [
         {
           "date": "2026-10-30",
@@ -32250,6 +32751,11 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
           "date": "2026-10-31",
           "type": "詳細補完",
           "note": "ChromeOS Stable M-156の公式本文からCritical 1件・High 3件の識別子と内容を補完。"
+        },
+        {
+          "date": "2026-11-08",
+          "type": "続報",
+          "note": "11/6 Google Chrome ReleasesのStable Channel Updateを確認。ChromeOS 16836.32.0（Browser 156.0.8078.93）と修正CVEを追記。"
         }
       ]
     },
@@ -32874,6 +33380,141 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
           "date": "2026-11-07",
           "type": "新規追加",
           "note": "CVE-2026-13584を設備・研究施設向けの重点テーマとして追加。"
+        }
+      ]
+    },
+    {
+      "id": "v-sonicos-ssl-vpn-20261106",
+      "product": "SonicWall SonicOS SSLVPN",
+      "title": "CVE-2026-19868：SAML認証・MFAの適用回避",
+      "identifiers": [
+        "CVE-2026-19868"
+      ],
+      "published": "2026-11-06",
+      "sourceUpdated": "2026-11-06",
+      "updated": "2026-11-08",
+      "checked": "2026-11-08",
+      "changeType": "新規追加",
+      "change": "11/8日次調査で一次資料の内容を確認して追加。",
+      "priority": "該当製品・版・構成を確認し、実悪用・外部到達性・業務影響で優先度を決める",
+      "conditions": "SonicOS SSLVPNでSAML認証が有効であり、別の認証方式の有効な資格情報を持つ場合にSAML制御を回避し得る。Gen7/Gen8の対象版はメーカーの製品系列表で要照合。",
+      "impact": "SAML強制の多要素認証を回避してVPNアクセスされるおそれ。",
+      "fix": "提供元のSNWLID-2026-0014で対象系列と修正版を確認して更新。暫定的に不要な認証方式やVPN公開範囲を見直すが、公式回避策があると断定しない。",
+      "investigation": "認証・アクセス・エラー・管理操作ログを保全し、更新前後の不審な挙動と影響範囲を調査する。",
+      "bcp": "停止を伴う更新、代替運用、構成バックアップ、復旧・切戻しと再開条件を確認する。",
+      "tech": "identity",
+      "check": "ck-identity",
+      "exploitation": "CISA KEV掲載を第三者転記で確認。メーカーは悪用可能性の報告を調査。悪用手法・件数は未公表。",
+      "exploitationTone": "red",
+      "sources": [
+        {
+          "label": "公式資料・一次資料",
+          "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0014"
+        }
+      ],
+      "sourceNote": "2026-11-08：SonicWall公式ページは動的表示で本文を直接取得できず。CVE公開情報、CISA KEV転記、SecurityWeekの当該メーカー引用を照合。詳細版は公式表の直接確認待ち。",
+      "history": [
+        {
+          "date": "2026-11-08",
+          "type": "新規追加",
+          "note": "公表と対象条件を確認して重点テーマに追加。"
+        }
+      ]
+    },
+    {
+      "id": "v-debian-zlib-dsa6613-20261107",
+      "product": "Debian 13（trixie） zlib",
+      "title": "DSA-6613-1：zlibのDoS・任意コード実行可能性",
+      "identifiers": [
+        "CVE-2026-27171",
+        "CVE-2026-76844",
+        "CVE-2026-85091"
+      ],
+      "published": "2026-11-07",
+      "sourceUpdated": "2026-11-07",
+      "updated": "2026-11-08",
+      "checked": "2026-11-08",
+      "changeType": "新規追加",
+      "change": "11/8日次調査で一次資料の内容を確認して追加。",
+      "priority": "該当製品・版・構成を確認し、実悪用・外部到達性・業務影響で優先度を決める",
+      "conditions": "Debian stable（trixie）の対象zlib。細工された入力を処理する構成で影響し得る。その他OSや同梱版への適用は個別に確認。",
+      "impact": "サービス妨害、場合により任意コード実行。",
+      "fix": "trixieの修正パッケージ1:1.3.dfsg+really1.3.1-1+deb13u1を適用。静的リンク・コンテナ・同梱版は別途調査。",
+      "investigation": "認証・アクセス・エラー・管理操作ログを保全し、更新前後の不審な挙動と影響範囲を調査する。",
+      "bcp": "停止を伴う更新、代替運用、構成バックアップ、復旧・切戻しと再開条件を確認する。",
+      "tech": "public",
+      "check": "ck-public",
+      "exploitation": "今回確認したDebian資料に実悪用の断定なし。",
+      "exploitationTone": "amber",
+      "sources": [
+        {
+          "label": "公式資料・一次資料",
+          "url": "https://lists.debian.org/debian-security-announce/2026/msg00532.html"
+        }
+      ],
+      "sourceNote": "Debianセキュリティメーリングリスト本文と公式Security Trackerを2026-11-08確認。",
+      "history": [
+        {
+          "date": "2026-11-08",
+          "type": "新規追加",
+          "note": "公表と対象条件を確認して重点テーマに追加。"
+        }
+      ]
+    },
+    {
+      "id": "v-debian-ruby33-dsa6614-20261107",
+      "product": "Debian 13（trixie） Ruby 3.3",
+      "title": "DSA-6614-1：Ruby 3.3の複数の脆弱性",
+      "identifiers": [
+        "DSA-6614-1",
+        "CVE-2026-27820",
+        "CVE-2026-41316",
+        "CVE-2026-42245",
+        "CVE-2026-42246",
+        "CVE-2026-42256",
+        "CVE-2026-42257",
+        "CVE-2026-42258",
+        "CVE-2026-47240",
+        "CVE-2026-47241",
+        "CVE-2026-47242",
+        "CVE-2026-80212",
+        "CVE-2026-80213",
+        "CVE-2026-89078",
+        "CVE-2026-93577",
+        "CVE-2026-97229",
+        "CVE-2026-110264",
+        "CVE-2025-24294",
+        "CVE-2025-58767",
+        "CVE-2025-61594"
+      ],
+      "published": "2026-11-07",
+      "sourceUpdated": "2026-11-07",
+      "updated": "2026-11-08",
+      "checked": "2026-11-08",
+      "changeType": "新規追加",
+      "change": "11/8日次調査で一次資料の内容を確認して追加。",
+      "priority": "該当製品・版・構成を確認し、実悪用・外部到達性・業務影響で優先度を決める",
+      "conditions": "Debian trixieのRuby 3.3パッケージ。個別CVEの成立条件は各資料を参照。",
+      "impact": "IMAPコマンドインジェクション、DoS、情報漏えい、任意コード実行等。すべてが同じ条件で成立するわけではない。",
+      "fix": "Debian trixieの修正版3.3.13-0+deb13u1へ更新。アプリ互換性・再起動・ジョブ実行を確認。",
+      "investigation": "認証・アクセス・エラー・管理操作ログを保全し、更新前後の不審な挙動と影響範囲を調査する。",
+      "bcp": "停止を伴う更新、代替運用、構成バックアップ、復旧・切戻しと再開条件を確認する。",
+      "tech": "public",
+      "check": "ck-public",
+      "exploitation": "今回確認したDebian資料に実悪用の断定なし。",
+      "exploitationTone": "amber",
+      "sources": [
+        {
+          "label": "公式資料・一次資料",
+          "url": "https://lists.debian.org/debian-security-announce/2026/msg00533.html"
+        }
+      ],
+      "sourceNote": "Debian公式メーリングリストのDSA-6614-1本文を2026-11-08確認。",
+      "history": [
+        {
+          "date": "2026-11-08",
+          "type": "新規追加",
+          "note": "公表と対象条件を確認して重点テーマに追加。"
         }
       ]
     }
@@ -35081,75 +35722,55 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
   "updateHighlights": [
     {
       "kind": "incident",
-      "id": "inc-smbccf-guarantee-20261105"
+      "id": "inc-ms-ins-mypage-20261106"
     },
     {
       "kind": "incident",
-      "id": "inc-resona-smbccf-20261106"
+      "id": "inc-jsps-eshinsei-20261106"
     },
     {
       "kind": "incident",
-      "id": "inc-kansaimirai-smbccf-20261106"
+      "id": "inc-doutor-online-20261106"
     },
     {
       "kind": "incident",
-      "id": "inc-minato-smbccf-20261106"
+      "id": "inc-toyo-account-20261105"
     },
     {
       "kind": "incident",
-      "id": "inc-teamspirit-20261106"
+      "id": "inc-kyoto-senior-sagawa-20261106"
     },
     {
       "kind": "incident",
-      "id": "inc-jnsa-checkservice-20261106"
+      "id": "inc-kyoto-museum-arara-20261106"
     },
     {
       "kind": "incident",
-      "id": "inc-docomo-myshop-20261105"
+      "id": "inc-fanplus-arara-20261102"
     },
     {
       "kind": "incident",
-      "id": "inc-09961079f6"
+      "id": "inc-bicgroup-arara-20261102"
     },
     {
       "kind": "incident",
-      "id": "inc-arara-message-20261029"
-    },
-    {
-      "kind": "incident",
-      "id": "inc-a2fc11f8ee"
-    },
-    {
-      "kind": "incident",
-      "id": "inc-shiga-anpic-arara-20261106"
-    },
-    {
-      "kind": "incident",
-      "id": "inc-konan-ucaro-arara-20261106"
-    },
-    {
-      "kind": "incident",
-      "id": "inc-setsunan-ucaro-arara-20261106"
-    },
-    {
-      "kind": "incident",
-      "id": "inc-2rinkan-prestige-20261106"
-    },
-    {
-      "kind": "incident",
-      "id": "inc-elecom-adminlink-arara-20261106"
-    },
-    {
-      "kind": "incident",
-      "id": "inc-daisen-shibata-20261106"
+      "id": "inc-club-tourism-20261031"
     },
     {
       "kind": "vuln",
-      "id": "v-mitsubishi-cclink-tsn-cve-2026-13584"
+      "id": "v-sonicos-ssl-vpn-20261106"
     },
     {
       "kind": "vuln",
-      "id": "v-brotli-202610"
+      "id": "v-debian-zlib-dsa6613-20261107"
+    },
+    {
+      "kind": "vuln",
+      "id": "v-debian-ruby33-dsa6614-20261107"
+    },
+    {
+      "kind": "vuln",
+      "id": "v-chromeos-stable-156-20261029"
     }
   ],
   "actorTimeline": [
