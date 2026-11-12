@@ -198,27 +198,27 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
 {
   "meta": {
     "schemaVersion": "1.0",
-    "version": "1.0.43",
+    "version": "1.0.44",
     "title": "セキュリティインテリジェンスハブ",
-    "compiledDate": "2026-11-12",
-    "incidentSnapshotDate": "2026-11-12",
+    "compiledDate": "2026-11-13",
+    "incidentSnapshotDate": "2026-11-13",
     "technicalReviewed": "2026-10-25",
     "timezone": "Asia/Tokyo",
-    "incidentSource": "v1.0.42（460項目）に独立事案7件・関連組織6件を追加。既存460件保持。",
-    "coverage": "11/11 07:04 JST前回基準後～11/12 06:59 JST。直近7日・追跡候補を再確認し、大学・企業・行政・金融・委託先・SaaSを公式一次資料中心に照合。",
-    "vulnerabilityCoverage": "83テーマ。Node.js正式版とChrome Stable／Extended Stableを更新。JPCERT月例、JVN、CERT/CC、CISA KEV、Linux主要各社、Mozilla等を独立確認。",
-    "verification": "新規インシデント13件、脆弱性2テーマ更新。アクター・動向の確定追加なし。",
+    "incidentSource": "v1.0.43（473項目）に独立事案7件・関連組織2件を追加。既存473件保持。",
+    "coverage": "11/12 06:59 JST前回基準後～11/13 07時台 JST。直近7日・追跡候補を再確認し、大学・企業・行政・医療・金融・委託先・SaaSを公式一次資料中心に照合。",
+    "vulnerabilityCoverage": "86テーマ。Apache HTTP Server、Movable Type、SoftBank Airターミナル6を追加。JVN/JPCERT、CISA KEV、CERT/CC、主要OS・ブラウザ・ランタイム各社を独立確認。",
+    "verification": "新規・未掲載インシデント9件、脆弱性3テーマ、犯罪基盤動向2件を追加。既存アクター図鑑16件は変更なし。",
     "reconciliation": {
       "newerRows": 180,
       "olderBiRows": 155,
       "preservedIds": 345,
       "addedAgainstBi": 28,
-      "previousRows": 460,
-      "addedThisUpdate": 13,
+      "previousRows": 473,
+      "addedThisUpdate": 9,
       "updatedThisUpdate": 0,
-      "currentRows": 473,
-      "associationThisUpdate": 6,
-      "referenceFixesThisUpdate": 3
+      "currentRows": 482,
+      "associationThisUpdate": 2,
+      "referenceFixesThisUpdate": 0
     },
     "changelog": [
       {
@@ -439,6 +439,11 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         "date": "2026-11-12",
         "version": "1.0.43",
         "text": "新規・関連13件を追加。Node.js正式修正版とChrome両系列を更新。物流委託先、貿易SaaS、持株会、AI再委託先、検証環境、予約停止、アララ波及を整理。473事例・83脆弱性・16アクターを保持。"
+      },
+      {
+        "date": "2026-11-13",
+        "version": "1.0.44",
+        "text": "新規・未掲載インシデント9件、脆弱性3テーマ、犯罪基盤動向2件を追加。厚労省JANIS関連、セブン銀行在留カード、マクロミル口座情報、Yeny API設定不備、GitHub認証情報、Notion AI再委託先、KASIKA、U.S.M.H.、リナビスを反映。Apache HTTP Server、Movable Type、Airターミナル6を重点化。482事例・86脆弱性・16アクター・18動向。"
       }
     ],
     "playbookReviewed": "2026-11-06",
@@ -22178,6 +22183,402 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         }
       ],
       "group": "アララメッセージ関連"
+    },
+    {
+      "id": "inc-usmh-scango-20261112",
+      "date": "2026-11-12",
+      "dateBasis": "初回公表日",
+      "org": "U.S.M.H.／Scan&Go ignica",
+      "industry": "小売・アプリ",
+      "cat": [
+        "不正アクセス",
+        "情報漏えいの可能性"
+      ],
+      "status": "64,003アカウントの氏名・メールアドレスが流出した可能性（取得・流出の事実は未確認）",
+      "info": "Scan&Go ignicaのシステムへの第三者不正アクセス。対象ファイルに氏名・メールアドレスが存在したため、外部取得の可能性を否定できないとして通知。",
+      "scope": "約240万アカウント中64,003アカウント。クレジットカード、住所、電話番号、生年月日は対象ファイルに含まれない。",
+      "impact": "対象者確認・通知と、ブランドを装うフィッシング監視が必要。可能性と確認済み流出を混同しない。",
+      "exclude": "対象者への個別通知、アプリ表示、認証ログ・アクセスログの保全、メール経由の二次被害監視を確認。",
+      "action": [
+        {
+          "label": "U.S.M.H.｜11/12公式PDF",
+          "url": "https://www.usmh.co.jp/wp-content/uploads/2026/11/us_20261112.pdf"
+        }
+      ],
+      "sources": "2026-11-12",
+      "sourceUpdated": "2026-11-12",
+      "changeType": "新規インシデント",
+      "change": "公式PDFで、対象64,003アカウント、対象情報、対象外情報、実取得未確認を区別して掲載。",
+      "secondary": {
+        "status": "報告なし（公表日時点）",
+        "date": "2026-11-12",
+        "text": "本件に起因する不正利用・二次被害は未確認。",
+        "checked": "2026-11-13"
+      },
+      "checked": "2026-11-13",
+      "updated": "2026-11-13",
+      "batch": "2026-11-13日次調査",
+      "evidence": "2026-11-13 07時台 JSTに公式PDF本文を確認。",
+      "history": [
+        {
+          "date": "2026-11-13",
+          "text": "公式PDF本文を確認し新規掲載。"
+        }
+      ]
+    },
+    {
+      "id": "inc-macromill-monitor-20261112",
+      "date": "2026-11-12",
+      "dateBasis": "初回公表日",
+      "occurred": "2026-10-29検知",
+      "org": "マクロミル モニタサイト",
+      "industry": "調査・ポイントサービス",
+      "cat": [
+        "不正アクセス",
+        "情報漏えい",
+        "サービス停止"
+      ],
+      "status": "317人分の基本・属性情報を閲覧、うち82人は振込先口座情報を含む",
+      "info": "第三者不正アクセスの痕跡を確認。登録メールアドレス変更やポイント交換の試行もあったが、完了した不正交換・不正ログイン実害は未確認。",
+      "scope": "317人。82人はポイント交換先の口座情報を含む。カード情報・金融機関暗証番号は保持していない。",
+      "impact": "ポイント交換を停止。保有ポイント消失・不正交換は未確認で、停止に伴う失効を防ぐ方針。別件の外部メール配信障害も交換再開の依存要因。",
+      "exclude": "ポイント残高保全、口座情報対象者への個別通知、登録情報変更ログ、交換再開条件、メール依存の代替認証を確認。",
+      "action": [
+        {
+          "label": "マクロミル｜11/12公式発表",
+          "url": "https://www.macromill.com/press/info/20261112.html"
+        }
+      ],
+      "sources": "2026-11-12",
+      "sourceUpdated": "2026-11-12",
+      "changeType": "新規インシデント",
+      "change": "公式本文で人数、口座情報、試行と完了、不正ログイン・金銭被害の有無、ポイント交換停止を分けて掲載。",
+      "secondary": {
+        "status": "報告なし（公表日時点）",
+        "date": "2026-11-12",
+        "text": "金銭被害、不正交換・ポイント消失は未確認。",
+        "checked": "2026-11-13"
+      },
+      "checked": "2026-11-13",
+      "updated": "2026-11-13",
+      "batch": "2026-11-13日次調査",
+      "evidence": "2026-11-13 07時台 JSTに公式本文を確認。",
+      "history": [
+        {
+          "date": "2026-11-13",
+          "text": "公式本文を確認し新規掲載。"
+        }
+      ]
+    },
+    {
+      "id": "inc-yeny-api-20261112",
+      "date": "2026-11-12",
+      "dateBasis": "初回公表日",
+      "occurred": "2026-10-31検知、2026-11-05漏えい確認",
+      "org": "Yeny／ultra pay等4サービス",
+      "industry": "決済・プリペイド",
+      "cat": [
+        "不正アクセス",
+        "情報漏えい",
+        "設定不備"
+      ],
+      "status": "電話番号・Yeny固有会員ID 1,332,505件の漏えいを確認",
+      "info": "接続先事業者から不審APIコールの連絡を受け調査し、API接続設定不備による漏えいを確認。退会者を含む。",
+      "scope": "ultra pay、アスルクラロ沼津Pay、巫神こんPay、東芝ブレイブルーパス東京Pay。電話番号と固有会員ID。決済情報の漏えいは未確認。",
+      "impact": "対象情報だけではアプリへの不正ログイン・決済に利用できないとの公表だが、SMS・電話による詐欺の標的化に注意。",
+      "exclude": "API接続先ごとの認証・権限・設定、異常コール検知、退会者データ保持、対象者通知、SMS注意喚起を確認。",
+      "action": [
+        {
+          "label": "Yeny｜11/12公式発表",
+          "url": "https://yeny.jp/pressrelease/1547/"
+        }
+      ],
+      "sources": "2026-11-12",
+      "sourceUpdated": "2026-11-12",
+      "changeType": "新規インシデント",
+      "change": "公式本文で件数単位、対象4サービス、漏えい情報、決済・ログインへの直接利用可否を確認して掲載。",
+      "secondary": {
+        "status": "注意喚起のみ",
+        "date": "2026-11-12",
+        "text": "不審なSMS・電話への注意を案内。実被害は未公表。",
+        "checked": "2026-11-13"
+      },
+      "checked": "2026-11-13",
+      "updated": "2026-11-13",
+      "batch": "2026-11-13日次調査",
+      "evidence": "2026-11-13 07時台 JSTに公式本文を確認。",
+      "history": [
+        {
+          "date": "2026-11-13",
+          "text": "公式本文を確認し新規掲載。"
+        }
+      ]
+    },
+    {
+      "id": "inc-cscloud-github-20261112",
+      "date": "2026-11-12",
+      "dateBasis": "初回公表日",
+      "occurred": "2026-11-05不審アクセス確認",
+      "org": "サイバーセキュリティクラウド／GitHub開発環境",
+      "industry": "セキュリティ・SaaS",
+      "cat": [
+        "認証情報流出",
+        "不正アクセス",
+        "情報漏えいの可能性"
+      ],
+      "status": "従業員のGitHub認証情報1件を使用した不審アクセス、顧客情報等が漏えいした可能性",
+      "info": "外部情報提供で認証情報流出が判明。ログ保持範囲の制約により、有効期間全体のアクセス状況は未確認。",
+      "scope": "一部顧客の企業名・氏名・メールアドレス等、サービス利用に伴う通信関連情報。対象人数・取得有無は調査中。",
+      "impact": "サービスへの不正操作・二次被害・提供影響は未確認。認証情報無効化、関連秘密情報変更、開発端末隔離を実施。",
+      "exclude": "GitHub/PAT/SSH鍵の失効、保存シークレットの一括ローテーション、開発端末・CI/CDログ、委託元通知を確認。",
+      "action": [
+        {
+          "label": "サイバーセキュリティクラウド｜11/12第一報",
+          "url": "https://www.cscloud.co.jp/news/info/20261112-2/"
+        }
+      ],
+      "sources": "2026-11-12",
+      "sourceUpdated": "2026-11-12",
+      "changeType": "新規インシデント",
+      "change": "公式本文で認証情報1件、ログ制約、漏えい可能性、サービス影響、実施済み封じ込めを区別して掲載。",
+      "secondary": {
+        "status": "報告なし（公表日時点）",
+        "date": "2026-11-12",
+        "text": "サービス不正操作・二次被害は未確認。",
+        "checked": "2026-11-13"
+      },
+      "checked": "2026-11-13",
+      "updated": "2026-11-13",
+      "batch": "2026-11-13日次調査",
+      "evidence": "2026-11-13 07時台 JSTに公式本文を確認。",
+      "history": [
+        {
+          "date": "2026-11-13",
+          "text": "公式第一報を確認し新規掲載。"
+        }
+      ]
+    },
+    {
+      "id": "inc-mhlw-janis-20261106",
+      "date": "2026-11-06",
+      "dateBasis": "初回公表日",
+      "occurred": "2026-10-27報告・停止",
+      "org": "厚生労働省／JIHS 薬剤耐性菌発生動向調査システム（JANIS関連）",
+      "industry": "行政・医療",
+      "cat": [
+        "サイバー攻撃",
+        "情報漏えいの可能性",
+        "サービス停止"
+      ],
+      "status": "最大21,023人分の利用者情報等が漏えいした可能性、10/27から停止",
+      "info": "Webサーバーに情報を抜き取るプログラムが配置され、実行された可能性。11月6日初報を11月12日に更新。",
+      "scope": "医療機関責任者・担当者の氏名、職名、電話番号、メールアドレス最大21,023人分。病院名、病床数、住所、登録耐性菌情報等。",
+      "impact": "院内感染対策サーベイランスの収集・還元停止が長期化し得る。医療機関は代替報告・集計・連絡経路を確認。",
+      "exclude": "停止中の代替提出、過去データ保全、参加医療機関通知、再開時の安全確認、感染対策業務の優先順位を確認。",
+      "action": [
+        {
+          "label": "厚生労働省｜11/6公表・11/12更新",
+          "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000120172.html"
+        }
+      ],
+      "sources": "2026-11-12",
+      "sourceUpdated": "2026-11-12",
+      "changeType": "既存公表の未掲載補完・続報",
+      "change": "11/12更新本文で、情報窃取プログラム、最大21,023人、病院・耐性菌情報、停止継続を確認して掲載。",
+      "secondary": {
+        "status": "報告なし（公表日時点）",
+        "date": "2026-11-12",
+        "text": "二次被害の記載は確認できず。",
+        "checked": "2026-11-13"
+      },
+      "checked": "2026-11-13",
+      "updated": "2026-11-13",
+      "batch": "2026-11-13日次調査",
+      "evidence": "2026-11-13 07時台 JSTに厚労省公式本文を確認。",
+      "history": [
+        {
+          "date": "2026-11-13",
+          "text": "11/6初報・11/12更新を未掲載補完。"
+        }
+      ]
+    },
+    {
+      "id": "inc-ivry-notion-fireworks-20261112",
+      "date": "2026-11-12",
+      "dateBasis": "初回公表日",
+      "occurred": "2026-11-10通知受領",
+      "org": "IVRy／Notion AI（Fireworks再委託先関連）",
+      "industry": "AI・SaaS",
+      "cat": [
+        "委託先",
+        "情報漏えい",
+        "生成AI"
+      ],
+      "status": "取引先33件・採用候補者12件等のNotion AI入出力が漏えい",
+      "info": "NotionのAI委託先Fireworks AIへの不正アクセスに関連。IVRyのシステム・アイブリーサービスへの直接不正アクセスではない。",
+      "scope": "取引先担当者の氏名・メール・電話33件、採用候補者の氏名・職歴12件、営業情報に含まれる取引先情報は精査中。",
+      "impact": "同一Fireworks侵害の関連組織として重複集計しない。AI入力内容の機密区分、委託・再委託、削除説明と流出済み情報を区別。",
+      "exclude": "生成AIへの入力ルール、DLP、委託先通知、対象者連絡、再委託先のログ・データ保持条件を確認。",
+      "action": [
+        {
+          "label": "IVRy｜11/12公式発表",
+          "url": "https://ivry.jp/corporate/news/4wu8ght2l2/"
+        }
+      ],
+      "sources": "2026-11-12",
+      "sourceUpdated": "2026-11-12",
+      "changeType": "関連組織の確認結果",
+      "change": "公式本文で件数・情報種類・サービス非侵害・精査中範囲を確認し、既存LRM事案と同じFireworks侵害へ関連付け。",
+      "secondary": {
+        "status": "注意喚起のみ",
+        "date": "2026-11-12",
+        "text": "なりすまし連絡への注意を案内。実被害は未公表。",
+        "checked": "2026-11-13"
+      },
+      "checked": "2026-11-13",
+      "updated": "2026-11-13",
+      "batch": "2026-11-13日次調査",
+      "evidence": "2026-11-13 07時台 JSTに公式本文を確認。",
+      "history": [
+        {
+          "date": "2026-11-13",
+          "text": "Fireworks再委託先侵害の関連組織として掲載。"
+        }
+      ],
+      "group": "Notion AI／Fireworks AI関連"
+    },
+    {
+      "id": "inc-cocolive-kasika-20261111",
+      "date": "2026-11-11",
+      "dateBasis": "初回公表日",
+      "occurred": "2026-11-07検知",
+      "org": "Cocolive／KASIKA",
+      "industry": "不動産SaaS",
+      "cat": [
+        "不正アクセスの可能性",
+        "調査中",
+        "委託先"
+      ],
+      "status": "一部Webサーバで不審アクセス痕跡、DB侵入・顧客情報持出しは未確認",
+      "info": "対象サーバを遮断・隔離し、侵入経路と考える問題へ対応。外部フォレンジック機関がログ解析を継続。",
+      "scope": "顧客情報・閲覧履歴等。現時点ではDBへの不正侵入や外部持出しの明確な事実を確認していない。",
+      "impact": "利用企業は「未確認」を「影響なし」と扱わず、通知窓口、データ取込み・出力、代替営業手段を準備。",
+      "exclude": "SaaS事業者への照会、連携API・資格情報、エクスポート履歴、停止時の顧客対応代替を確認。",
+      "action": [
+        {
+          "label": "Cocolive｜11/11第一報",
+          "url": "https://cocolive.co.jp/news/9645/"
+        }
+      ],
+      "sources": "2026-11-11",
+      "sourceUpdated": "2026-11-11",
+      "changeType": "新規インシデント",
+      "change": "公式本文を取得し、痕跡・隔離・DB侵入未確認・フォレンジック継続を分けて掲載。",
+      "secondary": {
+        "status": "未公表・不明",
+        "date": "2026-11-11",
+        "text": "二次被害の記載は確認できず。",
+        "checked": "2026-11-13"
+      },
+      "checked": "2026-11-13",
+      "updated": "2026-11-13",
+      "batch": "2026-11-13日次調査",
+      "evidence": "2026-11-13 07時台 JSTに公式本文を確認。",
+      "history": [
+        {
+          "date": "2026-11-13",
+          "text": "候補キューの公式本文を確認し新規掲載。"
+        }
+      ]
+    },
+    {
+      "id": "inc-sevenbank-residence-card-20261111",
+      "date": "2026-11-11",
+      "dateBasis": "初回公表日",
+      "occurred": "2026-11-09検知",
+      "org": "セブン銀行／在留カード提出・口座解約受付サイト",
+      "industry": "金融",
+      "cat": [
+        "不正アクセス",
+        "本人確認情報",
+        "サービス停止"
+      ],
+      "status": "在留カード券面情報 最大約150件が流出した可能性、2サイト停止",
+      "info": "第三者による不正アクセスを確認し、対象サイトを停止・攻撃元を遮断。送金・口座解約・改ざん等の不正処理は未確認。",
+      "scope": "在留カード提出サイトで保有した最大約150件の券面情報。10/16～11/9手続者等が対象候補。",
+      "impact": "顔写真・氏名・在留資格等を含み得る本人確認書類として高重要。ATM、インターネットバンキング、デビット等の主要サービスは影響なし。",
+      "exclude": "本人確認書類の保存期間・分離、対象者通知、不正口座・なりすまし監視、停止中の代替手続、再開基準を確認。",
+      "action": [
+        {
+          "label": "セブン銀行｜11/11公式発表",
+          "url": "https://www.sevenbank.co.jp/support/info_notice127.html"
+        }
+      ],
+      "sources": "2026-11-11",
+      "sourceUpdated": "2026-11-11",
+      "changeType": "既存公表の未掲載補完",
+      "change": "公式本文で在留カード券面情報、最大約150件、2サイト停止、主要サービス非影響、不正処理未確認を確認。",
+      "secondary": {
+        "status": "報告なし（公表日時点）",
+        "date": "2026-11-11",
+        "text": "情報の不正利用は未確認。",
+        "checked": "2026-11-13"
+      },
+      "checked": "2026-11-13",
+      "updated": "2026-11-13",
+      "batch": "2026-11-13日次調査",
+      "evidence": "2026-11-13 07時台 JSTに公式本文を確認。",
+      "history": [
+        {
+          "date": "2026-11-13",
+          "text": "11/11公表を未掲載補完。"
+        }
+      ]
+    },
+    {
+      "id": "inc-rinavis-arara-20261111",
+      "date": "2026-11-11",
+      "dateBasis": "初回公表日",
+      "occurred": "2026-10-08～2026-10-29配信分",
+      "org": "リナビス／repica（アララ関連）",
+      "industry": "クリーニング・EC",
+      "cat": [
+        "不正アクセス",
+        "情報漏えい",
+        "委託先"
+      ],
+      "status": "メールアドレス158,960件の漏えいを確認",
+      "info": "アララのメール配信サービスrepicaへの不正アクセスに関連。ECサイト・注文情報への影響はないと公表。",
+      "scope": "対象期間に配信した宛先メールアドレス158,960件。氏名、住所、電話、パスワード、カード情報は含まれない。",
+      "impact": "同一アララ侵害として独立攻撃件数へ重複加算しない。メール配信停止と個別通知、フィッシング監視が必要。",
+      "exclude": "再委託先、対象者通知、代替メール配信、送信元ドメインの監視、EC注文系との分離を確認。",
+      "action": [
+        {
+          "label": "リナビス｜11/11公式発表",
+          "url": "https://rinavis.com/f/notice_20261111"
+        }
+      ],
+      "sources": "2026-11-11",
+      "sourceUpdated": "2026-11-11",
+      "changeType": "関連組織の確認結果",
+      "change": "公式本文で158,960件、対象外情報、EC・注文非影響、二次被害未報告を確認しアララ侵害へ関連付け。",
+      "secondary": {
+        "status": "報告なし（公表日時点）",
+        "date": "2026-11-11",
+        "text": "二次被害の報告は受けていない。",
+        "checked": "2026-11-13"
+      },
+      "checked": "2026-11-13",
+      "updated": "2026-11-13",
+      "batch": "2026-11-13日次調査",
+      "evidence": "2026-11-13 07時台 JSTに公式本文を確認。",
+      "history": [
+        {
+          "date": "2026-11-13",
+          "text": "アララ関連組織として公式本文を確認し掲載。"
+        }
+      ],
+      "group": "アララメッセージ関連"
     }
   ],
   "caseLinks": {
@@ -32178,6 +32579,197 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         "P08",
         "P05"
       ]
+    },
+    "inc-usmh-scango-20261112": {
+      "techs": [
+        "identity",
+        "public"
+      ],
+      "checks": [
+        "ck-identity",
+        "ck-public"
+      ],
+      "ir": "account",
+      "notice": "leak",
+      "entry": "公式公表の範囲で不正アクセス・影響を確認",
+      "weakness": "具体的な侵入条件は未公表または調査中",
+      "actor": "確認情報なし",
+      "basis": "公式発表を基にした関連付け。原因・攻撃者の認定ではない。",
+      "responsePatterns": [
+        "P01",
+        "P08",
+        "P05"
+      ]
+    },
+    "inc-macromill-monitor-20261112": {
+      "techs": [
+        "identity",
+        "outage"
+      ],
+      "checks": [
+        "ck-identity",
+        "ck-bcp"
+      ],
+      "ir": "account",
+      "notice": "outage",
+      "entry": "公式公表の範囲で不正アクセス・影響を確認",
+      "weakness": "具体的な侵入条件は未公表または調査中",
+      "actor": "確認情報なし",
+      "basis": "公式発表を基にした関連付け。原因・攻撃者の認定ではない。",
+      "responsePatterns": [
+        "P01",
+        "P08",
+        "P05"
+      ]
+    },
+    "inc-yeny-api-20261112": {
+      "techs": [
+        "identity",
+        "supplier"
+      ],
+      "checks": [
+        "ck-identity",
+        "ck-supplier"
+      ],
+      "ir": "account",
+      "notice": "leak",
+      "entry": "公式公表の範囲で不正アクセス・影響を確認",
+      "weakness": "具体的な侵入条件は未公表または調査中",
+      "actor": "確認情報なし",
+      "basis": "公式発表を基にした関連付け。原因・攻撃者の認定ではない。",
+      "responsePatterns": [
+        "P01",
+        "P08",
+        "P05"
+      ]
+    },
+    "inc-cscloud-github-20261112": {
+      "techs": [
+        "identity",
+        "supplier"
+      ],
+      "checks": [
+        "ck-identity",
+        "ck-supplier"
+      ],
+      "ir": "account",
+      "notice": "supplier",
+      "entry": "公式公表の範囲で不正アクセス・影響を確認",
+      "weakness": "具体的な侵入条件は未公表または調査中",
+      "actor": "確認情報なし",
+      "basis": "公式発表を基にした関連付け。原因・攻撃者の認定ではない。",
+      "responsePatterns": [
+        "P01",
+        "P08",
+        "P05"
+      ]
+    },
+    "inc-mhlw-janis-20261106": {
+      "techs": [
+        "public",
+        "outage"
+      ],
+      "checks": [
+        "ck-public",
+        "ck-bcp"
+      ],
+      "ir": "web",
+      "notice": "outage",
+      "entry": "公式公表の範囲で不正アクセス・影響を確認",
+      "weakness": "具体的な侵入条件は未公表または調査中",
+      "actor": "確認情報なし",
+      "basis": "公式発表を基にした関連付け。原因・攻撃者の認定ではない。",
+      "responsePatterns": [
+        "P01",
+        "P08",
+        "P05"
+      ]
+    },
+    "inc-ivry-notion-fireworks-20261112": {
+      "techs": [
+        "supplier",
+        "sharing"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data"
+      ],
+      "ir": "supplier",
+      "notice": "supplier",
+      "entry": "公式公表の範囲で不正アクセス・影響を確認",
+      "weakness": "具体的な侵入条件は未公表または調査中",
+      "actor": "確認情報なし",
+      "basis": "公式発表を基にした関連付け。原因・攻撃者の認定ではない。",
+      "responsePatterns": [
+        "P01",
+        "P08",
+        "P05"
+      ]
+    },
+    "inc-cocolive-kasika-20261111": {
+      "techs": [
+        "supplier",
+        "public"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-public"
+      ],
+      "ir": "supplier",
+      "notice": "supplier",
+      "entry": "公式公表の範囲で不正アクセス・影響を確認",
+      "weakness": "具体的な侵入条件は未公表または調査中",
+      "actor": "確認情報なし",
+      "basis": "公式発表を基にした関連付け。原因・攻撃者の認定ではない。",
+      "responsePatterns": [
+        "P01",
+        "P08",
+        "P05"
+      ]
+    },
+    "inc-sevenbank-residence-card-20261111": {
+      "techs": [
+        "identity",
+        "public",
+        "outage"
+      ],
+      "checks": [
+        "ck-identity",
+        "ck-public",
+        "ck-bcp"
+      ],
+      "ir": "web",
+      "notice": "leak",
+      "entry": "公式公表の範囲で不正アクセス・影響を確認",
+      "weakness": "具体的な侵入条件は未公表または調査中",
+      "actor": "確認情報なし",
+      "basis": "公式発表を基にした関連付け。原因・攻撃者の認定ではない。",
+      "responsePatterns": [
+        "P01",
+        "P08",
+        "P05"
+      ]
+    },
+    "inc-rinavis-arara-20261111": {
+      "techs": [
+        "supplier",
+        "identity"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-identity"
+      ],
+      "ir": "supplier",
+      "notice": "supplier",
+      "entry": "公式公表の範囲で不正アクセス・影響を確認",
+      "weakness": "具体的な侵入条件は未公表または調査中",
+      "actor": "確認情報なし",
+      "basis": "公式発表を基にした関連付け。原因・攻撃者の認定ではない。",
+      "responsePatterns": [
+        "P01",
+        "P08",
+        "P05"
+      ]
     }
   },
   "techniques": [
@@ -37170,6 +37762,133 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
           "note": "CERT/CC・JVN公式本文に基づき追加。"
         }
       ]
+    },
+    {
+      "id": "v-apache-httpd-2471-20261111",
+      "product": "Apache HTTP Server 2.4",
+      "title": "Apache HTTP Server 2.4.71：HTTP/2のRCE可能性を含む複数脆弱性",
+      "identifiers": [
+        "CVE-2026-119618",
+        "CVE-2026-106023",
+        "CVE-2026-109163",
+        "JVNVU#90805396"
+      ],
+      "published": "2026-11-11",
+      "sourceUpdated": "2026-11-12",
+      "checked": "2026-11-13",
+      "updated": "2026-11-13",
+      "changeType": "新規掲載",
+      "exploitation": "確認したApache・JVN公式本文に実悪用確認の記載なし",
+      "exploitationTone": "amber",
+      "priority": "HTTP/2を有効化した公開Web、認証・リバースプロキシ基盤を優先して2.4.71へ更新",
+      "conditions": "CVE-2026-119618はmod_http2を使用する2.4.55～2.4.70等が対象。mod_md、mod_vhost_aliasの各条件は構成依存。",
+      "impact": "HTTP/2処理のヒープ破損によりサービス停止やコード実行の可能性。mod_mdのクラッシュ、mod_vhost_aliasのメモリ破損も含む。",
+      "fix": "Apache HTTP Server 2.4.71へ更新。ディストリビューション同梱版はバックポート情報とパッケージ版を確認し、単純な表示版比較だけで判断しない。",
+      "investigation": "HTTP/2有効化、対象モジュール、異常終了・再起動、Webアクセスログ、WAF/リバースプロキシログを保全・確認。",
+      "bcp": "公開Webの段階更新、冗長系切替、HTTP/2一時無効化の互換性、切戻しと監視強化を準備。",
+      "tech": "public",
+      "check": "ck-public",
+      "sources": [
+        {
+          "label": "JVN｜JVNVU#90805396",
+          "url": "https://jvn.jp/vu/JVNVU90805396/index.html"
+        },
+        {
+          "label": "Apache HTTP Server 2.4 security",
+          "url": "https://httpd.apache.org/security/vulnerabilities_24.html"
+        }
+      ],
+      "sourceNote": "JVNとApache公式情報を2026-11-13 JSTに確認。実悪用未確認は不存在の保証ではない。",
+      "change": "2.4.71で修正された3件を重点テーマとして追加。",
+      "history": [
+        {
+          "date": "2026-11-13",
+          "type": "新規掲載",
+          "note": "Apache・JVN公式情報に基づき追加。"
+        }
+      ]
+    },
+    {
+      "id": "v-movabletype-117687-20261111",
+      "product": "Movable Type",
+      "title": "Movable Type CVE-2026-117687：Dynamic Publishingの未認証PHPコード注入",
+      "identifiers": [
+        "CVE-2026-117687",
+        "JVN#11786640"
+      ],
+      "published": "2026-11-11",
+      "sourceUpdated": "2026-11-11",
+      "checked": "2026-11-13",
+      "updated": "2026-11-13",
+      "changeType": "新規掲載",
+      "exploitation": "JVN・ベンダー公式本文に実悪用確認の記載なし",
+      "exploitationTone": "amber",
+      "priority": "Dynamic Publishingを使う公開CMSを最優先で修正版へ更新",
+      "conditions": "Dynamic Publishing機能を使用する影響版へ未認証のネットワーク攻撃者が細工したリクエストを送信。Movable Type 9は非該当。",
+      "impact": "Webサーバ上で任意のPHPコードを実行され、コンテンツ改ざん、認証情報・DB取得、サービス停止につながる可能性。",
+      "fix": "Movable Type 8.8.7、8.0.14、Premium 2.19へ更新。EOLの8.4.x・7は移行。DynamicTemplateAllowPHP=0を設定しテンプレート互換性を確認。",
+      "investigation": "不審なリクエスト、テンプレート・PHPファイル改変、管理者ログイン、Web/PHP/DBログ、公開ディレクトリの新規ファイルを保全・確認。",
+      "bcp": "CMS停止・静的配信・告知代替、テンプレート互換性、バックアップからの安全な再構築と再開条件を準備。",
+      "tech": "public",
+      "check": "ck-public",
+      "sources": [
+        {
+          "label": "JVN｜JVN#11786640",
+          "url": "https://jvn.jp/jp/JVN11786640/"
+        },
+        {
+          "label": "シックス・アパート公式アドバイザリ",
+          "url": "https://www.sixapart.jp/movabletype/news/2026/11/11-1100.html"
+        }
+      ],
+      "sourceNote": "JVNとベンダー公式情報を2026-11-13 JSTに確認。",
+      "change": "未認証で成立する公開CMSのコード実行として追加。",
+      "history": [
+        {
+          "date": "2026-11-13",
+          "type": "新規掲載",
+          "note": "JVN・ベンダー公式情報に基づき追加。"
+        }
+      ]
+    },
+    {
+      "id": "v-softbank-air6-101107-20261112",
+      "product": "SoftBank Airターミナル6",
+      "title": "SoftBank Airターミナル6 CVE-2026-101107：管理画面からのroot権限OSコマンド注入",
+      "identifiers": [
+        "CVE-2026-101107",
+        "JVN#64740097"
+      ],
+      "published": "2026-11-12",
+      "sourceUpdated": "2026-11-12",
+      "checked": "2026-11-13",
+      "updated": "2026-11-13",
+      "changeType": "新規掲載",
+      "exploitation": "JVN公式本文に実悪用確認の記載なし",
+      "exploitationTone": "amber",
+      "priority": "Airターミナル6のファームウェア版・自動更新完了と管理画面アクセス範囲を確認",
+      "conditions": "ファームウェア1.01.80以前で、Web管理画面へログインできるネットワーク隣接・低権限利用者が必要。",
+      "impact": "root権限で任意OSコマンドを実行され、通信監視・設定改変・踏み台化・サービス停止につながる可能性。",
+      "fix": "修正版は自動配信済み。オフライン端末も接続時に自動取得するが、実際の稼働版と更新完了を端末側で確認。",
+      "investigation": "管理画面ログイン、設定差分、DNS・転送設定、外向き通信、再起動履歴を確認。異常時は事業者手順に沿って保全・交換を相談。",
+      "bcp": "拠点回線の停止・機器交換時の代替回線、認証情報再設定、監視再開条件を準備。",
+      "tech": "remote",
+      "check": "ck-public",
+      "sources": [
+        {
+          "label": "JVN｜JVN#64740097",
+          "url": "https://jvn.jp/jp/JVN64740097/"
+        }
+      ],
+      "sourceNote": "JVN公式本文を2026-11-13 JSTに確認。自動配信と適用済みを同一視しない。",
+      "change": "拠点ルーターの管理画面経由rootコマンド実行を追加。",
+      "history": [
+        {
+          "date": "2026-11-13",
+          "type": "新規掲載",
+          "note": "JVN公式情報に基づき追加。"
+        }
+      ]
     }
   ],
   "actors": [
@@ -39400,63 +40119,51 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
   "updateHighlights": [
     {
       "kind": "incident",
-      "id": "inc-openlogi-20261111"
+      "id": "inc-usmh-scango-20261112"
     },
     {
       "kind": "incident",
-      "id": "inc-humanmade-openlogi-20261111"
+      "id": "inc-macromill-monitor-20261112"
     },
     {
       "kind": "incident",
-      "id": "inc-tradewaltz-20261111"
+      "id": "inc-yeny-api-20261112"
     },
     {
       "kind": "incident",
-      "id": "inc-smbcnikko-shareholding-20261111"
+      "id": "inc-cscloud-github-20261112"
     },
     {
       "kind": "incident",
-      "id": "inc-fabric-tokyo-test-20261111"
+      "id": "inc-mhlw-janis-20261106"
     },
     {
       "kind": "incident",
-      "id": "inc-lrm-notion-fireworks-20261111"
+      "id": "inc-ivry-notion-fireworks-20261112"
     },
     {
       "kind": "incident",
-      "id": "inc-keyuca-nanotec-20261111"
+      "id": "inc-cocolive-kasika-20261111"
     },
     {
       "kind": "incident",
-      "id": "inc-yasukuni-online-20261111"
+      "id": "inc-sevenbank-residence-card-20261111"
     },
     {
       "kind": "incident",
-      "id": "inc-japanpost-tonariwa-20261111"
-    },
-    {
-      "kind": "incident",
-      "id": "inc-idemitsu-carmainte-20261110"
-    },
-    {
-      "kind": "incident",
-      "id": "inc-cao-arara-20261111"
-    },
-    {
-      "kind": "incident",
-      "id": "inc-jfa-store-arara-20261111"
-    },
-    {
-      "kind": "incident",
-      "id": "inc-mufg-arara-20261111"
+      "id": "inc-rinavis-arara-20261111"
     },
     {
       "kind": "vuln",
-      "id": "v-nodejs-202610"
+      "id": "v-apache-httpd-2471-20261111"
     },
     {
       "kind": "vuln",
-      "id": "v-chrome-202610"
+      "id": "v-movabletype-117687-20261111"
+    },
+    {
+      "kind": "vuln",
+      "id": "v-softbank-air6-101107-20261112"
     }
   ],
   "actorTimeline": [
@@ -39842,6 +40549,46 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
       ],
       "actors": [],
       "checked": "2026-11-06"
+    },
+    {
+      "id": "ev-europol-tornado-20261112",
+      "period": "2025年5月～2026年10月",
+      "published": "2026-11-12",
+      "title": "Europol Operation TorNado：ダークウェブ売人・購入者354人を逮捕",
+      "evidenceType": "法執行機関の公式発表・ダークウェブ犯罪市場対策",
+      "text": "14か国の法執行機関が354人を逮捕し、約2億1,000万ユーロ相当の資産と薬物5トン超を押収。Archetyp、Bohemia、Nemesis、Kingdom、Tor2Door等の市場摘発後の追跡で、フォーラム・売人ショップ・暗号化メッセージも対象。特定の既存16グループへ一括帰属させない。",
+      "checks": [
+        "ダークウェブだけでなく通常Web・メッセージサービスを使う情報売買・募集も監視対象にする",
+        "窃取情報の売買観測を被害確認と同一視せず、組織ログ・公式通知で照合する"
+      ],
+      "sources": [
+        {
+          "label": "Europol｜Operation TorNado 11/12",
+          "url": "https://www.europol.europa.eu/media-press/newsroom/news/354-dark-web-vendors-and-buyers-arrested-in-europol-coordinated-global-crackdown"
+        }
+      ],
+      "actors": [],
+      "checked": "2026-11-13"
+    },
+    {
+      "id": "ev-europol-endgame-20261112",
+      "period": "資料公表2026-11-12（最新行動は資料本文参照）",
+      "published": "2026-11-12",
+      "title": "Operation Endgame：Gootloader・CastleRAT・StealC基盤を国際摘発",
+      "evidenceType": "法執行機関の公式発表・犯罪インフラ対策",
+      "text": "Gootloader、CastleRAT、StealCの基盤を対象に235台のサーバーと257ドメインを差押え・無力化し、681サイトを是正。約640万件の被害データセットを確保したと発表。窃取認証情報が犯罪市場で販売され、ランサムウェア等の後続侵害へ使われる分業構造を示す。マルウェア名を攻撃グループ数へ加えない。",
+      "checks": [
+        "インフォスティーラー由来の認証情報流出通知、再利用パスワード、長寿命セッション・APIトークンを点検",
+        "テイクダウン後も残存端末・別基盤移行を想定し、資格情報失効と端末再構築を組み合わせる"
+      ],
+      "sources": [
+        {
+          "label": "Europol｜Operation Endgame 11/12",
+          "url": "https://www.europol.europa.eu/media-press/newsroom/news/64-million-victim-datasets-secured-in-international-operation-against-malware-networks"
+        }
+      ],
+      "actors": [],
+      "checked": "2026-11-13"
     }
   ],
   "crimeGlossary": [
