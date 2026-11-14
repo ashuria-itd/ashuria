@@ -198,25 +198,25 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
 {
   "meta": {
     "schemaVersion": "1.0",
-    "version": "1.0.45",
+    "version": "1.0.46",
     "title": "セキュリティインテリジェンスハブ",
-    "compiledDate": "2026-11-14",
-    "incidentSnapshotDate": "2026-11-14",
+    "compiledDate": "2026-11-15",
+    "incidentSnapshotDate": "2026-11-15",
     "technicalReviewed": "2026-10-25",
     "timezone": "Asia/Tokyo",
-    "incidentSource": "v1.0.44（482項目）に独立事案5件・関連組織11件を追加。既存482件保持。",
-    "coverage": "11/13 07時台 JST前回基準後～11/14 07時台 JST。直近7日・追跡候補を再確認し、大学・企業・行政・金融・委託先・SaaSを公式一次資料中心に照合。",
-    "vulnerabilityCoverage": "93テーマ。JVN/CERT/CCの11/13新着、PostgreSQL、OpenSSL、Ubuntu、Debian、CISA KEV、主要OS・ブラウザ・ランタイムを独立確認。",
-    "verification": "新規16事例、既存3件の続報、脆弱性7テーマ追加・1テーマ更新。攻撃アクター図鑑16件・動向18件は変更なし。第三者犯行主張は確認待ちへ記録。",
+    "incidentSource": "v1.0.45（498項目）を保持し、独立事案5件・関連組織11件を追加。",
+    "coverage": "11/14 07時台 JST前回基準後～11/15 07時台 JST。直近7日・追跡候補を再確認し、大学・企業・行政・委託先・SaaSを公式一次資料中心に照合。",
+    "vulnerabilityCoverage": "93テーマを維持。JVN/JPCERT、CERT/CC、CISA KEV、Red Hat、Ubuntu、Debian、SUSE、AWS、MSRC、Chrome、Mozilla等を独立照合し、11/14までの確定追加差分なし。",
+    "verification": "新規・未掲載16事例を追加。脆弱性テーマは変更なし。攻撃アクター図鑑16件を保持し、LLMJacking動向を更新、FBIのARTEX動向1件を追加。",
     "reconciliation": {
       "newerRows": 180,
       "olderBiRows": 155,
       "preservedIds": 345,
       "addedAgainstBi": 28,
-      "previousRows": 482,
+      "previousRows": 498,
       "addedThisUpdate": 16,
-      "updatedThisUpdate": 3,
-      "currentRows": 498,
+      "updatedThisUpdate": 0,
+      "currentRows": 514,
       "associationThisUpdate": 11,
       "referenceFixesThisUpdate": 0
     },
@@ -449,14 +449,19 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         "date": "2026-11-14",
         "version": "1.0.45",
         "text": "新規16事例、既存3件の続報、脆弱性7テーマ追加・1テーマ更新。大阪公立大学第6報、Hange、CLUB GIANTS、AXA、prismatix、アララ・COMSBI・OpenLogi・デジタルアーツ波及、PostgreSQL・ImageTragick2等を反映。498事例・93脆弱性・16アクター・18動向。"
+      },
+      {
+        "date": "2026-11-15",
+        "version": "1.0.46",
+        "text": "未掲載16事例（独立5・関連組織11）を追加。Snow Peak、paiza、PLAID、Fireworks AI／Notion、慶應義塾・跡見学園・兵庫県立大学・東洋大学、京阪・おやまゆうえん、KCN等を反映。93脆弱性・16アクターを維持し、LLMJackingを更新、FBIのARTEX動向を追加。514事例・93脆弱性・16アクター・19動向。"
       }
     ],
     "playbookReviewed": "2026-11-06",
     "actorReviewed": "2026-10-25",
     "uiReviewed": "2026-11-06",
-    "researchNotes": "2026-11-09 JST：前回成功後から実行時点、直近7日、追跡中候補を三分野で独立照合。一次本文を確認できない候補と攻撃者主張は確認待ちを維持。",
-    "vulnerabilitySupplementChecked": "2026-11-09",
-    "actorSupplementChecked": "2026-11-09"
+    "researchNotes": "2026-11-15 JST：前回成功後から実行時点、直近7日、追跡中候補を三分野で独立照合。一次本文を確認できない候補と攻撃者主張は確認待ちを維持。",
+    "vulnerabilitySupplementChecked": "2026-11-15",
+    "actorSupplementChecked": "2026-11-15"
   },
   "incidents": [
     {
@@ -23328,6 +23333,717 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
           "text": "11/13続報からMyAXA約597,000レコード、対象外カード情報、MyAXA再開と委託先機能停止を追加。"
         }
       ]
+    },
+    {
+      "id": "inc-keihan-comsbi-20261114",
+      "date": "2026-11-14",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-14",
+      "org": "京阪グループ／LINE公式アカウント（COMSBI関連）",
+      "industry": "交通・流通・小売",
+      "cat": [
+        "委託先",
+        "情報漏えい",
+        "LINE"
+      ],
+      "status": "複数LINE公式アカウントの会員情報が漏えいした可能性",
+      "info": "SonicMoovのCOMSBI Enterpriseへの不正アクセスに関連し、京阪電車、京都タワーサンド、枚方モール、京阪百貨店等のLINE公式アカウントで管理した情報が外部流出した可能性を公表。",
+      "scope": "アカウントごとにLINE表示名・プロフィール画像URL・ユーザーID、氏名・住所、生年月日・性別等が異なる。最大件数は京阪電車26,914、京都タワーサンド90,550、枚方モール46,957、京阪百貨店51,223等だが、項目別最大値で重複し得るため合算しない。",
+      "impact": "交通・商業施設・小売の同一グループで通知・問い合わせが集中し得る。LINE連携の停止・代替周知・対象者特定を横断管理する必要がある。",
+      "exclude": "項目別最大件数を人数や独立攻撃数として合算しない。京阪各社基盤への直接侵入や全項目の実流出を確定しない。",
+      "action": "公式アカウント別に取得項目、対象期間、通知主体、トークン・セッション、代替連絡手段、再開条件を確認。",
+      "sources": [
+        {
+          "label": "京阪ホールディングス｜11/14公式PDF",
+          "url": "https://www.keihan.co.jp/corporate/info/release/assets/261114_keihan-holdings.pdf"
+        }
+      ],
+      "change": "京阪グループの複数LINE公式アカウントをCOMSBI提供元侵害の関連組織として追加。項目別最大件数は重複を考慮し合算しない。",
+      "secondary": {
+        "status": "未公表・不明",
+        "date": "2026-11-14",
+        "text": "不正利用・金銭被害等の具体的な二次被害は公式本文から確定していない。",
+        "checked": "2026-11-15"
+      },
+      "checked": "2026-11-15",
+      "updated": "2026-11-15",
+      "batch": "2026-11-15日次調査",
+      "evidence": "2026-11-15 07時台 JSTに被害組織・提供元・公的機関の公式本文または公式PDFを確認。",
+      "changeType": "新規掲載",
+      "history": [
+        {
+          "date": "2026-11-15",
+          "text": "京阪グループの複数LINE公式アカウントをCOMSBI提供元侵害の関連組織として追加。項目別最大件数は重複を考慮し合算しない。"
+        }
+      ],
+      "group": "SonicMoov COMSBI Enterprise"
+    },
+    {
+      "id": "inc-atomi-teket-20261114",
+      "date": "2026-11-14",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-14",
+      "org": "跡見学園中学校高等学校／文化祭予約（teket関連）",
+      "industry": "教育・学校",
+      "cat": [
+        "委託先",
+        "情報漏えい",
+        "予約"
+      ],
+      "status": "2024年文化祭予約情報が漏えい対象に含まれるか確認中",
+      "info": "2024年9月の文化祭で受験生・保護者の入場予約に利用したteketについて、提供元への不正アクセスに伴う影響を公表。学校データの該当有無と件数は確認中。",
+      "scope": "teket全体の対象項目は氏名・メールアドレス、登録内容により生年月日・年齢・性別・住所・電話番号・チケットコード等。学校の予約者が実際に対象か、件数は未確定。",
+      "impact": "入試・学校行事の予約情報が標的型連絡に利用される可能性。受験生・保護者への通知と次年度予約の代替・再開判断が必要。",
+      "exclude": "クレジットカード情報・パスワードの漏えいは確認されていない。学校利用者の全件流出や被害人数を確定しない。",
+      "action": "提供元の対象者特定、学校側保有データとの突合、受験生・保護者への通知、次年度予約の代替運用を確認。",
+      "sources": [
+        {
+          "label": "跡見学園中学校高等学校｜11/14公式公表",
+          "url": "https://www.atomi.ac.jp/jh/news/detail/8710/"
+        }
+      ],
+      "change": "teket提供元侵害の教育機関波及として追加。学校利用データの該当有無・件数は確認中として保持。",
+      "secondary": {
+        "status": "未公表・不明",
+        "date": "2026-11-14",
+        "text": "不正利用・金銭被害等の具体的な二次被害は公式本文から確定していない。",
+        "checked": "2026-11-15"
+      },
+      "checked": "2026-11-15",
+      "updated": "2026-11-15",
+      "batch": "2026-11-15日次調査",
+      "evidence": "2026-11-15 07時台 JSTに被害組織・提供元・公的機関の公式本文または公式PDFを確認。",
+      "changeType": "新規掲載",
+      "history": [
+        {
+          "date": "2026-11-15",
+          "text": "teket提供元侵害の教育機関波及として追加。学校利用データの該当有無・件数は確認中として保持。"
+        }
+      ],
+      "group": "teket提供元侵害"
+    },
+    {
+      "id": "inc-mannoya-arara-20261114",
+      "date": "2026-11-14",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-14",
+      "org": "萬野屋／メール配信（アララ関連）",
+      "industry": "飲食・小売",
+      "cat": [
+        "委託先",
+        "情報漏えい",
+        "メール"
+      ],
+      "status": "メール配信情報の外部流出を確認",
+      "info": "外部メール配信サービスの提供元アララへの不正アクセスに関連し、萬野屋が利用した配信情報の流出を公表。",
+      "scope": "メールアドレス、氏名、グループラベル、誕生月・日（年を除く）。件数は公式本文で未公表。",
+      "impact": "誕生日情報と氏名・メールを組み合わせた標的型連絡、なりすましに注意が必要。メール配信停止中の代替周知も確認する。",
+      "exclude": "生年、パスワード、カード情報、件数を推測しない。提供元の総件数と重複合算しない。",
+      "action": "対象者通知、メール配信の代替、正規送信元の周知、問い合わせ・フィッシング監視、再開条件を確認。",
+      "sources": [
+        {
+          "label": "萬野屋｜11/14公式公表",
+          "url": "https://www.mannoya.com/company/information/9103/"
+        }
+      ],
+      "change": "アララ関連の利用組織公表として、流出確認項目と配信停止を追加。",
+      "secondary": {
+        "status": "未公表・不明",
+        "date": "2026-11-14",
+        "text": "不正利用・金銭被害等の具体的な二次被害は公式本文から確定していない。",
+        "checked": "2026-11-15"
+      },
+      "checked": "2026-11-15",
+      "updated": "2026-11-15",
+      "batch": "2026-11-15日次調査",
+      "evidence": "2026-11-15 07時台 JSTに被害組織・提供元・公的機関の公式本文または公式PDFを確認。",
+      "changeType": "新規掲載",
+      "history": [
+        {
+          "date": "2026-11-15",
+          "text": "アララ関連の利用組織公表として、流出確認項目と配信停止を追加。"
+        }
+      ],
+      "group": "アララメッセージ関連"
+    },
+    {
+      "id": "inc-niigata-pref-kankyomail-20261113",
+      "date": "2026-11-13",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-13",
+      "org": "新潟県／にいがた県環境メール",
+      "industry": "行政・自治体",
+      "cat": [
+        "委託先",
+        "情報漏えい",
+        "サービス停止"
+      ],
+      "status": "委託先侵害・約750登録者の情報漏えい可能性を調査中",
+      "info": "サービス運用事業者イー・エム・ズィーから11月12日に不正アクセスの連絡を受け、県が環境メールを停止し影響を調査。",
+      "scope": "約750登録者のメールアドレス、性別、年代、居住市町村が漏えいした可能性。漏えいの有無・範囲は調査中。",
+      "impact": "環境・防災等の行政周知が停止し、登録者へのなりすまし連絡の注意喚起と代替発信が必要。",
+      "exclude": "約750は登録者規模であり漏えい確定人数ではない。委託先の侵入経路・攻撃者は未公表。",
+      "action": "代替周知経路、委託先ログ・対象者突合、再開条件、登録情報の最小化、問い合わせ体制を確認。",
+      "sources": [
+        {
+          "label": "新潟県｜11/13公式公表",
+          "url": "https://www.pref.niigata.lg.jp/site/kankyo/kankyomail-rouei.html"
+        }
+      ],
+      "change": "行政メール配信委託先への侵害として追加。約750は登録者規模、漏えい有無・範囲は調査中とした。",
+      "secondary": {
+        "status": "未公表・不明",
+        "date": "2026-11-13",
+        "text": "不正利用・金銭被害等の具体的な二次被害は公式本文から確定していない。",
+        "checked": "2026-11-15"
+      },
+      "checked": "2026-11-15",
+      "updated": "2026-11-15",
+      "batch": "2026-11-15日次調査",
+      "evidence": "2026-11-15 07時台 JSTに被害組織・提供元・公的機関の公式本文または公式PDFを確認。",
+      "changeType": "新規掲載",
+      "history": [
+        {
+          "date": "2026-11-15",
+          "text": "行政メール配信委託先への侵害として追加。約750は登録者規模、漏えい有無・範囲は調査中とした。"
+        }
+      ]
+    },
+    {
+      "id": "inc-u-hyogo-arara-20261113",
+      "date": "2026-11-13",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-13",
+      "org": "兵庫県立大学／メール配信（アララ関連）",
+      "industry": "教育・大学",
+      "cat": [
+        "委託先",
+        "情報漏えい",
+        "メール"
+      ],
+      "status": "教職員・学生メールアドレス7,623件の漏えい確認",
+      "info": "委託先アバンセシステムが利用するアララ メッセージへの不正アクセスに関連し、大学の配信先メールアドレスが漏えい。",
+      "scope": "大学が発行した教職員・学生のメールアドレス7,623件。氏名・所属は含まれないと公表。",
+      "impact": "大学ドメインを識別できるメールアドレスへのフィッシング、MFA窃取、研究・学務を装う連絡が増える可能性。",
+      "exclude": "7,623件を人数と断定しない。氏名・所属・パスワードの漏えいを推定しない。",
+      "action": "対象アドレスへの周知、学内認証・MFAの監視、正規送信元確認、フィッシング報告窓口を点検。",
+      "sources": [
+        {
+          "label": "兵庫県立大学｜11/13公式公表",
+          "url": "https://www.u-hyogo.ac.jp/news/news/20261113newsso.html"
+        }
+      ],
+      "change": "アララ関連の大学波及として、大学発行メールアドレス7,623件と対象外項目を追加。",
+      "secondary": {
+        "status": "未公表・不明",
+        "date": "2026-11-13",
+        "text": "不正利用・金銭被害等の具体的な二次被害は公式本文から確定していない。",
+        "checked": "2026-11-15"
+      },
+      "checked": "2026-11-15",
+      "updated": "2026-11-15",
+      "batch": "2026-11-15日次調査",
+      "evidence": "2026-11-15 07時台 JSTに被害組織・提供元・公的機関の公式本文または公式PDFを確認。",
+      "changeType": "新規掲載",
+      "history": [
+        {
+          "date": "2026-11-15",
+          "text": "アララ関連の大学波及として、大学発行メールアドレス7,623件と対象外項目を追加。"
+        }
+      ],
+      "group": "アララメッセージ関連"
+    },
+    {
+      "id": "inc-toyo-alumni-arara-20261111",
+      "date": "2026-11-11",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-11",
+      "org": "東洋大学／校友・保護者向けメール（アララ関連）",
+      "industry": "教育・大学",
+      "cat": [
+        "委託先",
+        "情報漏えい",
+        "メール"
+      ],
+      "status": "校友・保護者向け配信メールアドレスの漏えい確認",
+      "info": "8月・10月に配信した校友・保護者向けニュースレターの宛先メールアドレスが、アララへの不正アクセスに関連して漏えい。",
+      "scope": "メールアドレスのみ。氏名、学籍番号、住所、電話番号等は対象外と公表。",
+      "impact": "大学・校友会・保護者連絡を装うフィッシングへの注意が必要。現役学生向け基盤と校友・保護者配信の責任分界を確認する。",
+      "exclude": "同大学の別事案や現役学生全体への侵害と統合しない。対象外項目の漏えいを推定しない。",
+      "action": "対象配信リスト、通知、正規送信元、フィッシング報告、配信再開条件を確認。",
+      "sources": [
+        {
+          "label": "東洋大学｜11/11公式公表",
+          "url": "https://www.toyo.ac.jp/news/20261111-20555.html"
+        }
+      ],
+      "change": "アララ関連の大学波及として、校友・保護者向けメールアドレスのみの漏えいを追加。",
+      "secondary": {
+        "status": "未公表・不明",
+        "date": "2026-11-11",
+        "text": "不正利用・金銭被害等の具体的な二次被害は公式本文から確定していない。",
+        "checked": "2026-11-15"
+      },
+      "checked": "2026-11-15",
+      "updated": "2026-11-15",
+      "batch": "2026-11-15日次調査",
+      "evidence": "2026-11-15 07時台 JSTに被害組織・提供元・公的機関の公式本文または公式PDFを確認。",
+      "changeType": "新規掲載",
+      "history": [
+        {
+          "date": "2026-11-15",
+          "text": "アララ関連の大学波及として、校友・保護者向けメールアドレスのみの漏えいを追加。"
+        }
+      ],
+      "group": "アララメッセージ関連"
+    },
+    {
+      "id": "inc-yokohama-tkc-arara-20261113",
+      "date": "2026-11-13",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-13",
+      "org": "横浜市／電子申請・届出システム（TKC・アララ関連）",
+      "industry": "行政・自治体",
+      "cat": [
+        "委託先",
+        "情報漏えい",
+        "電子申請"
+      ],
+      "status": "一部利用者メールアドレスの漏えい確認",
+      "info": "横浜市電子申請・届出システムの運営委託先TKCが利用するアララの侵害に関連し、一部利用者のメールアドレスが対象と確認。",
+      "scope": "電子申請・届出システムから送信に使用した一部メールアドレス。件数・個別対象は公式続報を確認する。",
+      "impact": "行政手続・申請内容を装う連絡への注意と、メール通知停止時の手続継続・問い合わせ代替が必要。",
+      "exclude": "申請本文、マイナンバー、本人確認書類等の漏えいを推定しない。提供元全体の件数と重複集計しない。",
+      "action": "対象手続・通知期間、対象者通知、申請ポータル内告知、代替連絡、フィッシング監視を確認。",
+      "sources": [
+        {
+          "label": "横浜市｜11/13更新",
+          "url": "https://www.city.yokohama.lg.jp/city-info/gyosei-kansa/yokohamadx/notice/notice20261106.html"
+        }
+      ],
+      "change": "TKC・アララ関連の自治体波及として、一部利用者メールアドレスの漏えい確認を追加。",
+      "secondary": {
+        "status": "未公表・不明",
+        "date": "2026-11-13",
+        "text": "不正利用・金銭被害等の具体的な二次被害は公式本文から確定していない。",
+        "checked": "2026-11-15"
+      },
+      "checked": "2026-11-15",
+      "updated": "2026-11-15",
+      "batch": "2026-11-15日次調査",
+      "evidence": "2026-11-15 07時台 JSTに被害組織・提供元・公的機関の公式本文または公式PDFを確認。",
+      "changeType": "新規掲載",
+      "history": [
+        {
+          "date": "2026-11-15",
+          "text": "TKC・アララ関連の自治体波及として、一部利用者メールアドレスの漏えい確認を追加。"
+        }
+      ],
+      "group": "アララメッセージ関連"
+    },
+    {
+      "id": "inc-fireworks-ai-20261109",
+      "date": "2026-11-09",
+      "dateBasis": "続報日（初回公表2026-10-09）",
+      "sourceUpdated": "2026-11-09",
+      "org": "Fireworks AI／AI推論・学習基盤",
+      "industry": "IT・SaaS",
+      "cat": [
+        "不正アクセス",
+        "情報漏えい",
+        "AI",
+        "委託先"
+      ],
+      "status": "顧客メタデータ等への影響確認・Notion利用組織へ波及",
+      "info": "Fireworksは、第三者クラウド事業者の侵害を起点に開発端末へ到達され、不正ワークロード実行と追加の顧客データ影響を確認。Notionは影響ワークスペースが1%未満と公表。",
+      "scope": "リソースメタデータ、請求先・請求履歴等（カード番号を除く）。限定された顧客で秘密情報、データセット、不完全なモデル重み。Notion側ではInsightsのチャット記録が含まれ、他機能は対象外。",
+      "impact": "AI SaaSの再委託先、推論基盤、クラウド基盤を跨いだ連鎖。プロンプトへ入力した資格情報のローテーション、委託先遮断、データ残存確認が必要。",
+      "exclude": "Fireworksは金銭目的のLLMJacking関連主体とのリンクを示したが、既存16グループのいずれかへの帰属や全顧客影響を認定しない。Notion以外の顧客影響も個別通知範囲で確認する。",
+      "action": "AI入力・応答ログ、APIキー・パスワードの混入、再委託先一覧、ZDR条件、接続遮断・データ削除・資格情報失効を確認。",
+      "sources": [
+        {
+          "label": "Fireworks AI｜11/9続報",
+          "url": "https://fireworks.ai/security/bulletins/october-2026-security-incident-update"
+        },
+        {
+          "label": "Notion｜第三者AIベンダー事案",
+          "url": "https://www.notion.com/en-gb/security/advisories/security-incident-involving-a-third-party-ai-vendor"
+        }
+      ],
+      "change": "Fireworks AI提供元事案とNotionの影響範囲を追加。AI再委託先・資格情報・LLMJacking分析を事実とベンダー評価に分けた。",
+      "secondary": {
+        "status": "未公表・不明",
+        "date": "2026-11-09",
+        "text": "不正利用・金銭被害等の具体的な二次被害は公式本文から確定していない。",
+        "checked": "2026-11-15"
+      },
+      "checked": "2026-11-15",
+      "updated": "2026-11-15",
+      "batch": "2026-11-15日次調査",
+      "evidence": "2026-11-15 07時台 JSTに被害組織・提供元・公的機関の公式本文または公式PDFを確認。",
+      "changeType": "新規掲載",
+      "history": [
+        {
+          "date": "2026-11-15",
+          "text": "Fireworks AI提供元事案とNotionの影響範囲を追加。AI再委託先・資格情報・LLMJacking分析を事実とベンダー評価に分けた。"
+        }
+      ],
+      "group": "Notion AI／Fireworks関連",
+      "occurred": "2026-10-23～2026-10-24"
+    },
+    {
+      "id": "inc-keio-notion-fireworks-20261113",
+      "date": "2026-11-13",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-13",
+      "org": "慶應義塾／Notion AI（Fireworks関連）",
+      "industry": "教育・大学",
+      "cat": [
+        "委託先",
+        "情報漏えい",
+        "AI"
+      ],
+      "status": "利用環境への影響可能性を調査中",
+      "info": "Notionから、AI処理委託先Fireworksへの不正アクセスにより慶應義塾の利用環境も影響を受けた可能性があるとの通知。問題箇所の遮断済み報告を受け、安全性と影響を調査中。",
+      "scope": "対象となるチャット内容、個人・団体、件数は調査中。",
+      "impact": "研究・教育・管理業務でAIへ入力した内容、資格情報、個人・団体情報の確認と、SaaS継続利用の判断が必要。",
+      "exclude": "慶應義塾のシステムへの直接侵入、全Notionページ、具体的な件数・二次被害を推定しない。",
+      "action": "対象期間のAI利用履歴、機密情報・資格情報の入力、対象者通知、APIキー失効、代替SaaS運用を確認。",
+      "sources": [
+        {
+          "label": "慶應義塾｜11/13公式公表",
+          "url": "https://www.keio.ac.jp/ja/news/20261113-news/"
+        }
+      ],
+      "change": "Notion AI／Fireworks関連の大学利用組織として、影響可能性と調査中の範囲を追加。",
+      "secondary": {
+        "status": "未公表・不明",
+        "date": "2026-11-13",
+        "text": "不正利用・金銭被害等の具体的な二次被害は公式本文から確定していない。",
+        "checked": "2026-11-15"
+      },
+      "checked": "2026-11-15",
+      "updated": "2026-11-15",
+      "batch": "2026-11-15日次調査",
+      "evidence": "2026-11-15 07時台 JSTに被害組織・提供元・公的機関の公式本文または公式PDFを確認。",
+      "changeType": "新規掲載",
+      "history": [
+        {
+          "date": "2026-11-15",
+          "text": "Notion AI／Fireworks関連の大学利用組織として、影響可能性と調査中の範囲を追加。"
+        }
+      ],
+      "group": "Notion AI／Fireworks関連"
+    },
+    {
+      "id": "inc-forstartups-notion-fireworks-20261113",
+      "date": "2026-11-13",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-13",
+      "org": "フォースタートアップス／Notion AI（Fireworks関連）",
+      "industry": "人材・ITサービス",
+      "cat": [
+        "委託先",
+        "情報漏えい",
+        "AI"
+      ],
+      "status": "Notion AIチャット最大約1,900件に個人情報を確認",
+      "info": "従業員が利用したNotion AIの入力・回答の一部が外部流出した可能性。対象期間のチャットに顧客等の個人情報が含まれることを確認し、全量精査中。",
+      "scope": "2026年10月5～24日のチャット履歴、最大約1,900件。件数はチャット等の項目数であり人数と同一視しない。",
+      "impact": "人材・取引先情報を含むAI入力の対象者特定、通知、フィッシング監視と、機密情報をAIへ入力する際の統制が必要。",
+      "exclude": "自社サービス・社内システムへの直接侵入はないと公表。最大約1,900件を被害人数としない。",
+      "action": "AI履歴の全量精査、対象者通知、資格情報の混入・ローテーション、再委託先とDLP・入力ルールを確認。",
+      "sources": [
+        {
+          "label": "フォースタートアップス｜11/13公式公表",
+          "url": "https://www.forstartups.com/news/20261113"
+        }
+      ],
+      "change": "Notion AI／Fireworks関連の利用組織として、チャット最大約1,900件と二次被害未確認を追加。",
+      "secondary": {
+        "status": "報告なし（11/13時点）",
+        "date": "2026-11-13",
+        "text": "本件に起因する不正利用等の二次被害は確認されていないと公表。",
+        "checked": "2026-11-15"
+      },
+      "checked": "2026-11-15",
+      "updated": "2026-11-15",
+      "batch": "2026-11-15日次調査",
+      "evidence": "2026-11-15 07時台 JSTに被害組織・提供元・公的機関の公式本文または公式PDFを確認。",
+      "changeType": "新規掲載",
+      "history": [
+        {
+          "date": "2026-11-15",
+          "text": "Notion AI／Fireworks関連の利用組織として、チャット最大約1,900件と二次被害未確認を追加。"
+        }
+      ],
+      "group": "Notion AI／Fireworks関連",
+      "occurred": "2026-10-05～2026-10-24"
+    },
+    {
+      "id": "inc-receptionist-notion-fireworks-20261112",
+      "date": "2026-11-12",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-12",
+      "org": "RECEPTIONIST／Notion AI（Fireworks関連）",
+      "industry": "IT・SaaS",
+      "cat": [
+        "委託先",
+        "情報漏えい",
+        "AI"
+      ],
+      "status": "社外53名分を含むAI記録を流出扱いで対応",
+      "info": "Notion AI利用記録の一部について第三者取得は未確定だが、社外の方の情報を確認し、流出したものとみなして通知・報告を進めると公表。",
+      "scope": "社外53名分と従業員情報。氏名、会社名、電話、メール、問い合わせ内容等。カード・銀行口座情報は対象外。",
+      "impact": "顧客対応内容をAIへ入力する業務で、再委託先の侵害が取引先通知へ波及。入力ルールと対象者特定手順が必要。",
+      "exclude": "RECEPTIONIST等の提供サービス、来訪者・従業員情報は対象外。第三者取得は未確定で、53名を他組織件数と合算しない。",
+      "action": "AI入力内容、対象者通知、正規通知ドメイン、資格情報混入、再委託先・DLP・保持期間を確認。",
+      "sources": [
+        {
+          "label": "RECEPTIONIST｜11/12公式PDF",
+          "url": "https://tdnet-pdf.kabutan.jp/20261112/140120261112577184.pdf"
+        }
+      ],
+      "change": "Notion AI／Fireworks関連の利用組織として、社外53名分・対象項目・自社サービス対象外を追加。",
+      "secondary": {
+        "status": "報告なし（11/12時点）",
+        "date": "2026-11-12",
+        "text": "本件による情報の不正利用は確認されていないと公表。",
+        "checked": "2026-11-15"
+      },
+      "checked": "2026-11-15",
+      "updated": "2026-11-15",
+      "batch": "2026-11-15日次調査",
+      "evidence": "2026-11-15 07時台 JSTに被害組織・提供元・公的機関の公式本文または公式PDFを確認。",
+      "changeType": "新規掲載",
+      "history": [
+        {
+          "date": "2026-11-15",
+          "text": "Notion AI／Fireworks関連の利用組織として、社外53名分・対象項目・自社サービス対象外を追加。"
+        }
+      ],
+      "group": "Notion AI／Fireworks関連",
+      "occurred": "2026-10-05～2026-10-23"
+    },
+    {
+      "id": "inc-paiza-staging-20261113",
+      "date": "2026-11-13",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-13",
+      "org": "paiza／開発用ステージング環境",
+      "industry": "IT・人材",
+      "cat": [
+        "アクセス管理",
+        "情報漏えいの可能性",
+        "開発環境"
+      ],
+      "status": "固定認証情報により最大902,576件がアクセス可能だったことを確認",
+      "info": "開発用ステージング環境で固定の認証情報が長期間使われ、退職者や外部関係者がアクセスできた可能性を公表。実際の不正取得は確認されていない。",
+      "scope": "最大902,576件のレコードがアクセス可能。ユーザーID、GitHub ID、ニックネーム、学校ID（一部期間）、プロフィール・学歴・応募履歴、予備メール、法人担当者情報等。主要項目は原則マスクだが一部期間・項目に例外。",
+      "impact": "開発・検証環境の長寿命共有認証、退職者・委託先のアクセス廃止、実データ持込、ログ保持の不備が長期露出につながる。",
+      "exclude": "最大902,576はアクセス可能レコード数で、漏えい人数・実取得件数ではない。全期間・全項目が非マスクだったとはしない。",
+      "action": "検証環境の固定・共有資格情報、退職・契約終了時失効、実データ・マスキング、アクセスログ、環境廃止手順を点検。",
+      "sources": [
+        {
+          "label": "paiza｜11/13公式公表",
+          "url": "https://www.paiza.co.jp/news/20261113/access-management-notice/"
+        }
+      ],
+      "change": "長期の固定認証情報と最大902,576レコードのアクセス可能性を追加。実取得未確認・件数単位を明記。",
+      "secondary": {
+        "status": "報告なし（11/13時点）",
+        "date": "2026-11-13",
+        "text": "不正利用等の具体的な二次被害は確認されていない。",
+        "checked": "2026-11-15"
+      },
+      "checked": "2026-11-15",
+      "updated": "2026-11-15",
+      "batch": "2026-11-15日次調査",
+      "evidence": "2026-11-15 07時台 JSTに被害組織・提供元・公的機関の公式本文または公式PDFを確認。",
+      "changeType": "新規掲載",
+      "history": [
+        {
+          "date": "2026-11-15",
+          "text": "長期の固定認証情報と最大902,576レコードのアクセス可能性を追加。実取得未確認・件数単位を明記。"
+        }
+      ],
+      "occurred": "2013年～2026-08-13（アクセス可能期間）"
+    },
+    {
+      "id": "inc-snowpeak-multi-20261113",
+      "date": "2026-11-13",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-13",
+      "org": "スノーピーク／複数Webサービス",
+      "industry": "小売・EC",
+      "cat": [
+        "不正アクセス",
+        "情報漏えい",
+        "アカウント悪用",
+        "サービス停止"
+      ],
+      "status": "4サービスで侵害・漏えい可能性・不正ログインを確認",
+      "info": "リユース購入、イベント予約、コミュニティアプリ、公式オンラインストアで異なる事象を公表。オンラインストアは認証情報リスト型攻撃で最大445アカウントへの不正ログインを確認。",
+      "scope": "リユース購入は最大24,948人（銀行口座情報を含むが暗証番号等を除く）、イベント予約は最大5,923人、コミュニティアプリは21,553人、オンラインストアは最大445アカウントの閲覧情報。件数・人・アカウントを合算しない。",
+      "impact": "口座情報を含む通知、イベント・宿泊運用、EC・ポイント・会員認証の復旧を別々に管理する必要。オンラインストアは再開済み、他サービスは停止継続。",
+      "exclude": "フルカード番号、パスワード、暗証番号・インターネットバンキング資格情報の漏えいを推定しない。部分再開を全面復旧・調査完了としない。",
+      "action": "サービス別に対象者通知、口座・カードの対象外、パスワード再利用、セッション、代替受付、再開判定・復旧順を確認。",
+      "sources": [
+        {
+          "label": "スノーピーク｜11/13公式公表",
+          "url": "https://www.snowpeak.co.jp/news/p20261113-0/"
+        }
+      ],
+      "change": "4サービスの異なる事象を一公表として追加し、人数・アカウント数・対象外情報・部分再開を分離。",
+      "secondary": {
+        "status": "報告なし（11/13時点）",
+        "date": "2026-11-13",
+        "text": "各事象に起因する金銭被害等の具体的な二次被害は公表本文で確認できない。",
+        "checked": "2026-11-15"
+      },
+      "checked": "2026-11-15",
+      "updated": "2026-11-15",
+      "batch": "2026-11-15日次調査",
+      "evidence": "2026-11-15 07時台 JSTに被害組織・提供元・公的機関の公式本文または公式PDFを確認。",
+      "changeType": "新規掲載",
+      "history": [
+        {
+          "date": "2026-11-15",
+          "text": "4サービスの異なる事象を一公表として追加し、人数・アカウント数・対象外情報・部分再開を分離。"
+        }
+      ],
+      "occurred": "2026-10-30～2026-11-09（公表された複数事象）"
+    },
+    {
+      "id": "inc-plaid-karte-20261113",
+      "date": "2026-11-13",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-13",
+      "org": "プレイド／KARTE",
+      "industry": "IT・SaaS",
+      "cat": [
+        "不正アクセス",
+        "サービス停止",
+        "情報漏えいの可能性"
+      ],
+      "status": "第三者アクセスを検知しKARTE全プロジェクトを緊急停止・調査中",
+      "info": "KARTE環境への第三者による不正アクセスを検知し、全プロジェクト・機能を順次停止して緊急メンテナンス。データ影響を調査中。",
+      "scope": "影響データ・顧客・件数、侵入経路は調査中。停止処理の時点で実行中ジョブが中断した可能性。",
+      "impact": "顧客接点・Web計測・配信・業務自動化が一斉停止し、利用企業側の代替運用、ジョブ整合性、再開条件の確認が必要。",
+      "exclude": "情報漏えい、顧客企業の被害、原因・攻撃者を確定しない。サービス停止をデータ漏えい確認と同一視しない。",
+      "action": "連携停止、実行中ジョブ・配信の整合性、APIキー・認証、ログ保全、代替接客・配信、段階再開条件を確認。",
+      "sources": [
+        {
+          "label": "プレイド｜11/13公式公表",
+          "url": "https://plaid.co.jp/news/20261113/"
+        }
+      ],
+      "change": "KARTEの緊急停止と調査中の範囲を追加。漏えい確認と停止影響を分離。",
+      "secondary": {
+        "status": "未公表・不明",
+        "date": "2026-11-13",
+        "text": "不正利用・金銭被害等の具体的な二次被害は公式本文から確定していない。",
+        "checked": "2026-11-15"
+      },
+      "checked": "2026-11-15",
+      "updated": "2026-11-15",
+      "batch": "2026-11-15日次調査",
+      "evidence": "2026-11-15 07時台 JSTに被害組織・提供元・公的機関の公式本文または公式PDFを確認。",
+      "changeType": "新規掲載",
+      "history": [
+        {
+          "date": "2026-11-15",
+          "text": "KARTEの緊急停止と調査中の範囲を追加。漏えい確認と停止影響を分離。"
+        }
+      ]
+    },
+    {
+      "id": "inc-kcn-pcs-20261114",
+      "date": "2026-11-14",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-14",
+      "org": "近鉄ケーブルネットワーク／生活あんしんサービス（自転車プラン）",
+      "industry": "通信・生活支援",
+      "cat": [
+        "委託先",
+        "情報漏えいの可能性"
+      ],
+      "status": "PCSへの不正アクセスによる顧客情報漏えい可能性を確認中",
+      "info": "サービス提供元JCOMから、業務委託先プレステージ・コアソリューションへの不正アクセスとKCN利用者情報の一部漏えい可能性について連絡。",
+      "scope": "漏えい有無・対象情報は確認中。PCS取扱情報にパスワード、カード、口座、運転免許証は含まれないと公表。",
+      "impact": "自転車ロードサービス・付帯保険等の利用者通知、問い合わせ、委託連鎖の把握が必要。",
+      "exclude": "重要情報の対象外を維持し、漏えい確定・人数・対象項目を推定しない。",
+      "action": "JCOM・PCSとの対象者突合、対象者通知、本人確認、サービス継続・代替、続報窓口を確認。",
+      "sources": [
+        {
+          "label": "KCN｜11/14公式公表",
+          "url": "https://www.kcn.jp/news/013590.html"
+        }
+      ],
+      "change": "PCS提供元侵害の関連組織としてKCN自転車プランを追加。対象情報は確認中、重要情報は対象外。",
+      "secondary": {
+        "status": "未公表・不明",
+        "date": "2026-11-14",
+        "text": "不正利用・金銭被害等の具体的な二次被害は公式本文から確定していない。",
+        "checked": "2026-11-15"
+      },
+      "checked": "2026-11-15",
+      "updated": "2026-11-15",
+      "batch": "2026-11-15日次調査",
+      "evidence": "2026-11-15 07時台 JSTに被害組織・提供元・公的機関の公式本文または公式PDFを確認。",
+      "changeType": "新規掲載",
+      "history": [
+        {
+          "date": "2026-11-15",
+          "text": "PCS提供元侵害の関連組織としてKCN自転車プランを追加。対象情報は確認中、重要情報は対象外。"
+        }
+      ],
+      "group": "プレステージ・コアソリューション関連"
+    },
+    {
+      "id": "inc-oyama-comsbi-20261114",
+      "date": "2026-11-14",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-14",
+      "org": "おやまゆうえんハーヴェストウォーク／LINEミニアプリ",
+      "industry": "商業施設",
+      "cat": [
+        "委託先",
+        "情報漏えい",
+        "LINE"
+      ],
+      "status": "LINEミニアプリ会員情報の漏えいを確認・対象者調査中",
+      "info": "ソニックムーブの外部システムへの不正アクセスにより会員情報等の漏えいを確認。攻撃元アクセスは遮断済みで、ミニアプリは利用継続。",
+      "scope": "ニックネーム、性別、生年月日、郵便番号、LINE表示名・プロフィール画像・ユーザーID。氏名（表示名を除く）、電話、メールは取得しておらず対象外。該当者・件数は調査中。",
+      "impact": "LINE公式アカウントを通じた通知の真正性、対象者特定、ミニアプリ継続利用のリスク判断が必要。",
+      "exclude": "LINEユーザーIDだけでアカウントへログインできるとはしない。件数・個別対象は未確定。",
+      "action": "公式LINE以外からの連絡を警戒し、対象者通知、連携トークン・セッション、再開・継続条件を確認。",
+      "sources": [
+        {
+          "label": "おやまゆうえんハーヴェストウォーク｜11/14公式公表",
+          "url": "https://harvestwalk.com/others/8777/"
+        }
+      ],
+      "change": "COMSBI関連の商業施設波及として、漏えい確認項目・対象外・対象者調査中を追加。",
+      "secondary": {
+        "status": "未公表・不明",
+        "date": "2026-11-14",
+        "text": "不正利用・金銭被害等の具体的な二次被害は公式本文から確定していない。",
+        "checked": "2026-11-15"
+      },
+      "checked": "2026-11-15",
+      "updated": "2026-11-15",
+      "batch": "2026-11-15日次調査",
+      "evidence": "2026-11-15 07時台 JSTに被害組織・提供元・公的機関の公式本文または公式PDFを確認。",
+      "changeType": "新規掲載",
+      "history": [
+        {
+          "date": "2026-11-15",
+          "text": "COMSBI関連の商業施設波及として、漏えい確認項目・対象外・対象者調査中を追加。"
+        }
+      ],
+      "group": "SonicMoov COMSBI Enterprise",
+      "occurred": "2026-11-09～2026-11-10"
     }
   ],
   "caseLinks": {
@@ -33826,6 +34542,330 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
       "responsePatterns": [
         "P05"
       ]
+    },
+    "inc-keihan-comsbi-20261114": {
+      "techs": [
+        "supplier"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-command"
+      ],
+      "ir": "supplier",
+      "notice": "leak",
+      "basis": "提供元・委託先と利用組織の公式公表から関連付け。個別の侵入原因・攻撃者を認定するものではない。",
+      "entry": "公表本文参照。利用組織への直接侵入とは限らない。",
+      "weakness": "具体的な侵入条件は提供元公表の範囲のみ。",
+      "actor": "確認情報なし",
+      "responsePatterns": [
+        "P05",
+        "P06"
+      ]
+    },
+    "inc-atomi-teket-20261114": {
+      "techs": [
+        "supplier"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-command"
+      ],
+      "ir": "supplier",
+      "notice": "leak",
+      "basis": "提供元・委託先と利用組織の公式公表から関連付け。個別の侵入原因・攻撃者を認定するものではない。",
+      "entry": "公表本文参照。利用組織への直接侵入とは限らない。",
+      "weakness": "具体的な侵入条件は提供元公表の範囲のみ。",
+      "actor": "確認情報なし",
+      "responsePatterns": [
+        "P05",
+        "P06"
+      ]
+    },
+    "inc-mannoya-arara-20261114": {
+      "techs": [
+        "supplier"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-command"
+      ],
+      "ir": "supplier",
+      "notice": "leak",
+      "basis": "提供元・委託先と利用組織の公式公表から関連付け。個別の侵入原因・攻撃者を認定するものではない。",
+      "entry": "公表本文参照。利用組織への直接侵入とは限らない。",
+      "weakness": "具体的な侵入条件は提供元公表の範囲のみ。",
+      "actor": "確認情報なし",
+      "responsePatterns": [
+        "P05",
+        "P06"
+      ]
+    },
+    "inc-niigata-pref-kankyomail-20261113": {
+      "techs": [
+        "identity",
+        "supplier"
+      ],
+      "checks": [
+        "ck-identity",
+        "ck-supplier",
+        "ck-data"
+      ],
+      "ir": "leak",
+      "notice": "general",
+      "basis": "公式公表に関連する自組織向け点検案。未公表の侵入原因・攻撃者を認定するものではない。",
+      "entry": "公表本文参照。未公表の経路は不明。",
+      "weakness": "公表で確認された範囲以外は未確認。",
+      "actor": "確認情報なし",
+      "responsePatterns": [
+        "P05",
+        "P06"
+      ]
+    },
+    "inc-u-hyogo-arara-20261113": {
+      "techs": [
+        "supplier"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-command"
+      ],
+      "ir": "supplier",
+      "notice": "leak",
+      "basis": "提供元・委託先と利用組織の公式公表から関連付け。個別の侵入原因・攻撃者を認定するものではない。",
+      "entry": "公表本文参照。利用組織への直接侵入とは限らない。",
+      "weakness": "具体的な侵入条件は提供元公表の範囲のみ。",
+      "actor": "確認情報なし",
+      "responsePatterns": [
+        "P05",
+        "P06"
+      ]
+    },
+    "inc-toyo-alumni-arara-20261111": {
+      "techs": [
+        "supplier"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-command"
+      ],
+      "ir": "supplier",
+      "notice": "leak",
+      "basis": "提供元・委託先と利用組織の公式公表から関連付け。個別の侵入原因・攻撃者を認定するものではない。",
+      "entry": "公表本文参照。利用組織への直接侵入とは限らない。",
+      "weakness": "具体的な侵入条件は提供元公表の範囲のみ。",
+      "actor": "確認情報なし",
+      "responsePatterns": [
+        "P05",
+        "P06"
+      ]
+    },
+    "inc-yokohama-tkc-arara-20261113": {
+      "techs": [
+        "supplier"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-command"
+      ],
+      "ir": "supplier",
+      "notice": "leak",
+      "basis": "提供元・委託先と利用組織の公式公表から関連付け。個別の侵入原因・攻撃者を認定するものではない。",
+      "entry": "公表本文参照。利用組織への直接侵入とは限らない。",
+      "weakness": "具体的な侵入条件は提供元公表の範囲のみ。",
+      "actor": "確認情報なし",
+      "responsePatterns": [
+        "P05",
+        "P06"
+      ]
+    },
+    "inc-fireworks-ai-20261109": {
+      "techs": [
+        "supplier"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-command"
+      ],
+      "ir": "supplier",
+      "notice": "leak",
+      "basis": "提供元・委託先と利用組織の公式公表から関連付け。個別の侵入原因・攻撃者を認定するものではない。",
+      "entry": "公表本文参照。利用組織への直接侵入とは限らない。",
+      "weakness": "具体的な侵入条件は提供元公表の範囲のみ。",
+      "actor": "確認情報なし",
+      "responsePatterns": [
+        "P05",
+        "P06"
+      ]
+    },
+    "inc-keio-notion-fireworks-20261113": {
+      "techs": [
+        "supplier"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-command"
+      ],
+      "ir": "supplier",
+      "notice": "leak",
+      "basis": "提供元・委託先と利用組織の公式公表から関連付け。個別の侵入原因・攻撃者を認定するものではない。",
+      "entry": "公表本文参照。利用組織への直接侵入とは限らない。",
+      "weakness": "具体的な侵入条件は提供元公表の範囲のみ。",
+      "actor": "確認情報なし",
+      "responsePatterns": [
+        "P05",
+        "P06"
+      ]
+    },
+    "inc-forstartups-notion-fireworks-20261113": {
+      "techs": [
+        "supplier"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-command"
+      ],
+      "ir": "supplier",
+      "notice": "leak",
+      "basis": "提供元・委託先と利用組織の公式公表から関連付け。個別の侵入原因・攻撃者を認定するものではない。",
+      "entry": "公表本文参照。利用組織への直接侵入とは限らない。",
+      "weakness": "具体的な侵入条件は提供元公表の範囲のみ。",
+      "actor": "確認情報なし",
+      "responsePatterns": [
+        "P05",
+        "P06"
+      ]
+    },
+    "inc-receptionist-notion-fireworks-20261112": {
+      "techs": [
+        "supplier"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-command"
+      ],
+      "ir": "supplier",
+      "notice": "leak",
+      "basis": "提供元・委託先と利用組織の公式公表から関連付け。個別の侵入原因・攻撃者を認定するものではない。",
+      "entry": "公表本文参照。利用組織への直接侵入とは限らない。",
+      "weakness": "具体的な侵入条件は提供元公表の範囲のみ。",
+      "actor": "確認情報なし",
+      "responsePatterns": [
+        "P05",
+        "P06"
+      ]
+    },
+    "inc-paiza-staging-20261113": {
+      "techs": [
+        "identity",
+        "supplier"
+      ],
+      "checks": [
+        "ck-identity",
+        "ck-supplier",
+        "ck-data"
+      ],
+      "ir": "leak",
+      "notice": "general",
+      "basis": "公式公表に関連する自組織向け点検案。未公表の侵入原因・攻撃者を認定するものではない。",
+      "entry": "公表本文参照。未公表の経路は不明。",
+      "weakness": "公表で確認された範囲以外は未確認。",
+      "actor": "確認情報なし",
+      "responsePatterns": [
+        "P05",
+        "P06"
+      ]
+    },
+    "inc-snowpeak-multi-20261113": {
+      "techs": [
+        "identity",
+        "supplier"
+      ],
+      "checks": [
+        "ck-identity",
+        "ck-supplier",
+        "ck-data"
+      ],
+      "ir": "leak",
+      "notice": "general",
+      "basis": "公式公表に関連する自組織向け点検案。未公表の侵入原因・攻撃者を認定するものではない。",
+      "entry": "公表本文参照。未公表の経路は不明。",
+      "weakness": "公表で確認された範囲以外は未確認。",
+      "actor": "確認情報なし",
+      "responsePatterns": [
+        "P05",
+        "P06"
+      ]
+    },
+    "inc-plaid-karte-20261113": {
+      "techs": [
+        "identity",
+        "supplier"
+      ],
+      "checks": [
+        "ck-identity",
+        "ck-supplier",
+        "ck-data"
+      ],
+      "ir": "leak",
+      "notice": "general",
+      "basis": "公式公表に関連する自組織向け点検案。未公表の侵入原因・攻撃者を認定するものではない。",
+      "entry": "公表本文参照。未公表の経路は不明。",
+      "weakness": "公表で確認された範囲以外は未確認。",
+      "actor": "確認情報なし",
+      "responsePatterns": [
+        "P05",
+        "P06"
+      ]
+    },
+    "inc-kcn-pcs-20261114": {
+      "techs": [
+        "supplier"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-command"
+      ],
+      "ir": "supplier",
+      "notice": "leak",
+      "basis": "提供元・委託先と利用組織の公式公表から関連付け。個別の侵入原因・攻撃者を認定するものではない。",
+      "entry": "公表本文参照。利用組織への直接侵入とは限らない。",
+      "weakness": "具体的な侵入条件は提供元公表の範囲のみ。",
+      "actor": "確認情報なし",
+      "responsePatterns": [
+        "P05",
+        "P06"
+      ]
+    },
+    "inc-oyama-comsbi-20261114": {
+      "techs": [
+        "supplier"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-command"
+      ],
+      "ir": "supplier",
+      "notice": "leak",
+      "basis": "提供元・委託先と利用組織の公式公表から関連付け。個別の侵入原因・攻撃者を認定するものではない。",
+      "entry": "公表本文参照。利用組織への直接侵入とは限らない。",
+      "weakness": "具体的な侵入条件は提供元公表の範囲のみ。",
+      "actor": "確認情報なし",
+      "responsePatterns": [
+        "P05",
+        "P06"
+      ]
     }
   },
   "techniques": [
@@ -41511,51 +42551,51 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
   "updateHighlights": [
     {
       "kind": "incident",
-      "id": "inc-5070a0a689"
+      "id": "inc-snowpeak-multi-20261113"
     },
     {
       "kind": "incident",
-      "id": "inc-hange-20261103"
+      "id": "inc-paiza-staging-20261113"
     },
     {
       "kind": "incident",
-      "id": "inc-giants-club-20261113"
+      "id": "inc-plaid-karte-20261113"
     },
     {
       "kind": "incident",
-      "id": "inc-axa-direct-prestige-20261113"
+      "id": "inc-fireworks-ai-20261109"
     },
     {
       "kind": "incident",
-      "id": "inc-giftee-prismatix-20261112"
+      "id": "inc-keio-notion-fireworks-20261113"
     },
     {
       "kind": "incident",
-      "id": "inc-kokusen-digitalarts-20261113"
+      "id": "inc-keihan-comsbi-20261114"
     },
     {
-      "kind": "vuln",
-      "id": "v-postgresql-20261113"
+      "kind": "incident",
+      "id": "inc-u-hyogo-arara-20261113"
     },
     {
-      "kind": "vuln",
-      "id": "v-imagemagick-imagetragick2-20261113"
+      "kind": "incident",
+      "id": "inc-niigata-pref-kankyomail-20261113"
     },
     {
-      "kind": "vuln",
-      "id": "v-comfyui-easyuse-123790-20261113"
+      "kind": "incident",
+      "id": "inc-atomi-teket-20261114"
     },
     {
-      "kind": "vuln",
-      "id": "v-vnc-128321-20261113"
+      "kind": "incident",
+      "id": "inc-oyama-comsbi-20261114"
     },
     {
-      "kind": "vuln",
-      "id": "v-openssl-20261110"
+      "kind": "incident",
+      "id": "inc-kcn-pcs-20261114"
     },
     {
-      "kind": "vuln",
-      "id": "v-apache-httpd-2471-20261111"
+      "kind": "incident",
+      "id": "inc-forstartups-notion-fireworks-20261113"
     }
   ],
   "actorTimeline": [
@@ -41904,7 +42944,7 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
       "published": "2026-11-02",
       "title": "Google／Mandiant：LLMJackingとLLM Mixerの分業構造を報告",
       "evidenceType": "セキュリティ企業の一次調査・複数脅威クラスタ",
-      "text": "Google Cloud／Mandiantは企業クラウドのLLM利用権限やサービスアカウント、PAT等の窃取・悪用による不正API利用を報告。侵入を担当する主体と、LLM Mixerと呼ぶ転売・中継基盤の運営者が分業する事例を観測。既存の16攻撃グループのいずれかに一律に帰属させない。",
+      "text": "Google Cloud／Mandiantは企業クラウドのLLM利用権限やサービスアカウント、PAT等の窃取・悪用による不正API利用を報告。侵入を担当する主体と、LLM Mixerと呼ぶ転売・中継基盤の運営者が分業する事例を観測。既存の16攻撃グループのいずれかに一律に帰属させない。 Fireworks AIは11月9日続報で、同社侵害の証拠が、窃取したLLM利用権を不正ルーティング基盤へ販売する金銭目的主体との関連を示すと説明した。これは提供元の分析であり、既存グループへの一律帰属ではない。",
       "checks": [
         "LLM・クラウドAPIキー、IAMサービスアカウント、PATの最小権限・利用監査",
         "不審なAPI呼出し量・費用急増、長寿命トークン、無認証のLLM API公開を点検"
@@ -41913,10 +42953,14 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         {
           "label": "Google Cloud / Mandiant 11/2",
           "url": "https://cloud.google.com/blog/topics/threat-intelligence/llmjacking-monetizing-compromised-cloud-models"
+        },
+        {
+          "label": "Fireworks AI 11/9続報",
+          "url": "https://fireworks.ai/security/bulletins/october-2026-security-incident-update"
         }
       ],
       "actors": [],
-      "checked": "2026-11-05"
+      "checked": "2026-11-15"
     },
     {
       "id": "ev-residential-proxy-takedown-20261104",
@@ -41981,6 +43025,26 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
       ],
       "actors": [],
       "checked": "2026-11-13"
+    },
+    {
+      "id": "ev-artex-20261113",
+      "period": "2026年8月以降（FBI公表範囲）",
+      "published": "2026-11-13",
+      "title": "FBI：LLM駆動の自律侵入フレームワークARTEXの悪用を警告",
+      "evidenceType": "公的機関の脅威情報・IOC／複数の悪用主体",
+      "text": "FBIは、オープンソースのLLM駆動エージェント型侵入テスト基盤ARTEXが、偵察から情報持出しまでを機械速度で自動化するため悪用されていると公表。2026年8月以降、金融・政府・技術・防衛・医療・製造・通信等を標的とする複数主体での利用を説明。元リポジトリ削除後もフォーク、アーカイブ、商用版が残るため、活動停止とは扱わない。マルウェア名・基盤名を単一グループとして数えず、既存16グループへ統合しない。",
+      "checks": [
+        "公開Web・セルフサービスポータル・クラウド・委託先接続の資産棚卸しと認証・レート制限",
+        "数時間内の偵察・脆弱性探索・権限昇格・大量取得を横断検知し、ログ時刻と連携先を保全"
+      ],
+      "sources": [
+        {
+          "label": "FBI IC3 FLASH 11/13",
+          "url": "https://www.ic3.gov/CSA/2026/261113.pdf"
+        }
+      ],
+      "actors": [],
+      "checked": "2026-11-15"
     }
   ],
   "crimeGlossary": [
