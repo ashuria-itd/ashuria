@@ -198,27 +198,27 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
 {
   "meta": {
     "schemaVersion": "1.0",
-    "version": "1.0.48",
+    "version": "1.0.49",
     "title": "セキュリティインテリジェンスハブ",
-    "compiledDate": "2026-11-16",
-    "incidentSnapshotDate": "2026-11-16",
+    "compiledDate": "2026-11-17",
+    "incidentSnapshotDate": "2026-11-17",
     "technicalReviewed": "2026-10-25",
     "timezone": "Asia/Tokyo",
-    "incidentSource": "v1.0.47（518項目）を全件維持し、公式確認済みの独立7事案と関連7組織を追加、既存2事案を続報・訂正。",
-    "coverage": "11/9～16の前回未掲載・重要続報を公式一次資料へ遡って再照合。発見源にロケットボーイズ、IncidentLog等を追加（確定根拠は公式）。",
-    "vulnerabilityCoverage": "95テーマ。JVN/JPCERT、CERT/CC、CISA KEV、Red Hat、Ubuntu、Debian、SUSE、AWS、MSRC、Chrome、Mozilla等を独立照合し、UnrealIRCdとAWS API MCP Serverを追加。",
-    "verification": "公式HTMLとPDF本文を確認。既存518件全保持、14事例追加、JNSA・KARTE計2件更新、脆弱性95テーマ・アクター16・動向19を維持。",
+    "incidentSource": "v1.0.48（532項目）から全件保持し、一次資料で確認した独立4事案・関連2事案の計6件追加、横浜市の続報1件を更新。",
+    "coverage": "11/16～17の独立3分野を確認。理研・GoQSystem・Cacoo・Neowing、大学ANPIC波及、横浜市の部分再開を公式本文で照合。未取得候補はresearchに保留。",
+    "vulnerabilityCoverage": "96テーマ。CERT/CC VU#604762を新規追加。CISA KEVと一部ベンダーの完全な日次差分は取得範囲に限界。",
+    "verification": "既存532件・95テーマを保持し、6件追加・既存続報1件・脆弱性1テーマ追加。生成と静的検証を実施。実ブラウザー確認は別途。",
     "reconciliation": {
       "newerRows": 180,
       "olderBiRows": 155,
       "preservedIds": 345,
       "addedAgainstBi": 28,
-      "previousRows": 518,
-      "addedThisUpdate": 14,
-      "updatedThisUpdate": 2,
-      "currentRows": 532,
-      "associationThisUpdate": 7,
-      "referenceFixesThisUpdate": 4
+      "previousRows": 532,
+      "addedThisUpdate": 6,
+      "updatedThisUpdate": 1,
+      "currentRows": 538,
+      "associationThisUpdate": 2,
+      "referenceFixesThisUpdate": 0
     },
     "changelog": [
       {
@@ -464,6 +464,11 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         "date": "2026-11-16",
         "version": "1.0.48",
         "text": "未掲載のConfit、GFS Education 2サービス、京成電鉄、アップルワールド、Pokepay、ラキールの独立7事案と、学会2・中京大学・大学生協2・広島ガス・高知市の関連7項目を追加。JNSAの15,128→8,388件とID/PW対象外の訂正、KARTE停止継続を既存IDに反映。計532事例。脆弱性95、アクター16、動向19維持。"
+      },
+      {
+        "date": "2026-11-17",
+        "version": "1.0.49",
+        "text": "理化学研究所・GoQSystem・Cacoo・Neowingの4事案と信州大学・アールケイの関連2件を追加。横浜市の一部再開を更新。CERT/CC APFS脆弱性1テーマを追加しGTIGのLLMJacking観測を補完。532件と既存95脆弱性テーマ・16アクター・19動向を保持。"
       }
     ],
     "playbookReviewed": "2026-11-06",
@@ -23627,7 +23632,7 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
       "id": "inc-yokohama-tkc-arara-20261113",
       "date": "2026-11-13",
       "dateBasis": "初回公表日",
-      "sourceUpdated": "2026-11-13",
+      "sourceUpdated": "2026-11-16",
       "org": "横浜市／電子申請・届出システム（TKC・アララ関連）",
       "industry": "行政・自治体",
       "cat": [
@@ -23638,31 +23643,39 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
       "status": "一部利用者メールアドレスの漏えい確認",
       "info": "横浜市電子申請・届出システムの運営委託先TKCが利用するアララの侵害に関連し、一部利用者のメールアドレスが対象と確認。",
       "scope": "電子申請・届出システムから送信に使用した一部メールアドレス。件数・個別対象は公式続報を確認する。",
-      "impact": "行政手続・申請内容を装う連絡への注意と、メール通知停止時の手続継続・問い合わせ代替が必要。",
+      "impact": "行政手続・申請内容を装う連絡への注意と、メール通知停止時の手続継続・問い合わせ代替が必要。 【11/16続報】メール送信サービスが一部復旧し全手続受付を再開。申請完了通知などは未復旧であり全面復旧ではない。",
       "exclude": "申請本文、マイナンバー、本人確認書類等の漏えいを推定しない。提供元全体の件数と重複集計しない。",
       "action": "対象手続・通知期間、対象者通知、申請ポータル内告知、代替連絡、フィッシング監視を確認。",
       "sources": [
         {
           "label": "横浜市｜11/13更新",
           "url": "https://www.city.yokohama.lg.jp/city-info/gyosei-kansa/yokohamadx/notice/notice20261106.html"
+        },
+        {
+          "label": "横浜市11/16更新",
+          "url": "https://www.city.yokohama.lg.jp/city-info/gyosei-kansa/yokohamadx/notice/notice20261106.html"
         }
       ],
-      "change": "TKC・アララ関連の自治体波及として、一部利用者メールアドレスの漏えい確認を追加。",
+      "change": "11/16の受付再開とメール機能の一部未復旧を区別。",
       "secondary": {
         "status": "未公表・不明",
         "date": "2026-11-13",
         "text": "不正利用・金銭被害等の具体的な二次被害は公式本文から確定していない。",
         "checked": "2026-11-15"
       },
-      "checked": "2026-11-15",
-      "updated": "2026-11-15",
+      "checked": "2026-11-17",
+      "updated": "2026-11-17",
       "batch": "2026-11-15日次調査",
       "evidence": "2026-11-15 07時台 JSTに被害組織・提供元・公的機関の公式本文または公式PDFを確認。",
-      "changeType": "新規掲載",
+      "changeType": "続報更新",
       "history": [
         {
           "date": "2026-11-15",
           "text": "TKC・アララ関連の自治体波及として、一部利用者メールアドレスの漏えい確認を追加。"
+        },
+        {
+          "date": "2026-11-17",
+          "text": "横浜市11/16公表：11/16 9:00にメール送信サービスが一部復旧し、全手続受付を再開。ただし申請完了通知等のメールは引き続き送信されない。117,489件はメールアドレス件数。"
         }
       ],
       "group": "アララメッセージ関連"
@@ -24873,6 +24886,263 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         "checked": "2026-11-16"
       },
       "group": "ApplyNow 2026-09"
+    },
+    {
+      "id": "inc-riken-fugaku-rikyu-20261116",
+      "date": "2026-11-16",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-16",
+      "org": "理化学研究所／富岳・理究",
+      "industry": "情報システム・サービス",
+      "cat": [
+        "不正アクセス",
+        "情報漏えい"
+      ],
+      "status": "認証情報持出し・可能性／運用停止",
+      "info": "11月10～13日に公開稼働状況ダッシュボードを足がかりとする運用系侵入を確認。複数サーバーの不正操作・一部改ざん、認証情報や一部ファイルの外部持ち出しとその可能性を確認。侵害者による他システム接続試行も確認。",
+      "scope": "富岳登録利用者最大4,222名、理究最大375名、合計最大4,597名。氏名・メール・ID、SSH秘密鍵・アクセスキーなど外部サービス認証情報、ホームディレクトリ内ファイル。研究成果の流出を示す具体的事実は現時点で未確認。",
+      "impact": "11/14 4:30に富岳停止、計算ジョブ停止、全利用者ログイン公開鍵無効化。研究計算と外部連携資産へ影響。",
+      "exclude": "対象人数は上限。研究成果の窃取確定とはしない。特定のCVE・攻撃者は未確定。",
+      "action": "研究者・委託先が保存したSSH鍵、APIキー、学外HPC資格情報を各接続先で失効・再発行。研究計算の代替、外部公開監視画面の分離、ログ保全、復旧順・再開条件を確認。",
+      "sources": [
+        {
+          "label": "理化学研究所2026/11/16",
+          "url": "https://www.riken.jp/pr/news/2026/20261116_2/index.html"
+        }
+      ],
+      "change": "理化学研究所／富岳・理究について公式本文確認済みの新規公表情報を追加。",
+      "updated": "2026-11-17",
+      "checked": "2026-11-17",
+      "batch": "2026-11-17日次調査",
+      "changeType": "新規追加",
+      "history": [
+        {
+          "date": "2026-11-17",
+          "text": "理化学研究所／富岳・理究：公式情報を確認して追加。"
+        }
+      ],
+      "secondary": {
+        "status": "疑い・因果未確定",
+        "date": "2026-11-16",
+        "text": "確認できた一次公表の範囲。将来の無被害を意味しない。",
+        "checked": "2026-11-17"
+      }
+    },
+    {
+      "id": "inc-goqsystem-20261112",
+      "date": "2026-11-12",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-13",
+      "org": "GoQSystem／EC受注管理",
+      "industry": "情報システム・サービス",
+      "cat": [
+        "不正アクセス",
+        "情報漏えい"
+      ],
+      "status": "注文データ一部持ち出し確認",
+      "info": "11/10～11に問い合わせフォームの脆弱性を悪用して侵入。注文者・配送先の注文データの一部が外部へ持ち出されたことを確認。11/11侵入経路遮断、接続元限定で再開。",
+      "scope": "対象1,694社・4,984,595注文・4,367,390名（人数）。氏名・住所・電話・メール・注文内容など。注文数と人数は別単位。",
+      "impact": "委託先・ECモールから配送・受注データが波及。認証情報更新、代替受注・発送や対象者通知を検討。",
+      "exclude": "カード情報はGoQSystemで非保持。店舗側の設定操作を原因としない。全件一律の流出と断定しない。",
+      "action": "フォームの脆弱性・公開Webの隔離、EC連携トークン失効、配送先への注意喚起、対象注文の突合、受注代替・制限付き再開を確認。",
+      "sources": [
+        {
+          "label": "GoQSystem第1報11/12",
+          "url": "https://goq.co.jp/security-incident.html"
+        },
+        {
+          "label": "GoQSystem第2報11/13",
+          "url": "https://goq.co.jp/security-incident-2.html"
+        }
+      ],
+      "change": "GoQSystem／EC受注管理について公式本文確認済みの新規公表情報を追加。",
+      "updated": "2026-11-17",
+      "checked": "2026-11-17",
+      "batch": "2026-11-17日次調査",
+      "changeType": "新規追加",
+      "history": [
+        {
+          "date": "2026-11-17",
+          "text": "GoQSystem／EC受注管理：公式情報を確認して追加。"
+        }
+      ],
+      "secondary": {
+        "status": "報告なし（公表日時点）",
+        "date": "2026-11-13",
+        "text": "確認できた一次公表の範囲。将来の無被害を意味しない。",
+        "checked": "2026-11-17"
+      },
+      "group": "GoQSystem 2026-11"
+    },
+    {
+      "id": "inc-nulab-cacoo-20261116",
+      "date": "2026-11-16",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-16",
+      "org": "ヌーラボ／Cacoo",
+      "industry": "情報システム・サービス",
+      "cat": [
+        "不正アクセス",
+        "情報漏えい"
+      ],
+      "status": "問い合わせ記録流出確認・Cacoo停止",
+      "info": "11/14にCacoo運用環境で不正使用された認証情報を検知。問い合わせ記録の一部流出を確認し、同日18:45からCacooを停止。",
+      "scope": "問い合わせ記録約792件（精査中）。氏名・メール・電話・住所、一部にカード情報の下4桁を含む。",
+      "impact": "ホワイトボード・共同設計の停止、オフライン図面・会議運用の代替が必要。",
+      "exclude": "Backlogを含む他サービスへの不正アクセスは11/16時点で確認されず、別環境として運用。カード番号全桁の流出とはしない。",
+      "action": "Cacoo内の設計図・共有設定、連携認証・問い合わせ情報、代替共同編集ツール、監査ログと再開条件を確認。",
+      "sources": [
+        {
+          "label": "ヌーラボ第1報",
+          "url": "https://nulab.com/ja/info/20261116_cacoo_01/"
+        },
+        {
+          "label": "他サービスへの影響",
+          "url": "https://nulab.com/ja/info/20261116_cacoo_backlog/"
+        }
+      ],
+      "change": "ヌーラボ／Cacooについて公式本文確認済みの新規公表情報を追加。",
+      "updated": "2026-11-17",
+      "checked": "2026-11-17",
+      "batch": "2026-11-17日次調査",
+      "changeType": "新規追加",
+      "history": [
+        {
+          "date": "2026-11-17",
+          "text": "ヌーラボ／Cacoo：公式情報を確認して追加。"
+        }
+      ],
+      "secondary": {
+        "status": "注意喚起のみ",
+        "date": "2026-11-16",
+        "text": "確認できた一次公表の範囲。将来の無被害を意味しない。",
+        "checked": "2026-11-17"
+      }
+    },
+    {
+      "id": "inc-neowing-card-20261113",
+      "date": "2026-11-13",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-13",
+      "org": "Neowing／CDJapan",
+      "industry": "情報システム・サービス",
+      "cat": [
+        "不正アクセス",
+        "情報漏えい"
+      ],
+      "status": "カード情報漏えい可能性・決済停止",
+      "info": "11/9～11にサイトの一部で第三者による不正アクセスを検知。カード情報の漏えい可能性があるためカード決済を停止し調査中。",
+      "scope": "11/9 12時～11/11 17時の対象利用285件。カード番号・有効期限・名義人・セキュリティコードの漏えい可能性。",
+      "impact": "決済停止中の代替決済、決済ログ・改ざんスクリプトの保全、カード会社との対応。",
+      "exclude": "カードの実流出、不正利用および二次被害は11/13時点で未確認。",
+      "action": "決済機能のサードパーティスクリプト、CSP・変更履歴、カード会社への報告・監視、停止・再開条件を確認。",
+      "sources": [
+        {
+          "label": "Neowing公式11/13",
+          "url": "https://www.neowing.co.jp/info/20261113_c"
+        }
+      ],
+      "change": "Neowing／CDJapanについて公式本文確認済みの新規公表情報を追加。",
+      "updated": "2026-11-17",
+      "checked": "2026-11-17",
+      "batch": "2026-11-17日次調査",
+      "changeType": "新規追加",
+      "history": [
+        {
+          "date": "2026-11-17",
+          "text": "Neowing／CDJapan：公式情報を確認して追加。"
+        }
+      ],
+      "secondary": {
+        "status": "未公表・未確認",
+        "date": "2026-11-13",
+        "text": "確認できた一次公表の範囲。将来の無被害を意味しない。",
+        "checked": "2026-11-17"
+      }
+    },
+    {
+      "id": "inc-shinshu-anpic-arara-20261116",
+      "date": "2026-11-16",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-16",
+      "org": "信州大学／ANPIC（アララ関連）",
+      "industry": "関連組織・委託先",
+      "cat": [
+        "委託先",
+        "情報漏えい"
+      ],
+      "status": "メールアドレス漏えい確認",
+      "info": "安否確認サービスANPICが使用するアララメッセージ侵害によりメール宛先が漏えい。大学独自の侵害ではない。",
+      "scope": "2026/7/1～10/31のANPICメール宛先16,764件。人数ではなくメールアドレス件数。",
+      "impact": "災害時のメール到達・代替通知経路・個別通知を確認。",
+      "exclude": "学籍・研究データへの侵害やパスワード流出と推定しない。",
+      "action": "ANPICのメール宛先・MFA・通知先台帳、災害時の複数経路、委託先の連絡体制を点検。",
+      "sources": [
+        {
+          "label": "信州大学公式11/16",
+          "url": "https://www.shinshu-u.ac.jp/news/2026/11/anpic.html"
+        }
+      ],
+      "change": "信州大学／ANPIC（アララ関連）について公式本文確認済みの新規公表情報を追加。",
+      "updated": "2026-11-17",
+      "checked": "2026-11-17",
+      "batch": "2026-11-17日次調査",
+      "changeType": "関連組織の確認結果",
+      "history": [
+        {
+          "date": "2026-11-17",
+          "text": "信州大学／ANPIC（アララ関連）：公式情報を確認して追加。"
+        }
+      ],
+      "secondary": {
+        "status": "注意喚起のみ",
+        "date": "2026-11-16",
+        "text": "確認できた一次公表の範囲。将来の無被害を意味しない。",
+        "checked": "2026-11-17"
+      },
+      "group": "アララメッセージ 2026-10"
+    },
+    {
+      "id": "inc-rk-enterprise-goq-20261116",
+      "date": "2026-11-16",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-16",
+      "org": "アールケイエンタープライズ／GoQSystem関連",
+      "industry": "関連組織・委託先",
+      "cat": [
+        "委託先",
+        "情報漏えい"
+      ],
+      "status": "関連注文情報漏えい確認",
+      "info": "受注管理委託先GoQSystemへの侵害を受け、11/15の提供元報告で国内ECモール顧客情報の漏えいを確認。",
+      "scope": "259件。注文者・配送先の氏名、住所、電話、メール・注文内容。人数ではなくレコード件数。",
+      "impact": "受注・発送連携を遮断し認証変更。対象者通知と代替受注管理を検討。",
+      "exclude": "カード情報はGoQSystemに非保持。店舗社内システムの侵害は確認されず。",
+      "action": "委託先との認証連携遮断、再開時セキュリティ確認、顧客への個別案内を確認。",
+      "sources": [
+        {
+          "label": "アールケイ公式11/16",
+          "url": "https://www.rk-enterprise.jp/11389/"
+        }
+      ],
+      "change": "アールケイエンタープライズ／GoQSystem関連について公式本文確認済みの新規公表情報を追加。",
+      "updated": "2026-11-17",
+      "checked": "2026-11-17",
+      "batch": "2026-11-17日次調査",
+      "changeType": "関連組織の確認結果",
+      "history": [
+        {
+          "date": "2026-11-17",
+          "text": "アールケイエンタープライズ／GoQSystem関連：公式情報を確認して追加。"
+        }
+      ],
+      "secondary": {
+        "status": "注意喚起のみ",
+        "date": "2026-11-16",
+        "text": "確認できた一次公表の範囲。将来の無被害を意味しない。",
+        "checked": "2026-11-17"
+      },
+      "group": "GoQSystem 2026-11"
     }
   ],
   "caseLinks": {
@@ -36063,6 +36333,138 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
       "responsePatterns": [
         "P06"
       ]
+    },
+    "inc-riken-fugaku-rikyu-20261116": {
+      "techs": [
+        "supplier",
+        "identity"
+      ],
+      "checks": [
+        "ck-data",
+        "ck-supplier",
+        "ck-identity",
+        "ck-command"
+      ],
+      "ir": "leak",
+      "notice": "leak",
+      "basis": "公式公表に記載された事実から関連付けた一般的点検。原因・攻撃主体の追加認定ではない。",
+      "entry": "構造化未確認",
+      "weakness": "構造化未確認",
+      "actor": "確認情報なし",
+      "responsePatterns": [
+        "P05",
+        "P06"
+      ]
+    },
+    "inc-goqsystem-20261112": {
+      "techs": [
+        "supplier",
+        "identity"
+      ],
+      "checks": [
+        "ck-data",
+        "ck-supplier",
+        "ck-identity",
+        "ck-command"
+      ],
+      "ir": "leak",
+      "notice": "leak",
+      "basis": "公式公表に記載された事実から関連付けた一般的点検。原因・攻撃主体の追加認定ではない。",
+      "entry": "構造化未確認",
+      "weakness": "構造化未確認",
+      "actor": "確認情報なし",
+      "responsePatterns": [
+        "P05",
+        "P06"
+      ]
+    },
+    "inc-nulab-cacoo-20261116": {
+      "techs": [
+        "supplier",
+        "identity"
+      ],
+      "checks": [
+        "ck-data",
+        "ck-supplier",
+        "ck-identity",
+        "ck-command"
+      ],
+      "ir": "leak",
+      "notice": "leak",
+      "basis": "公式公表に記載された事実から関連付けた一般的点検。原因・攻撃主体の追加認定ではない。",
+      "entry": "構造化未確認",
+      "weakness": "構造化未確認",
+      "actor": "確認情報なし",
+      "responsePatterns": [
+        "P05",
+        "P06"
+      ]
+    },
+    "inc-neowing-card-20261113": {
+      "techs": [
+        "supplier",
+        "identity"
+      ],
+      "checks": [
+        "ck-data",
+        "ck-supplier",
+        "ck-identity",
+        "ck-command"
+      ],
+      "ir": "leak",
+      "notice": "leak",
+      "basis": "公式公表に記載された事実から関連付けた一般的点検。原因・攻撃主体の追加認定ではない。",
+      "entry": "構造化未確認",
+      "weakness": "構造化未確認",
+      "actor": "確認情報なし",
+      "responsePatterns": [
+        "P05",
+        "P06"
+      ]
+    },
+    "inc-shinshu-anpic-arara-20261116": {
+      "techs": [
+        "supplier",
+        "identity"
+      ],
+      "checks": [
+        "ck-data",
+        "ck-supplier",
+        "ck-identity",
+        "ck-command"
+      ],
+      "ir": "leak",
+      "notice": "leak",
+      "basis": "公式公表に記載された事実から関連付けた一般的点検。原因・攻撃主体の追加認定ではない。",
+      "entry": "構造化未確認",
+      "weakness": "構造化未確認",
+      "actor": "確認情報なし",
+      "responsePatterns": [
+        "P05",
+        "P06"
+      ]
+    },
+    "inc-rk-enterprise-goq-20261116": {
+      "techs": [
+        "supplier",
+        "identity"
+      ],
+      "checks": [
+        "ck-data",
+        "ck-supplier",
+        "ck-identity",
+        "ck-command"
+      ],
+      "ir": "leak",
+      "notice": "leak",
+      "basis": "公式公表に記載された事実から関連付けた一般的点検。原因・攻撃主体の追加認定ではない。",
+      "entry": "構造化未確認",
+      "weakness": "構造化未確認",
+      "actor": "確認情報なし",
+      "responsePatterns": [
+        "P05",
+        "P06"
+      ]
     }
   },
   "techniques": [
@@ -41594,6 +41996,46 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
           "note": "AWS公式本文に基づき対象版・修正版・条件を追加。"
         }
       ]
+    },
+    {
+      "id": "v-cert-vu604762-apfs-20261116",
+      "product": "macOS APFS上の複数アプリ／アーカイブ・開発・バックアップツール",
+      "title": "CERT/CC VU#604762：APFS Unicode正規化衝突による除外保護回避",
+      "identifiers": [
+        "VU#604762",
+        "CVE-2026-14978",
+        "CVE-2026-49401"
+      ],
+      "published": "2026-11-16",
+      "sourceUpdated": "2026-11-16",
+      "exploitation": "CERT/CC本文で確認した範囲では実悪用は未確認。",
+      "exploitationTone": "amber",
+      "priority": "macOS上でアーカイブ展開・ビルド・バックアップ・フォレンジック等を行う製品／処理を棚卸しし、提供元修正を確認",
+      "conditions": "APFSとアプリのパス正規化・大文字小文字比較の差がある環境。細工された文字列を含むファイル名等が関連。",
+      "impact": "除外・禁止されたパスへの書き込みが回避され、設定上書き、データ破損、場合によってコード実行につながり得る。",
+      "fix": "製品ごとのアドバイザリと修正を確認し、危険な入力・アーカイブを隔離。OS更新だけで全アプリが修正済みと決めつけない。",
+      "investigation": "macOS端末のAPFS設定、バックアップ復元ツール、アーカイバ、CI/CD・Denoなどの製品別影響と、保護除外先への意図しない書込ログを確認。",
+      "bcp": "バックアップ・復旧素材の完全性、隔離環境での展開・切戻し、設定の整合性を検証する。",
+      "tech": "api",
+      "check": "ck-identity",
+      "sources": [
+        {
+          "label": "CERT/CC VU#604762 2026/11/16",
+          "url": "https://kb.cert.org/vuls/id/604762"
+        }
+      ],
+      "sourceNote": "CERT/CC一次資料本文を2026-11-17に確認。製品・CVE別の完全な影響条件は各ベンダー追加照合が必要。",
+      "change": "APFSのUnicode正規化差による保護回避。製品固有CVEを1テーマに整理。",
+      "checked": "2026-11-17",
+      "updated": "2026-11-17",
+      "changeType": "新規掲載",
+      "history": [
+        {
+          "date": "2026-11-17",
+          "type": "新規掲載",
+          "note": "CERT/CCの本文を確認して追加。"
+        }
+      ]
     }
   ],
   "actors": [
@@ -43885,6 +44327,38 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
     {
       "kind": "incident",
       "id": "inc-plaid-karte-20261113"
+    },
+    {
+      "kind": "incident",
+      "id": "inc-riken-fugaku-rikyu-20261116"
+    },
+    {
+      "kind": "incident",
+      "id": "inc-goqsystem-20261112"
+    },
+    {
+      "kind": "incident",
+      "id": "inc-nulab-cacoo-20261116"
+    },
+    {
+      "kind": "incident",
+      "id": "inc-neowing-card-20261113"
+    },
+    {
+      "kind": "incident",
+      "id": "inc-shinshu-anpic-arara-20261116"
+    },
+    {
+      "kind": "incident",
+      "id": "inc-rk-enterprise-goq-20261116"
+    },
+    {
+      "kind": "incident",
+      "id": "inc-yokohama-tkc-arara-20261113"
+    },
+    {
+      "kind": "vuln",
+      "id": "v-cert-vu604762-apfs-20261116"
     }
   ],
   "actorTimeline": [
@@ -44233,7 +44707,7 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
       "published": "2026-11-02",
       "title": "Google／Mandiant：LLMJackingとLLM Mixerの分業構造を報告",
       "evidenceType": "セキュリティ企業の一次調査・複数脅威クラスタ",
-      "text": "Google Cloud／Mandiantは企業クラウドのLLM利用権限やサービスアカウント、PAT等の窃取・悪用による不正API利用を報告。侵入を担当する主体と、LLM Mixerと呼ぶ転売・中継基盤の運営者が分業する事例を観測。既存の16攻撃グループのいずれかに一律に帰属させない。 Fireworks AIは11月9日続報で、同社侵害の証拠が、窃取したLLM利用権を不正ルーティング基盤へ販売する金銭目的主体との関連を示すと説明した。これは提供元の分析であり、既存グループへの一律帰属ではない。",
+      "text": "Google Cloud／Mandiantは企業クラウドのLLM利用権限やサービスアカウント、PAT等の窃取・悪用による不正API利用を報告。侵入を担当する主体と、LLM Mixerと呼ぶ転売・中継基盤の運営者が分業する事例を観測。既存の16攻撃グループのいずれかに一律に帰属させない。 Fireworks AIは11月9日続報で、同社侵害の証拠が、窃取したLLM利用権を不正ルーティング基盤へ販売する金銭目的主体との関連を示すと説明した。これは提供元の分析であり、既存グループへの一律帰属ではない。 【2026/11/16 GTIG続報】2026年のMandiant対応ではLLM・クラウド資源悪用による1日10万米ドル超、累計100万米ドル規模の不正請求例が観測された。これらは調査会社の観測事例であり、国内組織の発生件数・将来確率ではない。",
       "checks": [
         "LLM・クラウドAPIキー、IAMサービスアカウント、PATの最小権限・利用監査",
         "不審なAPI呼出し量・費用急増、長寿命トークン、無認証のLLM API公開を点検"
@@ -44246,10 +44720,14 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         {
           "label": "Fireworks AI 11/9続報",
           "url": "https://fireworks.ai/security/bulletins/october-2026-security-incident-update"
+        },
+        {
+          "label": "GTIG 2026/11/16",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold"
         }
       ],
       "actors": [],
-      "checked": "2026-11-15"
+      "checked": "2026-11-17"
     },
     {
       "id": "ev-residential-proxy-takedown-20261104",
