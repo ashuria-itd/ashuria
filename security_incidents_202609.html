@@ -198,26 +198,26 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
 {
   "meta": {
     "schemaVersion": "1.0",
-    "version": "1.0.51",
+    "version": "1.0.52",
     "title": "セキュリティインテリジェンスハブ",
-    "compiledDate": "2026-11-19",
-    "incidentSnapshotDate": "2026-11-19",
+    "compiledDate": "2026-11-20",
+    "incidentSnapshotDate": "2026-11-20",
     "technicalReviewed": "2026-10-25",
     "timezone": "Asia/Tokyo",
-    "incidentSource": "v1.0.50（553項目）から全件保持し、一次資料で確認した独立5事案・関連5事案の計10件を追加、既存4件を続報更新。",
-    "coverage": "11/18公表を中心に大学・教育、行政・医療、企業、SaaS/委託先波及を照合。直近7日・30日候補を再確認し、未取得・全体未確定はresearchへ保留。",
-    "vulnerabilityCoverage": "100テーマ。OpenJDK 1テーマを追加し、Chrome、Firefox、OpenSSLの3テーマを公式情報で更新。主要ベンダー新着を独立照合。",
-    "verification": "既存553件・99テーマ・16アクター・21動向を保持し、10件追加・4件更新・脆弱性1追加3更新・動向1件追加。生成・静的検証を実施予定。",
+    "incidentSource": "v1.0.51（563項目）から全件保持し、一次資料で確認した独立6事案・関連6事案の計12件を追加、既存2件を続報更新。",
+    "coverage": "11/19公表を中心に大学・教育、金融、製造、宿泊、企業、SaaS/委託先波及を照合。直近7日・30日候補を再確認し、本文取得制限・未確定候補はresearchへ保留。",
+    "vulnerabilityCoverage": "105テーマ。NGINX、Node-RED、Win Bird、Ruijie、vCenterの5テーマを追加し、PHPの正式セキュリティリリースを更新。主要ベンダー新着を独立照合。",
+    "verification": "既存563件・100テーマ・16アクター・22動向を保持し、12件追加・2件更新・脆弱性5追加1更新・動向2件追加。生成・静的・実ブラウザー検証を実施。",
     "reconciliation": {
       "newerRows": 180,
       "olderBiRows": 155,
       "preservedIds": 345,
       "addedAgainstBi": 28,
-      "previousRows": 553,
-      "addedThisUpdate": 10,
-      "updatedThisUpdate": 4,
-      "currentRows": 563,
-      "associationThisUpdate": 5,
+      "previousRows": 563,
+      "addedThisUpdate": 12,
+      "updatedThisUpdate": 2,
+      "currentRows": 575,
+      "associationThisUpdate": 6,
       "referenceFixesThisUpdate": 0
     },
     "changelog": [
@@ -479,6 +479,11 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         "date": "2026-11-19",
         "version": "1.0.51",
         "text": "新規・関連10事例、既存4続報、OpenJDK 1テーマ追加、Chrome・Firefox・OpenSSL 3テーマ更新、8-Digits Team摘発動向1件を反映。563事例・100脆弱性・16アクター・22動向。"
+      },
+      {
+        "date": "2026-11-20",
+        "version": "1.0.52",
+        "text": "独立6事案・関連6組織を追加し、楽天証券と信州大学を続報更新。NGINX、Node-RED、Win Bird、Ruijie、vCenterの5テーマ追加、PHP更新。ARMORY CASTLEとQ3ランサムウェア市場の2動向を追加。575事例・105脆弱性・16アクター・24動向。"
       }
     ],
     "playbookReviewed": "2026-11-06",
@@ -25228,7 +25233,7 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
       "id": "inc-shinshu-anpic-arara-20261116",
       "date": "2026-11-16",
       "dateBasis": "初回公表日",
-      "sourceUpdated": "2026-11-16",
+      "sourceUpdated": "2026-11-19",
       "org": "信州大学／ANPIC（アララ関連）",
       "industry": "関連組織・委託先",
       "cat": [
@@ -25245,24 +25250,32 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         {
           "label": "信州大学公式11/16",
           "url": "https://www.shinshu-u.ac.jp/news/2026/11/anpic.html"
+        },
+        {
+          "label": "信州大学｜11/19不審メール注意",
+          "url": "https://www.shinshu-u.ac.jp/news/2026/11/anpic.html"
         }
       ],
       "change": "信州大学／ANPIC（アララ関連）について公式本文確認済みの新規公表情報を追加。",
-      "updated": "2026-11-17",
-      "checked": "2026-11-17",
-      "batch": "2026-11-17日次調査",
-      "changeType": "関連組織の確認結果",
+      "updated": "2026-11-20",
+      "checked": "2026-11-20",
+      "batch": "2026-11-20日次更新",
+      "changeType": "二次被害・注意喚起更新",
       "history": [
         {
           "date": "2026-11-17",
           "text": "信州大学／ANPIC（アララ関連）：公式情報を確認して追加。"
+        },
+        {
+          "date": "2026-11-20",
+          "text": "アララの配信サービスを悪用した不審メール確認を追記。大学の漏えいアドレスとの因果関係は未確定として分離。"
         }
       ],
       "secondary": {
-        "status": "注意喚起のみ",
-        "date": "2026-11-16",
-        "text": "確認できた一次公表の範囲。将来の無被害を意味しない。",
-        "checked": "2026-11-17"
+        "status": "不審連絡確認",
+        "date": "2026-11-19",
+        "checked": "2026-11-20",
+        "text": "アララのメール配信サービスを悪用したカード会社等を装う不審メール送信を大学が確認。信州大学の漏えいアドレスが使われたとの因果関係は公表範囲で未確定。"
       },
       "group": "アララメッセージ 2026-10"
     },
@@ -25357,7 +25370,7 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
       "date": "2026-11-17",
       "org": "楽天証券／テスト環境",
       "industry": "金融",
-      "status": "最大約447万口座の詳細情報・約1,125万口座の識別情報に漏えいのおそれ",
+      "status": "最大約447万口座の詳細情報・約1,125万口座の識別情報に漏えいのおそれ／金融庁の報告徴求命令を受領",
       "cat": [
         "不正アクセス",
         "情報漏えいの可能性",
@@ -25373,6 +25386,10 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         {
           "label": "楽天証券｜11/17公式",
           "url": "https://www.rakuten-sec.co.jp/smartphone/info/info20261117-02.html"
+        },
+        {
+          "label": "楽天証券｜11/19報告徴求命令",
+          "url": "https://www.rakuten-sec.co.jp/web/company/newsrelease/pdf/press2026111901.pdf"
         }
       ],
       "secondary": {
@@ -25381,18 +25398,22 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         "checked": "2026-11-18",
         "text": "本件に起因する不正アクセス・不正取引は公表時点で確認されていない。"
       },
-      "change": "テスト環境からの大規模な顧客情報漏えいのおそれを、情報区分・口座数・対象外情報を分けて追加。",
+      "change": "金融庁の報告徴求命令受領を続報反映。被害範囲・原因の調査継続と区別。",
       "dateBasis": "初回公表日",
-      "sourceUpdated": "2026-11-17",
-      "checked": "2026-11-18",
-      "updated": "2026-11-18",
-      "batch": "2026-11-18日次更新",
-      "changeType": "新規追加",
+      "sourceUpdated": "2026-11-19",
+      "checked": "2026-11-20",
+      "updated": "2026-11-20",
+      "batch": "2026-11-20日次更新",
+      "changeType": "続報更新",
       "evidence": "2026-11-18（JST）に被害組織または提供元の公式本文・公式PDFを確認。公表事実、対象外、調査中、二次被害を区別。",
       "history": [
         {
           "date": "2026-11-18",
           "text": "テスト環境からの大規模な顧客情報漏えいのおそれを、情報区分・口座数・対象外情報を分けて追加。"
+        },
+        {
+          "date": "2026-11-20",
+          "text": "11月19日に金融庁から金融商品取引法・個人情報保護法に基づく報告徴求命令を受領。原因分析・再発防止は継続中。命令受領を被害範囲確定や処分決定と混同しない。"
         }
       ]
     },
@@ -26422,6 +26443,525 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
           "text": "KARTE関連の二つの対象区分を、11/16自社別事案と分離して追加。"
         }
       ]
+    },
+    {
+      "id": "inc-ffg-analysis-tool-20261119",
+      "date": "2026-11-19",
+      "org": "ふくおかフィナンシャルグループ／外部データ分析ツール",
+      "industry": "金融・委託先",
+      "status": "接続データベース情報に漏えいのおそれ・調査中",
+      "cat": [
+        "委託先",
+        "不正アクセス",
+        "情報漏えいの可能性"
+      ],
+      "info": "十八親和銀行等が業務で利用する外部データ分析ツールに第三者の不正アクセスがあり、接続先データベース内の情報が漏えいした可能性を公表。",
+      "scope": "対象情報・件数・侵入経路は調査中。外部ツールと行内の注文管理等の接続範囲を確認中。",
+      "impact": "金融・業務データ連携先の資格情報、接続権限、停止時の代替集計が論点。",
+      "exclude": "現時点で顧客被害、漏えい確定件数、原因CVEは未公表。",
+      "action": "連携アカウント・API鍵・許可元、抽出ログ、接続DBの対象列、失効後の業務代替と通知判断を確認。",
+      "sources": [
+        {
+          "label": "十八親和銀行｜11/19公式",
+          "url": "https://www.18shinwabank.co.jp/announcement/important/y2026/1119.html"
+        }
+      ],
+      "secondary": {
+        "status": "未公表・不明",
+        "date": "2026-11-19",
+        "checked": "2026-11-20",
+        "text": "一次公表で確認できた範囲。注意喚起や将来の可能性を具体的な二次被害確認と読み替えない。"
+      },
+      "change": "公式一次資料で対象・件数・対象外・対応状況を確認して追加。",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-19",
+      "checked": "2026-11-20",
+      "updated": "2026-11-20",
+      "batch": "2026-11-20日次更新",
+      "changeType": "新規追加",
+      "evidence": "2026-11-20（JST）に被害組織または提供元の公式本文・公式PDFを確認。公表事実・可能性・対象外・調査中を区別。",
+      "history": [
+        {
+          "date": "2026-11-20",
+          "text": "公式一次資料で対象・件数・対象外・対応状況を確認して追加。"
+        }
+      ]
+    },
+    {
+      "id": "inc-momoyama-support-scam-20261119",
+      "date": "2026-11-19",
+      "org": "桃山学院大学／教職員端末",
+      "industry": "大学・教育",
+      "status": "サポート詐欺被害・情報漏えいの可能性を調査中",
+      "cat": [
+        "サポート詐欺",
+        "不正アクセス",
+        "情報漏えいの可能性"
+      ],
+      "info": "教員がサポート詐欺の被害を受け、端末内等の一部情報が漏えいした可能性があるとして調査。",
+      "scope": "対象情報・件数・遠隔操作範囲は調査中。",
+      "impact": "教職員端末から学内認証・研究資料・クラウドへの横展開確認と、授業継続が必要。",
+      "exclude": "具体的な不正利用・漏えい範囲は公表時点で未確認。",
+      "action": "端末隔離と証拠保全、遠隔操作ツール・ブラウザ保存情報・セッション・MFA・学内ログを確認し、授業代替端末を準備。",
+      "sources": [
+        {
+          "label": "桃山学院大学｜11/19公式",
+          "url": "https://www.andrew.ac.jp/newstopics3/2026/jr7gv30000003znn.html"
+        }
+      ],
+      "secondary": {
+        "status": "未公表・不明",
+        "date": "2026-11-19",
+        "checked": "2026-11-20",
+        "text": "一次公表で確認できた範囲。注意喚起や将来の可能性を具体的な二次被害確認と読み替えない。"
+      },
+      "change": "公式一次資料で対象・件数・対象外・対応状況を確認して追加。",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-19",
+      "checked": "2026-11-20",
+      "updated": "2026-11-20",
+      "batch": "2026-11-20日次更新",
+      "changeType": "新規追加",
+      "evidence": "2026-11-20（JST）に被害組織または提供元の公式本文・公式PDFを確認。公表事実・可能性・対象外・調査中を区別。",
+      "history": [
+        {
+          "date": "2026-11-20",
+          "text": "公式一次資料で対象・件数・対象外・対応状況を確認して追加。"
+        }
+      ]
+    },
+    {
+      "id": "inc-usen-almex-precheckin-20261119",
+      "date": "2026-11-19",
+      "org": "USEN-ALMEX／PreCheck-in",
+      "industry": "宿泊・SaaS",
+      "status": "26施設・283件の予約者情報が流出した可能性が高い",
+      "cat": [
+        "不正アクセス",
+        "情報漏えい",
+        "SaaS"
+      ],
+      "info": "システム連携用APIへの連続アクセスを11月14日に検知。26施設・283件の氏名、住所、電話番号、メールアドレスが外部閲覧・流出した可能性が高い。",
+      "scope": "11月15日発見、16日にネットワーク遮断・サービス停止。",
+      "impact": "宿泊施設の到着前業務、本人確認、予約連携停止時の代替受付と利用先通知が必要。",
+      "exclude": "パスポート画像、クレジットカード情報は対象外。二次被害は公表時点で未確認。",
+      "action": "API認証・連続アクセス検知、施設別対象者、予約照合、停止中の手動チェックインと再開条件を確認。",
+      "sources": [
+        {
+          "label": "USEN-ALMEX｜11/19公式",
+          "url": "https://www.usen-almex.jp/news/release/20261119.html"
+        }
+      ],
+      "secondary": {
+        "status": "報告なし（公表日時点）",
+        "date": "2026-11-19",
+        "checked": "2026-11-20",
+        "text": "一次公表で確認できた範囲。注意喚起や将来の可能性を具体的な二次被害確認と読み替えない。"
+      },
+      "change": "公式一次資料で対象・件数・対象外・対応状況を確認して追加。",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-19",
+      "checked": "2026-11-20",
+      "updated": "2026-11-20",
+      "batch": "2026-11-20日次更新",
+      "changeType": "新規追加",
+      "evidence": "2026-11-20（JST）に被害組織または提供元の公式本文・公式PDFを確認。公表事実・可能性・対象外・調査中を区別。",
+      "history": [
+        {
+          "date": "2026-11-20",
+          "text": "公式一次資料で対象・件数・対象外・対応状況を確認して追加。"
+        }
+      ]
+    },
+    {
+      "id": "inc-lifull-internal-tool-20261119",
+      "date": "2026-11-19",
+      "org": "LIFULL／社内用業務管理ツール",
+      "industry": "企業",
+      "status": "管理者権限奪取・不正プログラム設置・情報持出し確認",
+      "cat": [
+        "不正アクセス",
+        "マルウェア",
+        "情報漏えい"
+      ],
+      "info": "11月14日に管理者権限が奪取され不正プログラムが設置。一般顧客101名、取引先等3,597名、従業員・退職者2,165名の情報が持ち出された可能性。",
+      "scope": "15日に関連サーバー停止・ネットワーク遮断、再構築と侵入原因となったネットワーク設定を修正。",
+      "impact": "社内業務管理・取引先連絡・従業員対応の継続と、再構築前の保全が論点。",
+      "exclude": "カード、銀行口座、マイナンバーは対象外。LIFULL HOME’S等のサービス侵害は未確認。",
+      "action": "管理者権限・設置物・外向き通信、設定変更、対象者通知、再構築後の秘密情報失効と業務再開条件を確認。",
+      "sources": [
+        {
+          "label": "LIFULL｜11/19公式",
+          "url": "https://lifull.com/news/51226/"
+        }
+      ],
+      "secondary": {
+        "status": "報告なし（公表日時点）",
+        "date": "2026-11-19",
+        "checked": "2026-11-20",
+        "text": "一次公表で確認できた範囲。注意喚起や将来の可能性を具体的な二次被害確認と読み替えない。"
+      },
+      "change": "公式一次資料で対象・件数・対象外・対応状況を確認して追加。",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-19",
+      "checked": "2026-11-20",
+      "updated": "2026-11-20",
+      "batch": "2026-11-20日次更新",
+      "changeType": "新規追加",
+      "evidence": "2026-11-20（JST）に被害組織または提供元の公式本文・公式PDFを確認。公表事実・可能性・対象外・調査中を区別。",
+      "history": [
+        {
+          "date": "2026-11-20",
+          "text": "公式一次資料で対象・件数・対象外・対応状況を確認して追加。"
+        }
+      ]
+    },
+    {
+      "id": "inc-osaki-ransomware-20261118",
+      "date": "2026-11-18",
+      "org": "大崎電気工業／埼玉・関連生産拠点",
+      "industry": "製造",
+      "status": "ランサムウェアでスマートメーター等の生産・出荷停止",
+      "cat": [
+        "ランサムウェア",
+        "サービス停止",
+        "情報漏えいの可能性"
+      ],
+      "info": "11月17日10時35分ごろサーバー内データの暗号化を確認し、正午以降外部ネットワークを遮断。",
+      "scope": "埼玉事業所、岩手大崎電気、大崎プラテックの生産関連システムを停止。データ流出可能性は調査中。",
+      "impact": "スマートメーター供給・出荷の停止が取引先や公共インフラ計画へ波及し得る。",
+      "exclude": "復旧・再開時期、窃取の有無、侵入経路、攻撃者は未公表。",
+      "action": "生産・出荷の手作業代替、在庫・優先顧客、AD/仮想基盤/バックアップ、再開判定と取引先連絡を確認。",
+      "sources": [
+        {
+          "label": "大崎電気工業｜11/18第1報",
+          "url": "https://www.osaki.co.jp/ja/notice/20261118.html"
+        }
+      ],
+      "secondary": {
+        "status": "未公表・不明",
+        "date": "2026-11-18",
+        "checked": "2026-11-20",
+        "text": "一次公表で確認できた範囲。注意喚起や将来の可能性を具体的な二次被害確認と読み替えない。"
+      },
+      "change": "公式一次資料で対象・件数・対象外・対応状況を確認して追加。",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-18",
+      "checked": "2026-11-20",
+      "updated": "2026-11-20",
+      "batch": "2026-11-20日次更新",
+      "changeType": "新規追加",
+      "evidence": "2026-11-20（JST）に被害組織または提供元の公式本文・公式PDFを確認。公表事実・可能性・対象外・調査中を区別。",
+      "history": [
+        {
+          "date": "2026-11-20",
+          "text": "公式一次資料で対象・件数・対象外・対応状況を確認して追加。"
+        }
+      ]
+    },
+    {
+      "id": "inc-schoo-swing-20261119",
+      "date": "2026-11-19",
+      "org": "Schoo／Swing LMS",
+      "industry": "教育SaaS",
+      "status": "共有試用アカウントと権限不備を悪用・86人分漏えい",
+      "cat": [
+        "不正アクセス",
+        "情報漏えい",
+        "SaaS",
+        "改ざん"
+      ],
+      "info": "11月14日、公開・共有状態の試用アカウントと機能の認可不備を悪用され、1校9教員と77校代表者の計86人分の情報を取得。一部学校データも改変されたが復元。",
+      "scope": "2時30分攻撃、3時16分～4時40分取得、5時30分～18時56分停止。全セッションをログアウトし不備修正、共通アカウントを停止。",
+      "impact": "LMS停止、学校情報の完全性、授業・校務の代替と再開前照合が必要。",
+      "exclude": "パスワード、学習者情報、授業データは対象外。二次被害は未確認。",
+      "action": "試用・共通アカウント、機能単位認可、全セッション失効、改変差分、学校別連絡、授業代替を確認。",
+      "sources": [
+        {
+          "label": "Schoo｜11/19公式",
+          "url": "https://corp.schoo.jp/post/0bDA5P_w"
+        }
+      ],
+      "secondary": {
+        "status": "報告なし（公表日時点）",
+        "date": "2026-11-19",
+        "checked": "2026-11-20",
+        "text": "一次公表で確認できた範囲。注意喚起や将来の可能性を具体的な二次被害確認と読み替えない。"
+      },
+      "change": "公式一次資料で対象・件数・対象外・対応状況を確認して追加。",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-19",
+      "checked": "2026-11-20",
+      "updated": "2026-11-20",
+      "batch": "2026-11-20日次更新",
+      "changeType": "新規追加",
+      "evidence": "2026-11-20（JST）に被害組織または提供元の公式本文・公式PDFを確認。公表事実・可能性・対象外・調査中を区別。",
+      "history": [
+        {
+          "date": "2026-11-20",
+          "text": "公式一次資料で対象・件数・対象外・対応状況を確認して追加。"
+        }
+      ]
+    },
+    {
+      "id": "inc-moneyforward-notion-fireworks-20261119",
+      "date": "2026-11-19",
+      "org": "マネーフォワードグループ3社／Notion AI",
+      "industry": "SaaS利用組織",
+      "status": "Notion AIチャット記録内の個人情報4,797名に漏えいの可能性",
+      "cat": [
+        "委託先",
+        "情報漏えいの可能性",
+        "AI"
+      ],
+      "info": "Fireworks AI侵害により、10月5日～24日のNotion AIチャット記録の一部が対象。名寄せ後4,797名（氏名3,460件、メール1,245件、管理識別子119件）と従業員情報。",
+      "scope": "複数項目の重複があるため内訳合計と4,797名は一致しない。",
+      "impact": "AI入力に含まれた顧客・取引先情報の通知、再委託先の停止・代替、入力統制が論点。",
+      "exclude": "パスワード・カードはNotion上で扱わず対象外。自社クラウド/ME等のシステム侵害ではない。",
+      "action": "AI入力ログ、機微情報持込み、再委託先、アクセス失効、対象者通知とAI機能停止時の代替を確認。",
+      "sources": [
+        {
+          "label": "マネーフォワード｜11/19公式",
+          "url": "https://corp.moneyforward.com/news/info/20261119-mf-press-2/"
+        }
+      ],
+      "secondary": {
+        "status": "報告なし（公表日時点）",
+        "date": "2026-11-19",
+        "checked": "2026-11-20",
+        "text": "一次公表で確認できた範囲。注意喚起や将来の可能性を具体的な二次被害確認と読み替えない。"
+      },
+      "change": "公式一次資料で対象・件数・対象外・対応状況を確認して追加。",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-19",
+      "checked": "2026-11-20",
+      "updated": "2026-11-20",
+      "batch": "2026-11-20日次更新",
+      "changeType": "関連組織の確認結果",
+      "evidence": "2026-11-20（JST）に被害組織または提供元の公式本文・公式PDFを確認。公表事実・可能性・対象外・調査中を区別。",
+      "history": [
+        {
+          "date": "2026-11-20",
+          "text": "公式一次資料で対象・件数・対象外・対応状況を確認して追加。"
+        }
+      ],
+      "group": "Fireworks AI／Notion AI 2026-11"
+    },
+    {
+      "id": "inc-mainichi-karte-20261119",
+      "date": "2026-11-19",
+      "org": "毎日新聞社／毎日新聞デジタル・KARTE",
+      "industry": "メディア・SaaS利用組織",
+      "status": "姓約14万件ほか会員属性の漏えい確認",
+      "cat": [
+        "委託先",
+        "情報漏えい"
+      ],
+      "info": "姓約14万件、年齢約7万件、契約プラン約1.8万件、ポイントID約2,700件、メール約80件がKARTE侵害で漏えい。",
+      "scope": "項目ごとの件数であり同一人数として合算しない。",
+      "impact": "会員への標的型連絡、ID照合、ニュース配信・会員案内の信頼維持が論点。",
+      "exclude": "パスワード、カード、生年月日、住所、電話番号は対象外。",
+      "action": "項目別対象者、KARTE連携停止、個別通知、正規メール識別、不審連絡窓口を確認。",
+      "sources": [
+        {
+          "label": "毎日新聞社｜11/19公式",
+          "url": "https://www.mainichi.co.jp/info/news/20261119.html"
+        }
+      ],
+      "secondary": {
+        "status": "未公表・不明",
+        "date": "2026-11-19",
+        "checked": "2026-11-20",
+        "text": "一次公表で確認できた範囲。注意喚起や将来の可能性を具体的な二次被害確認と読み替えない。"
+      },
+      "change": "公式一次資料で対象・件数・対象外・対応状況を確認して追加。",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-19",
+      "checked": "2026-11-20",
+      "updated": "2026-11-20",
+      "batch": "2026-11-20日次更新",
+      "changeType": "関連組織の確認結果",
+      "evidence": "2026-11-20（JST）に被害組織または提供元の公式本文・公式PDFを確認。公表事実・可能性・対象外・調査中を区別。",
+      "history": [
+        {
+          "date": "2026-11-20",
+          "text": "公式一次資料で対象・件数・対象外・対応状況を確認して追加。"
+        }
+      ],
+      "group": "KARTE関連"
+    },
+    {
+      "id": "inc-timee-karte-20261119",
+      "date": "2026-11-19",
+      "org": "タイミー／KARTE",
+      "industry": "人材・SaaS利用組織",
+      "status": "求人事業者担当者最大226,662名の情報漏えい",
+      "cat": [
+        "委託先",
+        "情報漏えい"
+      ],
+      "info": "求人事業者担当者最大226,662名。メール226,662件、姓または名93,862件、電話19,289件、顧客管理ID227,561件。",
+      "scope": "複数事業所で同一担当者に複数IDがあり得る。ワーカー情報ではない。",
+      "impact": "事業者担当者へのBEC・なりすまし、求人運用連絡、委託先停止時の代替が論点。",
+      "exclude": "ログインID・パスワード等の認証情報は対象外。二次被害未確認。",
+      "action": "事業者担当者への通知、顧客管理IDの用途、KARTE停止、正規連絡手段を確認。",
+      "sources": [
+        {
+          "label": "タイミー｜11/19公式",
+          "url": "https://corp.timee.co.jp/news/detail-7442/"
+        }
+      ],
+      "secondary": {
+        "status": "報告なし（公表日時点）",
+        "date": "2026-11-19",
+        "checked": "2026-11-20",
+        "text": "一次公表で確認できた範囲。注意喚起や将来の可能性を具体的な二次被害確認と読み替えない。"
+      },
+      "change": "公式一次資料で対象・件数・対象外・対応状況を確認して追加。",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-19",
+      "checked": "2026-11-20",
+      "updated": "2026-11-20",
+      "batch": "2026-11-20日次更新",
+      "changeType": "関連組織の確認結果",
+      "evidence": "2026-11-20（JST）に被害組織または提供元の公式本文・公式PDFを確認。公表事実・可能性・対象外・調査中を区別。",
+      "history": [
+        {
+          "date": "2026-11-20",
+          "text": "公式一次資料で対象・件数・対象外・対応状況を確認して追加。"
+        }
+      ],
+      "group": "KARTE関連"
+    },
+    {
+      "id": "inc-jleague-karte-20261118",
+      "date": "2026-11-18",
+      "org": "Jリーグ／チケット・Fantasy Card（KARTE）",
+      "industry": "スポーツ・SaaS利用組織",
+      "status": "チケット約238万件等の情報漏えい確認",
+      "cat": [
+        "委託先",
+        "情報漏えい"
+      ],
+      "info": "Jリーグ/WEリーグチケット2,383,073件（うちWE 14件）の内部ID・生年月日・性別・都道府県・市区町村と、Fantasy Card 543件のメール・内部ID。",
+      "scope": "KARTE関連機能・データ連携は停止。公式サービス自体は利用可能。",
+      "impact": "大規模属性情報の悪用、チケット販売継続と連携停止時の案内が論点。",
+      "exclude": "JリーグID、パスワード、カードは対象外。",
+      "action": "KARTE連携停止、内部IDの利用範囲、正規通知、チケット販売継続中の監視を確認。",
+      "sources": [
+        {
+          "label": "Jリーグ｜11/18公式",
+          "url": "https://www.jleague.jp/news/article/35384/"
+        }
+      ],
+      "secondary": {
+        "status": "未公表・不明",
+        "date": "2026-11-18",
+        "checked": "2026-11-20",
+        "text": "一次公表で確認できた範囲。注意喚起や将来の可能性を具体的な二次被害確認と読み替えない。"
+      },
+      "change": "公式一次資料で対象・件数・対象外・対応状況を確認して追加。",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-18",
+      "checked": "2026-11-20",
+      "updated": "2026-11-20",
+      "batch": "2026-11-20日次更新",
+      "changeType": "関連組織の確認結果",
+      "evidence": "2026-11-20（JST）に被害組織または提供元の公式本文・公式PDFを確認。公表事実・可能性・対象外・調査中を区別。",
+      "history": [
+        {
+          "date": "2026-11-20",
+          "text": "公式一次資料で対象・件数・対象外・対応状況を確認して追加。"
+        }
+      ],
+      "group": "KARTE関連"
+    },
+    {
+      "id": "inc-dhc-karte-20261118",
+      "date": "2026-11-18",
+      "org": "DHC／KARTE",
+      "industry": "小売・SaaS利用組織",
+      "status": "顧客情報約1,911万件の漏えい確認",
+      "cat": [
+        "委託先",
+        "情報漏えい"
+      ],
+      "info": "氏名、メール、生年月日、年齢、性別、会員ID、メールマガジン配信設定に関する約1,911万件。",
+      "scope": "件数は情報レコードであり人数と断定しない。",
+      "impact": "大規模会員データを使うなりすまし・フィッシングと通知能力が論点。",
+      "exclude": "オンラインショップのログインパスワードとカード情報は対象外。二次被害未確認。",
+      "action": "会員IDの用途、連携停止、対象者通知、正規メール識別、問い合わせ増加へのBCPを確認。",
+      "sources": [
+        {
+          "label": "DHC｜11/18公式PDF",
+          "url": "https://dhc-corporate.co.jp/cms_dH8vjpRq/wp-content/uploads/2026/11/2d7a589cb5008fbc262624582782444f.pdf"
+        }
+      ],
+      "secondary": {
+        "status": "報告なし（公表日時点）",
+        "date": "2026-11-18",
+        "checked": "2026-11-20",
+        "text": "一次公表で確認できた範囲。注意喚起や将来の可能性を具体的な二次被害確認と読み替えない。"
+      },
+      "change": "公式一次資料で対象・件数・対象外・対応状況を確認して追加。",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-18",
+      "checked": "2026-11-20",
+      "updated": "2026-11-20",
+      "batch": "2026-11-20日次更新",
+      "changeType": "関連組織の確認結果",
+      "evidence": "2026-11-20（JST）に被害組織または提供元の公式本文・公式PDFを確認。公表事実・可能性・対象外・調査中を区別。",
+      "history": [
+        {
+          "date": "2026-11-20",
+          "text": "公式一次資料で対象・件数・対象外・対応状況を確認して追加。"
+        }
+      ],
+      "group": "KARTE関連"
+    },
+    {
+      "id": "inc-mufgesmart-karte-20261118",
+      "date": "2026-11-18",
+      "org": "三菱UFJ eスマート証券／KARTE",
+      "industry": "金融・SaaS利用組織",
+      "status": "口座番号約6万件・年齢約10.5万件が別々に漏えい",
+      "cat": [
+        "委託先",
+        "情報漏えい",
+        "金融"
+      ],
+      "info": "証券口座番号約6万件と年齢約10.5万件が別々に漏えい。両情報は紐付かず、単独では顧客を特定できないと説明。",
+      "scope": "2区分を同一人物・合計人数として扱わない。",
+      "impact": "金融機関を装う連絡、不正ログイン監視、KARTE停止中の案内が論点。",
+      "exclude": "氏名、住所、生年月日、メール、パスワード、カード、本人確認書類は対象外。不正取引未確認。",
+      "action": "口座番号の利用範囲、KARTE連携停止、取引監視、正規連絡・問い合わせ対応を確認。",
+      "sources": [
+        {
+          "label": "三菱UFJ eスマート証券｜11/18公式",
+          "url": "https://kabu.com/company/pressrelease/20261118_1.html"
+        }
+      ],
+      "secondary": {
+        "status": "報告なし（公表日時点）",
+        "date": "2026-11-18",
+        "checked": "2026-11-20",
+        "text": "一次公表で確認できた範囲。注意喚起や将来の可能性を具体的な二次被害確認と読み替えない。"
+      },
+      "change": "公式一次資料で対象・件数・対象外・対応状況を確認して追加。",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-18",
+      "checked": "2026-11-20",
+      "updated": "2026-11-20",
+      "batch": "2026-11-20日次更新",
+      "changeType": "関連組織の確認結果",
+      "evidence": "2026-11-20（JST）に被害組織または提供元の公式本文・公式PDFを確認。公表事実・可能性・対象外・調査中を区別。",
+      "history": [
+        {
+          "date": "2026-11-20",
+          "text": "公式一次資料で対象・件数・対象外・対応状況を確認して追加。"
+        }
+      ],
+      "group": "KARTE関連"
     }
   ],
   "caseLinks": {
@@ -38344,6 +38884,294 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         "P05",
         "P08"
       ]
+    },
+    "inc-ffg-analysis-tool-20261119": {
+      "techs": [
+        "supplier",
+        "sharing",
+        "outage"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-bcp",
+        "ck-command"
+      ],
+      "ir": "supplier",
+      "notice": "supplier",
+      "entry": "委託先・SaaS環境への不正アクセス",
+      "weakness": "利用組織側システムへの直接侵入とは区別",
+      "actor": "確認情報なし",
+      "basis": "公式一次資料に基づく関連付け。共通の提供元事案は独立攻撃件数として重複集計しない。",
+      "responsePatterns": [
+        "P06",
+        "P05",
+        "P08"
+      ]
+    },
+    "inc-momoyama-support-scam-20261119": {
+      "techs": [
+        "public",
+        "remote",
+        "outage"
+      ],
+      "checks": [
+        "ck-public",
+        "ck-data",
+        "ck-bcp",
+        "ck-command"
+      ],
+      "ir": "account",
+      "notice": "leak",
+      "entry": "認証・端末・公開機能等からの侵入（個別原因は公表範囲）",
+      "weakness": "原因・成立条件は公表範囲を超えて推定しない",
+      "actor": "確認情報なし",
+      "basis": "公式一次資料に基づく関連付け。共通の提供元事案は独立攻撃件数として重複集計しない。",
+      "responsePatterns": [
+        "P01",
+        "P04",
+        "P08"
+      ]
+    },
+    "inc-usen-almex-precheckin-20261119": {
+      "techs": [
+        "public",
+        "remote",
+        "outage"
+      ],
+      "checks": [
+        "ck-public",
+        "ck-data",
+        "ck-bcp",
+        "ck-command"
+      ],
+      "ir": "account",
+      "notice": "leak",
+      "entry": "認証・端末・公開機能等からの侵入（個別原因は公表範囲）",
+      "weakness": "原因・成立条件は公表範囲を超えて推定しない",
+      "actor": "確認情報なし",
+      "basis": "公式一次資料に基づく関連付け。共通の提供元事案は独立攻撃件数として重複集計しない。",
+      "responsePatterns": [
+        "P01",
+        "P04",
+        "P08"
+      ]
+    },
+    "inc-lifull-internal-tool-20261119": {
+      "techs": [
+        "public",
+        "remote",
+        "outage"
+      ],
+      "checks": [
+        "ck-public",
+        "ck-data",
+        "ck-bcp",
+        "ck-command"
+      ],
+      "ir": "account",
+      "notice": "leak",
+      "entry": "認証・端末・公開機能等からの侵入（個別原因は公表範囲）",
+      "weakness": "原因・成立条件は公表範囲を超えて推定しない",
+      "actor": "確認情報なし",
+      "basis": "公式一次資料に基づく関連付け。共通の提供元事案は独立攻撃件数として重複集計しない。",
+      "responsePatterns": [
+        "P01",
+        "P04",
+        "P08"
+      ]
+    },
+    "inc-osaki-ransomware-20261118": {
+      "techs": [
+        "public",
+        "remote",
+        "outage"
+      ],
+      "checks": [
+        "ck-public",
+        "ck-data",
+        "ck-bcp",
+        "ck-command"
+      ],
+      "ir": "ransom",
+      "notice": "outage",
+      "entry": "認証・端末・公開機能等からの侵入（個別原因は公表範囲）",
+      "weakness": "原因・成立条件は公表範囲を超えて推定しない",
+      "actor": "確認情報なし",
+      "basis": "公式一次資料に基づく関連付け。共通の提供元事案は独立攻撃件数として重複集計しない。",
+      "responsePatterns": [
+        "P01",
+        "P04",
+        "P08"
+      ]
+    },
+    "inc-schoo-swing-20261119": {
+      "techs": [
+        "public",
+        "remote",
+        "outage"
+      ],
+      "checks": [
+        "ck-public",
+        "ck-data",
+        "ck-bcp",
+        "ck-command"
+      ],
+      "ir": "account",
+      "notice": "leak",
+      "entry": "認証・端末・公開機能等からの侵入（個別原因は公表範囲）",
+      "weakness": "原因・成立条件は公表範囲を超えて推定しない",
+      "actor": "確認情報なし",
+      "basis": "公式一次資料に基づく関連付け。共通の提供元事案は独立攻撃件数として重複集計しない。",
+      "responsePatterns": [
+        "P01",
+        "P04",
+        "P08"
+      ]
+    },
+    "inc-moneyforward-notion-fireworks-20261119": {
+      "techs": [
+        "supplier",
+        "sharing",
+        "outage"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-bcp",
+        "ck-command"
+      ],
+      "ir": "supplier",
+      "notice": "supplier",
+      "entry": "委託先・SaaS環境への不正アクセス",
+      "weakness": "利用組織側システムへの直接侵入とは区別",
+      "actor": "確認情報なし",
+      "basis": "公式一次資料に基づく関連付け。共通の提供元事案は独立攻撃件数として重複集計しない。",
+      "responsePatterns": [
+        "P06",
+        "P05",
+        "P08"
+      ]
+    },
+    "inc-mainichi-karte-20261119": {
+      "techs": [
+        "supplier",
+        "sharing",
+        "outage"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-bcp",
+        "ck-command"
+      ],
+      "ir": "supplier",
+      "notice": "supplier",
+      "entry": "委託先・SaaS環境への不正アクセス",
+      "weakness": "利用組織側システムへの直接侵入とは区別",
+      "actor": "確認情報なし",
+      "basis": "公式一次資料に基づく関連付け。共通の提供元事案は独立攻撃件数として重複集計しない。",
+      "responsePatterns": [
+        "P06",
+        "P05",
+        "P08"
+      ]
+    },
+    "inc-timee-karte-20261119": {
+      "techs": [
+        "supplier",
+        "sharing",
+        "outage"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-bcp",
+        "ck-command"
+      ],
+      "ir": "supplier",
+      "notice": "supplier",
+      "entry": "委託先・SaaS環境への不正アクセス",
+      "weakness": "利用組織側システムへの直接侵入とは区別",
+      "actor": "確認情報なし",
+      "basis": "公式一次資料に基づく関連付け。共通の提供元事案は独立攻撃件数として重複集計しない。",
+      "responsePatterns": [
+        "P06",
+        "P05",
+        "P08"
+      ]
+    },
+    "inc-jleague-karte-20261118": {
+      "techs": [
+        "supplier",
+        "sharing",
+        "outage"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-bcp",
+        "ck-command"
+      ],
+      "ir": "supplier",
+      "notice": "supplier",
+      "entry": "委託先・SaaS環境への不正アクセス",
+      "weakness": "利用組織側システムへの直接侵入とは区別",
+      "actor": "確認情報なし",
+      "basis": "公式一次資料に基づく関連付け。共通の提供元事案は独立攻撃件数として重複集計しない。",
+      "responsePatterns": [
+        "P06",
+        "P05",
+        "P08"
+      ]
+    },
+    "inc-dhc-karte-20261118": {
+      "techs": [
+        "supplier",
+        "sharing",
+        "outage"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-bcp",
+        "ck-command"
+      ],
+      "ir": "supplier",
+      "notice": "supplier",
+      "entry": "委託先・SaaS環境への不正アクセス",
+      "weakness": "利用組織側システムへの直接侵入とは区別",
+      "actor": "確認情報なし",
+      "basis": "公式一次資料に基づく関連付け。共通の提供元事案は独立攻撃件数として重複集計しない。",
+      "responsePatterns": [
+        "P06",
+        "P05",
+        "P08"
+      ]
+    },
+    "inc-mufgesmart-karte-20261118": {
+      "techs": [
+        "supplier",
+        "sharing",
+        "outage"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-bcp",
+        "ck-command"
+      ],
+      "ir": "supplier",
+      "notice": "supplier",
+      "entry": "委託先・SaaS環境への不正アクセス",
+      "weakness": "利用組織側システムへの直接侵入とは区別",
+      "actor": "確認情報なし",
+      "basis": "公式一次資料に基づく関連付け。共通の提供元事案は独立攻撃件数として重複集計しない。",
+      "responsePatterns": [
+        "P06",
+        "P05",
+        "P08"
+      ]
     }
   },
   "techniques": [
@@ -39267,18 +40095,18 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         "CVE-2026-115560"
       ],
       "published": "2026-10-21",
-      "sourceUpdated": "2026-11-02（IPA追記）",
+      "sourceUpdated": "2026-11-19",
       "exploitation": "CISAはCVE-2026-109618/109619をKEVに追加。JPCERT/CCは、特定ファイアウォール版でPHP脆弱性とLinux権限昇格を連鎖させた侵害成功の痕跡、内部横展開の試み、製品ベンダーによる攻撃観測を10/29追記。一般PHP環境すべての侵害を意味しない。",
       "exploitationTone": "red",
       "priority": "外部からWeb要求を処理するPHP環境を優先確認",
       "conditions": "PHP-FPM、Apache mod_php、php-cgi、FrankenPHP、LiteSpeedなど、PHPでWeb要求を処理する構成。アプリ名だけで判定せず、実際のPHP系列・版と配布元パッケージの修正状態を照合する。 CVE-2026-115560は特定の設定とアプリケーションコードの組合せでsession upload progressが関係し、一般的ではない構成と説明される。 IPAは11月2日、VPN・セキュリティアプライアンス等のWeb UIにPHPが組み込まれる場合もあるとして、製品開発元情報の確認を追記。",
       "impact": "109618はメモリ不足時の内部状態の破損、109619は解放後に残る内部状態に関する問題で、認証不要のコード実行につながり得る。メーカーはmod_phpでアプリ処理前に成立する実証があり最も高いリスクと評価。全構成で同一手順・被害が成立したという意味ではない。",
-      "fix": "公開済みのPHP 8.5.12／8.4.27／8.3.36／8.2.35以降の対応版へ更新。OS・LTS提供元が修正をバックポートする場合はパッケージのアドバイザリも確認し、再起動・プロセスの実稼働版を照合する。完全な解消は更新による。 CVE-2026-115560は通常リリースで修正予定のため、それまでsession.upload_progress.enabled=0へ設定し全ワーカーを再起動。109619向けに適用済みなら追加対応不要。",
+      "fix": "PHP 8.5.13／8.4.28／8.3.37／8.2.36は11月19日のセキュリティリリース。各系列の最新修正版へ更新し、OS・LTS提供元のバックポートと実稼働プロセスを確認。8.2は2026年末EOL予定のため移行も進める。",
       "investigation": "JPCERT/CCの10/22案内に沿い、通常と異なる長さ・形式のPHPSESSID、メモリ上限周辺の異常なmultipart要求・HTTP 500、ワーカー異常終了・再起動、プロセス・生成ファイル・外向き通信を確認する。単一の兆候がないだけで未侵害と判定しない。修正適用と適用前の侵入有無の調査を分ける。",
       "bcp": "更新担当と契約範囲、同梱PHP・コンテナ・管理UIを棚卸し。互換性・再起動・切戻しと受付・告知の代替を準備し、Web表示・ログイン・フォーム・連携を確認する。PHP 8.1以前はPHPプロジェクトの通常更新対象外。7.4／8.0／8.1向け最小ソースバックポートは通常サポート再開を意味しない。5系を含む旧版を安全と判断せず、ベンダー修正又は対応系列への移行を確認する。",
       "tech": "public",
       "check": "ck-public",
-      "change": "IPAの11/2追記を反映し、VPN等の製品同梱PHPを確認対象へ追加。",
+      "change": "11月19日提供の8.5.13／8.4.28／8.3.37／8.2.36を反映。最高Criticalは非既定・まれな構成が条件とされ、個別CVE条件はChangeLog・配布元情報で確認。",
       "sources": [
         {
           "label": "PHP｜公式セキュリティリリース",
@@ -39311,6 +40139,10 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         {
           "label": "IPA｜11/2更新",
           "url": "https://www.ipa.go.jp/security/security-alert/2026/alert20261022.html"
+        },
+        {
+          "label": "PHP公式｜2026年11月19日セキュリティリリース",
+          "url": "https://www.php.net/archive/2026.php"
         }
       ],
       "sourceNote": "IPAの11月2日更新本文を2026-11-03に確認。スタンドアロンPHPだけでなく製品同梱・組込みを点検対象へ追加。",
@@ -39557,9 +40389,9 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
           ]
         }
       ],
-      "checked": "2026-11-03",
-      "updated": "2026-11-03",
-      "changeType": "重要更新",
+      "checked": "2026-11-20",
+      "updated": "2026-11-20",
+      "changeType": "続報更新",
       "history": [
         {
           "date": "2026-10-22",
@@ -39625,6 +40457,11 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
           "date": "2026-11-03",
           "type": "重要更新",
           "note": "IPA追記に基づきVPN等の製品同梱PHPの確認を追加。"
+        },
+        {
+          "date": "2026-11-20",
+          "type": "続報更新",
+          "note": "11月19日提供の8.5.13／8.4.28／8.3.37／8.2.36を反映。最高Criticalは非既定・まれな構成が条件とされ、個別CVE条件はChangeLog・配布元情報で確認。"
         }
       ],
       "relatedVulnerabilities": [
@@ -44160,6 +44997,231 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
           "note": "公式一次資料に基づき追加。"
         }
       ]
+    },
+    {
+      "id": "v-nginx-20261119",
+      "product": "NGINX 1.30/1.31・ディストリビューション版",
+      "title": "NGINX：HTTP/2等のメモリ破損を含む10件の修正",
+      "identifiers": [
+        "CVE-2026-123007",
+        "CVE-2026-123634",
+        "CVE-2026-123633",
+        "CVE-2026-121810",
+        "CVE-2026-118899",
+        "CVE-2026-113425",
+        "CVE-2026-120993",
+        "CVE-2026-125283",
+        "CVE-2026-120967",
+        "CVE-2026-123640"
+      ],
+      "published": "2026-11-18",
+      "sourceUpdated": "2026-11-19",
+      "exploitation": "公式・配布元資料で実悪用確認の記載は確認できず。悪用なしとは断定しない。",
+      "exploitationTone": "red",
+      "priority": "インターネット公開のHTTP/2・HTTP/3、mail proxy、stream等の有効機能と配布元修正を優先照合",
+      "conditions": "各CVEでHTTP/2/3、resolver、mail proxy、PROXY protocol、alias/try_files、stream等の成立条件が異なる。",
+      "impact": "メモリ破損・use-after-free・無限ループ・認証回避により、コード実行、情報漏えい、停止の可能性。",
+      "fix": "上流1.31.9/1.30.7以降またはUbuntu等配布元修正版へ更新。Red Hatは製品別修正状況を確認し、mail proxy等の公式緩和策は機能影響を評価。",
+      "investigation": "実稼働バイナリとモジュール、HTTP/2/3異常、クラッシュ、子プロセス、設定差分、外向き通信を保全・確認。",
+      "bcp": "LB/リバースプロキシ更新のローリング、HTTP/2/3やメール機能停止時の代替、切戻しと監視を準備。",
+      "tech": "public",
+      "check": "ck-public",
+      "sources": [
+        {
+          "label": "NGINX公式｜11/18",
+          "url": "https://nginx.org/2026.html"
+        },
+        {
+          "label": "NGINX advisories",
+          "url": "https://nginx.org/en/security_advisories.html"
+        },
+        {
+          "label": "Red Hat RHSB-2026-019",
+          "url": "https://access.redhat.com/security/vulnerabilities/RHSB-2026-019"
+        },
+        {
+          "label": "Ubuntu USN-9159-1",
+          "url": "https://ubuntu.com/security/notices/USN-9159-1"
+        }
+      ],
+      "sourceNote": "公式一次資料を2026-11-20 JSTに本文確認。対象条件・修正版・悪用状況を区別。",
+      "change": "10件を一テーマとして追加し、機能別条件と配布元修正を分離。",
+      "checked": "2026-11-20",
+      "updated": "2026-11-20",
+      "changeType": "新規掲載",
+      "history": [
+        {
+          "date": "2026-11-20",
+          "type": "新規掲載",
+          "note": "公式一次資料に基づき追加。"
+        }
+      ]
+    },
+    {
+      "id": "v-nodered-58115-20261119",
+      "product": "Node-RED／SIMATIC IoT2050",
+      "title": "CVE-2026-58115：認証なし管理APIへの悪意あるフロー登録・実攻撃試行",
+      "identifiers": [
+        "CVE-2026-58115"
+      ],
+      "published": "2026-11-19",
+      "sourceUpdated": "2026-11-19",
+      "exploitation": "VulnCheckが自動探索・悪用試行を観測し、JPCERT/CCは国内Node-REDホストへの攻撃報告を受領。",
+      "exploitationTone": "red",
+      "priority": "adminAuth未設定で到達可能なNode-REDを最優先。OT・研究設備・組込み製品も確認",
+      "conditions": "エディター/管理APIの認証adminAuthが未設定で、攻撃者がHTTPインターフェースへ到達できる構成。",
+      "impact": "悪意あるフローからOSコマンド実行、マルウェア取得・実行、装置制御・停止。Siemens製品では最大権限の可能性。",
+      "fix": "Node-RED本体・製品ベンダーの修正版へ更新し、adminAuth設定、管理面のネットワーク制限、不要時アンインストール。",
+      "investigation": "登録フロー・資格情報・設定差分、Node-RED/OSログ、子プロセス、ダウンロード、外向き通信を保全。",
+      "bcp": "OT/施設・研究設備の停止影響を評価し、管理経路を限定、更新・再起動・制御代替と復旧試験を準備。",
+      "tech": "public",
+      "check": "ck-public",
+      "sources": [
+        {
+          "label": "JPCERT/CC｜11/19",
+          "url": "https://www.jpcert.or.jp/newsflash/2026111901.html"
+        },
+        {
+          "label": "Siemens SSA-834709",
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-834709.html"
+        }
+      ],
+      "sourceNote": "公式一次資料を2026-11-20 JSTに本文確認。対象条件・修正版・悪用状況を区別。",
+      "change": "実攻撃試行と国内報告を反映し、汎用Node-REDとSiemens同梱版を同一テーマで整理。",
+      "checked": "2026-11-20",
+      "updated": "2026-11-20",
+      "changeType": "新規掲載",
+      "history": [
+        {
+          "date": "2026-11-20",
+          "type": "新規掲載",
+          "note": "公式一次資料に基づき追加。"
+        }
+      ]
+    },
+    {
+      "id": "v-winbird-129517-20261119",
+      "product": "Win Bird 授業支援 for Chrome／Edge",
+      "title": "CVE-2026-129517：授業支援ブラウザ拡張のXSS",
+      "identifiers": [
+        "JVN#29068051",
+        "CVE-2026-129517"
+      ],
+      "published": "2026-11-19",
+      "sourceUpdated": "2026-11-19",
+      "exploitation": "実悪用情報はJVN本文で確認できず。",
+      "exploitationTone": "amber",
+      "priority": "学校・大学の管理ブラウザへ配布している場合に版を確認",
+      "conditions": "Chrome/Edge版3.3.0.2002以前。細工されたコンテンツ等を拡張機能が処理する条件。",
+      "impact": "拡張機能の権限範囲でスクリプトが実行され、セッション・表示・授業運用へ影響する可能性。",
+      "fix": "ベンダー案内の対策版へ更新し、MDM/ブラウザ管理で実配布版を確認。",
+      "investigation": "拡張機能版、配布ポリシー、ブラウザログ、不審ページ・セッション、設定変更を確認。",
+      "bcp": "授業中の一斉更新・再起動、代替ブラウザ/端末、授業継続と問い合わせ手順を準備。",
+      "tech": "public",
+      "check": "ck-public",
+      "sources": [
+        {
+          "label": "JVN#29068051",
+          "url": "https://jvn.jp/jp/JVN29068051/"
+        }
+      ],
+      "sourceNote": "公式一次資料を2026-11-20 JSTに本文確認。対象条件・修正版・悪用状況を区別。",
+      "change": "教育現場で利用される拡張機能として追加。",
+      "checked": "2026-11-20",
+      "updated": "2026-11-20",
+      "changeType": "新規掲載",
+      "history": [
+        {
+          "date": "2026-11-20",
+          "type": "新規掲載",
+          "note": "公式一次資料に基づき追加。"
+        }
+      ]
+    },
+    {
+      "id": "v-ruijie-113347-20261119",
+      "product": "Ruijie Networks複数製品",
+      "title": "CVE-2026-113347：管理者権限からのOSコマンドインジェクション",
+      "identifiers": [
+        "JVN#28897261",
+        "CVE-2026-113347"
+      ],
+      "published": "2026-11-19",
+      "sourceUpdated": "2026-11-19",
+      "exploitation": "JVN本文で実悪用情報は確認できず。",
+      "exploitationTone": "amber",
+      "priority": "Ruijie製ネットワーク機器の管理面・管理者資格情報・対象ファームを確認",
+      "conditions": "影響製品が多岐。管理者権限を持つ攻撃者が細工入力を実行できる条件。",
+      "impact": "機器OS上のコマンド実行、設定・通信監視の改変、停止、内部侵入の足場化。",
+      "fix": "製品別ベンダー情報で対象版を特定し修正ファームへ更新。管理面を限定し管理者資格情報を保護。",
+      "investigation": "管理ログ・設定差分、管理者追加、外向き通信、再起動、隣接装置へのアクセスを確認。",
+      "bcp": "ネットワーク機器更新の冗長切替、設定バックアップ、ロールバック、キャンパス/拠点通信の代替を準備。",
+      "tech": "public",
+      "check": "ck-public",
+      "sources": [
+        {
+          "label": "JVN#28897261",
+          "url": "https://jvn.jp/jp/JVN28897261/"
+        }
+      ],
+      "sourceNote": "公式一次資料を2026-11-20 JSTに本文確認。対象条件・修正版・悪用状況を区別。",
+      "change": "製品別対象確認が必要なネットワーク機器テーマとして追加。",
+      "checked": "2026-11-20",
+      "updated": "2026-11-20",
+      "changeType": "新規掲載",
+      "history": [
+        {
+          "date": "2026-11-20",
+          "type": "新規掲載",
+          "note": "公式一次資料に基づき追加。"
+        }
+      ]
+    },
+    {
+      "id": "v-vcenter-123890-20261119",
+      "product": "VMware vCenter／VMware Cloud Foundation",
+      "title": "CVE-2026-123890：認証回避・ゼロデイ悪用確認",
+      "identifiers": [
+        "CVE-2026-123890",
+        "CVE-2026-123891",
+        "CVE-2026-123892",
+        "CVE-2026-123893",
+        "CVE-2026-123894"
+      ],
+      "published": "2026-11-19",
+      "sourceUpdated": "2026-11-19",
+      "exploitation": "GTIG/MandiantはARMORY CASTLEが開示前の2026年9月初旬にCVE-2026-123890を悪用した証拠を報告。",
+      "exploitationTone": "red",
+      "priority": "vCenter管理面を最優先。BeyondTrust等の管理支援機器からの横展開と、EDR非導入Linuxアプライアンスも確認",
+      "conditions": "DCE/RPCのSRP-6aセッション鍵開示により認証なしでadministrator@vsphere.local相当のセッション確立。管理面への到達が前提。",
+      "impact": "SSO管理者作成、LMDB・STS秘密鍵取得、SAML偽造、仮想基盤全体・バックアップ・ADへの横展開。",
+      "fix": "9.1.1.0200、9.0.2.0200、8.0 U3m、VCF 5.2.5等へ更新。回避策なし。vCenter 7は延長サポート契約者がBroadcomへ連絡。",
+      "investigation": "SSO管理者・LMDB/STS鍵・SAML、port 2012、BONESAW等、API/SSH、管理支援機器からの接続を保全し、鍵ローテーションを検討。",
+      "bcp": "仮想基盤停止を伴う更新、クラスタ順序、管理プレーン代替、バックアップ隔離、再構築・証明書/鍵更新と再開条件を準備。",
+      "tech": "public",
+      "check": "ck-public",
+      "sources": [
+        {
+          "label": "Broadcom VMSA-2026-0009",
+          "url": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/39495"
+        },
+        {
+          "label": "Google GTIG/Mandiant｜ARMORY CASTLE",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-vsphere"
+        }
+      ],
+      "sourceNote": "公式一次資料を2026-11-20 JSTに本文確認。対象条件・修正版・悪用状況を区別。",
+      "change": "認証回避と実悪用を新規追加し、既存ESXi監査ログ脆弱性とは別テーマで管理。",
+      "checked": "2026-11-20",
+      "updated": "2026-11-20",
+      "changeType": "新規掲載",
+      "history": [
+        {
+          "date": "2026-11-20",
+          "type": "新規掲載",
+          "note": "公式一次資料に基づき追加。"
+        }
+      ]
     }
   ],
   "actors": [
@@ -46390,75 +47452,75 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
   "updateHighlights": [
     {
       "kind": "incident",
-      "id": "inc-mhlw-drug-supply-20261118"
+      "id": "inc-ffg-analysis-tool-20261119"
     },
     {
       "kind": "incident",
-      "id": "inc-agileware-testserver-20261118"
+      "id": "inc-momoyama-support-scam-20261119"
     },
     {
       "kind": "incident",
-      "id": "inc-open-group-bizrobo-mini-20261118"
+      "id": "inc-usen-almex-precheckin-20261119"
     },
     {
       "kind": "incident",
-      "id": "inc-uhyogo-ame-web-20261118"
+      "id": "inc-lifull-internal-tool-20261119"
     },
     {
       "kind": "incident",
-      "id": "inc-jpmirai-portal-20261118"
+      "id": "inc-osaki-ransomware-20261118"
     },
     {
       "kind": "incident",
-      "id": "inc-wacoal-karte-20261118"
+      "id": "inc-schoo-swing-20261119"
     },
     {
       "kind": "incident",
-      "id": "inc-campfire-karte-20261118"
+      "id": "inc-moneyforward-notion-fireworks-20261119"
     },
     {
       "kind": "incident",
-      "id": "inc-studying-chatplus-20261118"
+      "id": "inc-mainichi-karte-20261119"
     },
     {
       "kind": "incident",
-      "id": "inc-shibaura-notion-fireworks-20261118"
+      "id": "inc-timee-karte-20261119"
     },
     {
       "kind": "incident",
-      "id": "inc-meetsmore-karte-20261118"
+      "id": "inc-jleague-karte-20261118"
     },
     {
       "kind": "incident",
-      "id": "inc-b68abdfcc0"
+      "id": "inc-dhc-karte-20261118"
     },
     {
       "kind": "incident",
-      "id": "inc-333a2dbe9b"
-    },
-    {
-      "kind": "incident",
-      "id": "inc-nojima-online-20261102"
-    },
-    {
-      "kind": "incident",
-      "id": "inc-tradewaltz-20261111"
+      "id": "inc-mufgesmart-karte-20261118"
     },
     {
       "kind": "vuln",
-      "id": "v-openjdk-cve2026114938-20261118"
+      "id": "v-nginx-20261119"
     },
     {
       "kind": "vuln",
-      "id": "v-chrome-202610"
+      "id": "v-nodered-58115-20261119"
     },
     {
       "kind": "vuln",
-      "id": "v-firefox-202610"
+      "id": "v-winbird-129517-20261119"
     },
     {
       "kind": "vuln",
-      "id": "v-openssl-20261110"
+      "id": "v-ruijie-113347-20261119"
+    },
+    {
+      "kind": "vuln",
+      "id": "v-vcenter-123890-20261119"
+    },
+    {
+      "kind": "vuln",
+      "id": "v-php-202610"
     }
   ],
   "actorTimeline": [
@@ -46976,6 +48038,50 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
       ],
       "actors": [],
       "checked": "2026-11-19"
+    },
+    {
+      "id": "ev-armory-castle-vcenter-20261119",
+      "period": "2026年9月初旬の悪用証拠（公表2026-11-19）",
+      "published": "2026-11-19",
+      "title": "ARMORY CASTLE：vCenter認証回避をゼロデイ悪用し仮想基盤を掌握",
+      "evidenceType": "GTIG/Mandiantのインシデント対応・脅威アクター分析",
+      "text": "GTIG/Mandiantは、疑わしい中国関連クラスターARMORY CASTLEがCVE-2026-123890を開示前に悪用し、administrator@vsphere.local相当のセッション、SSO管理者作成、STS鍵取得・SAML偽造へ進んだと報告。BeyondTrust Remote Support等から内部Linuxアプライアンスへ横展開した観測を含む。既存16グループとの同一性や国内被害は今回確認していないため図鑑へ統合しない。",
+      "checks": [
+        "vCenter管理面・port 2012・SSO管理者・STS鍵・SAML・API操作を保全確認",
+        "管理支援機器、EDR非導入Linuxアプライアンス、AD・バックアップへの横展開を確認"
+      ],
+      "sources": [
+        {
+          "label": "Google GTIG/Mandiant｜11/19",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-vsphere"
+        }
+      ],
+      "actors": [],
+      "checked": "2026-11-20"
+    },
+    {
+      "id": "ev-ransomware-q3-fragmentation-20261118",
+      "period": "2026年7～9月のDLS観測（公表2026-11-18）",
+      "published": "2026-11-18",
+      "title": "ランサムウェア犯罪市場：DLS掲載2,830件、上位10ブランド比率49%へ低下",
+      "evidenceType": "セキュリティ企業のデータリークサイト観測・分析",
+      "text": "Check Point ResearchはQ3のデータリークサイト掲載を2,830件と観測。上位10ブランドの比率はQ1 71%、Q2 58%、Q3 49%へ低下し、犯罪ブランドの分散を指摘。Qilinが四半期首位、The Gentlemenが9月首位、LockBitは上位10から外れたとの観測であり、被害組織が確認した独立攻撃件数や国内被害件数ではない。",
+      "checks": [
+        "DLS掲載数を被害確定・独立攻撃数と同一視せず、ブランド変更・提携・同一実行者を分離",
+        "上位ブランドだけでなくIAB・窃取ログ・初期侵入・バックアップ破壊の横断検知を点検"
+      ],
+      "sources": [
+        {
+          "label": "Check Point Research｜11/18",
+          "url": "https://research.checkpoint.com/2026/the-state-of-ransomware-q3-2026/"
+        }
+      ],
+      "actors": [
+        "qilin",
+        "the-gentlemen",
+        "lockbit"
+      ],
+      "checked": "2026-11-20"
     }
   ],
   "crimeGlossary": [
