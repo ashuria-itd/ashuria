@@ -198,26 +198,26 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
 {
   "meta": {
     "schemaVersion": "1.0",
-    "version": "1.0.54",
+    "version": "1.0.55",
     "title": "セキュリティインテリジェンスハブ",
-    "compiledDate": "2026-11-22",
-    "incidentSnapshotDate": "2026-11-22",
+    "compiledDate": "2026-11-23",
+    "incidentSnapshotDate": "2026-11-23",
     "technicalReviewed": "2026-10-25",
     "timezone": "Asia/Tokyo",
-    "incidentSource": "v1.0.53（587項目）から全件保持し、一次資料で確認した独立3事案・関連7事案の計10件を追加、既存2件を続報更新。",
-    "coverage": "11/20公表を中心に大学・教育、行政、小売、金融、SaaS/委託先波及を照合。直近7日・30日候補を再確認し、本文取得不能候補はresearchへ保留。",
-    "vulnerabilityCoverage": "111テーマ。AWS S3 Encryption Client for PHPを追加し、RubyのRed Hat製品対応を更新。JVN/JPCERT、CISA KEV、CERT/CC、主要OS・ブラウザー・ランタイム各社を独立照合。",
-    "verification": "既存587件・110テーマ・16アクター・24動向を保持し、10件追加・2件更新・脆弱性1追加1更新。JSON・参照・生成HTMLを静的検証。",
+    "incidentSource": "v1.0.54（597項目）から全件保持し、一次資料で確認した独立2事案・関連6組織の計8件を追加。",
+    "coverage": "前回成功2026-11-22朝以降、直近7日・30日後追いを実施。11/21公表と11/20の未掲載を、教育、EC、行政、SaaS利用組織で確認。",
+    "vulnerabilityCoverage": "111テーマを保持。JVN/JPCERT、CISA KEV、CERT/CC、主要OS・ブラウザー・ランタイム各社を独立照合し、確認済み新規差分なし。",
+    "verification": "既存597件・111テーマ・16アクター・24動向を保持し、8件追加。JSON・参照・生成HTMLを静的検証。",
     "reconciliation": {
       "newerRows": 180,
       "olderBiRows": 155,
       "preservedIds": 345,
       "addedAgainstBi": 28,
-      "previousRows": 587,
-      "addedThisUpdate": 10,
-      "updatedThisUpdate": 2,
-      "currentRows": 597,
-      "associationThisUpdate": 7,
+      "previousRows": 597,
+      "addedThisUpdate": 8,
+      "updatedThisUpdate": 0,
+      "currentRows": 605,
+      "associationThisUpdate": 6,
       "referenceFixesThisUpdate": 0
     },
     "changelog": [
@@ -494,6 +494,11 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         "date": "2026-11-22",
         "version": "1.0.54",
         "text": "独立3事案・関連7組織を追加し、芦屋学園・新潟県環境メールを続報更新。AWS S3 Encryption Client for PHP 1テーマを追加し、RubyのRed Hat製品対応を更新。597事例・111脆弱性・16アクター・24動向。アクター動向は確認済み差分なし。"
+      },
+      {
+        "date": "2026-11-23",
+        "version": "1.0.55",
+        "text": "独立2事案（ベストコ、六花亭）・関連6組織（柏市立柏高校、ZOZO、マネーフォワード、キヤノンMJ、東京建物、インテージ）を追加。六花亭のカード不正利用1件を二次被害として区別。605事例・111脆弱性・16アクター・24動向。脆弱性・アクターは確認済み差分なし。"
       }
     ],
     "playbookReviewed": "2026-11-06",
@@ -28030,6 +28035,368 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         }
       ],
       "group": "KARTE関連"
+    },
+    {
+      "id": "inc-bestco-20261121",
+      "date": "2026-11-21",
+      "org": "ベストコ／学習塾・教育情報アプリ",
+      "industry": "教育・学習塾",
+      "status": "顧客・問い合わせ情報の漏えい可能性を調査中",
+      "cat": [
+        "不正アクセス",
+        "情報漏えい",
+        "教育",
+        "認証情報"
+      ],
+      "info": "2026年11月20日までの在籍者に関する保護者・子どもの氏名、住所、電話番号、メールアドレス、成績、入塾状況、口座番号・口座名義・月謝・入出金履歴、教育情報アプリのID・パスワード等が最大50,196件。過去問い合わせ情報は最大95,937件。",
+      "scope": "11月20日に利用システムへの第三者による不正アクセスを確認。外部専門機関と原因・影響範囲を調査し、必要な対象者へ順次連絡。",
+      "impact": "未成年者・保護者の教育情報、口座情報、アプリ認証情報を組み合わせたなりすまし、不正ログイン、口座関連詐欺への警戒が必要。",
+      "exclude": "各件数は最大値かつ漏えい可能性であり、被害人数や漏えい確定件数として合算しない。クレジットカード情報は含まれない。",
+      "action": "教育アプリのパスワード変更・使い回し解消、セッション失効の有無、口座明細監視、保護者への正規連絡経路、学習・連絡業務の代替を確認。",
+      "sources": [
+        {
+          "label": "ベストコ｜11/21公式",
+          "url": "https://bestco.jp/news/74/"
+        },
+        {
+          "label": "ユナイテッド｜11/21公式",
+          "url": "https://united.jp/news/info/post_170.html"
+        }
+      ],
+      "secondary": {
+        "status": "報告なし（公表日時点）",
+        "date": "2026-11-21",
+        "checked": "2026-11-23",
+        "text": "公表時点で本件に起因する個人情報の不正利用等の二次被害は確認されていない。"
+      },
+      "change": "教育情報・口座情報・アプリID/パスワードを含む漏えい可能性を公式一次資料で確認して追加。",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-21",
+      "checked": "2026-11-23",
+      "updated": "2026-11-23",
+      "batch": "2026-11-23日次更新",
+      "changeType": "新規インシデント",
+      "evidence": "2026-11-23（JST）に被害組織・提供元の公式本文または公式PDFを確認。確定・可能性・対象外・二次被害を区別。",
+      "history": [
+        {
+          "date": "2026-11-23",
+          "text": "11月21日公式公表を確認。最大件数・漏えい可能性・対象外・二次被害なし（公表時点）を区別して追加。"
+        }
+      ]
+    },
+    {
+      "id": "inc-rokkatei-online-20261118",
+      "date": "2026-11-18",
+      "org": "六花亭／公式オンラインショップ",
+      "industry": "食品・EC",
+      "status": "入力情報流出の可能性・カード不正利用1件を確認",
+      "cat": [
+        "不正アクセス",
+        "情報漏えい",
+        "金融",
+        "二次被害"
+      ],
+      "info": "2026年10月21日21時から11月18日11時までに入力されたクレジットカード番号（全桁）、名義人、有効期限、セキュリティコードと、氏名、郵便番号、住所、電話番号、メールアドレス。現時点の対象件数は約8,000件。",
+      "scope": "オンラインショップのプログラム改ざんにより入力時に情報を抜き取られた可能性。サイトは安全性確認まで停止し、対象候補へ11月19日・21日にメール案内。",
+      "impact": "カード不正利用が実際に1件確認されており、再発行・明細監視に加え、補償や発送を装うフィッシング・郵便物への警戒が必要。EC停止中の受注・顧客対応代替も課題。",
+      "exclude": "カード情報はサーバー保存情報の漏えいではなく、改ざんプログラムによる入力時窃取の可能性。約8,000件は調査中の件数で、人数と同一視しない。",
+      "action": "対象カードの再発行、決済・WAF・改ざん検知ログ保全、決済ページ完全性確認、EC停止中の代替受付、再開判定と偽の補償案内への周知を確認。",
+      "sources": [
+        {
+          "label": "六花亭｜11/21第二報",
+          "url": "https://www.rokkatei.co.jp/news/info/20261121-25796/"
+        }
+      ],
+      "secondary": {
+        "status": "被害確認",
+        "date": "2026-11-20",
+        "checked": "2026-11-23",
+        "text": "顧客の申し出によりクレジットカード不正利用1件を確認。元事案との関連を六花亭が第二報で公表。"
+      },
+      "change": "11月18日初報と11月21日第二報を同一事案として整理し、個人情報範囲とカード不正利用1件を反映。",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-21",
+      "checked": "2026-11-23",
+      "updated": "2026-11-23",
+      "batch": "2026-11-23日次更新",
+      "changeType": "新規インシデント",
+      "evidence": "2026-11-23（JST）に被害組織・提供元の公式本文または公式PDFを確認。確定・可能性・対象外・二次被害を区別。",
+      "history": [
+        {
+          "date": "2026-11-18",
+          "text": "オンラインショップの不正アクセスとカード情報約8,000件の流出可能性を初報。"
+        },
+        {
+          "date": "2026-11-21",
+          "text": "第二報で氏名・住所等も対象となる可能性と、11月20日にカード不正利用1件を確認したと公表。"
+        }
+      ]
+    },
+    {
+      "id": "inc-kashiwa-high-arara-20261117",
+      "date": "2026-11-17",
+      "org": "柏市立柏高等学校／はなまる連絡帳・アララメッセージ",
+      "industry": "行政・教育・SaaS利用組織",
+      "status": "生徒・保護者・教職員のメールアドレス1,389件漏えい確認",
+      "cat": [
+        "委託先",
+        "情報漏えい",
+        "行政",
+        "教育"
+      ],
+      "info": "市立柏高等学校のメール配信サービスに登録された生徒・保護者・教職員のメールアドレス1,389件。氏名・電話番号等は対象外。",
+      "scope": "運営委託先サテライトがメール配信を再委託するアララの侵害。11月17日は可能性として公表し、11月18日に漏えい確認の報告を受領、11月20日に公表。サービスは対策後利用可能。",
+      "impact": "学校・委託先をかたる標的型メール、災害・学校連絡の信頼性低下、委託・再委託先を含む連絡網の継続が課題。",
+      "exclude": "1,389件はメールアドレス件数であり人数と同一視しない。アララ全体の漏えい件数へ重複合算しない。",
+      "action": "学校連絡の正規送信元と代替経路、再委託台帳、対象者周知、10月28～30日のnews@arara.comを名乗る不審メール確認、再開後監視を確認。",
+      "sources": [
+        {
+          "label": "柏市｜11/20公式",
+          "url": "https://www.city.kashiwa.lg.jp/koho/pressrelease/r8houdou/11gatsu/r8112001.html"
+        }
+      ],
+      "secondary": {
+        "status": "不審連絡確認（個別被害未確認）",
+        "date": "2026-11-20",
+        "checked": "2026-11-23",
+        "text": "アララの送信元を悪用したカード会社をかたる不審メールへの注意を公表。受信者の不正利用・金銭被害は確認していない。"
+      },
+      "change": "学校連絡基盤の再委託先侵害として、漏えい確認・対象件数・サービス再開・不審メール注意を追加。",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-20",
+      "checked": "2026-11-23",
+      "updated": "2026-11-23",
+      "batch": "2026-11-23日次更新",
+      "changeType": "関連組織の確認結果",
+      "evidence": "2026-11-23（JST）に被害組織・提供元の公式本文または公式PDFを確認。確定・可能性・対象外・二次被害を区別。",
+      "group": "アララ関連",
+      "history": [
+        {
+          "date": "2026-11-17",
+          "text": "市立柏高校の登録情報漏えい可能性を公表。"
+        },
+        {
+          "date": "2026-11-20",
+          "text": "メールアドレス1,389件の漏えい確認とサービス利用可能を公表。"
+        }
+      ]
+    },
+    {
+      "id": "inc-zozo-karte-20261120",
+      "date": "2026-11-20",
+      "org": "ZOZO／ZOZOTOWN・WEAR・KARTE",
+      "industry": "EC・アプリ・SaaS利用組織",
+      "status": "顧客・出店ブランド担当者情報の漏えい確認",
+      "cat": [
+        "委託先",
+        "情報漏えい"
+      ],
+      "info": "ZOZOTOWN約1,518万人（会員ID・年齢・性別・郵便番号。うち約4.7万人はログイン名・メール・電話も対象）、WEAR約1,393万人（会員ID・年齢・性別）、出店ブランド担当者約2.4万人（会員ID・企業名・氏名）。",
+      "scope": "KARTE侵害に伴い11月13日に連携停止、11月15日に外部取得を確認。対象者へ順次個別連絡。",
+      "impact": "大規模な属性情報と一部連絡先の組合せによるEC・ブランド担当者向けフィッシング、会員IDの突合リスクが高い。",
+      "exclude": "各サービス・項目は重複し得るため単純合算しない。会員ID・ログイン名はログイン用IDではない。パスワードは対象外、カード情報の漏えいは現時点で未確認。",
+      "action": "分析SaaS連携項目の最小化、会員IDの外部突合リスク、ブランド担当者通知、フィッシング監視、連携再開条件を確認。",
+      "sources": [
+        {
+          "label": "ZOZO｜11/20公式",
+          "url": "https://corp.zozo.com/information/20261120-482917/"
+        }
+      ],
+      "secondary": {
+        "status": "報告なし（公表日時点）",
+        "date": "2026-11-20",
+        "checked": "2026-11-23",
+        "text": "公表時点で本件に起因する二次被害は確認されていない。"
+      },
+      "change": "KARTE利用組織の大規模漏えい確認として、サービス別・対象項目別の人数と対象外を区別して追加。",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-20",
+      "checked": "2026-11-23",
+      "updated": "2026-11-23",
+      "batch": "2026-11-23日次更新",
+      "changeType": "関連組織の確認結果",
+      "evidence": "2026-11-23（JST）に被害組織・提供元の公式本文または公式PDFを確認。確定・可能性・対象外・二次被害を区別。",
+      "group": "KARTE関連",
+      "history": [
+        {
+          "date": "2026-11-23",
+          "text": "ZOZO公式本文を確認して追加。"
+        }
+      ]
+    },
+    {
+      "id": "inc-moneyforward-karte-20261120",
+      "date": "2026-11-20",
+      "org": "マネーフォワード／マネーフォワードエックス・KARTE",
+      "industry": "金融・SaaS利用組織",
+      "status": "識別子・所在地・メールアドレス等の漏えい確認",
+      "cat": [
+        "委託先",
+        "情報漏えい",
+        "金融"
+      ],
+      "info": "マネーフォワードのシステム固有識別子59,998件・企業所在地625件、マネーフォワードエックスのMikatano利用者識別子22,443件・メールアドレス19,648件、および同社従業員の識別子・メールアドレス。",
+      "scope": "11月14日にKARTE連携停止・連携認証情報を無効化。連絡先を把握する対象者へ順次個別通知予定。",
+      "impact": "金融・業務支援サービスを装うフィッシングと、SaaS連携認証情報の失効、下流サービスへの影響説明が重要。",
+      "exclude": "項目別件数には同一人物の重複があり得るため合算しない。パスワード・カード・口座情報は対象外。クラウド・ME等の本番環境への不正アクセス・漏えいはない。",
+      "action": "KARTE連携キーの失効確認、Mikatano利用者通知、固有識別子の外部突合、金融サービスを装う不審連絡監視、再開条件を確認。",
+      "sources": [
+        {
+          "label": "マネーフォワード｜11/20公式",
+          "url": "https://corp.moneyforward.com/news/info/20261120-mf-press-1/"
+        }
+      ],
+      "secondary": {
+        "status": "報告なし（公表日時点）",
+        "date": "2026-11-20",
+        "checked": "2026-11-23",
+        "text": "公表時点で本件に起因する不正利用等の被害は確認されていない。"
+      },
+      "change": "KARTE利用2社の項目別件数・対象外・認証情報無効化を公式本文で確認して追加。",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-20",
+      "checked": "2026-11-23",
+      "updated": "2026-11-23",
+      "batch": "2026-11-23日次更新",
+      "changeType": "関連組織の確認結果",
+      "evidence": "2026-11-23（JST）に被害組織・提供元の公式本文または公式PDFを確認。確定・可能性・対象外・二次被害を区別。",
+      "group": "KARTE関連",
+      "history": [
+        {
+          "date": "2026-11-23",
+          "text": "公式一次資料で対象範囲と件数を確認して追加。"
+        }
+      ]
+    },
+    {
+      "id": "inc-canonmj-karte-20261120",
+      "date": "2026-11-20",
+      "org": "キヤノンマーケティングジャパン／KARTE",
+      "industry": "IT・製造・SaaS利用組織",
+      "status": "顧客属性情報約366万件の漏えい可能性",
+      "cat": [
+        "委託先",
+        "情報漏えい"
+      ],
+      "info": "会員識別ID、都道府県・市区町村・郵便番号、年齢、生年月日、性別、メールマガジン購読情報の約366万件。",
+      "scope": "プレイドからの報告に基づき対象範囲を確認中。KARTE連携は停止し、対象者へメール等で個別連絡。",
+      "impact": "地域・年齢属性と識別子を使う製品登録・サポートを装ったフィッシング、外部分析基盤のデータ最小化が論点。",
+      "exclude": "氏名、電話番号、メールアドレス、カード番号、パスワードは対象外。会員識別ID単独では個人を直接特定しない。自社システムへの不正アクセスではない。",
+      "action": "会員識別子の突合リスク、マーケティング連携項目、対象者通知、偽サポート連絡、KARTE再開条件を確認。",
+      "sources": [
+        {
+          "label": "キヤノンMJ｜11/20公式",
+          "url": "https://corporate.jp.canon/info/2026/20261120"
+        }
+      ],
+      "secondary": {
+        "status": "報告なし（公表日時点）",
+        "date": "2026-11-20",
+        "checked": "2026-11-23",
+        "text": "公表時点で本件に起因する不正利用等の被害は確認されていない。"
+      },
+      "change": "約366万件の属性情報と対象外を公式本文で確認し、KARTE関連組織として追加。",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-20",
+      "checked": "2026-11-23",
+      "updated": "2026-11-23",
+      "batch": "2026-11-23日次更新",
+      "changeType": "関連組織の確認結果",
+      "evidence": "2026-11-23（JST）に被害組織・提供元の公式本文または公式PDFを確認。確定・可能性・対象外・二次被害を区別。",
+      "group": "KARTE関連",
+      "history": [
+        {
+          "date": "2026-11-23",
+          "text": "公式一次資料に基づき追加。"
+        }
+      ]
+    },
+    {
+      "id": "inc-tokyotatemono-karte-20261120",
+      "date": "2026-11-20",
+      "org": "東京建物／TOFROM App for workers・KARTE",
+      "industry": "不動産・就業者アプリ・SaaS利用組織",
+      "status": "就業者情報最大4,235件の漏えい確認",
+      "cat": [
+        "委託先",
+        "情報漏えい",
+        "業務停止"
+      ],
+      "info": "TOFROM App for workers登録者の氏名（フリガナ含む）、メールアドレス、勤務先会社名・部署名、その他システム連携データ等が最大4,235件。",
+      "scope": "11月13日に連携停止・権限無効化、11月17日に漏えい確認の報告を受領。KARTE停止によりアプリのアンケート等一部機能が利用不能。",
+      "impact": "ビル就業者・所属部署を使う標的型メールと、分析・アンケート機能停止時の施設運用・連絡代替が課題。",
+      "exclude": "最大4,235件は登録情報件数。アプリ本体の継続・一部機能停止とKARTE安全性確認を混同しない。",
+      "action": "就業者アプリと分析基盤の分離、施設連絡の代替、連携権限無効化、対象者通知、第三者検証後の再開条件を確認。",
+      "sources": [
+        {
+          "label": "東京建物｜11/20公式PDF",
+          "url": "https://tatemono.com/news/images/fc4526c302ceff0b7afeddbe3040588a.pdf"
+        }
+      ],
+      "secondary": {
+        "status": "報告なし（公表日時点）",
+        "date": "2026-11-20",
+        "checked": "2026-11-23",
+        "text": "公表時点で本件に起因する二次被害は確認されていない。"
+      },
+      "change": "就業者アプリの対象・一部機能停止・連携無効化を公式PDFで確認して追加。",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-20",
+      "checked": "2026-11-23",
+      "updated": "2026-11-23",
+      "batch": "2026-11-23日次更新",
+      "changeType": "関連組織の確認結果",
+      "evidence": "2026-11-23（JST）に被害組織・提供元の公式本文または公式PDFを確認。確定・可能性・対象外・二次被害を区別。",
+      "group": "KARTE関連",
+      "history": [
+        {
+          "date": "2026-11-23",
+          "text": "公式PDF本文を確認して追加。"
+        }
+      ]
+    },
+    {
+      "id": "inc-intage-shopireco-karte-20261120",
+      "date": "2026-11-20",
+      "org": "インテージ／ショピレコ・KARTE",
+      "industry": "市場調査・アプリ・SaaS利用組織",
+      "status": "利用者204,516人の属性・識別ID漏えい確認",
+      "cat": [
+        "委託先",
+        "情報漏えい"
+      ],
+      "info": "ショピレコ利用者204,516人（精査中）の識別ID、生年月、年齢、性別コード、居住都道府県コード。",
+      "scope": "11月17日にプレイドから漏えい範囲の報告を受領。KARTE連携停止済みで、ショピレコ本体は継続利用可能。",
+      "impact": "購買調査を装う連絡と属性データの外部突合に注意。分析機能停止とアプリ本体継続を分けた説明が必要。",
+      "exclude": "氏名、住所、電話、メール、ログインID、パスワード、買物情報は対象外。204,516は精査中の人数。自社システムへの不正アクセスは未確認。",
+      "action": "分析SaaSへの属性連携最小化、識別IDの再識別リスク、KARTE連携停止、利用者周知、アプリ継続中の監視を確認。",
+      "sources": [
+        {
+          "label": "インテージ｜11/20公式",
+          "url": "https://www.intage.co.jp/news/9137/"
+        }
+      ],
+      "secondary": {
+        "status": "報告なし（公表日時点）",
+        "date": "2026-11-20",
+        "checked": "2026-11-23",
+        "text": "KARTE経由の自社システム不正アクセスや、それに伴う二次被害は確認されていない。"
+      },
+      "change": "対象人数・属性項目・対象外・アプリ継続を公式本文で確認し、KARTE関連組織として追加。",
+      "dateBasis": "初回公表日",
+      "sourceUpdated": "2026-11-20",
+      "checked": "2026-11-23",
+      "updated": "2026-11-23",
+      "batch": "2026-11-23日次更新",
+      "changeType": "関連組織の確認結果",
+      "evidence": "2026-11-23（JST）に被害組織・提供元の公式本文または公式PDFを確認。確定・可能性・対象外・二次被害を区別。",
+      "group": "KARTE関連",
+      "history": [
+        {
+          "date": "2026-11-23",
+          "text": "公式一次資料に基づき追加。"
+        }
+      ]
     }
   ],
   "caseLinks": {
@@ -40240,6 +40607,200 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         "P05",
         "P08"
       ]
+    },
+    "inc-bestco-20261121": {
+      "techs": [
+        "public",
+        "identity",
+        "sharing",
+        "outage"
+      ],
+      "checks": [
+        "ck-public",
+        "ck-identity",
+        "ck-data",
+        "ck-bcp"
+      ],
+      "ir": "leak",
+      "notice": "leak",
+      "entry": "外部からの不正アクセス／改ざん",
+      "weakness": "侵入経路・原因は調査中または未公表",
+      "actor": "確認情報なし",
+      "basis": "公式一次資料で確認した範囲のみを関連付け。",
+      "responsePatterns": [
+        "P01",
+        "P03",
+        "P05"
+      ]
+    },
+    "inc-rokkatei-online-20261118": {
+      "techs": [
+        "public",
+        "identity",
+        "sharing",
+        "outage"
+      ],
+      "checks": [
+        "ck-public",
+        "ck-identity",
+        "ck-data",
+        "ck-bcp"
+      ],
+      "ir": "leak",
+      "notice": "leak",
+      "entry": "外部からの不正アクセス／改ざん",
+      "weakness": "侵入経路・原因は調査中または未公表",
+      "actor": "確認情報なし",
+      "basis": "公式一次資料で確認した範囲のみを関連付け。",
+      "responsePatterns": [
+        "P01",
+        "P03",
+        "P05"
+      ]
+    },
+    "inc-kashiwa-high-arara-20261117": {
+      "techs": [
+        "supplier",
+        "sharing",
+        "outage"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-bcp",
+        "ck-command"
+      ],
+      "ir": "supplier",
+      "notice": "supplier",
+      "entry": "委託先・SaaS環境への不正アクセス",
+      "weakness": "利用組織側システムへの直接侵入とは区別",
+      "actor": "確認情報なし",
+      "basis": "公式一次資料に基づく関連付け。共通の提供元事案は独立攻撃件数として重複集計しない。",
+      "responsePatterns": [
+        "P06",
+        "P05",
+        "P08"
+      ]
+    },
+    "inc-zozo-karte-20261120": {
+      "techs": [
+        "supplier",
+        "sharing",
+        "outage"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-bcp",
+        "ck-command"
+      ],
+      "ir": "supplier",
+      "notice": "supplier",
+      "entry": "委託先・SaaS環境への不正アクセス",
+      "weakness": "利用組織側システムへの直接侵入とは区別",
+      "actor": "確認情報なし",
+      "basis": "公式一次資料に基づく関連付け。共通の提供元事案は独立攻撃件数として重複集計しない。",
+      "responsePatterns": [
+        "P06",
+        "P05",
+        "P08"
+      ]
+    },
+    "inc-moneyforward-karte-20261120": {
+      "techs": [
+        "supplier",
+        "sharing",
+        "outage"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-bcp",
+        "ck-command"
+      ],
+      "ir": "supplier",
+      "notice": "supplier",
+      "entry": "委託先・SaaS環境への不正アクセス",
+      "weakness": "利用組織側システムへの直接侵入とは区別",
+      "actor": "確認情報なし",
+      "basis": "公式一次資料に基づく関連付け。共通の提供元事案は独立攻撃件数として重複集計しない。",
+      "responsePatterns": [
+        "P06",
+        "P05",
+        "P08"
+      ]
+    },
+    "inc-canonmj-karte-20261120": {
+      "techs": [
+        "supplier",
+        "sharing",
+        "outage"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-bcp",
+        "ck-command"
+      ],
+      "ir": "supplier",
+      "notice": "supplier",
+      "entry": "委託先・SaaS環境への不正アクセス",
+      "weakness": "利用組織側システムへの直接侵入とは区別",
+      "actor": "確認情報なし",
+      "basis": "公式一次資料に基づく関連付け。共通の提供元事案は独立攻撃件数として重複集計しない。",
+      "responsePatterns": [
+        "P06",
+        "P05",
+        "P08"
+      ]
+    },
+    "inc-tokyotatemono-karte-20261120": {
+      "techs": [
+        "supplier",
+        "sharing",
+        "outage"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-bcp",
+        "ck-command"
+      ],
+      "ir": "supplier",
+      "notice": "supplier",
+      "entry": "委託先・SaaS環境への不正アクセス",
+      "weakness": "利用組織側システムへの直接侵入とは区別",
+      "actor": "確認情報なし",
+      "basis": "公式一次資料に基づく関連付け。共通の提供元事案は独立攻撃件数として重複集計しない。",
+      "responsePatterns": [
+        "P06",
+        "P05",
+        "P08"
+      ]
+    },
+    "inc-intage-shopireco-karte-20261120": {
+      "techs": [
+        "supplier",
+        "sharing",
+        "outage"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-bcp",
+        "ck-command"
+      ],
+      "ir": "supplier",
+      "notice": "supplier",
+      "entry": "委託先・SaaS環境への不正アクセス",
+      "weakness": "利用組織側システムへの直接侵入とは区別",
+      "actor": "確認情報なし",
+      "basis": "公式一次資料に基づく関連付け。共通の提供元事案は独立攻撃件数として重複集計しない。",
+      "responsePatterns": [
+        "P06",
+        "P05",
+        "P08"
+      ]
     }
   },
   "techniques": [
@@ -48786,59 +49347,35 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
   "updateHighlights": [
     {
       "kind": "incident",
-      "id": "inc-soai-unipa-20261120"
+      "id": "inc-bestco-20261121"
     },
     {
       "kind": "incident",
-      "id": "inc-fines-reservation-20260925"
+      "id": "inc-rokkatei-online-20261118"
     },
     {
       "kind": "incident",
-      "id": "inc-wowworld-servers-20261120"
+      "id": "inc-kashiwa-high-arara-20261117"
     },
     {
       "kind": "incident",
-      "id": "inc-nipponshinyaku-comsbi-20261120"
+      "id": "inc-zozo-karte-20261120"
     },
     {
       "kind": "incident",
-      "id": "inc-goldwin-karte-20261120"
+      "id": "inc-moneyforward-karte-20261120"
     },
     {
       "kind": "incident",
-      "id": "inc-marui-karte-20261120"
+      "id": "inc-canonmj-karte-20261120"
     },
     {
       "kind": "incident",
-      "id": "inc-nstock-notion-fireworks-20261120"
+      "id": "inc-tokyotatemono-karte-20261120"
     },
     {
       "kind": "incident",
-      "id": "inc-kakogawa-lookmee-karte-20261120"
-    },
-    {
-      "kind": "incident",
-      "id": "inc-nara-karte-20261120"
-    },
-    {
-      "kind": "incident",
-      "id": "inc-sunshinecity-karte-20261120"
-    },
-    {
-      "kind": "incident",
-      "id": "inc-5ce201e230"
-    },
-    {
-      "kind": "incident",
-      "id": "inc-niigata-pref-kankyomail-20261113"
-    },
-    {
-      "kind": "vuln",
-      "id": "v-aws-s3-encryption-php-132607-20261119"
-    },
-    {
-      "kind": "vuln",
-      "id": "v-ruby-regexp-string-20261118"
+      "id": "inc-intage-shopireco-karte-20261120"
     }
   ],
   "actorTimeline": [
