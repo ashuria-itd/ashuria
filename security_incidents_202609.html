@@ -198,26 +198,26 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
 {
   "meta": {
     "schemaVersion": "1.0",
-    "version": "1.0.55",
+    "version": "1.0.56",
     "title": "セキュリティインテリジェンスハブ",
-    "compiledDate": "2026-11-23",
-    "incidentSnapshotDate": "2026-11-23",
+    "compiledDate": "2026-11-24",
+    "incidentSnapshotDate": "2026-11-24",
     "technicalReviewed": "2026-10-25",
     "timezone": "Asia/Tokyo",
-    "incidentSource": "v1.0.54（597項目）から全件保持し、一次資料で確認した独立2事案・関連6組織の計8件を追加。",
-    "coverage": "前回成功2026-11-22朝以降、直近7日・30日後追いを実施。11/21公表と11/20の未掲載を、教育、EC、行政、SaaS利用組織で確認。",
-    "vulnerabilityCoverage": "111テーマを保持。JVN/JPCERT、CISA KEV、CERT/CC、主要OS・ブラウザー・ランタイム各社を独立照合し、確認済み新規差分なし。",
-    "verification": "既存597件・111テーマ・16アクター・24動向を保持し、8件追加。JSON・参照・生成HTMLを静的検証。",
+    "incidentSource": "v1.0.55（605項目）から全件保持し、一次資料で確認した独立4事案・関連4組織の計8件を追加。",
+    "coverage": "前回成功2026-11-23 07:02 JST後～2026-11-24 07:04 JST、直近7日・30日後追いを実施。国内公式、大学・教育、SaaS波及、主要脆弱性情報源、直近90日のアクター動向を照合。",
+    "vulnerabilityCoverage": "114テーマを保持。JVN/JPCERT、CISA KEV、CERT/CC、主要ベンダーを独立照合し、KEV 3テーマ追加・Chrome Extended Stableを更新。",
+    "verification": "既存605件・111テーマ・16アクター・24動向を保持し、8件・3テーマ・1動向を追加、既存1事案とChromeを更新。JSON・参照・生成HTMLを静的検証。",
     "reconciliation": {
       "newerRows": 180,
       "olderBiRows": 155,
       "preservedIds": 345,
       "addedAgainstBi": 28,
-      "previousRows": 597,
+      "previousRows": 605,
       "addedThisUpdate": 8,
-      "updatedThisUpdate": 0,
-      "currentRows": 605,
-      "associationThisUpdate": 6,
+      "updatedThisUpdate": 1,
+      "currentRows": 613,
+      "associationThisUpdate": 4,
       "referenceFixesThisUpdate": 0
     },
     "changelog": [
@@ -499,14 +499,19 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         "date": "2026-11-23",
         "version": "1.0.55",
         "text": "独立2事案（ベストコ、六花亭）・関連6組織（柏市立柏高校、ZOZO、マネーフォワード、キヤノンMJ、東京建物、インテージ）を追加。六花亭のカード不正利用1件を二次被害として区別。605事例・111脆弱性・16アクター・24動向。脆弱性・アクターは確認済み差分なし。"
+      },
+      {
+        "date": "2026-11-24",
+        "version": "1.0.56",
+        "text": "独立4事案・関連4組織を追加し、USEN-ALMEX PreCheck-inの関連付けを更新。CISA KEV 3テーマを追加、Chrome Extended Stableを更新。613事例・114脆弱性・16アクター・25動向。北朝鮮関連暗号資産没収請求の司法動向を追加。"
       }
     ],
     "playbookReviewed": "2026-11-06",
     "actorReviewed": "2026-10-25",
     "uiReviewed": "2026-11-06",
-    "researchNotes": "2026-11-22 JSTの日次調査。11/20公表を後追いし、11/21～実行時点の公式新着も確認。リバスタ第2報は公式URL本文の直接取得が制限され候補キューで継続追跡。",
-    "vulnerabilitySupplementChecked": "2026-11-22",
-    "actorSupplementChecked": "2026-11-22"
+    "researchNotes": "2026-11-24 JSTの日次調査。前回成功11/23 07:02 JST後から実行時点、直近7日・30日後追い、アクター90日を確認。Tower Recordsとメルカリは公式本文を直接取得できず候補キューで継続追跡。",
+    "vulnerabilitySupplementChecked": "2026-11-24",
+    "actorSupplementChecked": "2026-11-24"
   },
   "incidents": [
     {
@@ -26636,20 +26641,25 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         "checked": "2026-11-20",
         "text": "一次公表で確認できた範囲。注意喚起や将来の可能性を具体的な二次被害確認と読み替えない。"
       },
-      "change": "公式一次資料で対象・件数・対象外・対応状況を確認して追加。",
+      "change": "提供元事案と利用組織の重複集計を避けるため、USEN-ALMEX PreCheck-inの関連集約キーを付与。",
       "dateBasis": "初回公表日",
       "sourceUpdated": "2026-11-19",
-      "checked": "2026-11-20",
-      "updated": "2026-11-20",
-      "batch": "2026-11-20日次更新",
-      "changeType": "新規追加",
+      "checked": "2026-11-24",
+      "updated": "2026-11-24",
+      "batch": "2026-11-24日次更新",
+      "changeType": "関連付け更新",
       "evidence": "2026-11-20（JST）に被害組織または提供元の公式本文・公式PDFを確認。公表事実・可能性・対象外・調査中を区別。",
       "history": [
         {
           "date": "2026-11-20",
           "text": "公式一次資料で対象・件数・対象外・対応状況を確認して追加。"
+        },
+        {
+          "date": "2026-11-24",
+          "text": "提供元事案と利用組織の重複集計を避けるため、USEN-ALMEX PreCheck-inの関連集約キーを付与。"
         }
-      ]
+      ],
+      "group": "USEN-ALMEX PreCheck-in"
     },
     {
       "id": "inc-lifull-internal-tool-20261119",
@@ -28395,6 +28405,361 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         {
           "date": "2026-11-23",
           "text": "公式一次資料に基づき追加。"
+        }
+      ]
+    },
+    {
+      "dateBasis": "初回公表日",
+      "checked": "2026-11-24",
+      "updated": "2026-11-24",
+      "batch": "2026-11-24日次更新",
+      "changeType": "新規追加",
+      "evidence": "2026-11-24（JST）に被害組織または提供元の公式本文を確認。公表事実・可能性・対象外・調査中を区別。",
+      "id": "inc-ill-saas-testenv-20261122",
+      "date": "2026-11-22",
+      "sourceUpdated": "2026-11-22",
+      "org": "アイル／SaaS開発・テスト環境",
+      "industry": "IT・SaaS",
+      "status": "開発・テスト環境への不正アクセス、実データとAPI認証情報の一部を閲覧・取得された可能性",
+      "cat": [
+        "不正アクセス",
+        "情報漏えい",
+        "開発環境",
+        "SaaS",
+        "認証情報"
+      ],
+      "info": "11月18日に開発・テスト環境で不審な通信を検知。デモ・検証用データに含まれていた取引先担当者情報、会員・注文情報、API認証情報の一部が閲覧・取得された可能性があり、件数・範囲は調査中。",
+      "scope": "本番SaaS環境への侵入は確認されず、CROSS MALL／CROSS POINTの本番環境、アラジンオフィス、アラジンECは分離され影響なしと公表。",
+      "impact": "開発・検証環境に実データや本番接続用認証情報が残ると、本番分離だけでは通知・認証情報ローテーション・侵害調査が必要。",
+      "exclude": "本番環境への侵入、対象件数、二次被害は公表時点で未確認。",
+      "action": "開発・検証環境の実データ持込み、APIキーの用途・権限・有効期限、秘密情報保管、ログ保持、停止時の代替開発環境を点検。",
+      "sources": [
+        {
+          "label": "アイル｜11/22公式",
+          "url": "https://www.ill.co.jp/info/261122/"
+        }
+      ],
+      "secondary": {
+        "status": "未公表・未確認",
+        "date": "2026-11-22",
+        "checked": "2026-11-24",
+        "text": "対象範囲の調査中で、具体的な二次被害確認は公表されていない。"
+      },
+      "change": "11/18検知の開発・テスト環境侵害を、本番環境とは分離して新規追加。",
+      "history": [
+        {
+          "date": "2026-11-24",
+          "text": "11/18検知の開発・テスト環境侵害を、本番環境とは分離して新規追加。"
+        }
+      ]
+    },
+    {
+      "dateBasis": "初回公表日",
+      "checked": "2026-11-24",
+      "updated": "2026-11-24",
+      "batch": "2026-11-24日次更新",
+      "changeType": "新規追加",
+      "evidence": "2026-11-24（JST）に被害組織または提供元の公式本文を確認。公表事実・可能性・対象外・調査中を区別。",
+      "id": "inc-research-panel-20261121",
+      "date": "2026-11-21",
+      "sourceUpdated": "2026-11-21",
+      "org": "リサーチパネル",
+      "industry": "調査・ポイントサービス",
+      "status": "検索機能の脆弱性を悪用した不正アクセス、ログイン情報を含む登録情報が閲覧された可能性",
+      "cat": [
+        "不正アクセス",
+        "脆弱性悪用",
+        "情報漏えいの可能性",
+        "パスワード"
+      ],
+      "info": "11月20日23:10に不正アクセスを検知し、23:36に検索機能を停止。ログイン用メールアドレス・パスワード、氏名、性別、郵便番号、リサーチパネルID、ECナビIDが閲覧された可能性。",
+      "scope": "一部パスワードが不可逆変換されていない状態で保存されていたため、該当パスワードを無効化。範囲・件数は調査中。11月21日05:10に改修後、検索機能を再開。",
+      "impact": "認証情報の再利用による他サービス侵害やポイント交換の不正利用を想定し、本人確認と監視が必要。",
+      "exclude": "クレジットカード情報、マイナンバーは収集しておらず対象外。具体的なポイント不正交換は公表時点で未確認。",
+      "action": "該当者のパスワード無効化と再設定、セッション・APIトークン、ポイント交換、検索機能ログ、同一資格情報の横断利用を確認。",
+      "sources": [
+        {
+          "label": "リサーチパネル｜11/21公式",
+          "url": "https://research-panel.jp/faq/?article_id=1743&genre_id=0&mode=article_simple"
+        }
+      ],
+      "secondary": {
+        "status": "報告なし（公表日時点）",
+        "date": "2026-11-21",
+        "checked": "2026-11-24",
+        "text": "ポイント交換の監視強化は、具体的な不正利用確認とは区別。"
+      },
+      "change": "検索機能の脆弱性悪用と、平文相当で保存された一部パスワードの無効化を区別して追加。",
+      "history": [
+        {
+          "date": "2026-11-24",
+          "text": "検索機能の脆弱性悪用と、平文相当で保存された一部パスワードの無効化を区別して追加。"
+        }
+      ]
+    },
+    {
+      "dateBasis": "初回公表日",
+      "checked": "2026-11-24",
+      "updated": "2026-11-24",
+      "batch": "2026-11-24日次更新",
+      "changeType": "新規追加",
+      "evidence": "2026-11-24（JST）に被害組織または提供元の公式本文を確認。公表事実・可能性・対象外・調査中を区別。",
+      "id": "inc-mcdonalds-app-20261120",
+      "date": "2026-11-20",
+      "sourceUpdated": "2026-11-20",
+      "org": "日本マクドナルド／公式アプリ",
+      "industry": "飲食・アプリ",
+      "status": "公式アプリのデータベースへの不正アクセス、購入履歴等が閲覧された可能性",
+      "cat": [
+        "不正アクセス",
+        "情報漏えいの可能性",
+        "アプリ"
+      ],
+      "info": "公式アプリのデータベースへの不正アクセスを確認。購入履歴、システム上の顧客管理ID、IPアドレス、サービス利用時の端末位置情報が対象となる可能性。",
+      "scope": "認証情報を無効化し、外部専門家と調査。個人情報保護委員会へ報告。",
+      "impact": "購買履歴・位置情報を使った標的型詐欺やプライバシー影響を想定し、アプリ・API・認証ログの保全が必要。",
+      "exclude": "氏名、メールアドレス、電話番号、住所、クレジットカード情報は対象外。顧客管理IDはアプリ会員ID・メールアドレスとは別。",
+      "action": "アプリDB・API認証情報の失効、利用端末・位置情報の最小化、異常照会、公式連絡を装う詐欺への注意喚起を確認。",
+      "sources": [
+        {
+          "label": "日本マクドナルド｜11/20公式",
+          "url": "https://www.mcdonalds.co.jp/company/info/261120a/"
+        }
+      ],
+      "secondary": {
+        "status": "報告なし（公表日時点）",
+        "date": "2026-11-20",
+        "checked": "2026-11-24",
+        "text": "アプリ・サービスの不正利用は確認されておらず、パスワード変更は求めていない。"
+      },
+      "change": "アプリDB侵害で対象となる購入履歴・管理ID・IP・位置情報と、対象外情報を分けて追加。",
+      "history": [
+        {
+          "date": "2026-11-24",
+          "text": "アプリDB侵害で対象となる購入履歴・管理ID・IP・位置情報と、対象外情報を分けて追加。"
+        }
+      ]
+    },
+    {
+      "dateBasis": "初回公表日",
+      "checked": "2026-11-24",
+      "updated": "2026-11-24",
+      "batch": "2026-11-24日次更新",
+      "changeType": "新規追加",
+      "evidence": "2026-11-24（JST）に被害組織または提供元の公式本文を確認。公表事実・可能性・対象外・調査中を区別。",
+      "id": "inc-ill-crosspoint-20261110",
+      "date": "2026-11-10",
+      "sourceUpdated": "2026-11-10",
+      "org": "アイル／CROSS POINT",
+      "industry": "IT・SaaS",
+      "status": "顧客1社の正規APIキー窃取・悪用による会員情報の不正取得",
+      "cat": [
+        "API悪用",
+        "認証情報の悪用",
+        "情報漏えい",
+        "SaaS"
+      ],
+      "info": "11月7日に顧客1社の正規APIキーが窃取・悪用され、API経由で会員情報を不正取得されたことを検知。氏名、生年月日、性別、住所、電話、メール、会員番号・ランク、ポイント、実店舗カード番号、EC会員ID、購買統計等が対象。",
+      "scope": "全テナントのAPIキーを11月9日22:15までに無効化・再発行し、検知を強化。製品の脆弱性悪用や内部DBへの直接侵入ではない。",
+      "impact": "テナント側で保管・連携するAPIキーが侵害されると、SaaS本体の脆弱性がなくても顧客データ抽出が成立する。",
+      "exclude": "クレジットカード情報とログインパスワードは保有しておらず対象外。11/22公表の開発・テスト環境事案とは別事案。",
+      "action": "APIキーの保管場所、権限・IP制限・有効期限、利用量・異常照会、失効と再設定の手順、利用先通知を点検。",
+      "sources": [
+        {
+          "label": "アイル｜11/10公式",
+          "url": "https://www.ill.co.jp/info/261110/"
+        }
+      ],
+      "secondary": {
+        "status": "未公表・未確認",
+        "date": "2026-11-10",
+        "checked": "2026-11-24",
+        "text": "不正取得後の具体的な二次被害は公表本文で確認できない。"
+      },
+      "change": "正規APIキーの窃取・悪用を製品脆弱性やDB直接侵入と分け、後追い追加。",
+      "history": [
+        {
+          "date": "2026-11-24",
+          "text": "正規APIキーの窃取・悪用を製品脆弱性やDB直接侵入と分け、後追い追加。"
+        }
+      ]
+    },
+    {
+      "dateBasis": "初回公表日",
+      "checked": "2026-11-24",
+      "updated": "2026-11-24",
+      "batch": "2026-11-24日次更新",
+      "changeType": "新規追加",
+      "evidence": "2026-11-24（JST）に被害組織または提供元の公式本文を確認。公表事実・可能性・対象外・調査中を区別。",
+      "id": "inc-musashinomura-comsbi-20261121",
+      "date": "2026-11-21",
+      "sourceUpdated": "2026-11-21",
+      "org": "むさしの村／COMSBI",
+      "industry": "レジャー・LINE連携SaaS",
+      "group": "SonicMoov COMSBI Enterprise",
+      "status": "COMSBI提供元侵害に伴うLINE連携情報等の漏えい可能性",
+      "cat": [
+        "委託先被害",
+        "情報漏えいの可能性",
+        "LINE",
+        "SaaS"
+      ],
+      "info": "11月9～10日の提供元SonicMoovのCOMSBI Enterpriseへの攻撃により、LINE友だちの表示名・プロフィール画像URL・ユーザーIDが最大64,702件、氏名・電話・メールが最大161件、郵便番号が最大589件の対象となる可能性。",
+      "scope": "各項目の最大件数であり、同一人物の重複を含み得るため合算しない。提供元は11月10日にアクセス遮断と認証情報無効化。",
+      "impact": "LINE連携SaaSの停止・認証情報失効・利用者通知と、代替広報・来園案内が必要。",
+      "exclude": "LINEパスワード、クレジットカード情報は対象外。具体的な二次被害は公表時点で未確認。",
+      "action": "COMSBI利用有無、管理者・API認証情報の失効、2FA、権限、対象利用者、LINE以外の代替連絡手段を確認。",
+      "sources": [
+        {
+          "label": "むさしの村｜11/21公式",
+          "url": "https://www.musashinomura.co.jp/news/20261121/"
+        }
+      ],
+      "secondary": {
+        "status": "報告なし（公表日時点）",
+        "date": "2026-11-21",
+        "checked": "2026-11-24",
+        "text": "注意喚起はあるが具体的な不正利用・金銭被害は公表されていない。"
+      },
+      "change": "SonicMoov COMSBI Enterprise事案の利用組織として関連付け。件数は項目別最大値で合算しない。",
+      "history": [
+        {
+          "date": "2026-11-24",
+          "text": "SonicMoov COMSBI Enterprise事案の利用組織として関連付け。件数は項目別最大値で合算しない。"
+        }
+      ]
+    },
+    {
+      "dateBasis": "初回公表日",
+      "checked": "2026-11-24",
+      "updated": "2026-11-24",
+      "batch": "2026-11-24日次更新",
+      "changeType": "新規追加",
+      "evidence": "2026-11-24（JST）に被害組織または提供元の公式本文を確認。公表事実・可能性・対象外・調査中を区別。",
+      "id": "inc-solare-precheckin-20261119",
+      "date": "2026-11-19",
+      "sourceUpdated": "2026-11-19",
+      "org": "ソラーレ ホテルズ アンド リゾーツ／PreCheck-in",
+      "industry": "宿泊",
+      "group": "USEN-ALMEX PreCheck-in",
+      "status": "PreCheck-in提供元侵害に伴う14施設・17予約の情報流出可能性",
+      "cat": [
+        "委託先被害",
+        "情報漏えいの可能性",
+        "予約情報",
+        "サービス停止"
+      ],
+      "info": "USEN-ALMEXのPreCheck-in事案により、最終詳細では14施設・17予約の氏名、電話番号、住所、メールアドレスが対象となる可能性。公表冒頭の13施設・16予約との不一致は詳細リスト・改訂値を優先。",
+      "scope": "サービスは11月16日から停止し、再開時期未定。施設フロントでの通常チェックインを代替運用。",
+      "impact": "到着前手続きの停止により、フロント混雑・本人確認・予約照合の代替手順と再開条件が必要。",
+      "exclude": "パスポート情報、クレジットカード情報は対象外。項目は予約件数で、人数と同一視しない。",
+      "action": "対象予約の通知、フロント代替、API・認証情報、再開前確認、委託先からの改訂値管理を点検。",
+      "sources": [
+        {
+          "label": "ソラーレ ホテルズ｜11/19公式",
+          "url": "https://www.solarehotels.com/announce/detail/001392.html"
+        }
+      ],
+      "secondary": {
+        "status": "報告なし（公表日時点）",
+        "date": "2026-11-19",
+        "checked": "2026-11-24",
+        "text": "具体的な二次被害は公表時点で確認されていない。"
+      },
+      "change": "USEN-ALMEX PreCheck-in事案の利用組織として関連付け。改訂後の施設・予約件数と停止中の代替運用を反映。",
+      "history": [
+        {
+          "date": "2026-11-24",
+          "text": "USEN-ALMEX PreCheck-in事案の利用組織として関連付け。改訂後の施設・予約件数と停止中の代替運用を反映。"
+        }
+      ]
+    },
+    {
+      "dateBasis": "初回公表日",
+      "checked": "2026-11-24",
+      "updated": "2026-11-24",
+      "batch": "2026-11-24日次更新",
+      "changeType": "新規追加",
+      "evidence": "2026-11-24（JST）に被害組織または提供元の公式本文を確認。公表事実・可能性・対象外・調査中を区別。",
+      "id": "inc-plaza-karte-20261118",
+      "date": "2026-11-18",
+      "sourceUpdated": "2026-11-18",
+      "org": "PLAZA／KARTE",
+      "industry": "小売・EC",
+      "group": "KARTE関連",
+      "status": "KARTEへの不正アクセスに伴うID・年齢・再入荷通知情報の漏えい可能性",
+      "cat": [
+        "委託先被害",
+        "情報漏えいの可能性",
+        "SaaS",
+        "EC"
+      ],
+      "info": "第2報で、ユーザーID・PLAZA PASS番号約10万件、ユーザーID・年齢情報約12万件、ユーザーID・再入荷通知対象商品情報約2万件が対象となる可能性。",
+      "scope": "項目別件数は重複し得るため合算せず、対象範囲は精査中。提供元通知後にアクセスキーを停止。",
+      "impact": "行動・属性情報を使った標的型詐欺や再入荷通知偽装を想定し、正規通知との識別が必要。",
+      "exclude": "氏名、メールアドレス、生年月日、クレジットカード情報は対象外。年齢情報を生年月日と同一視しない。",
+      "action": "KARTE連携キーの失効、対象イベント・属性、通知経路、再入荷通知を装う詐欺、利用者照会対応を確認。",
+      "sources": [
+        {
+          "label": "PLAZA｜11/18第2報",
+          "url": "https://www.plazastyle.com/shop/t/t1075/"
+        }
+      ],
+      "secondary": {
+        "status": "報告なし（公表日時点）",
+        "date": "2026-11-18",
+        "checked": "2026-11-24",
+        "text": "不審メール等の具体的な二次被害は公表時点で確認されていない。"
+      },
+      "change": "KARTE関連利用組織として追加。項目別件数・年齢情報・対象外情報を区別。",
+      "history": [
+        {
+          "date": "2026-11-24",
+          "text": "KARTE関連利用組織として追加。項目別件数・年齢情報・対象外情報を区別。"
+        }
+      ]
+    },
+    {
+      "dateBasis": "初回公表日",
+      "checked": "2026-11-24",
+      "updated": "2026-11-24",
+      "batch": "2026-11-24日次更新",
+      "changeType": "新規追加",
+      "evidence": "2026-11-24（JST）に被害組織または提供元の公式本文を確認。公表事実・可能性・対象外・調査中を区別。",
+      "id": "inc-ill-arara-20261104",
+      "date": "2026-11-04",
+      "sourceUpdated": "2026-11-04",
+      "org": "アイル／データXメール配信サービス",
+      "industry": "IT・メール配信",
+      "group": "アララメッセージ関連",
+      "status": "アララ侵害に伴う配信先メールアドレス42,285件の漏えい",
+      "cat": [
+        "委託先被害",
+        "情報漏えい",
+        "メール配信"
+      ],
+      "info": "データXがアララの『repica』を利用して10月8～29日に配信したメールの宛先42,285件が、アララ事案で漏えいしたことを確認。",
+      "scope": "メールアドレス件数であり、人数とは限らない。アイルの顧客・取引・社内システムへの侵入ではない。",
+      "impact": "委託先メール配信基盤から漏えいした宛先を使うフィッシングやなりすましへの周知と配信経路切替が必要。",
+      "exclude": "氏名・メール本文は含まれない。自社の顧客管理・取引システムへの影響は確認されていない。",
+      "action": "利用中のメール配信基盤、対象期間・宛先、送信ドメイン、正規連絡文面、代替配信と再開条件を確認。",
+      "sources": [
+        {
+          "label": "アイル｜11/4公式",
+          "url": "https://www.ill.co.jp/info/261104/"
+        }
+      ],
+      "secondary": {
+        "status": "注意喚起のみ",
+        "date": "2026-11-04",
+        "checked": "2026-11-24",
+        "text": "フィッシング等への注意喚起はあるが、具体的な被害確認とは区別。"
+      },
+      "change": "アララメッセージ関連の利用組織として後追い追加。42,285はメールアドレス件数で人数としない。",
+      "history": [
+        {
+          "date": "2026-11-24",
+          "text": "アララメッセージ関連の利用組織として後追い追加。42,285はメールアドレス件数で人数としない。"
         }
       ]
     }
@@ -40801,6 +41166,210 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         "P05",
         "P08"
       ]
+    },
+    "inc-ill-saas-testenv-20261122": {
+      "techs": [
+        "public",
+        "api",
+        "identity",
+        "outage"
+      ],
+      "checks": [
+        "ck-public",
+        "ck-identity",
+        "ck-data",
+        "ck-bcp",
+        "ck-command"
+      ],
+      "ir": "account",
+      "notice": "leak",
+      "entry": "API・公開機能・認証情報等からの不正アクセス（個別原因は公表範囲）",
+      "weakness": "原因・成立条件は公表範囲を超えて推定しない",
+      "actor": "確認情報なし",
+      "basis": "公式一次資料に基づく関連付け。事実と一般的な点検案を分離。",
+      "responsePatterns": [
+        "P01",
+        "P04",
+        "P05",
+        "P08"
+      ]
+    },
+    "inc-research-panel-20261121": {
+      "techs": [
+        "public",
+        "api",
+        "identity",
+        "outage"
+      ],
+      "checks": [
+        "ck-public",
+        "ck-identity",
+        "ck-data",
+        "ck-bcp",
+        "ck-command"
+      ],
+      "ir": "account",
+      "notice": "leak",
+      "entry": "API・公開機能・認証情報等からの不正アクセス（個別原因は公表範囲）",
+      "weakness": "原因・成立条件は公表範囲を超えて推定しない",
+      "actor": "確認情報なし",
+      "basis": "公式一次資料に基づく関連付け。事実と一般的な点検案を分離。",
+      "responsePatterns": [
+        "P01",
+        "P04",
+        "P05",
+        "P08"
+      ]
+    },
+    "inc-mcdonalds-app-20261120": {
+      "techs": [
+        "public",
+        "api",
+        "identity",
+        "outage"
+      ],
+      "checks": [
+        "ck-public",
+        "ck-identity",
+        "ck-data",
+        "ck-bcp",
+        "ck-command"
+      ],
+      "ir": "account",
+      "notice": "leak",
+      "entry": "API・公開機能・認証情報等からの不正アクセス（個別原因は公表範囲）",
+      "weakness": "原因・成立条件は公表範囲を超えて推定しない",
+      "actor": "確認情報なし",
+      "basis": "公式一次資料に基づく関連付け。事実と一般的な点検案を分離。",
+      "responsePatterns": [
+        "P01",
+        "P04",
+        "P05",
+        "P08"
+      ]
+    },
+    "inc-ill-crosspoint-20261110": {
+      "techs": [
+        "public",
+        "api",
+        "identity",
+        "outage"
+      ],
+      "checks": [
+        "ck-public",
+        "ck-identity",
+        "ck-data",
+        "ck-bcp",
+        "ck-command"
+      ],
+      "ir": "account",
+      "notice": "leak",
+      "entry": "API・公開機能・認証情報等からの不正アクセス（個別原因は公表範囲）",
+      "weakness": "原因・成立条件は公表範囲を超えて推定しない",
+      "actor": "確認情報なし",
+      "basis": "公式一次資料に基づく関連付け。事実と一般的な点検案を分離。",
+      "responsePatterns": [
+        "P01",
+        "P04",
+        "P05",
+        "P08"
+      ]
+    },
+    "inc-musashinomura-comsbi-20261121": {
+      "techs": [
+        "supplier",
+        "sharing",
+        "outage"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-bcp",
+        "ck-command"
+      ],
+      "ir": "supplier",
+      "notice": "supplier",
+      "entry": "委託先・SaaS環境への不正アクセス",
+      "weakness": "利用組織側システムへの直接侵入とは区別",
+      "actor": "確認情報なし",
+      "basis": "公式一次資料に基づく関連付け。共通の提供元事案は独立攻撃件数として重複集計しない。",
+      "responsePatterns": [
+        "P06",
+        "P05",
+        "P08"
+      ]
+    },
+    "inc-solare-precheckin-20261119": {
+      "techs": [
+        "supplier",
+        "sharing",
+        "outage"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-bcp",
+        "ck-command"
+      ],
+      "ir": "supplier",
+      "notice": "supplier",
+      "entry": "委託先・SaaS環境への不正アクセス",
+      "weakness": "利用組織側システムへの直接侵入とは区別",
+      "actor": "確認情報なし",
+      "basis": "公式一次資料に基づく関連付け。共通の提供元事案は独立攻撃件数として重複集計しない。",
+      "responsePatterns": [
+        "P06",
+        "P05",
+        "P08"
+      ]
+    },
+    "inc-plaza-karte-20261118": {
+      "techs": [
+        "supplier",
+        "sharing",
+        "outage"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-bcp",
+        "ck-command"
+      ],
+      "ir": "supplier",
+      "notice": "supplier",
+      "entry": "委託先・SaaS環境への不正アクセス",
+      "weakness": "利用組織側システムへの直接侵入とは区別",
+      "actor": "確認情報なし",
+      "basis": "公式一次資料に基づく関連付け。共通の提供元事案は独立攻撃件数として重複集計しない。",
+      "responsePatterns": [
+        "P06",
+        "P05",
+        "P08"
+      ]
+    },
+    "inc-ill-arara-20261104": {
+      "techs": [
+        "supplier",
+        "sharing",
+        "outage"
+      ],
+      "checks": [
+        "ck-supplier",
+        "ck-data",
+        "ck-bcp",
+        "ck-command"
+      ],
+      "ir": "supplier",
+      "notice": "supplier",
+      "entry": "委託先・SaaS環境への不正アクセス",
+      "weakness": "利用組織側システムへの直接侵入とは区別",
+      "actor": "確認情報なし",
+      "basis": "公式一次資料に基づく関連付け。共通の提供元事案は独立攻撃件数として重複集計しない。",
+      "responsePatterns": [
+        "P06",
+        "P05",
+        "P08"
+      ]
     }
   },
   "techniques": [
@@ -42929,16 +43498,16 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         "CVE-2026-131031"
       ],
       "published": "2026-10-15",
-      "sourceUpdated": "2026-11-17",
-      "checked": "2026-11-19",
-      "updated": "2026-11-19",
-      "changeType": "続報更新",
+      "sourceUpdated": "2026-11-23",
+      "checked": "2026-11-24",
+      "updated": "2026-11-24",
+      "changeType": "配信版更新",
       "exploitation": "確認したGoogle公式本文に実悪用確認の記載なし",
       "exploitationTone": "amber",
       "priority": "日常業務で使うブラウザの配信・再起動・実稼働版を優先確認",
-      "conditions": "Desktop Stable 158.0.8127.36（Linux）、158.0.8127.36/.37（Windows/Mac）。段階配信。CriticalはWebViewのUse-after-freeとGPUの境界外書込み。",
+      "conditions": "Desktop Stable 158.0.8127.36（Linux）、158.0.8127.36/.37（Windows/Mac）。段階配信。CriticalはWebViewのUse-after-freeとGPUの境界外書込み。 Extended StableはWindows／macOS 156.0.8078.114を11月23日から段階配信し、セキュリティ詳細は追記待ち。",
       "impact": "204件のセキュリティ修正。Critical 2件を含む。確認したGoogle公式本文に実悪用確認の記載はない。",
-      "fix": "採用OSのChrome 158.0.8127.36/.37以降へ更新し、再起動後の実稼働版を確認。Extended Stable・ChromeOS・Androidは系列別に確認。",
+      "fix": "採用OSのChrome 158.0.8127.36/.37以降へ更新し、再起動後の実稼働版を確認。Extended Stable・ChromeOS・Androidは系列別に確認。 Extended Stable採用端末は156.0.8078.114以降の配信・再起動後の実稼働版を確認。",
       "investigation": "更新配信の成功と、再起動後に修正版が稼働していることを区別。管理対象外端末・長時間起動中の端末も棚卸しし、不審な拡張機能・実行や認証異常があればログ保全と端末調査につなげる。",
       "bcp": "更新・再起動の実施時間、業務Webとの互換性、未完了端末の代替手段を確認。管理された修正版への切替と再開条件を決める。",
       "tech": "public",
@@ -42995,10 +43564,14 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         {
           "label": "Google｜Chrome 158 Stable 11/17",
           "url": "https://chromereleases.googleblog.com/2026/11/stable-channel-update-for-desktop_17.html"
+        },
+        {
+          "label": "Google｜Extended Stable 11/23",
+          "url": "https://chromereleases.googleblog.com/2026/11/extended-stable-update-for-desktop_01590513949.html"
         }
       ],
-      "sourceNote": "Google Chrome Releases 11/17本文を2026-11-19 JSTに確認。段階配信と詳細制限を保持。",
-      "change": "Chrome 158 Stableと204件、Critical 2件、配信版を反映。",
+      "sourceNote": "Google Chrome Releases 11/23本文を2026-11-24 JSTに確認。Extended Stable 156.0.8078.114の段階配信を反映し、セキュリティ詳細追記待ちを未確定CVEに置き換えない。",
+      "change": "Extended Stable 156.0.8078.114の段階配信を追加。セキュリティ詳細は追記待ち。",
       "history": [
         {
           "date": "2026-10-19",
@@ -43065,6 +43638,17 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
             "impact": "9件のセキュリティ修正。WebGLの未初期化リソース、FileSystemの認可不備等のHighを含む。公式記事に実悪用確認の記載はない。",
             "fix": "StableはWindows/Mac 157.0.8103.78/.79、Linux 157.0.8103.78。Extended StableはWindows/Mac 156.0.8078.100。段階配信のため再起動後の実稼働版を確認。",
             "sourceNote": "Google Chrome Releases本文を2026-11-12 JSTに確認。セキュリティ詳細は追記待ち。"
+          }
+        },
+        {
+          "date": "2026-11-24",
+          "type": "配信版更新",
+          "note": "Extended Stable 156.0.8078.114の段階配信を追加。セキュリティ詳細は追記待ち。",
+          "before": {
+            "sourceUpdated": "2026-11-17",
+            "conditions": "Desktop Stable 158.0.8127.36（Linux）、158.0.8127.36/.37（Windows/Mac）。段階配信。CriticalはWebViewのUse-after-freeとGPUの境界外書込み。",
+            "fix": "採用OSのChrome 158.0.8127.36/.37以降へ更新し、再起動後の実稼働版を確認。Extended Stable・ChromeOS・Androidは系列別に確認。",
+            "sourceNote": "Google Chrome Releases 11/17本文を2026-11-19 JSTに確認。段階配信と詳細制限を保持。"
           }
         }
       ]
@@ -47117,6 +47701,132 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
           "note": "AWS公式一次資料に基づき追加。"
         }
       ]
+    },
+    {
+      "id": "v-cisco-expressway-cve-2026-76466",
+      "product": "Cisco Expressway-C／Expressway-E",
+      "title": "CVE-2026-76466：クラスタ環境の静的資格情報による認証不要のrootコマンド実行",
+      "identifiers": [
+        "CVE-2026-76466"
+      ],
+      "published": "2026-11-20",
+      "sourceUpdated": "2026-11-20",
+      "exploitation": "CISA KEVに2026年11月20日追加。実悪用の証拠に基づく。",
+      "exploitationTone": "red",
+      "priority": "クラスタ構成のExpressway-C／Eを最優先で版・公開範囲・管理経路確認",
+      "conditions": "Expressway-C／Expressway-Eのクラスタ構成。攻撃には永続Cookieの保有とデータベースへのネットワーク到達性が必要。",
+      "impact": "認証なしの遠隔攻撃者がroot権限で任意コマンドを実行し、通話・連携・認証基盤を侵害する可能性。",
+      "fix": "回避策はない。Ciscoのアドバイザリに示された修正済みリリースへ更新し、採用系列ごとの修正版を確認。",
+      "investigation": "管理・DB到達経路、クラスタ間通信、永続Cookie、rootコマンド、設定変更、外向き通信を保全確認。",
+      "bcp": "ビデオ会議・通話連携停止時の代替、クラスタ分離、更新・切戻し、認証情報再発行と再開条件を準備。",
+      "tech": "public",
+      "check": "ck-public",
+      "sources": [
+        {
+          "label": "Cisco Security Advisory",
+          "url": "https://www.cisco.com/c/en/us/support/docs/csa/cisco-sa-vcs-static-cred-hr7EWZ8t.html"
+        },
+        {
+          "label": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        }
+      ],
+      "sourceNote": "Cisco公式とCISA KEV公開面を2026-11-24 JSTに確認。成立条件・回避策なし・修正版を区別。",
+      "change": "CISA KEVで実悪用確認されたExpresswayテーマを追加。",
+      "checked": "2026-11-24",
+      "updated": "2026-11-24",
+      "changeType": "新規掲載",
+      "history": [
+        {
+          "date": "2026-11-24",
+          "type": "新規掲載",
+          "note": "Cisco公式とCISA KEVに基づき追加。"
+        }
+      ]
+    },
+    {
+      "id": "v-apache-roller-cve-2026-129448",
+      "product": "Apache Roller",
+      "title": "CVE-2026-129448：XML-RPCデシリアライゼーションによる認証不要RCE",
+      "identifiers": [
+        "CVE-2026-129448"
+      ],
+      "published": "2026-11-20",
+      "sourceUpdated": "2026-11-20",
+      "exploitation": "Apacheは実悪用を確認。CISA KEVに2026年11月20日追加。",
+      "exploitationTone": "red",
+      "priority": "インターネット到達可能なApache Roller 4.0.0～6.1.4を最優先",
+      "conditions": "Apache Roller 4.0.0～6.1.4。XML-RPCエンドポイントを利用した信頼できないデータのデシリアライゼーション。管理画面でXML-RPCを無効化しただけでは不十分。",
+      "impact": "認証不要の遠隔コード実行により、Webサーバー・掲載内容・資格情報・接続先へ影響する可能性。",
+      "fix": "Apache Roller 6.1.6以降へ更新。暫定策はWEB-INF/web.xmlでenabledForExtensions=falseとするか/roller-services/xmlrpcを除去し、再起動する。",
+      "investigation": "XML-RPCアクセス、Webアプリ・サーバーログ、生成プロセス、設置ファイル、認証情報、外向き通信を更新前に保全。",
+      "bcp": "ブログ・公開Web停止時の告知代替、静的ページ、更新・再起動・切戻し、侵害有無を再開条件に含める。",
+      "tech": "public",
+      "check": "ck-public",
+      "sources": [
+        {
+          "label": "Apache Security Advisory",
+          "url": "https://lists.apache.org/thread/lnz4s26tv6hdo03wngtdbpfj4hg4gtds"
+        },
+        {
+          "label": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        }
+      ],
+      "sourceNote": "Apache公式とCISA KEV公開面を2026-11-24 JSTに確認。対象版・実悪用・UI設定だけでは不十分な点を保持。",
+      "change": "実悪用確認済みのApache Roller RCEを追加。",
+      "checked": "2026-11-24",
+      "updated": "2026-11-24",
+      "changeType": "新規掲載",
+      "history": [
+        {
+          "date": "2026-11-24",
+          "type": "新規掲載",
+          "note": "Apache公式とCISA KEVに基づき追加。"
+        }
+      ]
+    },
+    {
+      "id": "v-sap-netweaver-cve-2025-42884",
+      "product": "SAP NetWeaver Enterprise Portal",
+      "title": "CVE-2025-42884：JNDIインジェクション・CISA KEV実悪用確認",
+      "identifiers": [
+        "CVE-2025-42884"
+      ],
+      "published": "2025-12-09",
+      "sourceUpdated": "2026-11-20",
+      "exploitation": "CISA KEVに2026年11月20日追加。実悪用の証拠に基づく。",
+      "exploitationTone": "red",
+      "priority": "SAP NetWeaver Enterprise Portal EP-BASIS／EP-RUNTIME 7.50を優先確認",
+      "conditions": "EP-BASIS 7.50およびEP-RUNTIME 7.50。SAP Security Note 3660969の対象条件を自組織構成で確認。",
+      "impact": "JNDIインジェクションにより、ポータル基盤上で意図しない処理や機密性・完全性・可用性への影響が生じる可能性。",
+      "fix": "SAP Security Note 3660969と採用サポートパッケージに対応する修正を適用。",
+      "investigation": "ポータル・アプリケーションログ、JNDI参照、外向き通信、管理者変更、配置物、接続資格情報を保全。",
+      "bcp": "学内・社内ポータル停止時の代替入口、認証・申請業務、更新・切戻し、侵害調査を再開条件に含める。",
+      "tech": "public",
+      "check": "ck-public",
+      "sources": [
+        {
+          "label": "SAP Security Patch Day Bulletin 2025",
+          "url": "https://support.sap.com/en/my-support/knowledge-base/security-notes-news/bulletin-2025.html"
+        },
+        {
+          "label": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        }
+      ],
+      "sourceNote": "SAP公式セキュリティノート一覧とCISA KEV公開面を2026-11-24 JSTに確認。CVSSだけで優先度を決めず実悪用を重視。",
+      "change": "CISA KEVで実悪用確認されたNetWeaver Enterprise Portalテーマを追加。",
+      "checked": "2026-11-24",
+      "updated": "2026-11-24",
+      "changeType": "新規掲載",
+      "history": [
+        {
+          "date": "2026-11-24",
+          "type": "新規掲載",
+          "note": "SAP公式とCISA KEVに基づき追加。"
+        }
+      ]
     }
   ],
   "actors": [
@@ -49347,35 +50057,51 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
   "updateHighlights": [
     {
       "kind": "incident",
-      "id": "inc-bestco-20261121"
+      "id": "inc-ill-saas-testenv-20261122"
     },
     {
       "kind": "incident",
-      "id": "inc-rokkatei-online-20261118"
+      "id": "inc-research-panel-20261121"
     },
     {
       "kind": "incident",
-      "id": "inc-kashiwa-high-arara-20261117"
+      "id": "inc-mcdonalds-app-20261120"
     },
     {
       "kind": "incident",
-      "id": "inc-zozo-karte-20261120"
+      "id": "inc-ill-crosspoint-20261110"
     },
     {
       "kind": "incident",
-      "id": "inc-moneyforward-karte-20261120"
+      "id": "inc-musashinomura-comsbi-20261121"
     },
     {
       "kind": "incident",
-      "id": "inc-canonmj-karte-20261120"
+      "id": "inc-solare-precheckin-20261119"
     },
     {
       "kind": "incident",
-      "id": "inc-tokyotatemono-karte-20261120"
+      "id": "inc-plaza-karte-20261118"
     },
     {
       "kind": "incident",
-      "id": "inc-intage-shopireco-karte-20261120"
+      "id": "inc-ill-arara-20261104"
+    },
+    {
+      "kind": "vuln",
+      "id": "v-cisco-expressway-cve-2026-76466"
+    },
+    {
+      "kind": "vuln",
+      "id": "v-apache-roller-cve-2026-129448"
+    },
+    {
+      "kind": "vuln",
+      "id": "v-sap-netweaver-cve-2025-42884"
+    },
+    {
+      "kind": "vuln",
+      "id": "v-chrome-202610"
     }
   ],
   "actorTimeline": [
@@ -49937,6 +50663,26 @@ h1{font-size:28px}h2{font-size:20px}h3{font-size:17px}h4{font-size:15px}
         "lockbit"
       ],
       "checked": "2026-11-20"
+    },
+    {
+      "id": "ev-dprk-binance-asset-recovery-20261123",
+      "period": "2026年10月29日の窃取（公表2026-11-23）",
+      "published": "2026-11-23",
+      "title": "北朝鮮関連暗号資産窃取：米司法省が10億ドル超のUSDC没収を求める民事訴訟",
+      "evidenceType": "米司法省の民事没収請求・当局公表（有罪確定前）",
+      "text": "米司法省は、北朝鮮の攻撃者に関連すると主張する10月29日のBinanceからの暗号資産窃取について、犯罪収益または資金洗浄資産とされる11億ドル超のUSDCの没収を求める民事訴訟を提起した。起訴・判決や既存16グループとの同一性を示すものではなく、当局の主張と回収支援実績を区別する。",
+      "checks": [
+        "暗号資産交換・保管・決済の依存関係、緊急凍結・連絡・証跡保全の手順を確認",
+        "国家背景の主張、マルウェア名、窃取主体、資金洗浄役を一括して既存グループへ統合しない"
+      ],
+      "sources": [
+        {
+          "label": "米司法省｜11/23",
+          "url": "https://www.justice.gov/usao-dc/pr/united-states-files-action-recover-more-1-billion-cryptocurrency-assets-related-north"
+        }
+      ],
+      "actors": [],
+      "checked": "2026-11-24"
     }
   ],
   "crimeGlossary": [
